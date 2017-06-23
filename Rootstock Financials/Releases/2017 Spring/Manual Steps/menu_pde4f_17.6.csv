@@ -1,0 +1,72 @@
+NAME,RSTK__ACTIVITY_ENABLED__C,RSTK__APPROVAL_ENABLED__C,RSTK__APPSECURITYKEY__C,RSTK__HEADER__C,RSTK__HIDEADDLINK__C,RSTK__HREF__C,RSTK__ID__C,RSTK__IMAGECLASS__C,RSTK__INACTIVE__C,RSTK__KEYPREFIX__C,RSTK__LABEL__C,RSTK__LEVEL__C,RSTK__MENUTYPE__C,RSTK__PAGE__C,RSTK__PAGEKEY__C,RSTK__PARENTID__C,RSTK__RECORDTYPE__C,RSTK__SECNSEQUENCE__C,RSTK__SEQUENCE__C,RSTK__SUBSECTION__C,RSTK__RSFINANCIALS__C
+Cash Requirements Report,FALSE,FALSE,m_cashreqreport__c,Accounts Payable,FALSE,/apex/CashReqirementsReport,999,Custom57Mru,FALSE,,Cash Requirements Report,1,1,,cc,986,,,58,,TRUE
+1099 Generate and Print,FALSE,FALSE,m_ap1099__c,Accounts Payable,TRUE,/apex/AP1099,999,Custom57Mru,FALSE,,1099 Generate and Print,1,1,,cc,986,ap1099,,61,,TRUE
+Predefined Subline Group Entry/Maintenance,FALSE,FALSE,m_glfstmplt7__c,Financial Reporting,FALSE,/apex/glfstmplt7,987,Custom57Mru,FALSE,,Predefined Subline Group Entry/Maintenance,1,1,,cc,972,,,101,Maintenance,TRUE
+Foreign Exchange Rate Schedule,FALSE,FALSE,m_syforexschedno__c,Multiple Currency,FALSE,/apex/listView?recType=syforexschedno__c,991,Custom57Mru,FALSE,,Foreign Exchange Rate Schedule,1,1,,cc,989,syforexschedno,,7,,TRUE
+Check Register for Single Payment Session,FALSE,FALSE,m_sigpaybatch__c,Accounts Payable,FALSE,/apex/ChkRegisterSinglePaymentBatch,999,Custom57Mru,FALSE,,Check Register for Single Payment Session,1,1,,cc,986,,,1,,TRUE
+All Payment Types Register,FALSE,FALSE,m_perpayreg__c,Accounts Payable,FALSE,/apex/PeriodicPaymentRegister,999,Custom57Mru,FALSE,,All Payment Types Register,1,1,,cc,986,,,4,,TRUE
+Vendor Company,FALSE,FALSE,m_povendcmpno__c,Financial System Admin,FALSE,/apex/listView?recType=povendcmpno,988,Custom57Mru,FALSE,,Vendor Company,1,1,,cc,988,povendcmpno,,11,,TRUE
+Check Register by Period,FALSE,FALSE,m_monthlychkreg__c,Accounts Payable,FALSE,/apex/MonthlyCheckRegister,999,Custom57Mru,FALSE,,Check Register by Period,1,1,,cc,986,,,7,,TRUE
+Payable Session,FALSE,FALSE,m_apinvh__c,Accounts Payable,FALSE,/apex/listView?recType=apinvh,995,Custom57Mru,FALSE,,Payable Session,1,1,,cc,986,apinvh,,10,,TRUE
+Post by Transaction,FALSE,FALSE,m_apgrouptransfer__c,Accounts Payable,FALSE,/apex/APGroupTransfer,997,Custom57Mru,FALSE,,Post by Transaction,1,1,,cc,986,,,23,,TRUE
+1099 List,FALSE,FALSE,m_1099list__c,Accounts Payable,TRUE,/apex/listView?recType=ap1099,999,Custom57Mru,FALSE,,1099 List,1,1,,cc,986,ap1099,,64,,TRUE
+Initialize Companies and Users,FALSE,FALSE,m_initialiazeCompAndUsrs__c,Financial System Setup,FALSE,/apex/InitializeCompAndUsrs,974,Custom57Mru,FALSE,,Initialize Companies and Users,1,1,,cc,987,,,64,Processes,TRUE
+Financial Division Master,FALSE,FALSE,m_gldiv__c,Financial System Setup,FALSE,/apex/listview?recType=gldiv,972,Custom57Mru,FALSE,,Financial Division Master,1,1,,cc,987,gldiv,,67,Maintenance,TRUE
+Financial Company Master,FALSE,FALSE,m_glcmp__c,Financial System Setup,FALSE,/apex/listView?recType=glcmp,973,Custom57Mru,FALSE,,Financial Company Master,1,1,,cc,987,glcmp,,66,Maintenance,TRUE
+Financial System User,FALSE,FALSE,m_glusr__c,Financial System Setup,FALSE,/apex/listView?recType=glusr,975,Custom57Mru,FALSE,,Financial System User,1,1,,cc,987,glusr,,50,Maintenance,TRUE
+Financial System User Company,FALSE,FALSE,m_glusrcmp__c,Financial System Setup,FALSE,/apex/listView?recType=glusrcmp,976,Custom57Mru,FALSE,,Financial System User Company,1,1,,cc,987,glusrcmp,,55,Maintenance,TRUE
+Financial Project Master,FALSE,FALSE,m_glproj__c,Financial System Setup,FALSE,/apex/listView?recType=glproj,978,Custom57Mru,FALSE,,Financial Project Master,1,1,,cc,987,glproj,,68,Maintenance,TRUE
+Reason Codes,FALSE,FALSE,m_glrsn__c,Financial System Setup,FALSE,/apex/listView?recType=glrsn,982,Custom57Mru,FALSE,,Reason Codes,1,1,,cc,987,glrsn,,74,Maintenance,TRUE
+Journal Entry Standard ID,FALSE,FALSE,m_gljestdid__c,Financial System Setup,FALSE,/apex/listView?recType=gljestdid,984,Custom57Mru,FALSE,,Journal Entry Standard ID,1,1,,cc,987,gljestdid,,76,Maintenance,TRUE
+AR Control,FALSE,FALSE,m_arcntl__c,Financial System Admin,FALSE,/apex/listView?recType=arcntl,911,Custom57Mru,FALSE,,AR Control,1,1,,cc,988,arcntl,,1,Setup,TRUE
+AP Control,FALSE,FALSE,m_apcntl__c,Financial System Admin,FALSE,/apex/listView?recType=apcntl,983,Custom57Mru,FALSE,,AP Control,1,1,,cc,988,apcntl,,1,Maintenance,TRUE
+Vendor Class Company,FALSE,FALSE,m_povclasscmpno__c,Financial System Admin,FALSE,/apex/listview?rectype=povclasscmpno,342,Custom57Mru,FALSE,,Vendor Class Company,1,1,,cc,988,povclasscmpno,,10,,TRUE
+GL Accounts (Chart of Accounts),FALSE,FALSE,m_glacct__c,Financial System Admin,FALSE,/apex/listView?recType=glacct,977,Custom57Mru,FALSE,,GL Accounts (Chart of Accounts),1,1,,cc,988,glacct,,69,Maintenance,TRUE
+Credit Card Account,FALSE,FALSE,m_glapcc__c,Financial System Admin,FALSE,/apex/listView?recType=glapcc,979,Custom57Mru,FALSE,,Credit Card Account,1,1,,cc,988,glapcc,,98,Maintenance,TRUE
+Fiscal Year,FALSE,FALSE,m_glyear__c,Financial System Admin,FALSE,/apex/listView?recType=glyear,980,Custom57Mru,FALSE,,Fiscal Year,1,1,,cc,988,glyear,,72,Maintenance,TRUE
+Financial Budget,FALSE,FALSE,m_glaybud__c,Financial System Admin,FALSE,/apex/listView?recType=glaybud,998,Custom57Mru,FALSE,,Financial Budget,1,1,,cc,988,glaybud,,90,Maintenance,TRUE
+Period Close,FALSE,FALSE,m_glcloseProcessor__c,Financial System Admin,FALSE,/apex/glcloseProcessor,903,Custom57Mru,FALSE,,Period Close,1,1,,cc,988,,,120,Process,TRUE
+Bank Account,FALSE,FALSE,m_glbankacct__c,Financial System Admin,FALSE,/apex/listView?recType=glbankacct,999,Custom57Mru,FALSE,,Bank Account,1,1,,cc,988,glbankacct,,96,Maintenance,TRUE
+Translate Data into Parent Company Currency,FALSE,FALSE,m_glstmtntryh__c,Financial Reporting,FALSE,/apex/buildgltxnplrate,999,Custom57Mru,FALSE,,Translate Data into Parent Company Currency,1,1,,cc,972,,,1,Process,TRUE
+Accounts Payable,FALSE,FALSE,ms_ap__c,ms_ap__c,FALSE,,986,,FALSE,,Accounts Payable,0,1,,,,,47,47,,TRUE
+Accounts Payable Setup,FALSE,FALSE,ms_apsetup__c,ms_apsetup__c,FALSE,,985,,TRUE,,Accounts Payable Setup,0,1,,,,,46,46,,TRUE
+Foreign Exchange Gain/Loss on App,FALSE,FALSE,m_apapplicforex__c,Accounts Payable,FALSE,/apex/listView?recType=apapplicforex__c,987,Custom57Mru,TRUE,,Foreign Exchange Gain/Loss on App,1,1,,cc,986,apapplicforex,,25,,TRUE
+Foreign Exchange Gain/Loss on Invoice,FALSE,FALSE,m_apinvtxnforex__c,Accounts Payable,FALSE,/apex/listView?recType=apinvtxnforex__c,988,Custom57Mru,TRUE,,Foreign Exchange Gain/Loss on Invoice,1,1,,cc,986,apinvtxnforex,,28,,TRUE
+Foreign Exchange Gain/Loss on Receipt,FALSE,FALSE,m_apinvlineforex__c,Accounts Payable,FALSE,/apex/listView?recType=apinvlineforex__c,990,Custom57Mru,TRUE,,Foreign Exchange Gain/Loss on Receipt,1,1,,cc,986,apinvlineforex,,31,,TRUE
+Payable Application Transaction Query,FALSE,FALSE,m_apapplic__c,Accounts Payable,FALSE,/apex/listView?recType=apapplic__c,993,Custom57Mru,FALSE,,Payable Application Transaction Query,1,1,,cc,986,apapplic,,34,,TRUE
+Payment Selection,FALSE,FALSE,m_paysession__c,Accounts Payable,FALSE,/apex/listView?recType=paysession__c,999,Custom57Mru,FALSE,,Payment Selection,1,1,,cc,986,paysession,,43,,TRUE
+Open Item Application,FALSE,FALSE,m_apinvtxn__c,Accounts Payable,FALSE,/apex/OpenItemApplication,999,Custom57Mru,FALSE,,Open Item Application,1,1,,cc,986,,,46,process,TRUE
+Vendor Credit Application Query/Report,FALSE,FALSE,m_vendorcrapp__c,Accounts Payable,FALSE,/apex/vendorcrapp,906,Custom57Mru,FALSE,,Vendor Credit Application Query/Report,1,1,,cc,986,,,49,Processes,TRUE
+Payable Edit List,FALSE,FALSE,m_apVoucherReport__c,Accounts Payable,FALSE,/apex/apVoucherReport,999,Custom57Mru,FALSE,,Payable Edit List,1,1,,cc,986,,,52,Process,TRUE
+AP Aging Report,FALSE,FALSE,m_Agedtrialbalancereport__c,Accounts Payable,FALSE,/apex/Agedtrialbalancereport,907,Custom57Mru,FALSE,,AP Aging Report,1,1,,cc,986,,,55,Processes,TRUE
+Payable Transaction,FALSE,FALSE,m_apinvtxn__c,Accounts Payable,FALSE,/apex/listView?recType=apinvtxn,996,Custom57Mru,FALSE,,Payable Transaction,1,1,,cc,986,apinvtxn,,11,,TRUE
+Journal Entry Templates,FALSE,FALSE,m_gljetemplth__c,General Ledger Setup,FALSE,/apex/gljetemplthlist,900,Custom57Mru,FALSE,,Journal Entry Templates,1,1,,cc,971,,,91,Process,TRUE
+General Journal Entries,FALSE,FALSE,m_gljh__c,General Ledger Setup,FALSE,/apex/gljhListView,905,Custom57Mru,FALSE,,General Journal Entries,1,1,,cc,971,,,93,Process,TRUE
+Postings Summary Report,FALSE,FALSE,m_gltrialbalance__c,General Ledger Setup,FALSE,/apex/postingsSummaryReport,904,Custom57Mru,FALSE,,Postings Summary Report,1,1,,cc,971,,,94,Process,TRUE
+Bank Reconciliation,FALSE,FALSE,m_glbankacctreconcile__c,General Ledger Setup,FALSE,/apex/GlbankacctReconcile,999,Custom57Mru,FALSE,,Bank Reconciliation,1,1,,cc,971,,,95,Process,TRUE
+Perform Financial Report Data Roll-up,FALSE,FALSE,m_buildglaystmt__c,Financial Reporting,FALSE,/apex/statementbuilder,985,Custom57Mru,FALSE,,Perform Financial Report Data Roll-up,1,1,,cc,972,,,20,,TRUE
+Define Financial Report Templates,FALSE,FALSE,m_glfstmplt1__c,Financial Reporting,FALSE,/apex/listview?rectype=glfstmplt1,985,Custom57Mru,FALSE,,Define Financial Report Templates,1,1,,cc,972,glfstmplt1,,30,Maintenance,TRUE
+Test Report Templates for Completeness,FALSE,FALSE,m_finstmttmpltest__c,Financial Reporting,FALSE,/apex/finstmttmpltest,988,Custom57Mru,FALSE,,Test Report Templates for Completeness,1,1,,cc,972,,,40,Maintenance,TRUE
+Change Payment Method,FALSE,FALSE,m_approcess__c,Accounts Payable,FALSE,/apex/APProcess,988,Custom57Mru,FALSE,,Change Payment Method,1,1,,cc,986,,,19,,TRUE
+Post by Session,FALSE,FALSE,m_apbatchtransfer__c,Accounts Payable,FALSE,/apex/APBatchTransfer,996,Custom57Mru,FALSE,,Post by Session,1,1,,cc,986,,,22,,TRUE
+Accounts Receivable,FALSE,FALSE,ms_ar__c,ms_ar__c,FALSE,,910,,FALSE,,Accounts Receivable,0,1,,,,,48,48,,TRUE
+Financial Reporting,FALSE,FALSE,ms_financialreporting__c,ms_financialreporting__c,FALSE,,972,,FALSE,,Financial Reporting,0,1,,,,,52,52,,TRUE
+Financial System Admin,FALSE,FALSE,m_fsa__c,ms_fsa__c,FALSE,,988,,FALSE,,Financial System Admin,0,1,,,,,54,54,,TRUE
+Financial System Setup,FALSE,FALSE,m_fss__c,ms_fss__c,FALSE,,987,,FALSE,,Financial System Setup,0,1,,,,,45,45,,TRUE
+General Ledger,FALSE,FALSE,ms_glsetup__c,ms_glsetup__c,FALSE,,971,,FALSE,,General Ledger,0,1,,,,,53,53,,TRUE
+Multiple Currency,FALSE,FALSE,m_mcurr__c,ms_mc__c,FALSE,,989,,FALSE,,Multiple Currency,0,1,,,,,55,55,,TRUE
+Convert JE Templates to JEs for a Period,FALSE,FALSE,m_periodAndJEChkList__c,General Ledger Setup,FALSE,/apex/periodAndJEChecklistProcess,999,Custom57Mru,FALSE,,Convert JE Templates to JEs for a Period,1,1,,cc,971,,,89,Process,TRUE
+Prepare Financial Reports,FALSE,FALSE,m_statementrun__c,Financial Reporting,FALSE,/apex/statementrun,985,Custom57Mru,FALSE,,Prepare Financial Reports,1,1,,cc,972,,,50,,TRUE
+Display/Print/Export/Purge Financial Reports,FALSE,FALSE,m_statementmaint__c,Financial Reporting,FALSE,/apex/statementmaint,985,Custom57Mru,FALSE,,Display/Print/Export/Purge Financial Reports,1,1,,cc,972,,,60,,TRUE
+Adjusting Statement Entries,FALSE,FALSE,Financial Reporting,Financial Reporting,FALSE,/apex/glStmtListView,999,Custom57Mru,FALSE,,Adjusting Statement Entries,1,1,,cc,972,,,70,Process,TRUE
+External Data for Financial Reports Entry/Maint,FALSE,FALSE,m_glfstmplt6__c,Financial Reporting,FALSE,/apex/glfstmplt6,986,Custom57Mru,FALSE,,External Data for Financial Reports Entry/Maint,1,1,,cc,972,,,100,Maintenance,TRUE
+Receivable Session,FALSE,FALSE,m_arinvh__c,Accounts Receivable,FALSE,/apex/listview?rectype=arinvh,911,Custom57Mru,FALSE,,Receivable Session,1,1,,cc,910,arinvh,,10,Process,TRUE
+Receivable Transaction,FALSE,FALSE,m_arinvtxn__c,Accounts Receivable,FALSE,/apex/listview?rectype=arinvtxn,989,Custom57Mru,FALSE,,Receivable Transaction,1,1,,cc,910,arinvtxn,,20,Process,TRUE
+AR Debit / Credit Memo Register,FALSE,FALSE,m_armemoregister__c,Accounts Receivable,FALSE,/apex/ardebitcreditmemoregister,999,Custom57Mru,FALSE,,AR Debit / Credit Memo Register,1,1,,cc,910,,,40,,TRUE
+AR Aging Report,FALSE,FALSE,m_aragedtrialbal__c,Accounts Receivable,FALSE,/apex/aragedtrialbalance,999,Custom57Mru,FALSE,,AR Aging Report,1,1,,cc,910,,,70,,TRUE
+Cash Receipts Journal,FALSE,FALSE,m_cashreceiptsjournal__c,Accounts Receivable,FALSE,/apex/cashreceiptsjournal,999,Custom57Mru,FALSE,,Cash Receipts Journal,1,1,,cc,910,,,60,,TRUE
+Customer Statements and Finance Charges,FALSE,FALSE,m_arstatandfincharges__c,Accounts Receivable,FALSE,/apex/arstatandfincharges,999,Custom57Mru,FALSE,,Customer Statements and Finance Charges,1,1,,cc,910,,,80,,TRUE
+Sales Invoice Review and Mass Post,FALSE,FALSE,m_arsalesinvoicereview__c,Accounts Receivable,FALSE,/apex/arsalesinvoicereview,999,Custom57Mru,FALSE,,Sales Invoice Review and Mass Post,1,1,,cc,910,,,30,,TRUE
+Cash Receipts,FALSE,FALSE,m_arcashh__c,Accounts Receivable,FALSE,/apex/listview?rectype=arcashh,911,Custom57Mru,FALSE,,Cash Receipts,1,1,,cc,910,arcashh,,50,Maintenance,TRUE
+Payment Selection Audit,FALSE,FALSE,m_appayselectaudit__c,RS-Support,FALSE,/apex/listView?recType=appayselectaudit__c,994,Custom57Mru,FALSE,,Payment Selection Audit,1,1,,cc,970,appayselectaudit,,37,,TRUE
+GL Transactions,FALSE,FALSE,m_gltxn__c,General Ledger Setup,FALSE,/apex/listview?rectype=gltxn,886,Custom57Mru,FALSE,,GL Transactions,1,1,,cc,971,gltxn,,85,Maintenance,TRUE

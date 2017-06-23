@@ -1,0 +1,26 @@
+// This script deletes existing (outdated) Financials menus records and moves the Rootstock Support menu section to the end.
+// After running the script use Data Loader to import the correct Fiancials menu records.
+rstk__menu__c[] menud1 = [select id, rstk__label__c from rstk__menu__c 
+where RSTK__RSFINANCIALS__C = True or
+rstk__header__c like '%Accounts Rec%' or
+rstk__header__c like '%Accounts Pay%' or
+rstk__header__c like '%General Ledger%' or
+rstk__header__c like '%Financial Rep%' or
+rstk__label__c like '%Accounts Rec%' or
+rstk__label__c like '%Accounts Pay%' or
+rstk__label__c like '%General Ledger%' or
+rstk__label__c like '%Financial Rep%'];
+
+if (menud1.size() > 0) {
+                delete menud1;
+}
+
+// This section moves the Rootstock Support menu section to the end
+
+rstk__menu__c[] menus = [select id, Name, rstk__parentid__c, rstk__sequence__c,
+rstk__secnsequence__c from rstk__menu__c where name = 'RS Support Functions'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__secnsequence__c = 80;
+  menu.rstk__sequence__c = 80;
+}
+update menus;

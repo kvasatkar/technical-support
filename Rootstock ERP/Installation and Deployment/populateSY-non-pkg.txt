@@ -1,0 +1,181 @@
+// 5179: add code to set syconfig_financials__c field - 
+// This replaces the  Accounting Package, FinancialForce Interface Active and QuickBooks Interface Active fields.
+// The fields will be set after adding a Mfg User and doing an edit/save on the syconfig record
+
+// Number of Authorized Users - this field is validated by Mfg User logic - can be increased if provisioning temporary licenses
+// Number of Paid Users - this field is not validated - set to number of licenses per contract  
+
+
+
+// Rootstock Manufacturing & Supply Chain Embedded Admin User PLTN (Limited Use) - Salesforce License
+// Rootstock Manufacturing & Supply Chain Embedded Partner Admin User PLTN (Ltd Use - Salesforce License
+// Rootstock Manufacturing & Supply Chain Embedded User PLTN (Limited Use) - Platform License
+// Rootstock Manufacturing & Supply Chain Embedded User SLV (Limited Use) - Platform License
+Integer authorizedUsers = 0;  // set to total of Platform Licenses plus 1 for the admin license (do not include Shop Floor licenses in 
+Integer paidUsers = 0;
+
+// Set shopfloorOnlyUsers to 50 x number of licenses for this product:
+// Rootstock Manufacturing & Supply Chain LIGHT Embedded - 50 User Bundle - Platform License
+Integer shopfloorOnlyUsers = 0;
+
+// The SF provisioning increases the org's Platform license count by the total of the 3 Platform License products.
+// Per Chuck, we do not (cannot) sell a customer a Salesforce (full CRM) license except for the 2 admin products
+
+//Boolean FFActive = true; //assumes QB is set to false
+// Edit syconfig record to set Financial System Interface field - old fields are still set based on FFA or not but are hidden
+
+syactivity__c activity = new syactivity__c();
+activity.name = 'SYACTIVITY';
+activity.syactivity_mrprunseq__c = 1;
+Database.insert(activity);
+
+syconfig__c config = new syconfig__c();
+config.name = 'SYCONFIG';
+config.syconfig_purchase__c = true;
+config.syconfig_divnumbers__c = 1;
+config.syconfig_acctgpackage__c = '0'; // must set value otherwise it's set to null
+//config.syconfig_acctgpackage__c = FFActive?'1':'0';  // 1=FFA 0=Other
+config.syconfig_solidworksint__c = false;
+config.syconfig_multidiv__c = true;
+config.syconfig_sysrevlvl__c = 2.000000;
+config.syconfig_intrsiteplng__c = true;
+config.syconfig_autocadint__c = false;
+config.syconfig_mrp__c = true;
+config.syconfig_inventory__c = true;
+config.syconfig_gradelvl__c = 999;
+config.syconfig_ffinvoice__c = false;
+config.syconfig_sales__c = true;
+config.syconfig_ffint__c = false; // must override field's default setting of true
+//config.syconfig_ffint__c = FFActive?true:false;
+//config.syconfig_quickbooks__c = FFActive?false:true;
+config.syconfig_financials__c = ' ';
+config.syconfig_intrdivplng__c = true;
+config.syconfig_subcontract__c = true;
+config.syconfig_disassembly__c = false;
+config.syconfig_proditem_bom__c = true;
+config.syconfig_scheduling__c = true;
+config.syconfig_numbauthusers__c = authorizedUsers;
+config.syconfig_numbpayusers__c = paidUsers;
+config.syconfig_numblaboronlyusers__c = shopfloorOnlyUsers;
+config.syconfig_workorder__c = true;
+config.syconfig_arenaint__c = false;
+config.syconfig_ffprojidfld__c = 'RS_PROJECT_ID__C';
+config.syconfig_password__c = 'aqJF8AeMPr42HcvvD6QOug==';
+config.syconfig_helpurl__c = 'http://www.rootstock.com/wp-content/uploads/';
+config.syconfig_allocations__c = true;  // Allocations 
+config.syconfig_configsoe__c = true; // Product Configurator
+config.syconfig_poloader__c  = true; // POLOADER Object Active
+//config.CurrencyIsoCode = 'USD';
+Database.insert(config);
+config.triggeroptions__c = '{"SAE":"1"}'; //SAE means Skip 
+config.syconfig_password__c = 'Enter password here';
+Database.update(config);
+
+
+sygradefunc__c gradeFunc = new sygradefunc__c();
+gradeFunc.name = 'SYGRADEFUNC';
+gradeFunc.sygradefunc_concursched_lvl__c = 200;
+gradeFunc.sygradefunc_multsite_lvl__c = 200;
+gradeFunc.sygradefunc_abccycphy_lvl__c = 200;
+gradeFunc.sygradefunc_allocation_lvl__c = 200;
+gradeFunc.sygradefunc_calendovr_lvl__c = 200;
+gradeFunc.sygradefunc_rwkword_lvl__c = 200;
+gradeFunc.sygradefunc_cstrollup_lvl__c = 200;
+gradeFunc.sygradefunc_nonnettable_lvl__c = 200;
+gradeFunc.sygradefunc_landedcost_lvl__c = 200;
+gradeFunc.sygradefunc_rcvginsp_lvl__c = 200;
+gradeFunc.sygradefunc_poagr_lvl__c = 200;
+gradeFunc.sygradefunc_labmacheff_lvl__c = 200;
+gradeFunc.sygradefunc_vendrfq_lvl__c = 200;
+gradeFunc.sygradefunc_proj_lvl__c = 200;
+gradeFunc.sygradefunc_scrap_lvl__c = 200;
+gradeFunc.sygradefunc_routing_lvl__c = 200;
+gradeFunc.sygradefunc_outsideop_lvl__c = 200;
+gradeFunc.sygradefunc_eco_lvl__c = 200;
+gradeFunc.sygradefunc_bomrtglink_lvl__c = 200;
+gradeFunc.sygradefunc_requisition_lvl__c = 200;
+gradeFunc.sygradefunc_consigned_lvl__c = 200;
+Database.insert(gradeFunc);
+
+/*
+syinstall__c install = new syinstall__c();
+install.name = 'SYINSTALL';
+install.syinstall_mrp__c=true;
+install.syinstall_solidworksint__c=false; 
+install.syinstall_stdcost__c=true; 
+install.syinstall_divnumbers__c=1; 
+install.syinstall_nsitemlotallowind__c=false; 
+install.syinstall_ohdmachind__c=true; 
+install.syinstall_arenaint__c=false; 
+install.syinstall_projctl__c=true; 
+install.syinstall_shopfloor__c=true; 
+install.syinstall_ohdfrngind__c=true; 
+install.syinstall_oploggingactive__c=false; 
+install.syinstall_nsitemsrlallowind__c=false; 
+install.syinstall_ohdlabind__c=true; 
+install.syinstall_mrplock__c=false; 
+install.syinstall_maxusercount__c = authorizedUsers; 
+install.syinstall_ohdmtlind__c=true; 
+install.syinstall_advinvcost__c=true; 
+install.syinstall_intrsiteplng__c=true; 
+install.syinstall_scheduling__c=true; 
+install.syinstall_useprimary__c=false; 
+install.syinstall_oneworldint__c=false; 
+install.syinstall_dflt_run_immediate__c=false; 
+install.syinstall_forecasting__c=true; 
+install.syinstall_multipodlvry__c=false; 
+install.syinstall_eco__c=true; 
+install.syinstall_multidivind__c=true; 
+install.syinstall_arena_append_rev__c=false; 
+install.syinstall_realtimecogs_ui__c=false; 
+install.syinstall_upditemopt__c=0; 
+install.syinstall_wosoordnumopt__c=true; 
+install.syinstall_converscostqtyopt__c=0; 
+install.syinstall_intrdivplng__c=true; 
+install.syinstall_subcontract__c=true; 
+install.syinstall_outsrcdmfg__c=true; 
+install.syinstall_multisite__c=true; 
+install.syinstall_shopflract__c=true;
+install.syinstall_multicmpind__c=true; 
+install.syinstall_disassembly__c=false; 
+install.syinstall_autocadint__c=false;
+install.syinstall_scheduledatetype_pl__c = 'Shop Calendar';
+Database.insert(install);
+*/
+
+symrpordassign__c mrpordassign = new symrpordassign__c();
+mrpordassign.name = 'SYMRPORDASSIGN';
+mrpordassign.symrpordassign_lstdivordno__c = '1000';
+mrpordassign.symrpordassign_lstdreqordno__c = '1000';
+mrpordassign.symrpordassign_lstinddmdordno__c = '1000';
+mrpordassign.symrpordassign_lstreqordno__c = '1000';
+mrpordassign.symrpordassign_lstsiteordno__c = '1000';
+mrpordassign.syordnumassign_lstsoagreeno__c = '1000';
+mrpordassign.syordnumassign_lstsoordno__c = '1000';
+mrpordassign.symrpordassign_lstwoordno__c = '1000';
+Database.insert(mrpordassign);
+
+
+sydefault__c default1 = new sydefault__c();
+default1.name = 'SYDEFAULT';
+default1.sydefault_scheduledateype__c = 'Shop Calendar';
+default1.sydefault_soprodaddopt__c = 'B';
+default1.sydefault_addsfaccount__c = true;
+default1.sydefault_addrpolicycust__c = true;
+default1.sydefault_addrpolicyvend__c = true;
+default1.sydefault_autormacase__c = true;
+Database.insert(default1);
+
+
+syrecinit__c recinit = new syrecinit__c();
+recinit.name = 'SYRECINIT';
+Database.insert(recinit);
+
+
+
+
+
+
+
+
+

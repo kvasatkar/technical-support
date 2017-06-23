@@ -1,0 +1,8 @@
+NAME,RSTK__APPSECURITYKEY__C,RSTK__HEADER__C,RSTK__HREF__C,RSTK__ID__C,RSTK__IMAGECLASS__C,RSTK__INACTIVE__C,RSTK__KEYPREFIX__C,RSTK__LABEL__C,RSTK__LEVEL__C,RSTK__PAGE__C,RSTK__PARENTID__C,RSTK__RECORDTYPE__C,RSTK__SECNSEQUENCE__C,RSTK__SEQUENCE__C,RSTK__SUBSECTION__C,RSTK__APPROVAL_ENABLED__C,RSTK__PAGEKEY__C,RSTK__MENUTYPE__C,RSTK__ACTIVITY_ENABLED__C
+Configuration Group,m_confgroup__c,salesordersu,/apex/listview?recType=confgroup,312,Custom57Mru,FALSE,,Configuration Group,1,,16,confgroup,,29,Maintenance,FALSE,confgroup__c,,FALSE
+Configuration Selection,m_confsel__c,salesordersu,/apex/listview?recType=confsel,312,Custom57Mru,FALSE,,Configuration Selection,1,,16,confsel,,30,Maintenance,FALSE,confsel__c,,FALSE
+Selection Component,m_confcomp__c,salesordersu,/apex/listview?recType=confcomp,312,Custom57Mru,FALSE,,Selection Component,1,,16,confcomp,,31,Maintenance,FALSE,confcomp__c,,FALSE
+Selection Exclusion,m_confexcl__c,salesordersu,/apex/listview?recType=confexcl,312,Custom57Mru,FALSE,,Selection Exclusion,1,,16,confexcl,,32,Maintenance,FALSE,confexcl__c,,FALSE
+Selection Recommendation,m_confrec__c,salesordersu,/apex/listview?recType=confrec,312,Custom57Mru,FALSE,,Selection Recommendation,1,,16,confrec,,34,Maintenance,FALSE,confrec__c,,FALSE
+Selection Requirement,m_confreq__c,salesordersu,/apex/listview?recType=confreq,312,Custom57Mru,FALSE,,Selection Requirement,1,,16,confreq,,33,Maintenance,FALSE,confreq__c,,FALSE
+Product Configurator,m_confsess__c,salesorder,/apex/listview?recType=confsess,312,Custom57Mru,FALSE,,Product Configurator,1,,15,confsess,,6,Processes,FALSE,confsess__c,,FALSE
