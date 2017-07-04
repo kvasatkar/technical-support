@@ -1,0 +1,1709 @@
+17)  14664
+
+paysession__c.object- Insync
+
+
+18)  14434
+
+povclasscmpno__c – in sync
+povclasscmpno__c- in sync
+
+
+19) 14457
+ 
+glyear.page
+
+20)  14365
+
+ControllerExtn.cls
+ControllerExtnGlacct.cls
+TestControllerExtnGlacct.cls
+TestTHGlacct.cls
+THGlacct.cls
+CustomLabels.labels
+glacct.page
+glacct_cli.resource
+
+21)  14607
+
+glcloseProcessor.page
+
+22)  14505
+
+Statement.cls
+
+23)  12117 – in sync with pde4f
+For the Help Text issues below you can redeploy the object from pde3f to pde5f as long as there are no other differences.  Otherwise, copy and paste Help Text from pde3f.
+GLDIV
+GLCMP
+GLUSR
+GLUSRCMP – 
+Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLACCT – 
+glacct_apaccttype__c – enable ‘Sort values alphabetically’ option – It is already enabled
+glacct_araccttype__c - enable ‘Sort values alphabetically’ option ¬¬- It is already enabled
+Delete ‘GL_Accounts_Dan’ list view in pde5f
+Also Deleted ‘GL_Accounts_Rod’ list view in pde5f
+
+
+	           
+GLPROJ
+	Delete ‘All_Financial_Project_Master’ list view in pde4f
+Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+
+GLAPCC
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLYEAR
+SYFOREXSCHEDNO
+GLRSN
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLJESTDID
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLJESTDIDPD
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLAYBUD
+GLJETEMPLTH 
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLJETEMPLTD
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+GLBANKACCT
+
+24)  12119
+
+APCNTL – in sync
+POVENDCMPNO - 
+POVCLASSCMPNO -  -see 14434
+POVCLASS – In-line help text -    to be done in pde4f
+1.	Accounts Payable User
+•	The Accounts Payable User typically responsible for Vendors assigned this Vendor Class
+2.	Bank Account
+•	Set to the Bank Account that would typically be used to pay Vendors assigned this Vendor Class
+3.	Credit Card Account
+•	Set to the Credit Card Account that would typically be used to pay Vendors assigned this Vendor Class (where Pay Type = Credit Card)
+4.	Default Company for Vendor
+•	Set to the Financial Company that Vendors assigned this Vendor Class will typically be doing business with
+5.	Expense Account (GL)
+•	Set to the Expense Account that would typically be used with Vendors assigned this Vendor Class
+
+APINVH -  
+	See 14509 
+APINVTXN- a)  externalid__c
+			Case sensitive = false
+	Fix ‘RS_Payable_Transactions’ list view in pde5f – remove filters
+
+25) 14509	
+	APLib.cls
+ControllerExtnApinvh.cls
+apinvh__c.object- New field added
+a)	apinvh_batchdate__c – Fix FLS
+Delete ‘AP_Batches’ list view in pd5f	
+	
+apinvh.page
+
+	
+26) 14671 – 14555 – 14443 -- 11361
+ARLib.cls
+ARDrCrMemo.cls	
+ControllerExtnARDrCrMemo.cls
+THArinvdue.cls
+THArinvtxn.cls
+TestTHArinvtxn.cls
+THSocustcmpno.cls
+TransferSalesInvoiceToRstkAR.cls
+CustomLabels.labels
+arato__c.object – new Object
+	New fields:
+		arato_arcashd__c
+		arato_arinvtxn__c
+		arato_memotext__c
+		arinvtxn_altid__c
+
+arinvdue__c.object – i)new field
+				a) arinvdue_disctknmaint__c - there in pde4f
+			    ii) arinvdue_homevalue__c - there in pde4f
+				track history = false
+
+arinvtxn__c.object- i)New field
+				a) altextid – there in pde4f
+				b) Bill-To Address for Memo Print - there in pde4f
+	New fields:
+		arinvtxn_sumdist__c
+		arinvtxn_sumdistcr__c
+		arinvtxn_sumdistdr__c
+		arinvtxn_sumhomeamt__c
+		arinvtxn_sumhomevalue__c
+		arinvtxn_summaintamt__c
+		arinvtxn_summaintvalue__c
+		
+
+
+			   
+   ii) Listview added
+a)	CustStmtTestARINVTXN
+
+		Field Help text does not exist in pde5f for arinvtxn_billto__c – fix by copy/paste from pde3f	- there is no help text for this field
+customextf__c.object- i) new field
+					aratb_dayslist__c
+					arcuststmt_statementdate__c
+					arsir_frdate__c
+					arsir_period__c
+arsir_salesdiv__c
+arsir_status__c
+arsir_todate__c
+arsir_year__c
+					buildplrate_accountnumber__c
+					buildplrate_effectiveperiod__c
+					buildplrate_effectiveyear__c
+buildplrate_fromaccountno__c
+buildplrate_fromdate__c
+buildplrate_fromperiod__c
+buildplrate_periodordate__c
+buildplrate_ratetype__c
+buildplrate_singleaccorrange__c
+buildplrate_spotratesource__c
+buildplrate_toaccountno__c
+buildplrate_todate__c
+buildplrate_toperiod__c
+buildplrate_typeofspotratepolicy__c
+cashreceipts_crossSO__c
+createdebitmemo_statementdate__c
+mcs_onetimetextmessage__c
+mcs_statementdate__c
+reversepostdebitmemo_statementdate__c
+trialbalance_Account_Div_Dimension_Numbe__c
+trialbalance_Account_Div_Dimension_Value__c
+trialbalance_Account_Project_Dimension_N__c
+trialbalance_Account_Project_Dimension_V__c
+trialbalance_Dimension_Number__c
+trialbalance_Dimension_Value__c
+trialbalance_Division__c
+trialbalance_Project__c
+trialbalance_source_data__c
+
+				ii) inline help text
+					a) Transaction cut-off date
+						> Transaction cut-off date
+					b) Company
+						> Company
+
+				iii) New picklist
+					a) Ok to Cross Currencies?
+					Type= picklist
+					b) Ok to Cross Divisions?
+					Type= picklist 
+					c) Ok to Cross Projects? 
+					Type= picklist 
+	Field Help text does not exist in pde5f – fix by copy/paste from pde3f
+	New fields:
+		apvoucher_company__c
+apvoucher_datePrinted__c
+apvoucher_prepayind__c
+apvoucher_unitprice__c
+apvoucher_voucherEditList__c
+arinvdist_creditAcct__c
+arinvdist_debitAcct__c
+cashreceipts_aritem_allowableDisMaint__c
+cashreceipts_aritem_allowableDiscDate__c
+cashreceipts_aritem_amtAppliedARCurr__c
+cashreceipts_aritem_applicationType__c
+cashreceipts_aritem_balRemainingARCurr__c
+cashreceipts_aritem_discntAmtARCurr__c
+cashreceipts_aritem_payment__c
+cashreceipts_aritem_suggestedApplied__c
+cashreceipts_stillunapplied__c
+cashreceipts_trialpayapplied__c
+glstmtntryh_glcmp__c
+
+
+arinvh.page
+arinvtxn.page
+socustcmpno.page
+arCrDrMemo_cli.resource
+
+
+27) 14555
+
+ARLib.cls
+TestARLib.cls
+THArato.cls
+TransferSalesInvoiceToRstkAR.cls
+arato__c.object – new object see 14761
+	
+		
+armemo__c.object
+
+28) 11361
+
+ARDrCrMemo.cls
+ControllerExtnARDrCrMemo.cls
+ControllerExtnEmailTemplate.cls
+EmailTemplates.cls
+partnerSoapSforceCom.cls
+PdfControllerExtn.cls
+sobjectPartnerSoapSforceCom.cls
+TestControllerExtnARDrCrMemo.cls
+TestControllerExtnEmailTemplate.cls
+TestEmailTemplates.cls	
+TestsobjectPartnerSoapSforceCom.cls
+TestpartnerSoapSforceCom.cls
+TestPdfControllerExtn.cls
+emailtemplatedata__c.object -  Not there in pde4f – Fix FLS for all fields
+arinvtxn.page
+emailTemplateDetailPrint.page	
+Notesandattachments.page
+RS_ARMemoPrint.page
+•	trunk/src/email/AR_Memo
+•	trunk/src/email/AR_Memo/ARMemoPrint.email
+
+29) 11355 - 11359
+
+ControllerExtnArcashh.cls- rev 4026
+CratoLib.cls
+CRLib.cls - 4028
+StaticList.cls	
+TestControllerExtnArcashh.cls
+TestCratoLib.cls
+TestCRLib.cls
+THArcashd.cls
+THArcashh.cls
+CustomLabels.labels
+arapplic__c.object –altextid__c 
+arcashd__c.object – New field
+				a) arcashd_arappliccount__c 
+				b) arcashd_checkedouton__c 
+				c) arcashd_checkedoutto__c 
+
+			 new piscklist value
+				arcashd_paymenttype__c 
+				a) No Payment 
+
+			arcashd_payseq__c 
+				Track history=false
+				Type= autonumber
+
+			RS_Cash_Receipts_Details
+				Check listview order
+	New fields:
+		arcashd_totalcredits__c
+		arcashd_totalcreditscash__c
+		arcashd_totaldebits__c
+		arcashd_totaldebitscash__c
+		
+						
+arcashddist__c.object – New field
+				a) altextid__c 
+
+				arcashddist_seq__c 
+					Track history=false
+					Type= autonumber 
+				
+				RS_Cash_Receipts_Distributions 
+					Check listview order
+	New field:
+		arcashddist_dramtcash__c
+arcashddist_cramtcash__c
+
+arcashh__c.object – New field
+				a) altextid__c 
+				b) arcashh_autosummed__c 
+				c) arcashh_checkedouton__c 
+				d) arcashh_checkedoutto__c 
+					e) arcashh_discountgracedays__c 
+
+			New Listview values
+			RS_Cash_Receipts 
+				arcashh_glcmp__c 
+				arcashh_trandate__c 
+arcashh.page
+arcashhview.page
+arcashh_cli.resource
+
+
+30) 14443
+
+ARLib.cls
+ARDrCrMemo.cls
+ControllerExtnArcntl.cls – rev 4089
+ControllerExtnARDrCrMemo.cls
+ControllerExtnArinvh.cls
+ControllerNotesandattachments.cls
+TestControllerExtnARDrCrMemo.cls
+TestControllerExtnArinvh.cls
+TestControllerNotesandattachments.cls
+TestTHArinvh.cls
+THArato.cls
+THArinvh.cls
+THArinvtxn.cls
+footerInclude.component
+arinvtxn__c-Receivable Transaction Layout.layout
+arinvdist__c.object
+arinvdue__c.object
+arinvh__c.object
+socustcmpno__c – New field added.
+				a) socustcmpno_maintvalue__c
+				b) socustcmpno_maintcurr__c
+c) socustcmpno_homevalue__c – 
+arcntl.page
+arinvh.page
+arinvtxn.page
+arinvhView.page
+arCrDrMemo_cli.resource
+arato.trigger
+
+
+31) 11359
+
+ControllerExtnARSalesInvoiceReview.cls
+ControllerExtnARStatFinCharges.cls	
+CreateDebitMemoProcessor.cls
+MonthlyCustomerStatProcessor.cls - 4101
+StaticList.cls
+ReversePostDebitMemoProcessor.cls
+TestControllerExtnARStatFinCharges.cls
+TestLib.cls
+TestTHArcuststmt1.cls
+TestTHArcuststmt2.cls
+TestTHArcuststmt3.cls
+TestTHArcuststmt4.cls
+TestTHArcuststmt5.cls
+ THArcuststmt1.cls
+	
+THArcuststmt2.cls
+THArcuststmt3.cls
+THArcuststmt4.cls
+THArcuststmt5.cls
+CustomLabels.labels
+arcuststmt1__c.object - New field: altextid__c
+arcuststmt2__c.object - New field: altextid__c
+arcuststmt3__c.object – new field altextid added.
+
+arcuststmt4__c.object – new field
+					altextid
+					arcuststmt4_lineno__c
+					formula_extid__c
+					formula_name__c
+
+arcuststmt5__c.object – new field
+					arcuststmt5_seq__c
+					formula_extid__c
+					formula_name__c
+arcustomerstatement.page
+arcustomerstatementpdfreport.page
+arsalesinvoicereview.page
+arstatandfincharges.page
+createdebitmemo.page
+MonthlyCustomerStat.page
+reversepostdebitmemo.page
+arcuststmt1_cli.resource
+arcuststmt2_cli.resource
+arcuststmt3_cli.resource
+arcuststmt4_cli.resource
+arcuststmt5_cli.resource
+arstatandfincharges_cli.resource
+commonlib.resource
+arcuststmt1.trigger
+arcuststmt2.trigger
+arcuststmt3.trigger
+ arcuststmt4.trigger
+arcuststmt5.trigger
+
+
+32) 14526
+
+ControllerExtnGlcmp.cls
+TestControllerExtnGlcmp.cls
+TestTHGlcmp.cls
+THGlclose.cls
+THGlcmp.cls
+CustomLabels.labels
+glcmp__c.object – in sync
+glcmp.page
+glcmp_cli.resource
+
+  33) 14498
+  
+  TestControllerExtnGlyear.cls
+ControllerExtnGlyear.cls
+
+34) 14456	
+
+apinvh.page
+
+35) 14334
+
+apVoucherReport.page
+
+
+
+36) 15082
+
+ARDrCrMemo.cls
+ControllerExtnArcntl.cls
+ControllerExtnARDrCrMemo.cls
+ControllerExtnEmailTemplate.cls
+PdfControllerExtn.cls
+Request.cls
+TestControllerExtnEmailTemplate.cls
+TestPdfControllerExtn.cls
+TestRequest.cls
+ARMemoPrint.email
+ARMemoPrint.email-meta.xml
+CustomLabels.labels
+emailtemplatedata__c.object – New field
+						a) emailtemplatedata_currency__c
+	New object – fix FLS on all fields
+arinvtxn.page
+emailTemplateDetailPrint.page
+RS_ARMemoPrint.page
+
+
+37) 15191
+
+arcntl__c.object
+	
+
+
+38) 14553
+	
+glacct__c.object – Redundant listviews in pde5f of different users.
+	glacct_apaccttype__c – enable ‘Sort values alphabetically’ option – pde4f will automatically get updated – this is a manual step on customer orgs
+	glacct_araccttype__c - enable ‘Sort values alphabetically’ option
+	Remove filter on RS_GL_Accounts list view
+
+
+
+39) 15119
+
+ControllerExtnArcntl.cls
+THArcntl.cls
+
+40) 15159
+
+ControllerExtnARDrCrMemo.cls
+ControllerExtnArinvh.cls
+TestPdfControllerExtn.cls
+THArinvh.cls
+THArinvtxn.cls
+CustomLabels.labels
+arinvh.page
+arinvtxn.page
+Notesandattachments.page
+arCrDrMemo_cli.resource
+
+41) 14721
+
+ControllerExtnCreditAppReport.cls
+CustomLabels.labels
+vendorcrapp.page
+vendorcrapp_cli.resource
+
+42) 11410
+
+TestControllerExtnOpenItemApplication.cls
+
+
+43) 15290
+
+arcntl_cashtoglpolicy_c - Deactivate picklist values
+						a)Never Default
+						b)Allow Override – TBD in pde4f
+
+44) 14384
+
+AgedTrialBalanceReport.page
+aragedtrialbalance.page
+ardebitcreditmemoregister.page
+arsalesinvoicereview.page
+cashreceiptsjournal.page
+ChkRegisterSinglePaymentBatch.page
+MonthlyCheckRegister.page
+PeriodicPaymentRegister.page
+
+
+45) 15250
+
+AbstractBatchJob.cls
+AgedTrialBalanceReportController.cls
+APLib.cls
+AppSettings.cls
+BatchProcessor.cls
+ControllerExtn.cls
+ControllerExtnAPBatchTransfer.cls – rev 4381
+ControllerExtnApcntl.cls
+ControllerExtnAPProcess.cls
+ControllerExtnARAgedTrialBalance.cls
+ControllerExtnArcntl.cls
+ControllerExtnARDebitCreditMemoRegister.cls
+ControllerExtnARSalesInvoiceReview.cls
+ControllerExtnBuildGltxnplrate.cls
+ControllerExtnCashReceiptsJournal.cls
+ControllerExtnChkRegisterSinglePayment.cls
+ControllerExtnCreditAppReport.cls	
+ControllerExtnGltxnplrateDetails.cls
+ControllerExtnMonthlyCheckRegister.cls
+ControllerExtnPeriodicPaymentRegister.cls
+ControllerExtnPovend.cls
+ControllerExtnSocustcmpno.cls
+ControllerExtnView.cls
+ObjectSaver.cls
+SDocsMassMergeChecksClass.cls
+TrialBalanceReportController.cls
+CustomLabels.labels
+apinvh.page
+glfstmplt2.page
+glfstmplt3.page
+glfstmplt4.page
+glfstmplt5.page
+gljetempltd.page
+glStmtListView.page
+paysession.page
+StatementMaint.page
+
+
+46) 14670
+
+APLib.cls
+ControllerExtn.cls
+TestAPPaymentSelection.cls – rev 4168
+TestARLib.cls – rev 4167
+TestControllerExtnAPVoucherReport.cls
+TestControllerExtnArcashh.cls 
+TestControllerExtnCashReqReport.cls
+TestControllerExtnCreditAppReport.cls
+TestControllerExtnGlbankacctReconcile.cls
+TestControllerExtnGljetemplth.cls
+TestControllerExtnGljh.cls
+TestControllerExtnOpenItemApplication.cls
+TestControllerExtnPaymentSelection.cls
+TestControllerExtnStatement.cls
+TestControllerExtnStatementEntryDetail.cls
+TestCratoLib.cls
+TestCRLib.cls
+TestCurrencyExchangeRateUtil.cls
+TestGlbankacctReconcile.cls
+TestGlbankacctReconcileProcessor.cls
+TestPaymentSelectionProcessor.cls
+TestTHPaysessinv.cls
+TestTHPaysession.cls
+TestTHPaysessvend.cls
+TestTransferSalesInvoiceToRstkAR.cls
+THApcntl.cls 
+apcntl__c.object – Remove validation rule
+				AP Clearing Account is required
+apcntl.page
+
+
+
+47) 15215 - 5
+	
+ControllerExtnCashReceiptsJournal.cls
+cashreceiptsjournal.page
+cashreceiptsjournalpdfreport.page
+cashreceiptsjournalreportview.page
+
+48) 14653-5
+CustomLabels.labels
+
+49) 15483 - 5
+ControllerExtnAPProcess.cls
+
+50) 14676 - 5
+APLib.cls
+
+51) 15527 - 5
+arcntl__c.object
+glacct__c.object
+
+52) 15275 - 5
+ControllerExtnArinvh.cls
+THArinvtxn.cls
+arinvh.page
+arinvtxn.page	
+arCrDrMemo_cli.resource
+arinvtxn.trigger
+
+
+53) 15511 - 5
+ControllerExtnArcntl.cls
+54) 14566 - 5
+APLib.cls
+ControllerExtnApinvh.cls
+ControllerExtnPovend.cls
+THApato.cls
+CustomLabels.labels
+apinvh.page
+
+
+55)       14630
+a.       APPaymentSelection.cls
+b.      ControllerExtnCashReqReport.cls
+c.       ControllerExtnPaymentSelection.cls
+d.      StaticList.cls
+e.      TestAPPaymentSelection.cls
+f.        TestControllerExtnPaymentSelection.cls
+g.       TestPaymentSelectionProcessor.cls
+h.      TestTHPaysessinv.cls
+i.         TestTHPaysession.cls
+j.        TestTHPaysessvend.cls
+k.       THApinvtxn.cls
+l.         THPaysessinv.cls
+m.    THPaysession.cls
+n.      THPaysessvend.cls
+o.      paysession__c.object
+                                                               i.      New picklist values:
+                                                             ii.      paysession_status__c
+1.       Completed With Errors
+                                                            iii.      paysession_vendorsel__c
+1.       By Bank Account
+56)       14633
+a.       ControllerExtnARSalesInvoiceReview.cls
+b.      CustomLabels.labels
+c.       arsalesinvoicereview.page
+57)       11359 – commits > Mar 13
+a.       ControllerExtnARStatFinCharges.cls
+b.      MonthlyCustomerStatProcessor.cls
+c.       TestTHArcuststmt3.cls
+d.      THArcuststmt3.cls
+e.      arcuststmt5__c.object
+                                                               i.      New field:
+1.       arcuststmt5_eff_trantype__c
+58)       14738 – commits > Mar 3
+a.       gldiv__c.object
+59)       15163
+a.       glfstmplt2.page – already in sync
+b.      glfstmplt2_cli.resource
+c.       glfstmplt3_cli.resource
+d.      glfstmplt4_cli.resource
+60)       15493
+a.       APLib.cls – already in sync
+b.      ControllerExtnApinvh.cls
+c.       apinvh.page
+61)       14816
+a.       ControllerExtnGlproj.cls
+b.      TestControllerExtnGlproj.cls
+c.       glproj.page
+d.      glproj_cli.resource
+62)       14797
+a.       ControllerExtnARDebitCreditMemoRegister.cls
+b.      CustomLabels.labels - already in sync
+c.       customextf__c.object
+                                                               i.      New fields:
+1.       memoregister_IncludeUnpostedBatchesOnly__c
+2.       memoregister_IncludeUnpostedMemosOnly__c
+3.       memoregister_PostUnpostedBatchesAfterRep__c
+4.       memoregister_PostUnpostedMemosAfterRepor__c
+5.       memoregister_ThroughCustomer__c
+6.       memoregister_company__c
+7.       memoregister_fromDate__c
+8.       memoregister_from_customer__c
+9.       memoregister_memosource__c
+10.   memoregister_memotype__c
+11.   memoregister_throughDate__c
+d.      ardebitcreditmemoregister.page
+e.      ardebitcreditmemoregistercsvreport.page
+f.        ardebitcreditmemoregisterpdfreport.page
+g.       ardebitcreditmemoregisterreportview.page
+ 
+ 
+63)       15350
+a.       ControllerExtnArcashh.cls
+b.      CRLib.cls
+c.       arcashd__c.object
+                                                               i.      arcashd_paymenttype__c - Set default = true
+d.      arcashh__c.object
+                                                               i.      arcashh_paycount__c – data type cannot be changed from Number to Summary in pde5f/package
+e.      arcashh.page
+f.        arcashh_cli.resource
+
+64)       11355 – commits > Mar 9 10:53 AM
+a.       ControllerExtnArcashh.cls
+b.      CRLib.cls
+c.       arcashh__c.object – see 15350
+d.      arcashh.page
+e.      arcashh_cli.resource
+
+65)       15458
+a.       ControllerExtnArcashh.cls
+b.      CRLib.cls
+c.       arcashh.page
+d.      arcashh_cli.resource
+
+66) 15536
+a.	ControllerExtnARStatFinCharges.cls
+b.	MonthlyCustomerStatProcessor.cls
+c.	TestTHArcuststmt4.cls
+d.	TestTHArcuststmt5.cls
+e.	THArcuststmt4.cls
+f.	THArcuststmt5.cls
+g.	arcuststmt4__c.object
+i.	New field:
+1.	arcuststmt4_lineseq__c
+ii.	Delete/erase field:
+1.	arcuststmt4_lineno__c (pde4f only)
+h.	arcuststmt5__c.object
+i.	New field:
+1.	arcuststmt5_seqno__c
+ii.	Delete/erase field:
+1.	arcuststmt5_seq__c (pde4f only)
+i.	arstatandfincharges.page
+
+
+67) 15608/15696
+APLib.cls
+ControllerExtnApinvh.cls
+apinvh.page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Financials Release – 17.2
+
+1)14587
+
+CustomLabels.labels
+periodAndJEChecklistProcess.page
+
+2)14582
+
+ControllerExtnAPVoucherReport.cls
+PayableBatchData.cls
+CustomLabels.labels
+apVoucherReport.page
+apVoucherCSVExport.page
+
+3)15297
+
+THGlbankacct.cls
+CustomLabels.labels
+
+
+4)15537	
+
+ControllerExtnARSalesInvoiceReview.cls
+TestControllerExtnARSalesInvoiceReview.cls
+StaticList.cls
+CustomLabels.labels
+customextf__c.object – New fields 
+					arsalesinvoice_createdDate__c
+					arsalesinvoice_glcmp__c
+					cashreceipts_netcashpay__c
+					crjournal_date__c
+trialbalance_sourcedata__c
+              			trialbalance_source_data_obsolete 
+
+
+arsalesinvoicereview.page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5)15726
+
+AgedTrialBalanceReportController.cls
+ControllerExtnAPBatchTransfer.cls
+ControllerExtnOpenItemApplication.cls
+StaticList.cls
+CustomLabels.labels
+apato__c.object
+apinvdist__c.object
+apinvh__c.object
+apinvtxn__c.object
+customextf__c.object
+apinvh.page
+
+6)15780
+
+customextf__c.object
+CustomLabels.labels
+
+
+7)15559 
+PaymentSelectionProcessor.cls
+
+8)14950 – dependent on 14949
+
+CustomLabels.labels
+customextf__c.object
+glbankacctReconcile.page	
+
+
+9)15703 
+ControllerExtnPaymentSelection.cls
+CustomLabels.labels
+paysession.page
+
+10)14658
+StaticList.cls
+TrialBalanceReportController.cls
+TestTrialBalanceReportController.cls
+customextf__c.object
+TrialBalanceReport.page
+
+
+
+
+
+
+
+11) 15557 
+ControllerExtnARDebitCreditMemoRegister.cls
+TestARDebitCreditMemoRegister.cls
+THArinvh.cls
+ardebitcreditmemoregister.page
+ardebitcreditmemoregisterpdfreport.page
+ardebitcreditmemoregisterreportview.page
+
+12) 15729 
+TestTransferSalesInvoiceToRstkAR.cls
+THArinvh.cls
+TransferSalesInvoiceToRstkAR.cls	
+
+13) 15802 
+CustomLabels.labels
+glcmp__c-Company Master Layout.layout
+glcmp.page
+
+14)15909
+customextf__c.object
+
+15) 15733
+ARLib.cls
+
+16) 15871
+ControllerExtn.cls
+DateUtil.cls
+commonlib.resource
+RowHandler_js.resource
+
+17) 15782
+APGroupTransfer.page
+CustomLabels.labels
+
+
+Financials 17.3 
+
+1) 14347
+
+ControllerExtnInitializeCompAndUsrs.cls
+InitializeCompAndUsrProcessor.cls
+StaticList.cls
+TestControllerExtnInitializeCompAndUsrs.cls
+TestInitializeCompAndUsrProcessor.cls
+TestLib.cls
+CustomLabels.labels
+InitializeCompAndUsrs.page
+initializeCompAndUsrs_cli.resource
+
+2) 15600
+ControllerExtnApinvh.cls
+apinvh.page
+
+
+3) 16006
+socustcmpno_cli.resource
+
+	
+
+5) 15733
+ARLib.cls
+
+6) 16124
+
+gltxn__c.object – new field
+				gltxn_isyearendadj__c
+
+gljh__c.object – new field
+			gljh_cmpno__c
+gljh_date__c
+gljh_isadjustment__c
+gljh_number__c
+
+
+socustcmpno – new field
+		socustcmpno_statementemail__c
+		
+APAPPLIC
+APPAYH
+AP1099
+GLJD
+ARCNTL
+glfstmplt7
+glfstmplt8
+socustcmpno
+CUSTOMEXTF
+
+7) 15812
+ControllerExtnGljetemplth.cls
+JournalEntryTemplate.cls
+TestControllerExtnGljetemplth.cls
+CustomLabels.labels
+gljetemplthlist.page	
+
+8) 16118
+AppSettings.cls
+ARDrCrMemo.cls - 15835
+ControllerExtnARStatFinCharges.cls –  15580
+ControllerNotesandattachments.cls
+DateUtil.cls
+EmailTemplates.cls
+EmailUtil.cls
+ExceptionUtil.cls
+Journal.cls - 15835
+Metadata.cls
+NumberUtil.cls
+ObjectSaver.cls
+ObjectUtil.cls
+partnerSoapSforceCom.cls
+PayableBatchData.cls
+PdfControllerExtn.cls
+Request.cls
+RSFinancialsImpl.cls - 15835
+SelectLists.cls
+Statement.cls – 15835
+StringUtil.cls
+THArato.cls
+THArcntl.cls
+THArcuststmt1.cls
+THArcuststmt2.cls
+THArcuststmt3.cls - 15580
+THArcuststmt4.cls - 15580
+THArcuststmt5.cls - 15580
+THGlato.cls
+THGlay.cls
+THGlaydim.cls
+THGlaydimdiv.cls
+THGlaydimproj.cls
+THGlaydiv.cls
+THGlayproj.cls
+THGlfstmplt1.cls – rev 4967
+THGlfstmplt2.cls – rev 4974
+THGlfstmplt3.cls
+THGlfstmplt4.cls
+THGlfstmplt5.cls
+THGlfstmplt6.cls
+THGlfstmplt7.cls
+THGlfstmplt8.cls
+THGljd.cls
+THGljh.cls
+THGltxn.cls
+THPovclasscmpno.cls
+THSocustcmpno.cls
+TrialBalanceReportHolder.cls
+URLUtil.cls
+
+
+9) 16084
+ControllerExtnStatement.cls
+TestControllerExtnStatement.cls
+
+
+10) 16069
+povclasscmpno.page
+
+11) 15835
+
+APLib.cls
+APPaymentSelection.cls – rev 5044
+ARDrCrMemo.cls
+ARLib.cls
+ControllerExtnApinvh.cls
+ControllerExtnArinvh.cls
+ControllerExtnBuildGltxnplrate.cls
+ControllerExtnGlcloseProcessor.cls
+ControllerExtnGlyear.cls
+ControllerExtnPeriodJEChklistProcessor.cls
+ControllerExtnStatement.cls
+GlaybudUpdator.cls
+GlaystmtBuilder.cls
+GLCloseProcessor.cls
+GlcloseReopenProcess.cls
+GLFinStmtGenerator.cls – rev 4818 15009
+GLTxnSaver.cls
+Journal.cls
+NewPeriodProcessor.cls
+RSFinancialsImpl.cls
+Statement.cls
+StaticList.cls
+TestControllerExtnGlaybud.cls
+TestControllerExtnGlclose.cls
+TestControllerExtnGlcloseProcessor.cls
+TestControllerExtnGlyear.cls
+TestGLCloseProcessor.cls
+TestGLCloseProcessor2.cls
+TestGlcloseReopenProcess.cls
+TestLib.cls – rev 4896
+TestTHGlaybud.cls
+TestTHGlyear.cls
+TestTHSyforexschedno.cls
+THArinvh.cls
+THArinvtxn.cls
+THGlaybud.cls
+THGlclose.cls
+THGlstmtntryh.cls
+THGlyear.cls
+THSyforexschedno.cls
+TransferSalesInvoiceToRstkAR.cls
+CustomLabels.labels
+glato__c-GL Add Transaction Object Layout.layout
+glaybud__c-GL Account Year Budget Layout.layout
+gltxn__c-GL Transaction Layout.layout
+glyear__c-FiscalYearF Layout.layout
+glato__c.object – new field
+				glato_isyearendadj__c
+glaybud__c.object
+gltxn__c.object
+glyear__c.object – new field
+				glyear_yearendadj__c
+			delete validation rule
+				nogapinperiod12endandperiod13Startdate
+				netprofitaccountisrequired
+				period13closedforadjnotbechanged
+				period13closedtopostnotchnged
+				period13endingdateisrequired
+				period13mustbegrthanperiod12end
+glaybud.page
+glcloseProcessor.page
+glyear.page
+TrialBalanceReport.page
+glaybud_cli.resource
+glcloseProcessor_cli.resource
+glyear_cli.resource
+
+12)16120
+Paysession_c – Delete ‘Print Checks’ button
+ControllerExtnARCustomerStatement.cls
+ControllerExtnCreateDebitMemo.cls
+ControllerExtnMonthlyCustomerStat.cls
+ControllerExtnReversePostDebitMemo.cls
+TestControllerExtnARCustomerStatement.cls 
+TestControllerExtnCreateDebitMemo.cls
+TestControllerExtnMonthlyCustomerStat.cls 
+TestControllerExtnReversePostDebitMemo.cls
+
+13) 16260 – 17.3.1 (patch)
+ControllerExtnEmailTemplate.cls
+ControllerNotesandattachments.cls
+PaymentSelection.page – file deleted in pde3f – deploying as a stub
+
+Financials 17.4
+
+1) 15460
+
+ControllerExtnCashReceiptsJournal.cls
+TestControllerExtnCashReceiptsJournal.cls
+CustomLabels.labels
+customextf__c.object
+cashreceiptsjournal.page	
+cashreceiptsjournalpdfreport.page
+cashreceiptsjournalreportview.page
+
+2) 14435 
+
+GlbankacctReconcile.cls
+ScriptExecutor.cls
+TestScriptExecutor.cls
+THGlbankacct.cls
+glbankacct__c.object
+glbankacct.page
+glbankacctReconcile.page
+
+3)  14414
+ControllerExtnPovendcmpno.cls
+povendcmpno.page
+
+4) 15819
+ControllerExtnMonthlyCheckRegister.cls
+
+5) 16164
+APPaymentSelection.cls
+TestAPPaymentSelection.cls
+
+6)16110
+glfstmplt1
+glfstmplt2
+glfstmplt3 – new fields
+glfstmplt3_period13policy__c
+glfstmplt3_yearoffset__c
+
+glfstmplt4
+glfstmplt5
+
+7) 16238 
+ControllerExtnGldiv.cls
+CurrencyUtil.cls
+GlaybudUpdator.cls
+GLFinStmtGenerator.cls
+NewPeriodProcessor.cls
+TestControllerExtnGldiv.cls
+TestControllerExtnGlfstmplt2.cls
+TestGLFinStmtGenerator.cls
+TestGlfstmplMaint.cls
+TestInitializeCompAndUsrProcessor.cls
+TestNewPeriodProcessor.cls
+TestTHPovclasscmpno.cls
+TestTHPovend.cls
+THPovclasscmpno.cls
+THPovend.cls
+
+8)15787
+arcntl__c-AR Control Layout.layout
+arcntl__c.object
+arcntl.page
+
+9) 16104
+GLTXN
+
+10) 15580
+ControllerExtnARStatFinCharges.cls
+CratoLib.cls – rev 4771
+CreateDebitMemoProcessor.cls
+MonthlyCustomerStatProcessor.cls
+ReversePostDebitMemoProcessor.cls
+TestTHArcuststmt3.cls
+THArcuststmt3.cls
+THArcuststmt4.cls
+THArcuststmt5.cls
+CustomLabels.labels
+arcuststmt2__c-AR Statements Session Customer Layout.layout
+socustcmpno__c-Customer Company Layout.layout
+arcashd__c.object
+arcuststmt2__c.object – new field
+					arcuststmt2_socustcmpno__c
+customextf__c.object – new fields
+					glcloseproc_glcmp__c	
+					glcloseproc_glyear__c
+					glcloseproc_period__c
+socustcmpno__c.object
+arstatandfincharges.page
+socustcmpno.page
+arstatandfincharges_cli.resource
+
+11) 15870
+PayableBatchData.cls – rev 5228
+apVoucherReport.page
+
+12) 15810
+APINVH
+APINVTXN
+GLTXN
+ARINVH
+ARINVTXN
+GLJH
+GLACCT
+GLBANKACCT- new field
+			glbankacct_maskednumber__c
+GLAPCC
+GLYEAR – delete validation rule
+			retainedearningsaccountisrequired
+
+syforexschedno
+GLAYBUD
+ARCASHH
+PAYSESSION
+
+13) 14300
+PaymentSelectionProcessor.cls
+
+14) 16222
+PayableBatchData.cls
+apVoucherReport.page
+
+15) 16105
+GLATO
+
+16) 16220
+   THAppayd.cls
+APPAYD
+APAPPLIC
+GLBANKTXN – new fields
+			glbanktxn_viewbankamt__c
+			glbanktxn_viewhomeamt__c
+			glbanktxn_viewpayamt__c
+GLTXNDIM
+
+17) 15788
+ControllerExtnARDebitCreditMemoRegister.cls
+ardebitcreditmemoregister.page
+
+18) 15803
+ControllerExtnGlcloseProcessor.cls
+CustomLabels.labels
+customextf__c-customextf Layout.layout
+customextf__c.object
+glcloseProcessor.page
+glcloseProcessor_cli.resource
+
+19) 15757
+AgedTrialBalanceReportController.cls
+ControllerExtnARAgedTrialBalance.cls
+ControllerExtnARDebitCreditMemoRegister.cls
+ControllerExtnCashReceiptsJournal.cls
+ControllerExtnMonthlyCheckRegister.cls
+CustomLabels.labels
+AgedTrialBalanceReport.page
+aragedtrialbalance.page
+
+20) 15885
+TrialBalanceReportController.cls
+CustomLabels.labels
+customextf__c-customextf Layout.layout
+
+
+
+customextf__c.object – arsir_status__c
+					delete ‘All Batches’
+
+-	memoregister_memosource__c
+delete ‘A/R Memo Entry’
+
+TrialBalanceReport.page
+	
+21) 15861
+ControllerExtnARDrCrMemo.cls
+arinvtxn.page
+
+22)  15809
+CurrencyExchangeRateUtil.cls
+CustomLabels.labels
+
+23)16382
+arato__c.object
+arcuststmt2__c.object
+arcuststmt4__c.object
+
+24) 16082
+ARINVH
+ARINVTXN
+ARINVDUE
+ARMEMO
+CUSTOMEXTF
+
+25)16444
+APINVH
+
+26) 15792
+ControllerExtnArcntl.cls
+ControllerExtnGlbankacctReconcile.cls
+GlbankacctReconcile.cls
+GlbankacctReconcileProcessor.cls
+StaticList.cls
+THArcntl.cls
+arcntl__c.object
+glacct__c.object
+arcntl.page
+glbankacctReconcile.page
+
+27) 16512
+CustomLabels.labels
+apinvh.page
+
+28) 16489
+APINVH
+APINVTXN
+APINVLINE
+APCNTL 
+ARCNTL – new fields
+			arcntl_crcardprocfeeacct__c
+			arcntl_interestexpacct__c
+			arcntl_interestincomeacct__c
+ARINVH
+ARINVTXN
+ARINVDIST
+GLTXN
+GLATO
+APATO
+APINVLINEFOREX
+APPAYD
+ARCASHH
+APINVTXNFOREX
+CUSTOMEXTF – new fields
+noncashtransfer_work_div__c 
+			noncashtransfer_work_proj__c
+			noncashtransfer_work_so__c
+
+29) 15727
+ARCNTL
+ARATO
+CUSTOMEXTF
+ARINTERCO
+ARINVH
+ARINVTXN
+ARAPPLIC
+GLBANKTXN
+
+
+30) 14949
+ControllerExtnGlbankacctReconcile.cls
+GlbankacctReconcile.cls
+glbanktxn__c.object
+apcntl.page
+glbankacctReconcile.page
+glbankacctReconcile_cli.resource
+
+31)14950
+CustomLabels.labels
+customextf__c.object
+glbankacctReconcile.page
+
+32) 16121
+Menu records are updated as follows:
+ 
+Menu Record - GL Statement External Data
+
+Old href value = https://c.na30.visual.force.com/apex/listview?rectype=glfstmplt6
+New href value = https://c.na30.visual.force.com/apex/glfstmplt6
+ 
+Menu Record - GL Statement Subline Group
+Old href value = https://c.na30.visual.force.com/apex/listview?rectype=glfstmplt7
+New href value = https://c.na30.visual.force.com/apex/glfstmplt7
+
+33) 15835
+ControllerExtnGlcloseProcessor.cls
+GLCloseProcessor.cls
+GLTxnSaver.cls
+CustomLabels.labels
+glcloseProcessor_cli.resource
+
+34) 15813
+ControllerExtnBasicGrid.cls
+ControllerExtnDimensionGrid.cls
+ControllerExtnEditableGrid.cls
+ControllerExtnGljh.cls
+ControllerExtnGljhMaintenance.cls
+GridData.cls
+Journal.cls
+NewPeriodProcessor.cls
+RowUtils.cls
+TestControllerExtnBasicGrid.cls
+TestControllerExtnDimensionGrid.cls
+TestControllerExtnEditableGrid.cls
+TestControllerExtnGljh.cls
+TestControllerExtnGljhMaintenance.cls
+TestGridData.cls
+TestRowUtils.cls
+TestTHGljd.cls
+THGljd.cls
+THGljh.cls
+EditableGrid.component
+Popup.component
+CustomLabels.labels
+gljd__c-Journal Entry Detail Layout.layout
+gljh__c-Journal Entry Header Layout.layout
+gljd__c.object
+gljh__c.object
+gljd.page
+gljdDimension.page
+gljh.page
+gljhListView.page
+gljd_cli.resource
+gljh_cli.resource
+hover_popup.resource
+
+
+35) 16204
+APLib.cls
+PaymentSelectionProcessor.cls
+TestTHApcntl.cls
+TestTHGlfstmplt6.cls
+TestTHPaysessinv.cls
+THApcntl.cls
+THArcntl.cls
+THGlclose.cls
+THGlfstmplt6.cls
+THPaysessvend.cls
+THPaysessinv.cls
+THPaysession.cls
+CustomLabels.labels
+paysession.page
+paymentSelection_cli.resource
+
+36) 14678
+PaymentSelectionProcessor.cls
+apapplic__c.object
+
+37) 16481
+GLCloseProcessor.cls
+
+38) 16370
+ControllerExtnArinvh.cls
+Arinvtxn__c.object
+arinvtxn.page
+arCrDrMemo_cli.resource
+
+39) 15795
+CRLib.cls
+CustomLabels.labels
+arcashh_cli.resource
+
+40) 15865
+ARDrCrMemo.cls
+ControllerExtnARDrCrMemo.cls
+ControllerExtnArinvh.cls
+StaticList.cls
+TestArDrCrMemo.cls
+THArinvtxn.cls
+CustomLabels.labels
+arinvh.page
+arinvtxn.page
+arCrDrMemo_cli.resource
+
+41) 15602
+APLib.cls
+APPaymentSelection.cls
+ControllerExtnPaymentSelection.cls
+paysession__c.object
+paysession.page
+paymentSelection_cli.resource
+
+42) 16552
+appsecurityf__c-Application Security Layout.layout
+appsecurityf__c.object – new object
+
+43) 15580
+ControllerExtnARStatFinCharges.cls
+CreateDebitMemoProcessor.cls
+MonthlyCustomerStatProcessor.cls
+CustomLabels.labels
+socustcmpno__c.object
+arcustomerstatementpdfreport.page
+
+44) 16564
+APLib.cls
+THApato.cls
+
+45) 15020
+ControllerExtnGljh.cls
+TestJournal.cls
+TestTHGljh.cls
+THGljh.cls
+gljd__c.object
+gljhListView.page
+
+46) 14970
+glyear.page
+
+47) 16351
+ControllerExtnOpenItemApplication.cls
+StaticList.cls
+customextf__c.object – new fields
+			openitemapplic_datesel__c
+			openitemapplic_duedate__c
+			openitemapplic_includeonhold__c
+			openitemapplic_respuser__c
+			openitemapplic_sycmp__c
+			trialbalance_includeinactiveacct__c
+			trialbalance_zerobalacct__c
+OpenItemApplication.page
+
+48) 16223 – On Hold dependent on 16052
+glfstmplt2__c-Financial statement - Variant Header Layout.layout
+glfstmplt4__c-Financial statement - Line Header Layout.layout
+glfstmplt2__c.object
+glfstmplt3__c.object
+glfstmplt4__c.object – delete values
+			glfstmplt4_operator__c
+				Divide By
+glfstmplt2.page
+glfstmplt3.page
+glfstmplt4.page
+glfstmplt3_cli.resource
+glfstmplt4_cli.resource
+
+49) 15536
+ControllerExtnARStatFinCharges.cls
+TestTHArcuststmt1.cls
+TestTHArcuststmt2.cls
+TestTHArcuststmt3.cls
+TestTHArcuststmt4.cls
+TestTHArcuststmt5.cls
+THArcuststmt1.cls
+THArcuststmt2.cls
+THArcuststmt3.cls
+THArcuststmt4.cls
+THArcuststmt5.cls
+arcuststmt4__c.object
+arcuststmt5__c.object
+arstatandfincharges.page
+
+50) 15056
+NewPeriodProcessor.cls
+maintainJEChkListPopup.page
+
+51) 16590
+THPaysessinv.cls
+paysessinv.trigger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+Financials 17.6
+
+1) 14628
+ControllerExtnCashReqReport.cls
+
+2) 16667
+ControllerExtnPaymentSelection.cls
+
+3) 15186
+TrialBalanceReportController.cls
+TrialBalanceReportHolder.cls
+
+4) 16068
+glfstmplt7- new field
+		glfstmplt7_labelOpt__c 
+glfstmplt8
+gldiv – new field ‘altexid’
+glproj – new field ‘altexid’
+
+5) 16681
+AgedTrialBalanceReportController.cls
+ControllerExtnARAgedTrialBalance.cls
+ControllerExtnARDebitCreditMemoRegister.cls
+ControllerExtnARSalesInvoiceReview.cls
+ControllerExtnBuildGltxnplrate.cls
+ControllerExtnCashReceiptsJournal.cls
+ControllerExtnChkRegisterSinglePayment.cls
+ControllerExtnPeriodicPaymentRegister.cls
+ControllerExtnMonthlyCheckRegister.cls
+PostingSummaryReportController.cls
+
+6) 16701
+arinvtxn.page
+arCrDrMemo_cli.resource
+glstmtntryd_cli.resource
+PopupPageHeader_css.resource
+
+7) 16667
+ControllerExtnPaymentSelection.cls
+paymentSelection_cli.resource
+
+8) 16689
+APPaymentSelection.cls
+paysession__c.object
+
+9) 16452
+GlaystmtBuilder.cls
+Statementbuilder.page
+statementbuilder_cli.resource
+
+
+10) 15558
+ControllerExtnArcashh.cls
+CRLib.cls
+TestControllerExtnArcashh.cls
+TestCRLib.cls
+CustomLabels.labels
+arcashd__c.object
+arcashh__c.object
+arinvdue__c.object
+arinvtxn__c.object	
+customextf__c.object
+arcashh.page
+arcashh_cli.resource
+
+11) 15639
+CratoLib.cls
+
+12)16256
+ARLib.cls
+CratoLib.cls
+TestCratoLib.cls
+crato__c-CR Add Transaction Object Layout.layout
+crato__c.object
+
+13) 16792
+StatementRun.page
+CustomLabels.labels
+
+14) 16795
+StatementMaint.page
+
+15) 16796
+glStmtListView.page
+
+16) 16797
+buildgltxnplrate.page
+
+17) 16794
+Statementbuilder.page
+
+18) 15436
+PostingSummaryReportController.cls
+PostingSummaryReportHandler.cls
+TestPostingsSummaryReportController.cls
+TestPostingSummaryReportHandler.cls
+TestTrialBalanceReportController.cls
+TrialBalanceReportController.cls
+TrialBalanceReportHolder.cls
+CustomLabels.labels
+customextf__c-customextf Layout.layout
+customextf__c.object
+postingsSummaryReport.page
+postingSummaryReportcsv.page
+postingSummaryPDFReport.page
+TrialBalanceReport.page
+TrialBalanceReportcsv.page
+TrialBalancePDFReport.page
+
+19) 16458
+RSFinancialsImpl.cls
+
+
+20) 16841
+ControllerExtnApinvh.cls
+TestControllerExtnAp1099.cls
+TestControllerExtnApinvh.cls
+TestControllerExtnARAgedTrialBalance.cls
+TestControllerExtnChkRegisterSinglePmt.cls
+TestControllerExtnMonthlyCheckRegister.cls
+TestControllerExtnPeriodicPaymentRgr.cls
+TestLib.cls
+TestTHApato.cls
+TestTHGlbankacct.cls
+TestTHPovclass.cls
