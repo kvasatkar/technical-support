@@ -1,0 +1,128 @@
+17.6 Manual Steps
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a0000006Ha2
+
+17.5 Manual Steps
+All Picklist Manipulations.
+APATO - rstkf__apato_status__c
+		Add ‘Posted’
+		Deactivate ‘Transferred’
+
+-	rstkf__apato_trantype__c
+ 	Add ‘Vendor Debit’
+	Deactivate ‘Debit Memo’
+
+ARCNTL - arcntl_cashtoglpolicy__c
+		Add ‘Constant’
+		Deactivate ‘Always Default’
+
+GLBANKTXN - rstkf__glbanktxn_trantype__c
+
+		DEACTIVATE ALL VALUES STARTING FROM A/P OR A/R
+Add the following values
+
+AP Check
+AP Cash Payment
+AP EFT Payment (General)
+AP ACH Payment
+AP Credit Card Payment
+AP ACH/EFT Fees
+AP Payment Variance, Single Currency
+AP Payment Variance, Multi-Currency
+AP Voided Check
+AP Other Voided Payment
+AR Cash Deposit
+AR Credit Card Payment
+AR Cash Deposit Variance, Single Currency
+AR Cash Deposit Variance, Multi-Currency
+AR ACH/EFT Payment Reported by Bank
+Credit Card Processing Fee
+Interest Income
+Interest Expense
+
+
+
+
+
+GLFSTMPLT4 - glfstmplt4_operator__c
+		Add ‘Divided By’
+		Deactivate ‘Divide By’
+
+
+
+GLFSTMPLT3 - glfstmplt3_currentperiodmeans__c
+		Add ‘Floating Period With Offset’
+	
+		glfstmplt3_currentyearmeans__c
+		 	
+Floating Period With Offset
+Floating Year With Offset
+Calculated Column
+
+GLACCT - glacct_araccttype__c
+
+		Bank Payment Variance
+		Bank Payment Variance - Foreign Currency
+		Credit Card Processing Fee
+		Interest Expense
+		Interest Income
+
+	Deactivate
+		Bank Deposit Variance - Foreign Currency
+		Bank Deposit Variance
+
+APINVH - rstkf__apinvh_status__c
+		Activate ‘Posted’
+		Deactivate ‘Transferred’
+
+APINVTXN - rstkf__apinvtxn_trantype__c
+		Add ‘Vendor Debit’
+
+ARAPPLIC - rstkf__arapplic_nogainlossreason__c
+		Add ‘CR Side Of AR Application’
+		Deactivate ‘CR Side Of A/R Application’
+
+rstkf__arapplic_nopostreason__c
+ADD
+‘CR Side Of AR Application’
+‘AR Application Within One Control Account’
+
+		Deactivate ‘CR Side Of A/R Application’
+Deactivate ‘A/R Application Within One Control Account’
+ARINVH - arinvh_batchsource__c
+ADD ‘AR Memo Entry’
+Deactivate ‘A/R Memo Entry’
+
+CUSTOMEXTF - rstkf__memoregister_memosource__c
+Add ‘AR Memo Entry
+All Sessions’
+Deactivate ‘A/R Memo Entry’
+
+
+17.4 Manual Steps
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a0000006HUJ
+Ticket #15810
+GLYEAR – delete validation rule
+			retainedearningsaccountisrequired
+
+Ticket #15885
+customextf__c.object – arsir_status__c
+					add ‘All Sessions’
+					delete ‘All Batches’
+
+-	memoregister_memosource__c
+-	add ‘AR Memo Entry’
+delete ‘A/R Memo Entry’
+
+17.3 Manual Steps
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a0000006HR5
+Ticket # 15835
+glyear__c.object –  delete validation rule
+				nogapinperiod12endandperiod13Startdate
+				netprofitaccountisrequired
+				period13closedforadjnotbechanged
+				period13closedtopostnotchnged
+				period13endingdateisrequired
+				period13mustbegrthanperiod12end
+
+Ticket # 16120
+Paysession_c – Delete ‘Print Checks’ button
