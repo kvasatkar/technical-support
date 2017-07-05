@@ -1,0 +1,271 @@
+// - Ticket 13809 Menu Pre-Delete 01
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where
+rstk__label__c in ('Purging - Monitoring', 'Process Log', 'SO Line', 'ICIXR', 'Requirements (ICIXR)', 'Requirements', 'Net Change', 'ICITEMSITEPROJ', 'Inventory By Item/Site/Project', 'DRP Log', 'Obj Page Setup', 'Default Page Layout', 'Site Map-Menu Bar', 'Payable Batch Header', 'PO Receipt Transactions', 'PO Receipt Txn', 'Purge Cost Transactions', 'Purge System Transactions', 'PO Component')];
+
+if (menud01.size() > 0) {
+                delete menud01;
+}
+
+// Purge - Monitor Menu Header Insert
+rstk__menu__c menu11 = new rstk__menu__c(
+Name = 'Purging - Monitoring',
+rstk__header__c = '',
+rstk__href__c = '/RS_Purge_Monitor',
+rstk__imageclass__c = '',
+rstk__label__c = 'Purging - Monitoring',
+rstk__sequence__c = 20,
+rstk__secnsequence__c = 27,
+rstk__inactive__c = false,
+rstk__parentid__c = null,
+rstk__level__c = 0,
+rstk__id__c = 27,
+rstk__appsecuritykey__c = 'ms_rs_purge_monitor__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = ''
+//rstk__menutype__c = 1
+);
+insert menu11;
+
+// Insert Purge Cost Transactions
+rstk__menu__c menu12 = new rstk__menu__c(
+Name = 'Purge Cost Transactions',
+rstk__header__c = 'purge-monitor',
+rstk__href__c = '/apex/PurgeCostTransaction',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Purge Cost Transactions',
+rstk__sequence__c = 1,
+rstk__inactive__c = false,
+rstk__parentid__c = 27,
+rstk__level__c = 1,
+rstk__id__c = 337,
+rstk__appsecuritykey__c = 'm_purgeCostTransaction__c',
+rstk__subsection__c = 'Qty/Costs/Info',
+rstk__pagekey__c = 'purgecosttransaction',
+rstk__recordtype__c = 'purgecosttransaction'
+//rstk__menutype__c = 1
+);
+insert menu12;
+
+// Insert Purge System Transactions
+rstk__menu__c menu13 = new rstk__menu__c(
+Name = 'Purge System Transactions',
+rstk__header__c = 'purge-monitor',
+rstk__href__c = '/apex/PurgeSystemTransactions',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Purge System Transactions',
+rstk__sequence__c = 2,
+rstk__inactive__c = false,
+rstk__parentid__c = 27,
+rstk__level__c = 1,
+rstk__id__c = 338,
+rstk__appsecuritykey__c = 'm_purgeSystemTransactions__c',
+rstk__subsection__c = 'Qty/Costs/Info',
+rstk__pagekey__c = 'purgesystemtransactions',
+rstk__recordtype__c = 'purgesystemtransactions'
+//rstk__menutype__c = 1
+);
+insert menu13;
+
+// Insert Process Log
+rstk__menu__c menu14 = new rstk__menu__c(
+Name = 'Process Log',
+rstk__header__c = 'purge-monitor',
+rstk__href__c = '/apex/listview?recType=processlog',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Process Log',
+rstk__sequence__c = 3,
+rstk__inactive__c = false,
+rstk__parentid__c = 27,
+rstk__level__c = 1,
+rstk__id__c = 829,
+rstk__appsecuritykey__c = 'm_processlog__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'processlog__c',
+rstk__recordtype__c = 'processlog'
+//rstk__menutype__c = 1
+);
+insert menu14;
+
+// Insert DRP Log
+rstk__menu__c menu15 = new rstk__menu__c(
+Name = 'DRP Log',
+rstk__header__c = 'DRP Processing',
+rstk__href__c = '/apex/listview?rectype=drplog',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'DRP Log',
+rstk__sequence__c = 21,
+rstk__inactive__c = false,
+rstk__parentid__c = 51,
+rstk__level__c = 1,
+rstk__id__c = 829,
+rstk__appsecuritykey__c = 'm_drplog__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'drplog'
+//rstk__menutype__c = 1
+);
+insert menu15;
+
+// Insert Net Change
+rstk__menu__c menu16 = new rstk__menu__c(
+Name = 'Net Change',
+rstk__header__c = 'DRP Processing',
+rstk__href__c = '/apex/listview?rectype=netchange',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Net Change',
+rstk__sequence__c = 24,
+rstk__inactive__c = false,
+rstk__parentid__c = 51,
+rstk__level__c = 1,
+rstk__id__c = 832,
+rstk__appsecuritykey__c = 'm_netchange__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'm_netchange__c',
+rstk__recordtype__c = 'netchange'
+//rstk__menutype__c = 1
+);
+insert menu16;
+
+// Insert Requirements (ICIXR)
+rstk__menu__c menu17 = new rstk__menu__c(
+Name = 'Requirements',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/listview?rectype=icixr',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Requirements',
+rstk__sequence__c = 28,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 838,
+rstk__appsecuritykey__c = 'm_icixr__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'icixr'
+//rstk__menutype__c = 1
+);
+insert menu17;
+
+// Insert Inventory By Item/Site/Project
+rstk__menu__c menu18 = new rstk__menu__c(
+Name = 'Inventory By Item/Site/Project',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/listview?rectype=icitemsiteproj',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory By Item/Site/Project',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 841,
+rstk__appsecuritykey__c = 'm_icitemsiteproj__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'icitemsiteproj'
+//rstk__menutype__c = 1
+);
+insert menu18;
+
+// Insert Default Page Layout
+rstk__menu__c menu19 = new rstk__menu__c(
+Name = 'Default Page Layout',
+rstk__header__c = 'setup',
+rstk__href__c = '/apex/listview?rectype=objpagesetup',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Default Page Layout',
+rstk__sequence__c = 32,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 847,
+rstk__appsecuritykey__c = 'm_objpagesetup__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'objpagesetup'
+//rstk__menutype__c = 1
+);
+insert menu19;
+
+// Insert Site Map-Menu Bar
+rstk__menu__c menu20 = new rstk__menu__c(
+Name = 'Site Map-Menu Bar',
+rstk__header__c = 'setup',
+rstk__href__c = '/apex/listview?rectype=menu',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Site Map-Menu Bar',
+rstk__sequence__c = 33,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 853,
+rstk__appsecuritykey__c = 'm_menu__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'rs_menu',
+rstk__recordtype__c = 'menu'
+//rstk__menutype__c = 1
+);
+insert menu20;
+
+// Insert Payable Batch Header
+rstk__menu__c menu21 = new rstk__menu__c(
+Name = 'Payable Batch Header',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/listview?rectype=ttaphdr',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Payable Batch Header',
+rstk__sequence__c = 20,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 856,
+rstk__appsecuritykey__c = 'm_ttaphdr__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'rs_ttaphdr',
+rstk__recordtype__c = 'menu'
+//rstk__menutype__c = 1
+);
+insert menu21;
+
+
+// Insert PO Receipt Transactions
+rstk__menu__c menu22 = new rstk__menu__c(
+Name = 'PO Receipt Transactions',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/listview?rectype=porcptap',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'PO Receipt Transactions',
+rstk__sequence__c = 22,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 859,
+rstk__appsecuritykey__c = 'm_porcptap__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'menu'
+//rstk__menutype__c = 1
+);
+insert menu22;
+
+
+// Insert SO Line
+rstk__menu__c menu23 = new rstk__menu__c(
+Name = 'SO Line',
+rstk__header__c = 'salesorder',
+rstk__href__c = '/apex/listview?rectype=soline',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SO Line',
+rstk__sequence__c = 2,
+rstk__inactive__c = false,
+rstk__parentid__c = 15,
+rstk__level__c = 1,
+rstk__id__c = 323,
+rstk__appsecuritykey__c = 'm_soline__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'm_soline__c',
+rstk__recordtype__c = 'menu'
+//rstk__menutype__c = 1
+);
+insert menu23;
