@@ -1,0 +1,29 @@
+// - Disassembly Order Menu Add, Pre-Delete
+rstk__menu__c[] menudel01 = [select id, Name, rstk__label__c from rstk__menu__c 
+where (rstk__label__c like '%Disassembly%' or Name like '%Disassembly%')];
+
+if (menudel01.size() > 0) {
+	delete menudel01;
+}
+
+// - Insert Disassembly Order Menu selection
+rstk__menu__c menuadd01 = new rstk__menu__c(
+Name = 'New Disassembly Order',
+rstk__label__c = 'New Disassembly Order',
+rstk__header__c = 'Work Order',
+rstk__href__c = '/apex/dwocst',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 27,
+rstk__inactive__c = false,
+rstk__parentid__c = 14,
+rstk__level__c = 1,
+rstk__id__c = 350,
+rstk__appsecuritykey__c = 'dwocst__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'dwocst__c',
+rstk__recordtype__c = 'wocst',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//menutype__c = 1
+);
+insert menuadd01;
