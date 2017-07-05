@@ -1,0 +1,21 @@
+// - Ticket 15596 Menu Fix 1
+rstk__menu__c[] menu01 = [SELECT Id, rstk__appsecuritykey__c 
+FROM rstk__menu__c WHERE (rstk__label__c = 'Purchase Order Agreement' or rstk__label__c = 'PO Agreement')];
+
+if (menu01.size() > 0) {
+for (rstk__menu__c menu1 : menu01) {
+  menu1.rstk__appsecuritykey__c = 'm_poagreement__c';
+}
+update menu01;
+}
+
+// - Ticket 15596 Menu Fix 1
+rstk__menu__c[] menu02 = [SELECT Id, rstk__appsecuritykey__c
+FROM rstk__menu__c WHERE (rstk__label__c = 'Customer Agreements' or rstk__label__c = 'SO Agreement')];
+
+if (menu02.size() > 0) {
+for (rstk__menu__c menu2 : menu02) {
+  menu2.rstk__appsecuritykey__c = 'm_soagh__c';
+}
+update menu02;
+}
