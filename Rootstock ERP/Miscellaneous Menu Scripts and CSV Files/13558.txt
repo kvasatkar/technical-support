@@ -1,8 +1,0 @@
-rstk__icitem__c[] icitems = [select Id, rstk__triggeroptions__c from rstk__icitem__c where Id IN (select rstk__ictsl_icitem__c from rstk__ictsl__c)];
-if (icitems.size() > 0) {
-	for (rstk__icitem__c icitem : icitems) {
-		icitem.rstk__icitem_tslitem__c = true;
-		icitem.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
-	}
-	update icitems;
-}
