@@ -1,0 +1,143 @@
+DreamFactory SnapShot,,
+Asset Comparison Report,,
+
+
+SnapShot,Snapshot: Physical Sciences Prod - RS Standard Platform User - Full Access,Snapshot: coServe Prod - RS Standard Platform User - Full Access
+,Created: 7/4/2017 11:05 AM,Created: 7/4/2017 11:22 AM
+,Username: rs-support@rootstock.com.physicalsciences,Username: rs-support@rootstock.com.coserve
+
+
+Asset,Name,Name
+
+Profiles: Field Permissions,Unpackaged,Unpackaged
+,      RS Standard Platform User - Full Access,      RS Standard Platform User - Full Access
+,            Account.AnnualRevenue,            Account.AnnualRevenue
+,            Account.Area_Of_Operations__c,            
+,            Account.Fax,            Account.Fax
+,            Account.Tax__c,            
+,            Asset.AssetLevel,            Asset.AssetLevel
+,            Asset.AssetProvidedById,            Asset.AssetProvidedById
+,            Asset.AssetServicedById,            Asset.AssetServicedById
+,            Asset.IsInternal,            Asset.IsInternal
+,            AssetRelationship.RelationshipType,            AssetRelationship.RelationshipType
+,            Case.Date_Equip_Received__c,            
+,            Case.Date_Equip_Returned__c,            
+,            Case.ParentId,            Case.ParentId
+,            Case.Repair_Costs__c,            
+,            Case.RMA__c,            
+,            ,            Case.SourceId
+,            Case.Tracking_Number__c,            
+,            Contact.AssistantName,            Contact.AssistantName
+,            Contact.AssistantPhone,            Contact.AssistantPhone
+,            Contact.Birthdate,            Contact.Birthdate
+,            Contact.Description,            Contact.Description
+,            Contact.HomePhone,            Contact.HomePhone
+,            Contact.LeadSource,            Contact.LeadSource
+,            Contact.OtherAddress,            Contact.OtherAddress
+,            Contact.OtherPhone,            Contact.OtherPhone
+,            Contract.Pricebook2Id,            Contract.Pricebook2Id
+,            Event.Type,            Event.Type
+,            Lead.AnnualRevenue,            Lead.AnnualRevenue
+,            Lead.Description,            Lead.Description
+,            Lead.MobilePhone,            Lead.MobilePhone
+,            Opportunity.Budget_Confirmed__c,            
+,            Opportunity.Discovery_Completed__c,            
+,            Opportunity.Loss_Reason__c,            
+,            Opportunity.ROI_Analysis_Completed__c,            
+,            Product2.BAA_TAA_Compliant__c,            
+,            Product2.Berry_Compliant__c,            
+,            Product2.Country_of_Origin__c,            
+,            Product2.Product_Type__c,            
+,            Quote.AccountId,            Quote.AccountId
+,            Quote.Bill_To_ATTN__c,            
+,            Quote.Bill_To_Contact__c,            
+,            Quote.Bill_To_Email__c,            
+,            Quote.Bill_To_Info__c,            
+,            Quote.Bill_To_Phone__c,            
+,            Quote.Contracts_Contact__c,            
+,            Quote.Contracts_POC__c,            
+,            Quote.Discount,            Quote.Discount
+,            Quote.GrandTotal,            Quote.GrandTotal
+,            Quote.Payment_Terms__c,            
+,            Quote.Quote_Notes__c,            
+,            Quote.Quote_Revision_Number__c,            
+,            Quote.Sales_Contact__c,            
+,            Quote.Ship_Date__c,            
+,            Quote.Ship_To_ATTN__c,            
+,            Quote.Ship_To_Contact__c,            
+,            Quote.Ship_To_Email__c,            
+,            Quote.Ship_To_Info__c,            
+,            Quote.Ship_To_Phone__c,            
+,            Quote.Subtotal,            Quote.Subtotal
+,            Quote.Tax_Percentage__c,            
+,            Quote.TotalPrice,            Quote.TotalPrice
+,            Quote.Valid_Until__c,            
+,            QuoteLineItem.ListPrice,            QuoteLineItem.ListPrice
+,            QuoteLineItem.Product_Discount__c,            
+,            QuoteLineItem.Quantity__c,            
+,            QuoteLineItem.Subtotal,            QuoteLineItem.Subtotal
+,            QuoteLineItem.TotalPrice,            QuoteLineItem.TotalPrice
+,            ,            SocialPersona.AreWeFollowing
+,            ,            SocialPersona.Bio
+,            ,            SocialPersona.Followers
+,            ,            SocialPersona.Following
+,            ,            SocialPersona.IsBlacklisted
+,            ,            SocialPersona.IsFollowingUs
+,            ,            SocialPersona.Klout
+,            ,            SocialPersona.ListedCount
+,            ,            SocialPersona.MediaProvider
+,            ,            SocialPersona.MediaType
+,            ,            SocialPersona.NumberOfFriends
+,            ,            SocialPersona.NumberOfTweets
+,            ,            SocialPersona.ProfileType
+,            ,            SocialPersona.R6SourceId
+,            ,            SocialPersona.RealName
+,            ,            SocialPersona.TopicType
+,            ,            SocialPersona.UserId
+,            ,            SocialPost.AnalyzerScore
+,            ,            SocialPost.AssignedTo
+,            ,            SocialPost.AttachmentType
+,            ,            SocialPost.AttachmentUrl
+,            ,            SocialPost.Classification
+,            ,            SocialPost.CommentCount
+,            ,            SocialPost.Content
+,            ,            SocialPost.DeletedById
+,            ,            SocialPost.EngagementLevel
+,            ,            SocialPost.ExternalPostId
+,            ,            SocialPost.HarvestDate
+,            ,            SocialPost.InboundLinkCount
+,            ,            SocialPost.IsOutbound
+,            ,            SocialPost.KeywordGroupName
+,            ,            SocialPost.Language
+,            ,            SocialPost.LikesAndVotes
+,            ,            SocialPost.MediaProvider
+,            ,            SocialPost.MediaType
+,            ,            SocialPost.MessageType
+,            ,            SocialPost.OutboundSocialAccountId
+,            ,            SocialPost.ParentId
+,            ,            SocialPost.PersonaId
+,            ,            SocialPost.PostPriority
+,            ,            SocialPost.PostTags
+,            ,            SocialPost.PostUrl
+,            ,            SocialPost.R6PostId
+,            ,            SocialPost.R6SourceId
+,            ,            SocialPost.R6TopicId
+,            ,            SocialPost.Recipient
+,            ,            SocialPost.RecipientType
+,            ,            SocialPost.ReplyToId
+,            ,            SocialPost.ResponseContextExternalId
+,            ,            SocialPost.ReviewedStatus
+,            ,            SocialPost.ReviewScale
+,            ,            SocialPost.ReviewScore
+,            ,            SocialPost.Sentiment
+,            ,            SocialPost.Shares
+,            ,            SocialPost.SourceTags
+,            ,            SocialPost.SpamRating
+,            ,            SocialPost.Status
+,            ,            SocialPost.StatusMessage
+,            ,            SocialPost.ThreadSize
+,            ,            SocialPost.TopicProfileName
+,            ,            SocialPost.TopicType
+,            ,            SocialPost.UniqueCommentors
+,            ,            SocialPost.ViewCount
+,            ,            SocialPost.WhoId
