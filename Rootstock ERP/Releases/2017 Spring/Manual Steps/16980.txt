@@ -1,0 +1,38 @@
+Date startDate = Date.newInstance(2017, 5, 17);
+Date endDate = Date.newInstance(2017, 7, 7);
+rstk__solaud__c[] solauds = [select rstk__solaud_line__c, rstk__solaud_order__c, rstk__solaud_div__c, 
+rstk__solaud_div__r.Name, 
+rstk__solaud_qtyorder__c, rstk__solaud_price__c, rstk__solaud_discpct__c
+from rstk__solaud__c 
+where rstk__solaud_date__c >= :startDate and rstk__solaud_date__c <= :endDate
+order by rstk__solaud_line__c, rstk__solaud_date__c];
+Map<String, rstk__solaud__c> lastAuditMap = new Map<String, rstk__solaud__c>();
+for (rstk__solaud__c solaud: solauds) {
+String key = solaud.rstk__solaud_div__c+'!'+solaud.rstk__solaud_order__c+'|'+solaud.rstk__solaud_line__c;
+rstk__solaud__c lastAudit = lastAuditMap.get(key);
+if (lastAudit != null) {
+if (solaud.rstk__solaud_price__c != null && lastAudit.rstk__solaud_price__c != null) {
+if (lastAudit.rstk__solaud_price__c >= 1000) {
+Decimal problemValue = lastAudit.rstk__solaud_price__c;
+while (problemValue >= 1000) {
+problemValue = (problemValue / 1000).setScale(0, RoundingMode.DOWN);
+}
+if (problemValue == solaud.rstk__solaud_price__c) {
+System.debug(LoggingLevel.ERROR, 'Audit Price: ('+lastAudit.rstk__solaud_price__c+' --> '+solaud.rstk__solaud_price__c+') '+solaud);
+}
+}
+}
+if (solaud.rstk__solaud_qtyorder__c != null && lastAudit.rstk__solaud_qtyorder__c != null) {
+if (lastAudit.rstk__solaud_qtyorder__c >= 1000) {
+Decimal problemValue = lastAudit.rstk__solaud_qtyorder__c;
+while (problemValue >= 1000) {
+problemValue = (problemValue / 1000).setScale(0, RoundingMode.DOWN);
+}
+if (problemValue == solaud.rstk__solaud_qtyorder__c) {
+System.debug(LoggingLevel.ERROR, 'Audit Quantity: ('+lastAudit.rstk__solaud_qtyorder__c+' --> '+solaud.rstk__solaud_qtyorder__c+') '+solaud);
+}
+}
+}
+}
+lastAuditMap.put(key, solaud);
+}
