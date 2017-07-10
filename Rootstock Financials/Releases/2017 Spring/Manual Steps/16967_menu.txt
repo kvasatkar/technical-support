@@ -1,0 +1,91 @@
+// Delete obsolete menu group
+rstk__menu__c menu_d01 = [select id from rstk__menu__c where name = 'Accounts Payable Setup'];
+delete menu_d01;
+
+// Re-sort Financials menu groups
+rstk__menu__c menu_u01 = [select id from rstk__menu__c where name = 'Financial System Setup'];
+menu_u01.rstk__secnsequence__c = 45;
+menu_u01.rstk__sequence__c = 45;
+update menu_u01;
+
+rstk__menu__c menu_u02 = [select id from rstk__menu__c where name = 'Financial System Admin'];
+menu_u02.rstk__secnsequence__c = 50;
+menu_u02.rstk__sequence__c = 50;
+update menu_u02;
+
+rstk__menu__c menu_u03 = [select id from rstk__menu__c where name = 'Multiple Currency'];
+menu_u03.rstk__secnsequence__c = 55;
+menu_u03.rstk__sequence__c = 55;
+update menu_u03;
+
+rstk__menu__c menu_u04 = [select id from rstk__menu__c where name = 'Accounts Payable'];
+menu_u04.rstk__secnsequence__c = 60;
+menu_u04.rstk__sequence__c = 60;
+update menu_u04;
+
+rstk__menu__c menu_u05 = [select id from rstk__menu__c where name = 'Accounts Receivable'];
+menu_u05.rstk__secnsequence__c = 70;
+menu_u05.rstk__sequence__c = 70;
+update menu_u05;
+
+rstk__menu__c menu_u06 = [select id from rstk__menu__c where name = 'General Ledger'];
+menu_u06.rstk__secnsequence__c = 75;
+menu_u06.rstk__sequence__c = 75;
+update menu_u06;
+
+rstk__menu__c menu_u07 = [select id from rstk__menu__c where name = 'Financial Reporting'];
+menu_u07.rstk__secnsequence__c = 80;
+menu_u07.rstk__sequence__c = 80;
+update menu_u07;
+
+rstk__menu__c menu_u08 = [select id from rstk__menu__c where name = 'RS Support Functions'];
+menu_u08.rstk__secnsequence__c = 99;
+menu_u08.rstk__sequence__c = 99;
+update menu_u08;
+
+// Delete/Add new menu group
+rstk__menu__c[] menu_d02 = [select id from rstk__menu__c where name = 'Period Close Activities'];
+if (menu_d02.size() > 0) {
+    delete menu_d02[1];
+}
+
+rstk__menu__c menu_a01 = new rstk__menu__c (
+NAME = 'Period Close Activities',
+rstk__PARENTID__C = null,
+rstk__HEADER__C = 'ms_periodcloseactivities__c',
+rstk__SEQUENCE__C = 77,
+rstk__ACTIVITY_ENABLED__C = False,
+rstk__APPROVAL_ENABLED__C = False,
+rstk__APPSECURITYKEY__C = 'ms_periodcloseactivities__c',
+rstk__HIDEADDLINK__C = False,
+rstk__HREF__C = '',
+rstk__ID__C = 981,
+rstk__IMAGECLASS__C = '',
+rstk__INACTIVE__C = False,
+rstk__KEYPREFIX__C = '',
+rstk__LABEL__C = 'Period Close Activities',
+rstk__LEVEL__C = 0,
+rstk__MENUTYPE__C = 1,
+rstk__PAGE__C = '',
+rstk__PAGEKEY__C = '',
+rstk__RECORDTYPE__C = '',
+rstk__SECNSEQUENCE__C = 77,
+rstk__SUBSECTION__C = '',
+rstk__RSFINANCIALS__C = True);
+insert menu_a01;
+
+// Move existing menu records to Period Close Activities group
+rstk__menu__c menu_u09 = [select id from rstk__menu__c where name = 'Period Close'];
+menu_u09.rstk__parentid__c = 981;
+menu_u09.rstk__sequence__c = 10;
+update menu_u09;
+
+rstk__menu__c menu_u10 = [select id from rstk__menu__c where name = 'Translate Data into Parent Company Currency'];
+menu_u10.rstk__parentid__c = 981;
+menu_u10.rstk__sequence__c = 20;
+update menu_u10;
+
+rstk__menu__c menu_u11 = [select id from rstk__menu__c where name = 'Perform Financial Report Data Roll-up'];
+menu_u11.rstk__parentid__c = 981;
+menu_u11.rstk__sequence__c = 30;
+update menu_u11;
