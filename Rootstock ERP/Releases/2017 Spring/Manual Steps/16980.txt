@@ -1,5 +1,5 @@
 Date startDate = Date.newInstance(2017, 5, 17);
-Date endDate = Date.newInstance(2017, 7, 7);
+Date endDate = Date.newInstance(2017, 10, 31);
 rstk__solaud__c[] solauds = [select rstk__solaud_line__c, rstk__solaud_order__c, rstk__solaud_div__c, 
 rstk__solaud_div__r.Name, 
 rstk__solaud_qtyorder__c, rstk__solaud_price__c, rstk__solaud_discpct__c
