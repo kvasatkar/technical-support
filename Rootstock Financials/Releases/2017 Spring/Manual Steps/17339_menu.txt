@@ -1,0 +1,28 @@
+// Change General Journal Entries to General Journal Workbench
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'General Journal Entries'];
+for (rstk__menu__c menu : menus) {
+  menu.name = 'General Journal Workbench';
+  menu.rstk__label__c = 'General Journal Workbench';
+  menu.rstk__sequence__c = 92;
+}
+update menus;
+
+// Add new menu option General Journal Entries
+rstk__menu__c menu01 = new rstk__menu__c(
+Name = 'General Journal Entries',
+rstk__header__c = 'General Ledger Setup',
+rstk__href__c = '/apex/listview?rectype=gljh',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'General Journal Entries',
+rstk__sequence__c = 93,
+rstk__inactive__c = false,
+rstk__parentid__c = 971,
+rstk__level__c = 1,
+rstk__id__c = 903,
+rstk__appsecuritykey__c = 'm_gljh__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = ' '
+//rstk__menutype__c = 1
+);
+insert menu01;
