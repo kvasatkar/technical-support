@@ -1565,6 +1565,12 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000Mht7
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000Mht7
 
 
+17.20.2 - Upload Speed Test
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MhtC
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MhtC
+
+
 
 admin@rstk_17.21.patch
 R00tst0cklClUAfUNB4MwFPrCI5gNfJQ3A
