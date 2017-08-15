@@ -1,6 +1,6 @@
 // - Insert initial menu selection 14
 rstk__menu__c menua14 = new rstk__menu__c(
-Name = 'New Diasassembly Order',
+Name = 'New Disassembly Order',
 rstk__label__c = 'New Disassembly Order',
 rstk__header__c = 'Work Order',
 rstk__href__c = '/apex/dwocst',
