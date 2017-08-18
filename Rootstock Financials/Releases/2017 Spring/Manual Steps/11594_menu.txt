@@ -11,12 +11,13 @@ rstk__parentid__c = 910,
 rstk__level__c = 1,
 rstk__id__c = 999,
 rstk__appsecuritykey__c = 'm_arnoncashtransfers__c',
-rstk__subsection__c = 'Processes',
+rstk__subsection__c = '',
 rstk__pagekey__c = 'cc',
-rstk__recordtype__c = 'wocst',
+rstk__recordtype__c = '',
 rstk__hideaddlink__c = false,
 rstk__activity_enabled__c = false,
-rstk__approval_enabled__c = false
-//rstk__menutype__c = 1
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
 );
 insert menua14;
