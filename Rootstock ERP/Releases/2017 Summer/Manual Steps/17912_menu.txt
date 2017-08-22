@@ -1,0 +1,6 @@
+// Enable Cycle Count Report menu option
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Cycle Count Report'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__inactive__c = false;
+}
+update menus;
