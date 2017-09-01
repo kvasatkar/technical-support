@@ -1,0 +1,8 @@
+// Change AP Aging Report menu record
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'AP Aging Report'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__href__c = 'apex/apagingreport';
+  menu.rstk__header__c = 'AP Aging Report' ;
+  menu.rstk__appsecuritykey__c = 'm_apagingreport__c';
+}
+update menus;
