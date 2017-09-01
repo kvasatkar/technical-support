@@ -1,8 +1,0 @@
-// Change Voucher Edit List to Payable Edit List
-rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'General Journal Entries'];
-for (rstk__menu__c menu : menus) {
-  menu.rstk__href__c = 'apex/listview?rectype=gljh';
-  menu.rstk__rsfinancials__c = true ;
-  menu.rstk__recordtype__c = 'gljh';
-}
-update menus;
