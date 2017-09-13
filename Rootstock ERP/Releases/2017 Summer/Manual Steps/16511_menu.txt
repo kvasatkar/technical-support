@@ -1,0 +1,21 @@
+rstk__menu__c[] menu_d01 = [select id from rstk__menu__c where name = 'Job Code Maintenance'];
+if (menu_d01.size() > 0) {
+	delete menu_d01;
+}
+
+rstk__menu__c menu_a01 = new rstk__menu__c(
+Name = 'Job Code Maintenance',
+rstk__header__c = 'projectcontrol',
+rstk__href__c = '/apex/listview?recType=icjobcode',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Job Code Maintenance',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 2,
+rstk__level__c = 1,
+rstk__id__c = null,
+rstk__appsecuritykey__c = 'm_icjobcode__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icjobcode__c'
+);
+insert menu_a01;
