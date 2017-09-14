@@ -1,0 +1,24 @@
+// Insert AR Aging menu record
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'AR Aging Report',
+rstk__label__c = 'AR Aging Report',
+rstk__header__c = 'Accounts Receivable',
+rstk__href__c = '/apex/aragingreport',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 70,
+rstk__inactive__c = false,
+rstk__parentid__c = 910,
+rstk__level__c = 1,
+rstk__id__c = 990,
+rstk__appsecuritykey__c = 'm_aragingreport__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua14;
