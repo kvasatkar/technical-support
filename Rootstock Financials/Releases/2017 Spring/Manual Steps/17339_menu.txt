@@ -22,7 +22,8 @@ rstk__id__c = 903,
 rstk__appsecuritykey__c = 'm_gljh__c',
 rstk__subsection__c = ' ',
 rstk__pagekey__c = 'cc',
-rstk__recordtype__c = ' '
+rstk__recordtype__c = ' ',
+rstk__rsfinancials__c = true
 //rstk__menutype__c = 1
 );
 insert menu01;
