@@ -1,0 +1,24 @@
+// Insert GL Transaction Inquiry menu record
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'GL Transaction Inquiry',
+rstk__label__c = 'GL Transaction Inquiry',
+rstk__header__c = 'General Ledger Setup',
+rstk__href__c = '/apex/gltxnInquiry',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 84,
+rstk__inactive__c = false,
+rstk__parentid__c = 971,
+rstk__level__c = 1,
+rstk__id__c = 999,
+rstk__appsecuritykey__c = 'm_gltxninquiry__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua14;
