@@ -1,3 +1,8 @@
+// Remove existing AR Aging Report menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'AR Aging Report'];
+if (menud01.size() > 0) delete menud01;
+
 // Insert AR Aging menu record
 // - Insert initial menu selection 14
 rstk__menu__c menua14 = new rstk__menu__c(
