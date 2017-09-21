@@ -1,0 +1,72 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Inspection Order',
+rstk__label__c = 'Inspection Order',
+rstk__header__c = 'inspectionorder',
+rstk__href__c = '/apex/listview?rectype=inspord',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 26,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 302,
+rstk__appsecuritykey__c = 'm_inspord__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'inspord__c',
+rstk__recordtype__c = 'inspord',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+
+
+// - Insert initial menu selection 15
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'Inspection Order Template',
+rstk__label__c = 'Inspection Order Template',
+rstk__header__c = 'inspectionorderTemplate',
+rstk__href__c = '/apex/listview?rectype=insptempl',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 27,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 303,
+rstk__appsecuritykey__c = 'm_insptempl__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'insptempl__c',
+rstk__recordtype__c = 'insptempl',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;
+
+
+
+// - Insert initial menu selection 16
+rstk__menu__c menua16 = new rstk__menu__c(
+Name = 'Inventory Balances',
+rstk__label__c = 'Inventory Balances',
+rstk__header__c = 'inventorybalances',
+rstk__href__c = '/apex/inventorybalances',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 35,
+rstk__inactive__c = false,
+rstk__parentid__c = 901,
+rstk__level__c = 1,
+rstk__id__c = 334,
+rstk__appsecuritykey__c = 'm_inventorybalances__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'inventorybalances',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua16;
