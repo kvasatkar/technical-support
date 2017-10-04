@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Feature Category',
+rstk__label__c = 'Feature Category',
+rstk__header__c = 'setup',
+rstk__href__c = '/apex/listview?rectype=featcat',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 30,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 984,
+rstk__appsecuritykey__c = 'm_featcat__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'featcat__c',
+rstk__recordtype__c = 'featcat',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
