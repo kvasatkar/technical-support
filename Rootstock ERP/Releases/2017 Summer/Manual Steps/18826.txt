@@ -1,5 +1,4 @@
-// Enable Cycle Count Report menu option
-rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Rootstock Support Portal' and rstk__href__c = 'https://portal.teamsupport.com/login.aspx?OrgName=rootstock'];
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Rootstock Support Portal'];
 for (rstk__menu__c menu : menus) {
-}
+  menu.rstk__href__c = 'https://portal.teamsupport.com/login.aspx?OrgName=rootstock';}
 update menus;
