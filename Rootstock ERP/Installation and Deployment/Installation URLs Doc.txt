@@ -1797,10 +1797,17 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Sk
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Sk
 
 
-
+admin@rstk_17.34.patch
+R00tst0ckNQP2mWzu8gMRyLNws5bVHNM1
 
 17.34
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Tx
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Tx
+
+
+17.34.1
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000QvUG
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000QvUG
 
