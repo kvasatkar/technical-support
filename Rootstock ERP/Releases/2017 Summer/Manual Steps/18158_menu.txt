@@ -1,0 +1,6 @@
+// Set Related List Child Objects field on Sales Order Entry menu record
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Sales Order Entry' or name = 'Sales Order Entry - HV'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__relatedlists__c = 'soships__r';
+}
+update menus;
