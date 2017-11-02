@@ -1,0 +1,14 @@
+// Delete obsolete menu record
+rstk__menu__c[] menus = [select id from rstk__menu__c
+	where name = 'New Disassembly Order' and rstk__appsecuritykey__c = 'dwocst__c'];
+if (menus.size() > 0) {
+	delete menus;
+}
+
+// Set fields to blank 
+rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'New Disassembly Order'];
+for (rstk__menu__c menu : menus2) {
+  menu.rstk__subsection__c = '';
+  menu.rstk__recordtype__c = '';
+}
+update menus2;	
