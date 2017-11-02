@@ -1812,6 +1812,8 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000QvUG
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000QvUG
 
 
+admin@rstk_17.35.patch
+R00tst0ckCNWJOlAlLrSn6JtePvdjsOgYj
 
 17.35
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2WN
