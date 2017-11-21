@@ -1849,3 +1849,25 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiHW
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiHW
 
 
+17.36.2
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiHg
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiHg
+
+17.36.3
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiIA
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000MiIA
+
+
+
+admin@rstk_17.37.patch
+R00tst0ckkGvnvA4n3W077Vw7m8zjlDRQ9
+
+
+17.37
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Xa
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2Xa
+
+
