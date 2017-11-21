@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Purge Work Orders',
+rstk__label__c = 'Purge Work Orders',
+rstk__header__c = 'purge-monitor',
+rstk__href__c = '/apex/PurgeWorkOrders',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 3,
+rstk__inactive__c = false,
+rstk__parentid__c = 27,
+rstk__level__c = 1,
+rstk__id__c = 320,
+rstk__appsecuritykey__c = 'm_purgeworkorders__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'purgeworkorders',
+rstk__recordtype__c = 'featcat',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
