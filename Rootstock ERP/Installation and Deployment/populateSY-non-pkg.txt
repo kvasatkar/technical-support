@@ -61,7 +61,7 @@ config.syconfig_workorder__c = true;
 config.syconfig_arenaint__c = false;
 config.syconfig_ffprojidfld__c = 'RS_PROJECT_ID__C';
 config.syconfig_password__c = 'aqJF8AeMPr42HcvvD6QOug==';
-config.syconfig_helpurl__c = 'http://www.rootstock.com/wp-content/uploads/';
+config.syconfig_helpurl__c = 'http://resources.rootstock.com/wp-content/uploads/';
 config.syconfig_allocations__c = true;  // Allocations 
 config.syconfig_configsoe__c = true; // Product Configurator
 config.syconfig_poloader__c  = true; // POLOADER Object Active
