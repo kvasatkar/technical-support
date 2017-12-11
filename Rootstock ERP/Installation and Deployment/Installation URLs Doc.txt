@@ -1893,3 +1893,9 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000IZ2X
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000IZ2X
 
 
+17.38.2
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000IZ2m
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000IZ2m
+
+
