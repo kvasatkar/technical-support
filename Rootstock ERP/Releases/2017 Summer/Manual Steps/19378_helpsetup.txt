@@ -1,0 +1,13 @@
+// Add poagh__c record
+rstk__helpsetup__c[] helpsetup_d01 = [select id from rstk__helpsetup__c where name = 'poagh__c'];
+if (helpsetup_d01.size() > 0) {
+	delete helpsetup_d01;
+}
+
+rstk__helpsetup__c helpsetup_a01 = new rstk__helpsetup__c(
+Name = 'poagh__c',
+rstk__pagekey__c = 'poagh__c',
+rstk__helpurl1__c = 'purchase-order-price-discount-logic.pdf'
+);
+insert helpsetup_a01;
+
