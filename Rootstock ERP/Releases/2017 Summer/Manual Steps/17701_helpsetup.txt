@@ -11,16 +11,3 @@ rstk__helpurl1__c = 'purchase-order-price-discount-logic.pdf'
 );
 insert helpsetup_a01;
 
-// Add POAgreement record
-rstk__helpsetup__c[] helpsetup_d02 = [select id from rstk__helpsetup__c where name = 'POagreement'];
-if (helpsetup_d02.size() > 0) {
-	delete helpsetup_d02;
-}
-
-rstk__helpsetup__c helpsetup_a02 = new rstk__helpsetup__c(
-Name = 'POagreement',
-rstk__pagekey__c = 'POagreement',
-rstk__helpurl1__c = 'purchase-order-price-discount-logic.pdf'
-);
-insert helpsetup_a02;
-
