@@ -1919,4 +1919,8 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2dY
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2dY
 
+17.40
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2fj
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2fj
 
