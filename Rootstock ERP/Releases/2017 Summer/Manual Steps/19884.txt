@@ -1,0 +1,28 @@
+// Delete obsolete menu record
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Sylimits']; 
+for (rstk__menu__c menu : menus) {
+                delete menus;
+}
+
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Sylimits',
+rstk__label__c = 'Sylimits',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=sylimits',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 68,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 868,
+rstk__appsecuritykey__c = 'm_sylimits__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'sylimits',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
