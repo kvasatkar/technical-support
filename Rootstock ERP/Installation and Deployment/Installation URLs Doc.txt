@@ -1940,3 +1940,14 @@ R00tst0ckA216KjSnNyJUtwWx6ZH0VjOxZ
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2hp
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2hp
+
+
+
+admin@rstk_17.41.patch
+R00tst0ck5Exe1bNdISAZTqAa9oVh5dAJ
+
+
+17.41
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2h1
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2h1
