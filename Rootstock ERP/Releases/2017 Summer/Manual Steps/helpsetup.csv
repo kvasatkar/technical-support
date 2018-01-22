@@ -1,5 +1,7 @@
 NAME,RSTK__HELPURL1__C,RSTK__PAGEKEY__C
 ShopFloorTimeEntryTrans,time-and-qty-booking.pdf,ShopFloorTimeEntryTrans
+poagh__c,purchase-order-price-discount-logic.pdf,poagh__c
+soconpbill__c,recurring-billing.pdf,soconpbill__c
 glrsn__c,reason-codes-1.pdf,glrsn__c
 glfstmplt1__c,define-financial-statement-templates.pdf,glfstmplt1__c
 MonthlyCheckRegister,check-register-by-period.pdf,MonthlyCheckRegister
@@ -84,7 +86,6 @@ socomm__c,product-groups.pdf,socomm__c
 socompp__c,component-price-maint.pdf,socompp__c
 socondev__c,contract-covered-serialized-devices.pdf,socondev__c
 transactionexport,general-journal-export.pdf,transactionexport
-soconpbill__c,contract-periodic-billing-review.pdf,soconpbill__c
 soconpbbatch__c,recurring-billing-batch-review.pdf,soconpbbatch__c
 socontract__c,sales-contract-maintenance.pdf,socontract__c
 socontainer__c,so-container.pdf,socontainer__c
