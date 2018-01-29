@@ -1984,3 +1984,9 @@ https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETz4
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETz9
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETz9
+
+
+17.42.3
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETzE
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETzE
