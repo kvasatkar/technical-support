@@ -1,0 +1,15 @@
+rstk__menu__c[] menuapp1 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Warranty Type%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__appsecuritykey__c = 'm_sowarrtype__c';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp2 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Customer Agreements%'];
+
+for (rstk__menu__c upd2 : menuapp2) 
+     {upd2.rstk__appsecuritykey__c = 'm_soagh__c';
+     }
+update menuapp2;
