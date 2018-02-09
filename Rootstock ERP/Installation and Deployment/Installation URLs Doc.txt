@@ -2010,6 +2010,32 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETzY
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000ETzY
 
 
-17.42.5
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0C
-https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0C
+17.42.6
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0W
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0W
+
+
+17.42.7
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0b
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0b
+
+
+17.42.8
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0g
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0g
+
+
+17.42.9
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0v
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000EU0v
+
+
+
+18.1
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2ke
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2ke
