@@ -1958,6 +1958,11 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2ko
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2ko
 
+17.40.5
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2vj
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2vj
+
 
 
 admin@rstk_17.41.patch
