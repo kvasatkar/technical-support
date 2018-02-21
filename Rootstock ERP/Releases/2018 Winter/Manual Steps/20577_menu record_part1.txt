@@ -1,0 +1,30 @@
+// Delete obsolete menu record
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Routing Operations']; 
+for (rstk__menu__c menu : menus) {
+                delete menus;
+}
+
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Routing Operations',
+rstk__label__c = 'Routing Operations',
+rstk__header__c = 'shopfloor',
+rstk__href__c = '/apex/listview?rectype=rtroutoper',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 2,
+rstk__inactive__c = false,
+rstk__parentid__c = 10,
+rstk__level__c = 1,
+rstk__id__c = 282,
+rstk__appsecuritykey__c = 'm_routingoper__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'rtroutoper__c',
+rstk__recordtype__c = 'rtroutoper',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+
