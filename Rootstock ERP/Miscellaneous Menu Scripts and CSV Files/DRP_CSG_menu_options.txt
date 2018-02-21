@@ -1,0 +1,135 @@
+// Script created from DRP Processing menu options on dev-qa-ff 7/20/2015)
+
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'DRP Processing',
+rstk__label__c = 'DRP Processing',
+rstk__header__c = '',
+rstk__parentid__c = null,
+rstk__sequence__c = 5,
+rstk__secnsequence__c = 5,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'ms_drpprocessing__c',
+rstk__href__c = '',
+rstk__pagekey__c = '',
+rstk__imageclass__c = '',
+rstk__level__c = 0,
+rstk__recordtype__c = '',
+rstk__id__c = 51,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'DRP Location Replenishment',
+rstk__label__c = 'DRP Location Replenishment',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 51,
+rstk__sequence__c = 3,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_icreplenish__c',
+rstk__href__c = '/apex/listview?recType=icreplenish',
+rstk__pagekey__c = 'icreplenish__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'icreplenish',
+rstk__id__c = 331,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'DRP Processing',
+rstk__label__c = 'DRP Processing',
+rstk__header__c = 'DRP Processing',
+rstk__parentid__c = 51,
+rstk__sequence__c = 6,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_icreplenishprocessrequest',
+rstk__href__c = '/apex/icreplenishProcessRequest',
+rstk__pagekey__c = 'icreplenishprocessrequest',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 332,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu3;
+
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Planned Location Transfer Maintenance',
+rstk__label__c = 'Planned Location Transfer Maintenance',
+rstk__header__c = 'DRP Processing',
+rstk__parentid__c = 51,
+rstk__sequence__c = 9,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__href__c = '/apex/listview?recType=ictransreq',
+rstk__pagekey__c = 'ictransreq__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'ictransreq',
+rstk__id__c = 333,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu4;
+
+rstk__menu__c menu5 = new rstk__menu__c(
+Name = 'Planned Location Transfer Query',
+rstk__label__c = 'Planned Location Transfer Query',
+rstk__header__c = 'DRP Processing',
+rstk__parentid__c = 51,
+rstk__sequence__c = 12,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__href__c = '/apex/ictransreqList',
+rstk__pagekey__c = 'ictransreqlist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 334,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu5;
+
+rstk__menu__c menu6 = new rstk__menu__c(
+Name = 'Planned Transfer Picklist',
+rstk__label__c = 'Planned Transfer Picklist',
+rstk__header__c = 'DRP Processing',
+rstk__parentid__c = 51,
+rstk__sequence__c = 15,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_createplannedtransferpicklist__c',
+rstk__href__c = '/apex/createPlannedTransferPicklist',
+rstk__pagekey__c = 'createplannedtransferpicklist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 335,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu6;
+
+rstk__menu__c menu7 = new rstk__menu__c(
+Name = 'Transfer Request Packing Slip',
+rstk__label__c = 'Transfer Request Packing Slip',
+rstk__header__c = 'DRP Processing',
+rstk__parentid__c = 51,
+rstk__sequence__c = 18,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__href__c = '/apex/createPackingSlip',
+rstk__pagekey__c = 'createpackingslip',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 336,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu7;
