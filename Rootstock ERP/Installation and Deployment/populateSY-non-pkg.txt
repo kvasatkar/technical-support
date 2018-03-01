@@ -2,8 +2,12 @@
 // This replaces the  Accounting Package, FinancialForce Interface Active and QuickBooks Interface Active fields.
 // The fields will be set after adding a Mfg User and doing an edit/save on the syconfig record
 
-// Number of Authorized Users - this field is validated by Mfg User logic - can be increased if provisioning temporary licenses
-// Number of Paid Users - this field is not validated - set to number of licenses per contract  
+// Number of Authorized Users
+// - Set this field to the number of ERP users based on the SSO or Sales Order.  Do NOT include RSF licenses in this field.
+// - This field is validated by Mfg User logic - it can be increased if provisioning temporary licenses
+// Number of Paid Users
+// - This field is not validated
+// - Set to Number of Authorized Users 
 
 
 
