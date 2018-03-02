@@ -3,7 +3,7 @@
 // The fields will be set after adding a Mfg User and doing an edit/save on the syconfig record
 
 // Number of Authorized Users
-// - Set this field to the number of ERP users based on the SSO or Sales Order.  Do NOT include RSF licenses in this field.
+// - Set this field to the number of ERP users based on the SSO or Sales Order.  This field will be increased later if RFS licenses were also purchased.
 // - This field is validated by Mfg User logic - it can be increased if provisioning temporary licenses
 // Number of Paid Users
 // - This field is not validated
