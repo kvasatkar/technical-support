@@ -2092,3 +2092,13 @@ https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2wr
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2xz
 
 https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2xz
+
+
+
+admin@rstk_18.2.patch
+R00tst0ckynwenM9LJFtfjF1EaWaP7MjMq
+
+18.2
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2rM
+
+https://test.salesforce.com/packaging/installPackage.apexp?p0=04t0B000000A2rM
