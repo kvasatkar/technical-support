@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Purge Purchase Orders',
+rstk__label__c = 'Purge Purchase Orders',
+rstk__header__c = 'purge-monitor',
+rstk__href__c = '/apex/popurge',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 4,
+rstk__inactive__c = false,
+rstk__parentid__c = 27,
+rstk__level__c = 1,
+rstk__id__c = 350,
+rstk__appsecuritykey__c = 'm_purgepurchorders__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'pjprojwbs__c',
+rstk__recordtype__c = 'popurge',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
