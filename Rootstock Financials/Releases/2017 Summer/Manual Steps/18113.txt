@@ -1,6 +1,6 @@
 // Update Link Field
 rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'Journal Entry Templates'];
 for (rstk__menu__c menu : menus2) {
-  menu.rstk__href__c = '/apex/Listview?recType=gljetemplthlist';
+  menu.rstk__href__c = '/apex/Listview?recType=gljetemplth';
 }
 update menus2;
