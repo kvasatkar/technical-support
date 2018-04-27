@@ -1,13 +1,70 @@
-<style type="text/css">@page{margin: 0in 0in 0in 0in;}
+<style type="text/css">@page{margin: 0in 0in 0in 0in;}table {border-collapse: collapse;}table, th, td {border: 1px solid black;}
 </style>
-<div style="text-align:center; position:absolute; top:0px; z-index:-1"><img alt="" height="1050" src="" width="815" /></div>
-
-<div style="position: relative;"><span style="left:  10px; top:  15px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__company_name__c}}</span><br />
-<span style="left: 750px; top:  30px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span><br />
-<span style="left: 650px; top:  65px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>DATE</strong></span> <span style="left: 690px; top:  50px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 85px;">{{!rstkf__apcheck__c.rstkf__apcheck_date__c}}</span> <strong> <span style="left:  50px; top: 110px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">PAY TO THE</span> </strong><br />
-<span style="left:  50px; top: 125px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>ORDER OF</strong></span> <span style="left: 130px; top: 120px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 500px;">{{!rstkf__apcheck__c.rstkf__apcheck_payto__c}}</span> <span style="left: 660px; top: 120px; position: absolute; z-index: 0; font-size:18px; font-family:Arial Unicode MS;">$</span><br />
-<span style="left: 675px; top: 123px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;  border: 1pt solid black; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px;">{{!rstkf__apcheck__c.rstkf__apcheck_amount__c}}</span><br />
-<span style="left:  50px; top: 150px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 620px;">{{!rstkf__apcheck__c.rstkf__apcheck_numbertext__c}}</span> <span style="left: 675px; top: 155px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>DOLLARS</strong></span> <span style="left: 350px; top:  15px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">{{!apcheck__r.apcheck_paysession__r.paysession_glbankacct__r.paysession_glbankacct__c}}</span><br />
-<span style="left:  27px; top: 220px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>MEMO</strong></span> <span style="left:  75px; top: 218px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_memo__c}}</span> <span style="left: 560px; top: 240px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">AUTHORIZED SIGNATURE</span> <span style="left:  75px; top: 238px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 300px;"></span> <span style="left: 500px; top: 238px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 275px;"></span><br />
-<span style="left: 180px; top: 295px; position: absolute; z-index: 0;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c MICR17}} &nbsp; {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.paysession_glbankacct__r.glbankacct_routing__c MICR17}} &nbsp; {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.paysession_glbankacct__r.glbankacct_number__c MICR17}}</span></div>
-<span style="left:  27px; top: 375px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__company_name__c}}</span> <span style="left: 750px; top: 375px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span> <span style="left:  27px; top: 725px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__company_name__c}}</span> <span style="left: 750px; top: 725px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span>
+<div style="position: relative;"><span style="left: 50px; top: 12px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;"> {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glcmp__r.name}}</span><br />
+<span style="left: 50px; top: 29px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glcmp__r.rstkf__glcmp_street__c}}</span><br />
+<span style="left: 50px; top: 44px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glcmp__r.rstkf__glcmp_city__c}}, {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glcmp__r.rstkf__glcmp_stateprov__c}} {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glcmp__r.rstkf__glcmp_zippostal__c}}</span><br />
+<span style="left: 750px; top: 15px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span><br />
+<span style="left: 650px; top: 60px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>DATE</strong></span><br />
+<span style="left: 690px; top: 60px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 85px;">{{!rstkf__apcheck__c.rstkf__apcheck_date__c}}</span><br />
+<span style="left: 20px; top: 195px; position: absolute; z-index: 0; font-size:11px; font-family:Arial Unicode MS;"><strong>PAY TO THE</strong></span><br />
+<span style="left: 20px; top: 210px; position: absolute; z-index: 0; font-size:11px; font-family:Arial Unicode MS;"><strong>ORDER OF</strong></span><br />
+<span style="left: 100px; top: 194px; position: absolute; z-index: 0; font-size:15px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_payto__c}}</span><br />
+<span style="left: 100px; top: 208px; position: absolute; z-index: 0; font-size:15px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_street__c}}</span><br />
+<span style="left: 100px; top: 222px; position: absolute; z-index: 0; font-size:15px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_city__c}}, {{!rstkf__apcheck__c.rstkf__apcheck_state__c}} {{!rstkf__apcheck__c.rstkf__apcheck_zip__c}}</span><br />
+<span style="left: 100px; top: 235px; position: absolute; z-index: 0; font-size:15px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_country__c}}</span><br />
+<span style="left: 660px; top: 100px; position: absolute; z-index: 0; font-size:18px; font-family:Arial Unicode MS;">$</span><br />
+<span style="left: 675px; top: 100px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;  border: 1pt solid black; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px;">{{!rstkf__apcheck__c.rstkf__apcheck_amount__c}}</span><br />
+<span style="left: 180px; top: 125px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 490px;">{{!rstkf__apcheck__c.rstkf__apcheck_numbertext__c}}</span><br />
+<span style="left: 675px; top: 125px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>DOLLARS</strong></span><br />
+<span style="left: 350px; top: 12px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_institution__c}}</span><br />
+<span style="left: 350px; top: 25px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_branch__c}}</span><br />
+<span style="left: 350px; top: 38px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_citystate__c}}</span><br />
+<span style="left: 590px; top: 12px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS; border-bottom: 0.5pt solid black; width: 50px;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_idnum__c}}</span><br />
+<span style="left: 590px; top: 30px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_idden__c}}</span><br />
+<span style="left: 500px; top: 258px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS; border-bottom: 1pt solid black; width: 275px;"></span><br />
+<span style="left: 750px; top: 345px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span><br />
+<span style="left: 750px; top: 695px; position: absolute; z-index: 0; font-size:16px; font-family:Arial Unicode MS;">{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c}}</span><br />
+<span style="left: 755px; top: 240px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;"><strong>MP</strong></span><br />
+<span style="left: 180px; top: 290px; position: absolute; z-index: 0;">{{!rstkf__apcheck__c.MICRonus__c MICR16,-5}}{{!rstkf__apcheck__c.rstkf__apcheck_checknumber__c MICR16,-5}}{{!rstkf__apcheck__c.MICRonus__c MICR16,-5}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{!rstkf__apcheck__c.MICRtransit__c MICR16,-5}}{{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_routing__c MICR16,-5}}{{!rstkf__apcheck__c.MICRtransit__c MICR16,-5}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{!rstkf__apcheck__c.rstkf__apcheck_paysession__r.rstkf__paysession_glbankacct__r.rstkf__glbankacct_number__c MICR16,-5}}{{!rstkf__apcheck__c.MICRonus__c MICR16,-5}}</span><br />
+<br />
+<!-- ******************** START RELATED LIST SECTION UNIQUEID:479********************-->
+<table style="left: 15px; top: 350px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">
+	<thead>
+		<tr>
+			<th>Document Number</th>
+			<th>Document Amount</th>
+		</tr>
+	</thead>
+	<tbody><!--{{!
+<lineitems><class>table479</class>
+<listname>rstkf__apcheckstubs__r</listname>
+<column>rstkf__apcheckstub_docno__c</column>
+<column>rstkf__apcheckstub_amount__c</column>
+</lineitems>
+}}-->
+	</tbody>
+</table>
+<br />
+<!-- ******************** END RELATED LIST SECTION UNIQUEID:479********************--><br />
+<!-- ******************** START RELATED LIST SECTION UNIQUEID:781********************-->
+<table style="left: 15px; top: 700px; position: absolute; z-index: 0; font-size:12px; font-family:Arial Unicode MS;">
+	<thead>
+		<tr>
+			<th>Document Number</th>
+			<th>Document Amount</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		</tr>
+		<!--{{!
+<lineitems><class>table781</class>
+<listname>rstkf__apcheckstubs__r</listname>
+<column>rstkf__apcheckstub_docno__c</column>
+<column>rstkf__apcheckstub_amount__c</column>
+</lineitems>
+}}-->
+	</tbody>
+</table>
+<br />
+<!-- ******************** END RELATED LIST SECTION UNIQUEID:781********************--></div>
