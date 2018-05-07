@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Inventory Reconciliation Automatic Generation',
+rstk__label__c = 'Inventory Reconciliation Automatic Generation',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/invreconcautogen',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 53,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 139,
+rstk__appsecuritykey__c = 'm_invreconcautogen__c',
+rstk__subsection__c = 'Transactions',
+rstk__pagekey__c = 'invreconcautogen',
+rstk__recordtype__c = 'invreconcautogen',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
