@@ -1,0 +1,31 @@
+rstkf__glfstmplt2__c[] c = [
+
+select id
+
+from rstkf__glfstmplt2__c
+
+where rstkf__glfstmplt2_onecomporconsol__c = null
+
+limit 4000
+
+];
+
+if (c.size() == 0) {
+
+system.debug(logginglevel.info, 'NO MORE RECORDS FOUND FOR UPDATE');
+
+} else {
+
+for (rstkf__glfstmplt2__c o : c) {
+
+o.rstkf__glfstmplt2_onecomporconsol__c = 'Single Company';
+
+o.rstkf__triggeroptions__c = '{"SAE":"1"}';
+
+}
+
+update c;
+
+system.debug(logginglevel.info, 'UPDATED ' + c.size() + ' RECORDS');
+
+}
