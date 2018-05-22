@@ -1,0 +1,13 @@
+// Add paysession record
+rstk__helpsetup__c[] helpsetup_d02 = [select id from rstk__helpsetup__c where name = 'paysession'];
+if (helpsetup_d02.size() > 0) {
+	delete helpsetup_d02;
+}
+
+rstk__helpsetup__c helpsetup_a02 = new rstk__helpsetup__c(
+Name = 'paysession',
+rstk__pagekey__c = 'paysession',
+rstk__helpurl1__c = 'notavailable.pdf'
+);
+insert helpsetup_a02;
+
