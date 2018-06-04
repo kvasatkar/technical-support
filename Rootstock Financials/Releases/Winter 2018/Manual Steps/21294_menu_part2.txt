@@ -1,0 +1,28 @@
+// Remove existing VAT Transactions menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'VAT Transactions'];
+if (menud01.size() > 0) delete menud01;
+
+// Insert VAT Transactions menu record
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'VAT Transactions',
+rstk__label__c = 'VAT Transactions',
+rstk__header__c = 'Financial System Admin',
+rstk__href__c = '/apex/listview?rectype=syvattxn',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 50,
+rstk__inactive__c = false,
+rstk__parentid__c = 981,
+rstk__level__c = 1,
+rstk__id__c = 903,
+rstk__appsecuritykey__c = 'm_syvattxn__c',
+rstk__subsection__c = 'Process',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'syvattxn__c',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
