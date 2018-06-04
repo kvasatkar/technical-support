@@ -1,0 +1,8 @@
+rstk__menu__c[] menus = [SELECT Id, rstk__label__c, Name, rstk__hideaddlink__c FROM rstk__menu__c
+                  where rstk__label__c like 'PO Receipt Transaction%'];
+
+for (rstk__menu__c menu : menus) 
+{
+menu.rstk__hideaddlink__c = True;
+}
+update menus;
