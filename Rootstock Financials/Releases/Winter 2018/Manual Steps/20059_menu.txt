@@ -1,0 +1,28 @@
+// Remove existing Financial Report Template Mover menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'Financial Report Template Mover'];
+if (menud01.size() > 0) delete menud01;
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Financial Report Template Mover',
+rstk__label__c = 'Financial Report Template Mover',
+rstk__header__c = 'RS Support Functions',
+rstk__href__c = '/apex/financialreporttemplatemover',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 102,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 812,
+rstk__appsecuritykey__c = 'm_financialreporttemplatemover__c',
+rstk__subsection__c = 'Process',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
