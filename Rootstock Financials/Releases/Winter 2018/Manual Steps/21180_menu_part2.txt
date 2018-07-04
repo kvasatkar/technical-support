@@ -1,0 +1,28 @@
+// Remove existing GL Type menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'GL Type'];
+if (menud01.size() > 0) delete menud01;
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'GL Type',
+rstk__label__c = 'GL Type',
+rstk__header__c = 'Financial Reporting',
+rstk__href__c = '/apex/gltype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 104,
+rstk__inactive__c = false,
+rstk__parentid__c = 972,
+rstk__level__c = 1,
+rstk__id__c = 987,
+rstk__appsecuritykey__c = 'm_gltype__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
