@@ -1,0 +1,28 @@
+// Remove existing Create Transaction Summary Object menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'Create Transaction Summary Object'];
+if (menud01.size() > 0) delete menud01;
+
+// Insert Create Transaction Summary Objects menu record
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Create Transaction Summary Object',
+rstk__label__c = 'Create Transaction Summary Object',
+rstk__header__c = 'Financial Reporting',
+rstk__href__c = 'apex/gltxnsummary',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 103,
+rstk__inactive__c = false,
+rstk__parentid__c = 972,
+rstk__level__c = 1,
+rstk__id__c = 813,
+rstk__appsecuritykey__c = 'm_gltxnsummary__c',
+rstk__subsection__c = 'Process',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
