@@ -1,0 +1,28 @@
+// Remove existing Clone Chart of Accounts menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'Clone Chart of Accounts'];
+if (menud01.size() > 0) delete menud01;
+
+// Insert Clone Chart of Accounts menu record
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Clone Chart of Accounts',
+rstk__label__c = 'Clone Chart of Accounts',
+rstk__header__c = 'Clone Chart of Accounts',
+rstk__href__c = '/apex/clonechartofaccounts',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 99,
+rstk__inactive__c = false,
+rstk__parentid__c = 988,
+rstk__level__c = 1,
+rstk__id__c = 846,
+rstk__appsecuritykey__c = 'm_clonechartofaccounts__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
