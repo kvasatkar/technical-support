@@ -1,0 +1,178 @@
+
+
+// Remove existing RS Financials Support Functions header if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'RS Financials Support Functions'];
+if (menud01.size() > 0) delete menud01;
+
+// RS Financials Support Functions Insert
+rstk__menu__c menu11 = new rstk__menu__c(
+Name = 'RS Financials Support Functions',
+rstk__header__c = '',
+rstk__href__c = '/RS_Financials_Support_Functions',
+rstk__imageclass__c = '',
+rstk__label__c = 'RS Financials Support Functions',
+rstk__sequence__c = 101,
+rstk__secnsequence__c = 99,
+rstk__inactive__c = false,
+rstk__parentid__c = null,
+rstk__level__c = 0,
+rstk__id__c = 991,
+rstk__appsecuritykey__c = 'RS_Financials_Support_Functions__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = ''
+
+);
+insert menu11;
+
+
+
+
+
+// Remove existing Cash Receipts Detail menu records if they exist
+rstk__menu__c[] menud02 = 
+[select id from rstk__menu__c where name = 'Cash Receipts Detail'];
+if (menud02.size() > 0) delete menud02;
+
+// Insert Cash Receipts Detail
+rstk__menu__c menu12 = new rstk__menu__c(
+Name = 'Cash Receipts Detail',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arcashd',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Cash Receipts Detail',
+rstk__sequence__c = 1,
+
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 91,
+rstk__appsecuritykey__c = 'm_arcashd__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu12;
+
+// Remove existing Cash Receipts Distribution menu record if they exist
+rstk__menu__c[] menud03 = 
+[select id from rstk__menu__c where name = 'Cash Receipts Distribution'];
+if (menud03.size() > 0) delete menud03;
+
+// Insert Cash Receipts Distribution
+rstk__menu__c menu13 = new rstk__menu__c(
+Name = 'Cash Receipts Distribution',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arcashddist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Cash Receipts Distribution',
+rstk__sequence__c = 2,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 92,
+rstk__appsecuritykey__c = 'm_arcashddist__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu13;
+
+// Remove existing 'Receivable Transaction Scheduled Payment' menu record if they exist
+rstk__menu__c[] menud04 = 
+[select id from rstk__menu__c where name = 'Receivable Transaction Scheduled Payment'];
+if (menud04 .size() > 0) delete menud04;
+
+// Insert Receivable Transaction Scheduled Payment
+rstk__menu__c menu14 = new rstk__menu__c(
+Name = 'Receivable Transaction Scheduled Payment',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arinvdue',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Receivable Transaction Scheduled Payment',
+rstk__sequence__c = 3,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 93,
+rstk__appsecuritykey__c = 'm_arinvdue__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu14;
+
+// Remove existing 'Receivable Transaction Distribution' menu record if they exist
+rstk__menu__c[] menud05  = 
+[select id from rstk__menu__c where name = 'Receivable Transaction Distribution'];
+if (menud05.size() > 0) delete menud05;
+
+// Insert Receivable Transaction Distribution
+rstk__menu__c menu15 = new rstk__menu__c(
+Name = 'Receivable Transaction Distribution ',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arinvdist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Receivable Transaction Distribution',
+rstk__sequence__c = 4,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 94,
+rstk__appsecuritykey__c = 'm_arinvdist__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu15;
+
+// Remove existing 'Payments Session Header' menu record if they exist
+rstk__menu__c[] menud06 = 
+[select id from rstk__menu__c where name = 'Payments Session Header'];
+if (menud06.size() > 0) delete menud06;
+
+// Insert Payments Session Header
+rstk__menu__c menu16 = new rstk__menu__c(
+Name = 'Payments Session Header',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=appayh',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Payments Session Header',
+rstk__sequence__c = 5,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 95,
+rstk__appsecuritykey__c = 'm_appayh__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu16;
+
