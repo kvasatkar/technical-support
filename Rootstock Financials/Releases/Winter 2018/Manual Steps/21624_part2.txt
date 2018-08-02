@@ -1,0 +1,178 @@
+// Remove existing 'Payments Session Detail' menu record if they exist
+rstk__menu__c[] menud07 = 
+[select id from rstk__menu__c where name = 'Payments Session Detail'];
+if (menud07.size() > 0) delete menud07;
+
+// Insert Payments Session Detail
+rstk__menu__c menu17 = new rstk__menu__c(
+Name = 'Payments Session Detail',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=appayd',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Payments Session Detail',
+rstk__sequence__c = 6,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 96,
+rstk__appsecuritykey__c = 'm_appayd__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu17;
+
+// Remove existing 'Payables Line' menu record if they exist
+rstk__menu__c[] menud08 = 
+[select id from rstk__menu__c where name = 'Payables Line'];
+if (menud08.size() > 0) delete menud08;
+
+// Insert Payables Line 
+rstk__menu__c menu18 = new rstk__menu__c(
+Name = 'Payables Line',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apinvline',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Payables Line',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 97,
+rstk__appsecuritykey__c = 'm_apinvline__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu18;
+
+
+// Remove existing 'Payables Distribution' menu record if they exist
+rstk__menu__c[] menud09 = 
+[select id from rstk__menu__c where name = 'Payables Distribution'];
+if (menud09.size() > 0) delete menud09;
+
+// Insert Payables Distribution 
+rstk__menu__c menu19 = new rstk__menu__c(
+Name = 'Payables Distribution',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apinvdist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Payables Distribution',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 98,
+rstk__appsecuritykey__c = 'm_apinvdist__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu19;
+
+
+
+// Remove existing 'Foreign Exchange Gain/Loss on Invoice' menu record if they exist
+rstk__menu__c[] menud010 = 
+[select id from rstk__menu__c where name = 'Foreign Exchange Gain/Loss on Invoice'];
+if (menud010.size() > 0) delete menud010;
+
+// Insert Foreign Exchange Gain/Loss on Invoice
+rstk__menu__c menu20 = new rstk__menu__c(
+Name = 'Foreign Exchange Gain/Loss on Invoice',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apinvtxnforex',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Foreign Exchange Gain/Loss on Invoice',
+rstk__sequence__c = 9,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 99,
+rstk__appsecuritykey__c = 'm_apinvtxnforex__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu20;
+
+// Remove existing 'Foreign Exchange Gain/Loss on App' menu record if they exist
+rstk__menu__c[] menud011 = 
+[select id from rstk__menu__c where name = 'Foreign Exchange Gain/Loss on App'];
+if (menud011.size() > 0) delete menud011;
+
+// Insert Foreign Exchange Gain/Loss on App
+rstk__menu__c menu21 = new rstk__menu__c(
+Name = 'Foreign Exchange Gain/Loss on App',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apapplicforex',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Foreign Exchange Gain/Loss on App',
+rstk__sequence__c = 10,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 100,
+rstk__appsecuritykey__c = 'm_apapplicforex__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu21;
+
+// Remove existing GL Processlog menu record if they exist
+rstk__menu__c[] menud012 = 
+[select id from rstk__menu__c where name = 'GL Processlog'];
+if (menud012.size() > 0) delete menud012;
+
+// Insert GL Processlog
+rstk__menu__c menu22 = new rstk__menu__c(
+Name = 'GL Processlog',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=processlogf',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'GL Processlog',
+rstk__sequence__c = 11,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 101,
+rstk__appsecuritykey__c = 'm_processlogf__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu22;
+
+
