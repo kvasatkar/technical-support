@@ -1,0 +1,121 @@
+
+
+// Remove existing GL Add Transaction menu record if they exist
+rstk__menu__c[] menud020 = 
+[select id from rstk__menu__c where name = 'GL Add Transaction'];
+if (menud020.size() > 0) delete menud020;
+
+// Insert GL Add Transaction Transaction 
+rstk__menu__c menu34 = new rstk__menu__c(
+Name = 'GL Add Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=glato',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'GL Add Transaction',
+rstk__sequence__c = 23,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 113,
+rstk__appsecuritykey__c = 'm_glato__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu34;
+
+// Remove existing AR Add Transaction menu record if they exist
+rstk__menu__c[] menud021 = 
+[select id from rstk__menu__c where name = 'AR Add Transaction'];
+if (menud021.size() > 0) delete menud021;
+
+// Insert AR Add Transaction 
+rstk__menu__c menu35 = new rstk__menu__c(
+Name = 'AR Add Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arato',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'AR Add Transaction',
+rstk__sequence__c = 24,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 114,
+rstk__appsecuritykey__c = 'm_arato__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu35;
+
+// Remove existing AP Add Transaction menu record if they exist
+rstk__menu__c[] menud022 = 
+[select id from rstk__menu__c where name = 'AP Add Transaction'];
+if (menud022.size() > 0) delete menud022;
+
+// Insert AP Add Transaction 
+rstk__menu__c menu36 = new rstk__menu__c(
+Name = 'AP Add Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apato',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'AP Add Transaction',
+rstk__sequence__c = 25,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 115,
+rstk__appsecuritykey__c = 'm_apato__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu36;
+
+// Remove existing CR Add Transaction menu record if they exist
+rstk__menu__c[] menud023 = 
+[select id from rstk__menu__c where name = 'CR Add Transaction'];
+if (menud023.size() > 0) delete menud023;
+
+// Insert CR Add Transaction 
+rstk__menu__c menu37 = new rstk__menu__c(
+Name = 'CR Add Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=crato',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'CR Add Transaction',
+rstk__sequence__c = 26,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 116,
+rstk__appsecuritykey__c = 'm_crato__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu37;
+
+
+
+
