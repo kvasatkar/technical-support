@@ -1,0 +1,208 @@
+// Remove existing Receivable Application Transaction menu record if they exist
+rstk__menu__c[] menud013 = 
+[select id from rstk__menu__c where name = 'Receivable Application Transaction'];
+if (menud013.size() > 0) delete menud013;
+
+// Insert Receivable Application Transaction
+rstk__menu__c menu27 = new rstk__menu__c(
+Name = 'Receivable Application Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=arapplic',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Receivable Application Transaction',
+rstk__sequence__c = 16,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 106,
+rstk__appsecuritykey__c = 'm_arapplic__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu27;
+
+// Remove existing Accounts Payable Check menu record if they exist
+rstk__menu__c[] menud014 = 
+[select id from rstk__menu__c where name = 'Accounts Payable Check'];
+if (menud014.size() > 0) delete menud014;
+
+// Insert Accounts Payable Check
+rstk__menu__c menu28 = new rstk__menu__c(
+Name = 'Accounts Payable Check',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apcheck',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Accounts Payable Check',
+rstk__sequence__c = 17,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 107,
+rstk__appsecuritykey__c = 'm_apcheck__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu28;
+
+// Remove existing AP Check Stub Detail  menu record if they exist
+rstk__menu__c[] menud015 = 
+[select id from rstk__menu__c where name = 'AP Check Stub Detail'];
+if (menud015.size() > 0) delete menud015;
+
+// Insert AP Check Stub Detail 
+rstk__menu__c menu29 = new rstk__menu__c(
+Name = 'AP Check Stub Detail',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apcheckstub',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'AP Check Stub Detail',
+rstk__sequence__c = 18,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 108,
+rstk__appsecuritykey__c = 'm_apcheckstub__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu29;
+
+
+// Remove existing Accounts Payable EFT menu record if they exist
+rstk__menu__c[] menud016 = 
+[select id from rstk__menu__c where name = 'Accounts Payable EFT'];
+if (menud016.size() > 0) delete menud016;
+
+
+// Insert Accounts Payable EFT
+rstk__menu__c menu30 = new rstk__menu__c(
+Name = 'Accounts Payable EFT',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apeft',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Accounts Payable EFT',
+rstk__sequence__c = 19,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 109,
+rstk__appsecuritykey__c = 'm_apeft__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu30;
+
+
+// Remove existing AP EFT Payment Detail menu record if they exist
+rstk__menu__c[] menud017 = 
+[select id from rstk__menu__c where name = 'AP EFT Payment Detail'];
+if (menud017.size() > 0) delete menud017;
+
+// Insert AP EFT Payment Detail 
+rstk__menu__c menu31 = new rstk__menu__c(
+Name = 'AP EFT Payment Detail',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apeftstub__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'AP EFT Payment Detail',
+rstk__sequence__c = 20,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 110,
+rstk__appsecuritykey__c = 'm_apeftstub__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu31;
+
+
+// Remove existing Dimension Values menu record if they exist
+rstk__menu__c[] menud018 = 
+[select id from rstk__menu__c where name = 'Dimension Values'];
+if (menud018.size() > 0) delete menud018;
+
+// Insert Dimension Values
+rstk__menu__c menu32 = new rstk__menu__c(
+Name = 'Dimension Values',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=dimvals',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Dimension Values',
+rstk__sequence__c = 21,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 111,
+rstk__appsecuritykey__c = 'm_dimvals__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = false, 
+rstk__menutype__c = 1
+);
+insert menu32;
+
+// Remove existing Bank Account Transaction menu record if they exist
+rstk__menu__c[] menud019 = 
+[select id from rstk__menu__c where name = 'Bank Account Transaction'];
+if (menud019.size() > 0) delete menud019;
+
+// Insert Bank Account Transaction 
+rstk__menu__c menu33 = new rstk__menu__c(
+Name = 'Bank Account Transaction',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=glbanktxn',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Bank Account Transaction',
+rstk__sequence__c = 22,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 112,
+rstk__appsecuritykey__c = 'm_glbanktxn__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menu33;
+
+
