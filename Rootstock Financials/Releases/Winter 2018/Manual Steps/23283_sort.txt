@@ -1,0 +1,15 @@
+//Sort 'RS Financials Support Functions ' records in ascending order
+
+
+rstk__menu__c[] menus = [select id, rstk__label__c ,rstk__sequence__c from rstk__menu__c where rstk__header__c = 'RS Financials Support Functions' order by rstk__label__c ];
+
+// update sequence nos , so that 'RS Financials Support Functions ' subrecords are arranged in ascending order
+integer sequence_no =1;
+for (rstk__menu__c menu : menus) {
+     
+    menu.rstk__sequence__c =sequence_no;
+    sequence_no = sequence_no + 1;
+    
+}
+update menus;
+
