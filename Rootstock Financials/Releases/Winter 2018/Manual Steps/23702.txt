@@ -1,0 +1,127 @@
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'RS Financials Support Functions' and rstk__level__c = 0];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus;
+
+rstk__menu__c[] menus1 = [select id from rstk__menu__c where name = 'Cash Receipts Distribution' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus1) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus1;
+
+rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'Receivable Transaction Scheduled Payment' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus2) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus2;
+
+rstk__menu__c[] menus3 = [select id from rstk__menu__c where name = 'Receivable Transaction Distribution' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus3) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus3;
+
+rstk__menu__c[] menus4 = [select id from rstk__menu__c where name = 'Payments Session Header' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus4) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus4;
+
+rstk__menu__c[] menus5 = [select id from rstk__menu__c where name = 'Payments Session Detail' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus5) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus5;
+
+rstk__menu__c[] menus6 = [select id from rstk__menu__c where name = 'Payables Line' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus6) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus6;
+
+rstk__menu__c[] menus7 = [select id from rstk__menu__c where name = 'Payables Distribution' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus7) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus7;
+
+rstk__menu__c[] menus8 = [select id from rstk__menu__c where name = 'Foreign Exchange Gain/Loss on Invoice' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus8) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus8;
+
+rstk__menu__c[] menus9 = [select id from rstk__menu__c where name = 'Foreign Exchange Gain/Loss on App' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus9) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus9;
+
+rstk__menu__c[] menus10 = [select id from rstk__menu__c where name = 'GL Processlog' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus10) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus10;
+
+rstk__menu__c[] menus11 = [select id from rstk__menu__c where name = 'Receivable Application Transaction' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus11) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus11;
+
+rstk__menu__c[] menus12 = [select id from rstk__menu__c where name = 'Accounts Payable Check' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus12) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus12;
+
+rstk__menu__c[] menus13 = [select id from rstk__menu__c where name = 'AP Check Stub Detail' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus13) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus13;
+
+rstk__menu__c[] menus14 = [select id from rstk__menu__c where name = 'Accounts Payable EFT' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus14) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus14;
+
+rstk__menu__c[] menus15 = [select id from rstk__menu__c where name = 'AP EFT Payment Detail' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus15) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus15;
+
+rstk__menu__c[] menus16 = [select id from rstk__menu__c where name = 'Dimension Values' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus16) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus16;
+
+rstk__menu__c[] menus17 = [select id from rstk__menu__c where name = 'Bank Account Transaction' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus17) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus17;
+
+rstk__menu__c[] menus18 = [select id from rstk__menu__c where name = 'GL Add Transaction' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus18) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus18;
+
+rstk__menu__c[] menus19 = [select id from rstk__menu__c where name = 'AR Add Transaction' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus19) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus19;
+
+rstk__menu__c[] menus20 = [select id from rstk__menu__c where name = 'CR Add Transaction' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus20) {
+  menu.rstk__pagekey__c = 'ccrstk';
+}
+update menus20;
+
+
