@@ -1,6 +1,0 @@
-// Enable Cycle Count Report menu option
-rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Purging - Monitoring' and rstk__level__c = 0];
-for (rstk__menu__c menu : menus) {
-  menu.rstk__pagekey__c = '';
-}
-update menus;
