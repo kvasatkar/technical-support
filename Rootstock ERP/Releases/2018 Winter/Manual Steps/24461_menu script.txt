@@ -1,0 +1,77 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Calculate ABC Codes',
+rstk__label__c = 'Calculate ABC Codes',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/calculateABCcodes',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 25,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 985,
+rstk__appsecuritykey__c = 'm_calculateABCcodes__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'calculateabccodes',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'Subcontract PO Line Processing',
+rstk__label__c = 'Subcontract PO Line Processing',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/podmdprocess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 25,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 274,
+rstk__appsecuritykey__c = 'm_posubecomponent__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'podmdprocess',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;
+
+
+
+rstk__menu__c[] menud01 = [select id, name, rstk__label__c from rstk__menu__c 
+where (rstk__label__c = 'Transfer Request Packing Slip' or Name = 'Transfer Request Packing Slip')];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+
+
+rstk__menu__c menua16 = new rstk__menu__c(
+Name = 'Transfer Request Packing Slip',
+rstk__label__c = 'Transfer Request Packing Slip',
+rstk__header__c = 'ictransreq',
+rstk__href__c = '/apex/createPackingSlip',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 57,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_transferRequestPackingSlip__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'createpackingslip',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua16;
