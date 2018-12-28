@@ -1,0 +1,5 @@
+rstk__menu__c[] menus1 = [select id from rstk__menu__c where name = 'Translate Data into Parent Company Currency' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus1) {
+  menu.rstk__href__c = '/apex/TranslateToParentCompCurr';
+}
+update menus1;
