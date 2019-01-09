@@ -1,0 +1,6 @@
+rstk__menu__c[] menus1 = [select id from rstk__menu__c where name = 'Predefined Subline Group Entry/Maintenance' and rstk__level__c = 1];
+for (rstk__menu__c menu : menus1) {
+  	menu.Name = 'Reporting Account Group Entry/Maintenance';
+	menu.rstk__label__c = 'Reporting Account Group Entry/Maintenance';
+}
+update menus1;
