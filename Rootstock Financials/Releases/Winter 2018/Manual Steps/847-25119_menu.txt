@@ -1,0 +1,61 @@
+// Remove existing WHT Certificate Workbench menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'WHT Certificate Workbench'];
+if (menud01.size() > 0) delete menud01;
+
+
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'WHT Certificate Workbench',
+rstk__label__c = 'WHT Certificate Workbench',
+rstk__header__c = 'Accounts Payable',
+rstk__href__c = '/apex/WHTCertWB',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 67,
+rstk__inactive__c = false,
+rstk__parentid__c = 986,
+rstk__level__c = 1,
+rstk__id__c = 999,
+rstk__appsecuritykey__c = 'm_whtcertwb__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
+
+// Remove existing WHT Return Workbench menu records if they exist
+rstk__menu__c[] menud02 = 
+[select id from rstk__menu__c where name = 'WHT Return Workbench'];
+if (menud01.size() > 0) delete menud02;
+
+
+
+// - Insert initial menu selection 14
+rstk__menu__c menua02 = new rstk__menu__c(
+Name = 'WHT Return Workbench',
+rstk__label__c = 'WHT Return Workbench',
+rstk__header__c = 'Accounts Payable',
+rstk__href__c = '/apex/WHTReturnWB',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 68,
+rstk__inactive__c = false,
+rstk__parentid__c = 986,
+rstk__level__c = 1,
+rstk__id__c = 999,
+rstk__appsecuritykey__c = 'm_whtreturnwb__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua02;
