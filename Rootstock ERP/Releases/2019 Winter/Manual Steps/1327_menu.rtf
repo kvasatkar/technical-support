@@ -1,200 +1,162 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
-{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\margl1440\margr1440\vieww28600\viewh15280\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%API Objects - Results%'];
 
-\f0\fs24 \cf0 rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%API Objects - Results%'];\
-\
-for (rstk__menu__c upd1 : menuapp1) \
-     \{upd1.rstk__pagekey__c = 'hr_RS_APIs';\
-     \}\
-update menuapp1;\
-\
-rstk__menu__c[] menuapp2 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like \'91%BOC%\'92];\
-\
-for (rstk__menu__c upd2 : menuapp2) \
-     \{upd2.rstk__pagekey__c = 'hr_boc';\
-     \}\
-update menuapp2;\
-\
-rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Cost Accounting%'];\
-\
-for (rstk__menu__c upd3 : menuapp3) \
-     \{upd3.rstk__pagekey__c = 'hr_CostAccounting';\
-     \}\
-update menuapp3;\
-\
-rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%CPQ and Contract%'];\
-\
-for (rstk__menu__c upd4 : menuapp4) \
-     \{upd4.rstk__pagekey__c = 'hr_CPQandContract';\
-     \}\
-update menuapp4;\
-\
-rstk__menu__c[] menuapp5 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%DRP Processing'];\
-\
-for (rstk__menu__c upd5 : menuapp5) \
-     \{upd5.rstk__pagekey__c = 'hr_DRPProcessing';\
-     \}\
-update menuapp5;\
-\
-rstk__menu__c[] menuapp6 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like \'91%\ul Financials\ulnone \'92];\
-\
-for (rstk__menu__c upd6 : menuapp6) \
-     \{upd6.rstk__pagekey__c = 'hr_Financials';\
-     \}\
-update menuapp6;\
-\
-rstk__menu__c[] menuapp7 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Forecasting-MRP%'];\
-\
-for (rstk__menu__c upd7 : menuapp7) \
-     \{upd7.rstk__pagekey__c = 'hr_ForecastingMRP';\
-     \}\
-update menuapp7;\
-\
-rstk__menu__c[] menuapp8 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Inventory Management%'];\
-\
-for (rstk__menu__c upd8 : menuapp8) \
-     \{upd8.rstk__pagekey__c = 'hr_InventoryManagement';\
-     \}\
-update menuapp8;\
-\
-rstk__menu__c[] menuapp9 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Inventory Transactions%'];\
-\
-for (rstk__menu__c upd9 : menuapp9) \
-     \{upd9.rstk__pagekey__c = 'hr_InventoryTransactions';\
-     \}\
-update menuapp9;\
-\
-rstk__menu__c[] menuapp11 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Packaging%\'92];\
-\
-for (rstk__menu__c upd11 : menuapp11) \
-     \{upd11.rstk__pagekey__c = 'hr_Packaging';\
-     \}\
-update menuapp11;\
-\
-rstk__menu__c[] menuapp11 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%Packaging%\'92];\
-\
-for (rstk__menu__c upd11 : menuapp11) \
-     \{upd11.rstk__pagekey__c = 'hr_Packaging';\
-     \}\
-update menuapp11;\
-\
-rstk__menu__c[] menuapp12 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Project Control'];\
-\
-for (rstk__menu__c upd12 : menuapp12) \
-     \{upd12.rstk__pagekey__c = 'hr_ProjectControl';\
-     \}\
-update menuapp12;\
-\
-rstk__menu__c[] menuapp13 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Purchasing'];\
-\
-for (rstk__menu__c upd13 : menuapp13) \
-     \{upd13.rstk__pagekey__c = 'hr_Purchasing';\
-     \}\
-update menuapp13;\
-\
-rstk__menu__c[] menuapp14 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Purging - Monitoring'];\
-\
-for (rstk__menu__c upd14 : menuapp14) \
-     \{upd14.rstk__pagekey__c = 'hr_PurgingMonitoring';\
-     \}\
-update menuapp14;\
-\
-rstk__menu__c[] menuapp15 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Requisitions'];\
-\
-for (rstk__menu__c upd15 : menuapp15) \
-     \{upd15.rstk__pagekey__c = 'hr_Requisitions';\
-     \}\
-update menuapp15;\
-\
-rstk__menu__c[] menuapp16 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '\ul Rootstock\ulnone  \ul Financials\ulnone '];\
-\
-for (rstk__menu__c upd16 : menuapp16) \
-     \{upd16.rstk__pagekey__c = 'hr_RootstockFinancials';\
-     \}\
-update menuapp16;\
-\
-rstk__menu__c[] menuapp17 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Sales Order Processes'];\
-\
-for (rstk__menu__c upd17 : menuapp17) \
-     \{upd17.rstk__pagekey__c = 'hr_SalesOrderProcesses';\
-     \}\
-update menuapp17;\
-\
-rstk__menu__c[] menuapp18 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Sales Order Setup'];\
-\
-for (rstk__menu__c upd18 : menuapp18) \
-     \{upd18.rstk__pagekey__c = 'hr_SalesOrderSetup';\
-     \}\
-update menuapp18;\
-\
-rstk__menu__c[] menuapp19 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Scheduling-Capacity Planning'];\
-\
-for (rstk__menu__c upd19 : menuapp19) \
-     \{upd19.rstk__pagekey__c = 'hr_SchedulingCapacityPlanning';\
-     \}\
-update menuapp19;\
-\
-rstk__menu__c[] menuapp20 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Shop Floor'];\
-\
-for (rstk__menu__c upd20 : menuapp20) \
-     \{upd20.rstk__pagekey__c = 'hr_ShopFloor';\
-     \}\
-update menuapp20;\
-\
-rstk__menu__c[] menuapp21 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'Standard Costs'];\
-\
-for (rstk__menu__c upd21 : menuapp21) \
-     \{upd21.rstk__pagekey__c = 'hr_StandardCosts';\
-     \}\
-update menuapp21;\
-\
-rstk__menu__c[] menuapp22 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like 'System Setup'];\
-\
-for (rstk__menu__c upd22 : menuapp22) \
-     \{upd22.rstk__pagekey__c = 'hr_SystemSetup';\
-     \}\
-update menuapp22;\
-\
-rstk__menu__c[] menuapp23 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c\
-where rstk__label__c like '%
-\f1 \cf2 \expnd0\expndtw0\kerning0
-Work Orders%
-\f0 \cf0 \kerning1\expnd0\expndtw0 \'92];\
-\
-for (rstk__menu__c upd23 : menuapp23) \
-     \{upd23.rstk__pagekey__c = '
-\f1 \cf2 \expnd0\expndtw0\kerning0
-hr_WorkOrders
-\f0 \cf0 \kerning1\expnd0\expndtw0 ';\
-     \}\
-update menuapp23;\
-\
-\
-}
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'hr_RS_APIs';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Cost Accounting%'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'hr_CostAccounting';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%CPQ and Contract%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__pagekey__c = 'hr_CPQandContract';
+     }
+update menuapp4;
+
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%DRP Processing'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__pagekey__c = 'hr_DRPProcessing';
+     }
+update menuapp5;
+
+rstk__menu__c[] menuapp7 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Forecasting-MRP%'];
+
+for (rstk__menu__c upd7 : menuapp7) 
+     {upd7.rstk__pagekey__c = 'hr_ForecastingMRP';
+     }
+update menuapp7;
+
+rstk__menu__c[] menuapp8 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Management%'];
+
+for (rstk__menu__c upd8 : menuapp8) 
+     {upd8.rstk__pagekey__c = 'hr_InventoryManagement';
+     }
+update menuapp8;
+
+rstk__menu__c[] menuapp9 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Transactions%'];
+
+for (rstk__menu__c upd9 : menuapp9) 
+     {upd9.rstk__pagekey__c = 'hr_InventoryTransactions';
+     }
+update menuapp9;
+
+rstk__menu__c[] menuapp11 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Packaging'];
+
+for (rstk__menu__c upd11 : menuapp11) 
+     {upd11.rstk__pagekey__c = 'hr_Packaging';
+     }
+update menuapp11;
+
+rstk__menu__c[] menuapp12 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Project Control'];
+
+for (rstk__menu__c upd12 : menuapp12) 
+     {upd12.rstk__pagekey__c = 'hr_ProjectControl';
+     }
+update menuapp12;
+
+rstk__menu__c[] menuapp13 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purchasing'];
+
+for (rstk__menu__c upd13 : menuapp13) 
+     {upd13.rstk__pagekey__c = 'hr_Purchasing';
+     }
+update menuapp13;
+
+rstk__menu__c[] menuapp14 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purging - Monitoring'];
+
+for (rstk__menu__c upd14 : menuapp14) 
+     {upd14.rstk__pagekey__c = 'hr_PurgingMonitoring';
+     }
+update menuapp14;
+
+rstk__menu__c[] menuapp15 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Requisitions'];
+
+for (rstk__menu__c upd15 : menuapp15) 
+     {upd15.rstk__pagekey__c = 'hr_Requisitions';
+     }
+update menuapp15;
+
+rstk__menu__c[] menuapp16 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Rootstock Financials'];
+
+for (rstk__menu__c upd16 : menuapp16) 
+     {upd16.rstk__pagekey__c = 'hr_RootstockFinancials';
+     }
+update menuapp16;
+
+rstk__menu__c[] menuapp17 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Processes'];
+
+for (rstk__menu__c upd17 : menuapp17) 
+     {upd17.rstk__pagekey__c = 'hr_SalesOrderProcesses';
+     }
+update menuapp17;
+
+rstk__menu__c[] menuapp18 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Setup'];
+
+for (rstk__menu__c upd18 : menuapp18) 
+     {upd18.rstk__pagekey__c = 'hr_SalesOrderSetup';
+     }
+update menuapp18;
+
+rstk__menu__c[] menuapp19 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Scheduling-Capacity Planning'];
+
+for (rstk__menu__c upd19 : menuapp19) 
+     {upd19.rstk__pagekey__c = 'hr_SchedulingCapacityPlanning';
+     }
+update menuapp19;
+
+rstk__menu__c[] menuapp20 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Shop Floor'];
+
+for (rstk__menu__c upd20 : menuapp20) 
+     {upd20.rstk__pagekey__c = 'hr_ShopFloor';
+     }
+update menuapp20;
+
+rstk__menu__c[] menuapp21 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Standard Costs'];
+
+for (rstk__menu__c upd21 : menuapp21) 
+     {upd21.rstk__pagekey__c = 'hr_StandardCosts';
+     }
+update menuapp21;
+
+rstk__menu__c[] menuapp22 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'System Setup'];
+
+for (rstk__menu__c upd22 : menuapp22) 
+     {upd22.rstk__pagekey__c = 'hr_SystemSetup';
+     }
+update menuapp22;
+
+rstk__menu__c[] menuapp23 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Work Orders'];
+
+for (rstk__menu__c upd23 : menuapp23) 
+     {upd23.rstk__pagekey__c = 'hr_WorkOrders';
+     }
+update menuapp23;
+
+
+
