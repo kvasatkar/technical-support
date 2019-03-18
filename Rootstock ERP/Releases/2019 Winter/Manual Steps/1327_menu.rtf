@@ -158,5 +158,11 @@ for (rstk__menu__c upd23 : menuapp23)
      }
 update menuapp23;
 
+rstk__menu__c[] menuapp24 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Mfg Engineering'];
 
+for (rstk__menu__c upd24 : menuapp24) 
+     {upd24.rstk__pagekey__c = 'hr_MfgEngineering';
+     }
+update menuapp24;
 
