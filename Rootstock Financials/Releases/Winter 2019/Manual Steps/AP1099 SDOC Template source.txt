@@ -1,0 +1,32 @@
+<style type="text/css">@page{margin: 0in 0in 0in 0in;}
+</style>
+<div style="position: relative;"><!--<div style="text-align:center; position:absolute; top:0px; z-index:-1"><img alt="" height="1050" src="/servlet/servlet.ImageServer?id=01541000002nlw1&amp;oid=00D410000011HE0&amp;lastMod=1516838801000" width="815" /></div>--><span style="left: 80px; top: 75px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_payer_name__c}}</span><br />
+<span style="left: 80px; top:100px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_payer_street__c}}</span><br />
+<span style="left: 80px; top:120px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_payer_city__c}}&nbsp;{{!rstkf__ap1099__c.rstkf__ap1099_payer_stateprov__c}}&nbsp;{{!rstkf__ap1099__c.rstkf__ap1099_payer_zippostal__c}}</span><br />
+<span style="left: 80px; top:140px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_payer_telephone__c}}</span><br />
+<span style="left: 80px; top:221px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_payer_tax_id__c}}</span><br />
+<span style="left:240px; top:221px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_vendor_tax_id__c}}</span><br />
+<span style="left: 80px; top:260px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_vendor_name__c}}</span><br />
+<span style="left: 80px; top:310px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_vendor_street__c}}</span><br />
+<span style="left: 80px; top:360px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_vendor_city__c}}&nbsp;{{!rstkf__ap1099__c.rstkf__ap1099_vendor_stateprov__c}}&nbsp;{{!rstkf__ap1099__c.rstkf__ap1099_vendor_zippostal__c}}</span><br />
+<span style="left: 80px; top:405px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_account_number__c}}</span><br />
+<span style="left:415px; top: 77px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box1__c #,###.##}}</span><br />
+<span style="left:415px; top:124px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box2__c #,###.##}}</span><br />
+<span style="left:415px; top:157px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box3__c #,###.##}}</span><br />
+<span style="left:550px; top:157px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box4__c #,###.##}}</span><br />
+<span style="left:415px; top:221px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box5__c #,###.##}}</span><br />
+<span style="left:550px; top:221px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box6__c #,###.##}}</span><br />
+<span style="left:415px; top:285px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box7__c #,###.##}}</span><br />
+<span style="left:550px; top:285px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box8__c #,###.##}}</span><br />
+<span style="left:510px; top:332px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.Box9_5000__c}}</span><br />
+<span style="left:550px; top:333px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box10__c #,###.##}}</span><br />
+<span style="left:415px; top:413px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box13__c #,###.##}}</span><br />
+<span style="left:550px; top:413px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box14__c #,###.##}}</span><br />
+<span style="left: 90px; top:461px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box15a__c #,###.##}}</span><br />
+<span style="left:255px; top:461px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box15b__c #,###.##}}</span><br />
+<span style="left:415px; top:446px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box16top__c #,###.##}}</span><br />
+<span style="left:415px; top:462px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box16bottom__c #,###.##}}</span><br />
+<span style="left:550px; top:446px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box17top__c}}</span><br />
+<span style="left:550px; top:462px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box17bottom__c}}</span><br />
+<span style="left:685px; top:446px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box18top__c #,###.##}}</span><br />
+<span style="left:685px; top:462px; position: absolute; z-index: 0; font-size:14px; font-family:Arial Unicode MS;">{{!rstkf__ap1099__c.rstkf__ap1099_box18bottom__c #,###.##}}</span></div>
