@@ -1,0 +1,263 @@
+//GL Transactions:
+rstk__menu__c[] menuapp61 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GL Transactions'];
+
+for (rstk__menu__c upd61 : menuapp61) 
+     {upd61.rstk__pagekey__c = 'gltxn__c'; 
+     }
+update menuapp61;
+
+//Convert JE Templates to JEs for a Period:
+rstk__menu__c[] menuapp62 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Convert JE Templates to JEs for a Period'];
+
+for (rstk__menu__c upd62: menuapp62) 
+     {upd62.rstk__pagekey__c = 'periodandjechecklistprocess'; 
+     }
+update menuapp62;
+
+//AR Non Cash Transfers:
+rstk__menu__c[] menuapp63 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AR Non Cash Transfers'];
+
+for (rstk__menu__c upd63 : menuapp63) 
+     {upd63.rstk__pagekey__c = 'arnoncashtransfer'; 
+     }
+update menuapp63;
+
+//AP Aging Report:
+rstk__menu__c[] menuapp64 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AP Aging Report'];
+
+for (rstk__menu__c upd64 : menuapp64) 
+     {upd64.rstk__pagekey__c = 'apagingreport'; 
+     }
+update menuapp64;
+
+//General Journal Entries:
+rstk__menu__c[] menuapp65 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%General Journal Entries'];
+
+for (rstk__menu__c upd65 : menuapp65) 
+     {upd65.rstk__pagekey__c = 'gljh__c'; 
+     }
+update menuapp65;
+
+//AR Aging Report:
+rstk__menu__c[] menuapp66 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AR Aging Report'];
+
+for (rstk__menu__c upd66 : menuapp66) 
+     {upd66.rstk__pagekey__c = 'aragingreport'; 
+     }
+update menuapp66;
+
+//GL Transaction Inquiry:
+rstk__menu__c[] menuapp67 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GL Transaction Inquiry'];
+
+for (rstk__menu__c upd67 : menuapp67) 
+     {upd67.rstk__pagekey__c = 'gltxninquiry'; 
+     }
+update menuapp67;
+
+//Quick Cash Receipts:
+rstk__menu__c[] menuapp68 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Quick Cash Receipts'];
+
+for (rstk__menu__c upd68 : menuapp68) 
+     {upd68.rstk__pagekey__c = 'quickcashreceipts'; 
+     }
+update menuapp68;
+
+//Update Customer Aging and Ad Hoc Statements:
+rstk__menu__c[] menuapp69 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Update Customer Aging and Ad Hoc Statements'];
+
+for (rstk__menu__c upd69 : menuapp69) 
+     {upd69.rstk__pagekey__c = 'updatecustagingadhocstmts'; 
+     }
+update menuapp69;
+
+//AR Invoice and Memo Review and Mass Post:
+rstk__menu__c[] menuapp70 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AR Invoice and Memo Review and Mass Post'];
+
+for (rstk__menu__c upd70 : menuapp70) 
+     {upd70.rstk__pagekey__c = 'arinvoiceandmassreview'; 
+     }
+update menuapp70;
+
+//Customer Company:
+rstk__menu__c[] menuapp71 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Customer Company'];
+
+for (rstk__menu__c upd71 : menuapp71) 
+     {upd71.rstk__pagekey__c = 'socustcmpno__c'; 
+     }
+update menuapp71;
+
+//Financial Report Template Mover:
+rstk__menu__c[] menuapp72 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial Report Template Mover'];
+
+for (rstk__menu__c upd72 : menuapp72) 
+     {upd72.rstk__pagekey__c = 'financialreporttemplatemover'; 
+     }
+update menuapp72;
+
+//Create Transaction Summary Object:
+rstk__menu__c[] menuapp73 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Create Transaction Summary Object'];
+
+for (rstk__menu__c upd73 : menuapp73) 
+     {upd73.rstk__pagekey__c = 'gltxnsummary'; 
+     }
+update menuapp73;
+
+//GL Type:
+rstk__menu__c[] menuapp74 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GL Type'];
+
+for (rstk__menu__c upd74 : menuapp74) 
+     {upd74.rstk__pagekey__c = 'gltype'; 
+     }
+update menuapp74;
+
+
+
+//Financial Analytics Reports
+rstk__menu__c[] menuapp75 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial Analytics Reports'];
+
+for (rstk__menu__c upd75 : menuapp75) 
+     {upd75.rstk__pagekey__c = 'rifr';
+     }
+update menuapp75;
+
+//Financial Analytics Report Section
+rstk__menu__c[] menuapp76 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial Analytics Report Section'];
+
+for (rstk__menu__c upd76 : menuapp76) 
+     {upd76.rstk__pagekey__c = 'rifrsec';
+     }
+update menuapp76;
+
+
+//VAT Transaction Processing
+rstk__menu__c[] menuapp77 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%VAT Transaction Processing'];
+
+for (rstk__menu__c upd77 : menuapp77) 
+     {upd77.rstk__pagekey__c = 'vattxnprocess';
+     }
+update menuapp77;
+
+//Print General Journal Entries
+rstk__menu__c[] menuapp78 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Print General Journal Entries'];
+
+for (rstk__menu__c upd78 : menuapp78) 
+     {upd78.rstk__pagekey__c = 'gljhprint';
+     }
+update menuapp78;
+
+//Clone Chart of Accounts
+rstk__menu__c[] menuapp79 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Clone Chart of Accounts'];
+
+for (rstk__menu__c upd79 : menuapp79) 
+     {upd79.rstk__pagekey__c = 'clonechartofaccounts';
+     }
+update menuapp79;
+
+//GLTXNDIM Consolidation
+rstk__menu__c[] menuapp80 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GLTXNDIM Consolidation'];
+
+for (rstk__menu__c upd80 : menuapp80) 
+     {upd80.rstk__pagekey__c = 'gltxndimconsolidate';
+     }
+update menuapp80;
+
+//Withholding Tax Class
+rstk__menu__c[] menuapp81 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Withholding Tax Class'];
+
+for (rstk__menu__c upd81 : menuapp81) 
+     {upd81.rstk__pagekey__c = 'apwht__c';
+     }
+update menuapp81;
+
+//Accounts Payable
+rstk__menu__c[] menuapp82 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Accounts Payable'];
+
+for (rstk__menu__c upd82 : menuapp82) 
+     {upd82.rstk__pagekey__c = 'hr_AccountsPayable';
+     }
+update menuapp82;
+
+//Accounts Receivable
+rstk__menu__c[] menuapp83 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Accounts Receivable'];
+
+for (rstk__menu__c upd83 : menuapp83) 
+     {upd83.rstk__pagekey__c = 'hr_AccountsReceivable';
+     }
+update menuapp83;
+
+//Financial Reporting
+rstk__menu__c[] menuapp84 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial Reporting'];
+
+for (rstk__menu__c upd84 : menuapp84) 
+     {upd84.rstk__pagekey__c = 'hr_FinancialReporting';
+     }
+update menuapp84;
+
+//Financial System Admin
+rstk__menu__c[] menuapp85 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial System Admin'];
+
+for (rstk__menu__c upd85 : menuapp85) 
+     {upd85.rstk__pagekey__c = 'hr_FinancialSystemAdmin';
+     }
+update menuapp85;
+
+//Financial System Setup
+rstk__menu__c[] menuapp86 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Financial System Setup'];
+
+for (rstk__menu__c upd86 : menuapp86) 
+     {upd86.rstk__pagekey__c = 'hr_FinancialSystemSetup';
+     }
+update menuapp86;
+
+//General Ledger
+rstk__menu__c[] menuapp87 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%General Ledger'];
+
+for (rstk__menu__c upd87 : menuapp87) 
+     {upd87.rstk__pagekey__c = 'hr_GeneralLedger';
+     }
+update menuapp87;
+
+//Multiple Currency
+rstk__menu__c[] menuapp88 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Multiple Currency'];
+
+for (rstk__menu__c upd88 : menuapp88) 
+     {upd88.rstk__pagekey__c = 'hr_MultipleCurrency';
+     }
+update menuapp88;
+
+//Period Close Activities
+rstk__menu__c[] menuapp89 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Period Close Activities'];
+
+for (rstk__menu__c upd89 : menuapp89) 
+     {upd89.rstk__pagekey__c = 'hr_PeriodCloseActivities';
+     }
+update menuapp89;

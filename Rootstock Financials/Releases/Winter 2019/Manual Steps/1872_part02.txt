@@ -1,0 +1,265 @@
+//Foreign Exchange Rate Schedule:
+rstk__menu__c[] menuapp33 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Foreign Exchange Rate Schedule'];
+
+for (rstk__menu__c upd33 : menuapp33) 
+     {upd33.rstk__pagekey__c = 'syforexschedno__c'; 
+     }
+update menuapp33;
+
+
+//Check Register for Single Payment Sessiont:
+rstk__menu__c[] menuapp34 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Check Register for Single Payment Session'];
+
+for (rstk__menu__c upd34 : menuapp34) 
+     {upd34.rstk__pagekey__c = 'chkregistersinglepaymentbatch'; 
+     }
+update menuapp34;
+
+
+//All Payment Types Register:
+rstk__menu__c[] menuapp35 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%All Payment Types Register'];
+
+for (rstk__menu__c upd35 : menuapp35) 
+     {upd35.rstk__pagekey__c = 'periodicpaymentregister'; 
+     }
+update menuapp35;
+
+
+//Vendor Company:
+rstk__menu__c[] menuapp36 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Vendor Company'];
+
+for (rstk__menu__c upd36 : menuapp36) 
+     {upd36.rstk__pagekey__c = 'povendcmpno__c'; 
+     }
+update menuapp36;
+
+
+//Check Register by Period:
+rstk__menu__c[] menuapp37 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Check Register by Period'];
+
+for (rstk__menu__c upd37 : menuapp37) 
+     {upd37.rstk__pagekey__c = 'monthlycheckregister'; 
+     }
+update menuapp37;
+
+
+//Payable Session:
+rstk__menu__c[] menuapp38 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Payable Session'];
+
+for (rstk__menu__c upd38 : menuapp38) 
+     {upd38.rstk__pagekey__c = 'apinvh__c'; 
+     }
+update menuapp38;
+
+
+//Post by Transaction:
+rstk__menu__c[] menuapp39 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Post by Transaction'];
+
+for (rstk__menu__c upd39 : menuapp39) 
+     {upd39.rstk__pagekey__c = 'apgrouptransfer'; 
+     }
+update menuapp39;
+
+
+//Change Payment Method:
+rstk__menu__c[] menuapp40 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Change Payment Method'];
+
+for (rstk__menu__c upd40 : menuapp40) 
+     {upd40.rstk__pagekey__c = 'approcess'; 
+     }
+update menuapp40;
+
+
+//Post by Session:
+rstk__menu__c[] menuapp41 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Post by Session'];
+
+for (rstk__menu__c upd41 : menuapp41) 
+     {upd41.rstk__pagekey__c = 'apbatchtransfer'; 
+     }
+update menuapp41;
+
+
+//Payable Transaction:
+rstk__menu__c[] menuapp42 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Payable Transaction'];
+
+for (rstk__menu__c upd42 : menuapp42) 
+     {upd42.rstk__pagekey__c = 'apinvtxn__c'; 
+     }
+update menuapp42;
+
+
+//General Journal Workbench:
+rstk__menu__c[] menuapp43 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%General Journal Workbench'];
+
+for (rstk__menu__c upd43 : menuapp43) 
+     {upd43.rstk__pagekey__c = 'gljhlistview'; 
+     }
+update menuapp43;
+
+
+//Postings Summary Report:
+rstk__menu__c[] menuapp44 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Postings Summary Report'];
+
+for (rstk__menu__c upd44 : menuapp44) 
+     {upd44.rstk__pagekey__c = 'postingssummaryreport'; 
+     }
+update menuapp44;
+
+
+//Bank Reconciliation:
+rstk__menu__c[] menuapp45 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Bank Reconciliation'];
+
+for (rstk__menu__c upd45 : menuapp45) 
+     {upd45.rstk__pagekey__c = 'glbankacctreconcile'; 
+     }
+update menuapp45;
+
+
+//Perform Financial Report Data Roll-up:
+rstk__menu__c[] menuapp46 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Perform Financial Report Data Roll-up'];
+
+for (rstk__menu__c upd46 : menuapp46) 
+     {upd46.rstk__pagekey__c = 'statementbuilder'; 
+     }
+update menuapp46;
+
+
+//Define Financial Report Templates:
+rstk__menu__c[] menuapp47 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Define Financial Report Templates'];
+
+for (rstk__menu__c upd47 : menuapp47) 
+     {upd47.rstk__pagekey__c = 'glfstmplt1__c'; 
+     }
+update menuapp47;
+
+//Test Report Templates for Completeness
+rstk__menu__c[] menuapp48 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Test Report Templates for Completeness'];
+
+for (rstk__menu__c upd48 : menuapp48) 
+     {upd48.rstk__pagekey__c = 'finstmttmpltest'; 
+     }
+update menuapp48;
+
+//Prepare Financial Reports:
+rstk__menu__c[] menuapp49 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Prepare Financial Reports'];
+
+for (rstk__menu__c upd49 : menuapp49) 
+     {upd49.rstk__pagekey__c = 'statementrun'; 
+     }
+update menuapp49;
+
+//Display/Print/Export/Purge Financial Reports:
+rstk__menu__c[] menuapp50 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Display/Print/Export/Purge Financial Reports'];
+
+for (rstk__menu__c upd50 : menuapp50) 
+     {upd50.rstk__pagekey__c = 'statementmaint'; 
+     }
+update menuapp50;
+
+//Adjusting Statement Entries:
+rstk__menu__c[] menuapp51 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Adjusting Statement Entries'];
+
+for (rstk__menu__c upd51 : menuapp51) 
+     {upd51.rstk__pagekey__c = 'glstmtlistview'; 
+     }
+update menuapp51;
+
+//External Data for Financial Reports Entry/Maintenance:
+rstk__menu__c[] menuapp52 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%External Data for Financial Reports Entry/Maintenance'];
+
+for (rstk__menu__c upd52 : menuapp52) 
+     {upd52.rstk__pagekey__c = 'glfstmplt6'; 
+     }
+update menuapp52;
+
+//Receivable Session:
+rstk__menu__c[] menuapp53 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Receivable Session'];
+
+for (rstk__menu__c upd53 : menuapp53) 
+     {upd53.rstk__pagekey__c = 'arinvh__c'; 
+     }
+update menuapp53;
+
+//Receivable Transaction:
+rstk__menu__c[] menuapp54 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Receivable Transaction'];
+
+for (rstk__menu__c upd54: menuapp54) 
+     {upd54.rstk__pagekey__c = 'arinvtxn__c'; 
+     }
+update menuapp54;
+
+//AR Debit / Credit Memo Register:
+rstk__menu__c[] menuapp55 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AR Debit / Credit Memo Register'];
+
+for (rstk__menu__c upd55: menuapp55) 
+     {upd55.rstk__pagekey__c = 'ardebitcreditmemoregister'; 
+     }
+update menuapp55;
+
+//Cash Receipts Journal:
+rstk__menu__c[] menuapp56 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Cash Receipts Journal'];
+
+for (rstk__menu__c upd56: menuapp56) 
+     {upd56.rstk__pagekey__c = 'cashreceiptsjournal'; 
+     }
+update menuapp56;
+
+//Customer Statements and Finance Charges:
+rstk__menu__c[] menuapp57 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Customer Statements and Finance Charges'];
+
+for (rstk__menu__c upd57: menuapp57) 
+     {upd57.rstk__pagekey__c = 'arstatandfincharges'; 
+     }
+update menuapp57;
+
+//Sales Invoice Review and Mass Post:
+rstk__menu__c[] menuapp58 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Sales Invoice Review and Mass Post'];
+
+for (rstk__menu__c upd58: menuapp58) 
+     {upd58.rstk__pagekey__c = 'arsalesinvoicereview'; 
+     }
+update menuapp58;
+
+//Cash Receipts:
+rstk__menu__c[] menuapp59 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Cash Receipts'];
+
+for (rstk__menu__c upd59 : menuapp59) 
+     {upd59.rstk__pagekey__c = 'arcashh__c'; 
+     }
+update menuapp59;
+
+//Payment Selection Audit:
+rstk__menu__c[] menuapp60 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Payment Selection Audit'];
+
+for (rstk__menu__c upd60 : menuapp60) 
+     {upd60.rstk__pagekey__c = 'appayselectaudit__c'; 
+     }
+update menuapp60;

@@ -1,0 +1,144 @@
+rstk__menu__c[] menuapp33 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%AP Check Stub Detail%'];
+
+for (rstk__menu__c upd33 : menuapp33) 
+     {upd33.rstk__recordtype__c = 'apcheckstub';
+     }
+update menuapp33;
+
+
+//Accounts Payable EFT:
+rstk__menu__c[] menuapp34 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Accounts Payable EFT%'];
+
+for (rstk__menu__c upd34 : menuapp34) 
+     {upd34.rstk__pagekey__c = 'apeft__c';
+     }
+update menuapp34;
+rstk__menu__c[] menuapp35 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%Accounts Payable EFT%'];
+
+for (rstk__menu__c upd35 : menuapp35) 
+     {upd35.rstk__recordtype__c = 'apeft';
+     }
+update menuapp35;
+
+
+//AP EFT Payment Detail:
+rstk__menu__c[] menuapp36 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AP EFT Payment Detail%'];
+
+for (rstk__menu__c upd36 : menuapp36) 
+     {upd36.rstk__pagekey__c = 'apeftstub__c';
+     }
+update menuapp36;
+rstk__menu__c[] menuapp37 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%AP EFT Payment Detail%'];
+
+for (rstk__menu__c upd37 : menuapp37) 
+     {upd37.rstk__recordtype__c = 'apeftstub';
+     }
+update menuapp37;
+
+
+//Bank Account Transaction:
+rstk__menu__c[] menuapp38 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Bank Account Transaction%'];
+
+for (rstk__menu__c upd38 : menuapp38) 
+     {upd38.rstk__pagekey__c = 'glbanktxn__c';
+     }
+update menuapp38;
+rstk__menu__c[] menuapp39 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%Bank Account Transaction%'];
+
+for (rstk__menu__c upd39 : menuapp39) 
+     {upd39.rstk__recordtype__c = 'glbanktxn';
+     }
+update menuapp39;
+
+
+//GL Add Transaction:
+rstk__menu__c[] menuapp40 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GL Add Transaction%'];
+
+for (rstk__menu__c upd40 : menuapp40) 
+     {upd40.rstk__pagekey__c = 'glato__c';
+     }
+update menuapp40;
+rstk__menu__c[] menuapp41 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%GL Add Transaction%'];
+
+for (rstk__menu__c upd41 : menuapp41) 
+     {upd41.rstk__recordtype__c = 'glato';
+     }
+update menuapp41;
+
+
+//AR Add Transaction:
+rstk__menu__c[] menuapp42 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AR Add Transaction%'];
+
+for (rstk__menu__c upd42 : menuapp42) 
+     {upd42.rstk__pagekey__c = 'arato__c';
+     }
+update menuapp42;
+rstk__menu__c[] menuapp43 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%AR Add Transaction%'];
+
+for (rstk__menu__c upd43 : menuapp43) 
+     {upd43.rstk__recordtype__c = 'arato';
+     }
+update menuapp43;
+
+
+//AP Add Transaction:
+rstk__menu__c[] menuapp44 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%AP Add Transaction%'];
+
+for (rstk__menu__c upd44 : menuapp44) 
+     {upd44.rstk__pagekey__c = 'apato__c';
+     }
+update menuapp44;
+rstk__menu__c[] menuapp45 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%AP Add Transaction%'];
+
+for (rstk__menu__c upd45 : menuapp45) 
+     {upd45.rstk__recordtype__c = 'apato';
+     }
+update menuapp45;
+
+
+
+//CR Add Transaction:
+rstk__menu__c[] menuapp46 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%CR Add Transaction%'];
+
+for (rstk__menu__c upd46 : menuapp46) 
+     {upd46.rstk__pagekey__c = 'crato__c';
+     }
+update menuapp46;
+rstk__menu__c[] menuapp47 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%CR Add Transaction%'];
+
+for (rstk__menu__c upd47 : menuapp47) 
+     {upd47.rstk__recordtype__c = 'crato';
+     }
+update menuapp47;
+
+
+//GL Processlog:
+rstk__menu__c[] menuapp48 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%GL Processlog%'];
+
+for (rstk__menu__c upd48 : menuapp48) 
+     {upd48.rstk__pagekey__c = 'processlogf__c';
+     }
+update menuapp48;
+rstk__menu__c[] menuapp49 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%GL Processlog%'];
+
+for (rstk__menu__c upd49 : menuapp49) 
+     {upd49.rstk__recordtype__c = 'processlogf';
+     }
+update menuapp49;
