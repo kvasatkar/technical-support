@@ -1,3 +1,12 @@
+//Reporting Account Group Entry/Maintenance:
+rstk__menu__c[] menuapp32 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Reporting Account Group Entry/Maintenance'];
+
+for (rstk__menu__c upd32 : menuapp32) 
+     {upd32.rstk__pagekey__c = 'glfstmplt7'; 
+     }
+update menuapp32;
+
 //Foreign Exchange Rate Schedule:
 rstk__menu__c[] menuapp33 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
 where rstk__label__c like '%Foreign Exchange Rate Schedule'];
@@ -255,11 +264,3 @@ for (rstk__menu__c upd59 : menuapp59)
      }
 update menuapp59;
 
-//Payment Selection Audit:
-rstk__menu__c[] menuapp60 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
-where rstk__label__c like '%Payment Selection Audit'];
-
-for (rstk__menu__c upd60 : menuapp60) 
-     {upd60.rstk__pagekey__c = 'appayselectaudit__c'; 
-     }
-update menuapp60;

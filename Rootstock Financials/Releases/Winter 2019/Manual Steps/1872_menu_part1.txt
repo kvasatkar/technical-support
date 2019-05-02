@@ -249,13 +249,3 @@ for (rstk__menu__c upd31 : menuapp31)
      }
 update menuapp31;
 
-
-
-//AP Check Stub Detail:
-rstk__menu__c[] menuapp32 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
-where rstk__label__c like '%AP Check Stub Detail%'];
-
-for (rstk__menu__c upd32 : menuapp32) 
-     {upd32.rstk__pagekey__c = 'apcheckstub__c';
-     }
-update menuapp32;

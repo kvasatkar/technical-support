@@ -1,3 +1,13 @@
+
+//Payment Selection Audit:
+rstk__menu__c[] menuapp60 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Payment Selection Audit'];
+
+for (rstk__menu__c upd60 : menuapp60) 
+     {upd60.rstk__pagekey__c = 'appayselectaudit__c'; 
+     }
+update menuapp60;
+
 //GL Transactions:
 rstk__menu__c[] menuapp61 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
 where rstk__label__c like '%GL Transactions'];
