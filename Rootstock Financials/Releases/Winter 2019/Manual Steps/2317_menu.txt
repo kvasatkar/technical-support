@@ -1,0 +1,28 @@
+// Remove existing AP Aging Drill Down Header menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'AP Aging Drill Down Header'];
+if (menud01.size() > 0) delete menud01;
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'AP Aging Drill Down Header',
+rstk__label__c = 'AP Aging Drill Down Header',
+rstk__header__c = 'RS Financials Support Functions',
+rstk__href__c = '/apex/listview?rectype=apagingh__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 25,
+rstk__inactive__c = false,
+rstk__parentid__c = 991,
+rstk__level__c = 1,
+rstk__id__c = 112,
+rstk__appsecuritykey__c = 'm_apagingh__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'apagingh',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
