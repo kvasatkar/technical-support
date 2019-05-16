@@ -1,0 +1,18 @@
+﻿
+List< icitemlot__c> invItemByLotList = new  List< icitemlot__c>(); 
+for(icitemlot __c invItemLot : [Select icitemlot_issexpiredate__c, icitemlot_expiredate__c,icitemlot_item__r.icitem_ltexpirefrm__c From icitemlot__c where icitemlot_issexpiredate__c = null Limit 2000])
+{
+	if(icitemlot.icitemlot_expiredate__c != null && icitemlot.icitemlot_item__r.icitem_ltexpirefrm__c != null){
+		invItemLot.icitemlot_issexpiredate__c = icitemlot.icitemlot_expiredate__c.addDays(-icitemlot.icitemlot_item__r.icitem_ltexpirefrm__c.intValue());
+		invItemByLotList.add(invItemLot);
+		System.debug('invItemByLotList = ' +invItemByLotList);
+	}
+}
+ 
+if(!invItemByLotList.isEmpty()){
+	update invItemByLotList;
+}
+ 
+ 
+Note: Run this script multiple times until all the records are updated with calculate date value on icitemlot_issexpiredate__c field.
+

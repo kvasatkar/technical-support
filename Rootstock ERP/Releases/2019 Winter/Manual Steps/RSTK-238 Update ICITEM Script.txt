@@ -1,0 +1,17 @@
+﻿
+
+List<icitem__c> inventoryItemList = new  List<icitem__c>(); 
+for(icitem__c invItem : [Select icitem_ltexpireind__c From icitem__c Where icitem_ltexpireind__c = false Limit 2000])
+{
+  invItem.icitem_ltexpireind__c = true;
+  inventoryItemList.add(invItem);
+  System.debug('inventory item list = ' +inventoryItemList);
+}
+ 
+if(!inventoryItemList.isEmpty()){
+	update inventoryItemsList;
+}
+
+
+Note: Run this script multiple times until all the records are updated with 'true' value on icitem_ltexpireind__c field.
+
