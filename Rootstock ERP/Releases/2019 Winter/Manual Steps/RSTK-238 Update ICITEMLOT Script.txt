@@ -1,9 +1,9 @@
 ﻿
-List< icitemlot__c> invItemByLotList = new  List< icitemlot__c>(); 
-for(icitemlot __c invItemLot : [Select icitemlot_issexpiredate__c, icitemlot_expiredate__c,icitemlot_item__r.icitem_ltexpirefrm__c From icitemlot__c where icitemlot_issexpiredate__c = null Limit 2000])
+List< rstk__icitemlot__c> invItemByLotList = new  List< rstk__icitemlot__c>(); 
+for(rstk__icitemlot__c invItemLot : [Select rstk__icitemlot_issexpiredate__c, rstk__icitemlot_expiredate__c,rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c From rstk__icitemlot__c where rstk__icitemlot_issexpiredate__c = null Limit 2000])
 {
-	if(icitemlot.icitemlot_expiredate__c != null && icitemlot.icitemlot_item__r.icitem_ltexpirefrm__c != null){
-		invItemLot.icitemlot_issexpiredate__c = icitemlot.icitemlot_expiredate__c.addDays(-icitemlot.icitemlot_item__r.icitem_ltexpirefrm__c.intValue());
+	if(rstk__icitemlot__c.rstk__icitemlot_expiredate__c != null && rstk__icitemlot__c.rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c != null){
+		rstk__invItemLot__c.rstk__icitemlot_issexpiredate__c = rstk__icitemlot__c.rstk__icitemlot_expiredate__c.addDays(-rstk__icitemlot__c.rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c.intValue());
 		invItemByLotList.add(invItemLot);
 		System.debug('invItemByLotList = ' +invItemByLotList);
 	}
@@ -12,7 +12,4 @@ for(icitemlot __c invItemLot : [Select icitemlot_issexpiredate__c, icitemlot_exp
 if(!invItemByLotList.isEmpty()){
 	update invItemByLotList;
 }
- 
- 
-Note: Run this script multiple times until all the records are updated with calculate date value on icitemlot_issexpiredate__c field.
 

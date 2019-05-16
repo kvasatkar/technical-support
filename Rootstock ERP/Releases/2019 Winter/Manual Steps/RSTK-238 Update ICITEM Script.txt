@@ -1,17 +1,16 @@
-﻿
-
-List<icitem__c> inventoryItemList = new  List<icitem__c>(); 
-for(icitem__c invItem : [Select icitem_ltexpireind__c From icitem__c Where icitem_ltexpireind__c = false Limit 2000])
+﻿List<rstk__icitem__c> inventoryItemList = new  List<rstk__icitem__c>(); 
+for(rstk__icitem__c invItem : [Select rstk__icitem_ltexpireind__c From rstk__icitem__c Where rstk__icitem_ltexpireind__c = false Limit 2000])
 {
-  invItem.icitem_ltexpireind__c = true;
+  invItem.rstk__icitem_ltexpireind__c = true;
   inventoryItemList.add(invItem);
   System.debug('inventory item list = ' +inventoryItemList);
 }
  
 if(!inventoryItemList.isEmpty()){
-	update inventoryItemsList;
+	update inventoryItemList;
 }
 
 
-Note: Run this script multiple times until all the records are updated with 'true' value on icitem_ltexpireind__c field.
+
+
 
