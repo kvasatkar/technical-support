@@ -1,0 +1,12 @@
+//RSTK-238 Update ICITEMLOT Script
+List<rstk__icitemlot__c> invItemByLotList = new  List<rstk__icitemlot__c>(); 
+for(rstk__icitemlot__c icitemlot : [Select Id, rstk__icitemlot_issexpiredate__c, rstk__icitemlot_expiredate__c, rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c From rstk__icitemlot__c where rstk__icitemlot_issexpiredate__c = null Limit 2000]) {
+    if(icitemlot.rstk__icitemlot_expiredate__c != null && icitemlot.rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c != null) {
+        icitemlot.rstk__icitemlot_issexpiredate__c = icitemlot.rstk__icitemlot_expiredate__c.addDays(-icitemlot.rstk__icitemlot_item__r.rstk__icitem_ltexpirefrm__c.intValue());
+        icitemlot.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+        invItemByLotList.add(icitemlot);
+    }
+}
+if(!invItemByLotList.isEmpty()){
+    update invItemByLotList;
+}

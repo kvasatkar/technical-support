@@ -1,0 +1,11 @@
+//RSTK-238 Update ICITEM Script
+List<rstk__icitem__c> inventoryItemList = new  List<rstk__icitem__c>(); 
+for(rstk__icitem__c invItem : [Select Id, rstk__icitem_ltexpireind__c, rstk__icitem_expdatereqdind__c From rstk__icitem__c Where rstk__icitem_ltexpireind__c = false Limit 2000]) {
+    invItem.rstk__icitem_ltexpireind__c = true;
+    invItem.rstk__icitem_expdatereqdind__c = true;
+    invItem.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    inventoryItemList.add(invItem);
+}
+if(!inventoryItemList.isEmpty()){
+    update inventoryItemList;
+}
