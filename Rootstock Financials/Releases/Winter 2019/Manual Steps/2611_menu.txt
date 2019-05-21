@@ -1,0 +1,15 @@
+//Journal Entry Templates:
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Journal Entry Templates%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__href__c = '/apex/listview?rectype=gljetemplth';
+     }
+update menuapp4;
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like '%Journal Entry Templates%'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__pagekey__c = 'gljetemplth__c';
+     }
+update menuapp5;
