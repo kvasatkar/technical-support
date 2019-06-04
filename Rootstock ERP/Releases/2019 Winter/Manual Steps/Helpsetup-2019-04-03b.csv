@@ -221,7 +221,8 @@ rtwctr__c,rtwctr__c,Manufacturing-Work-Center,kA01O000000ogqc
 salescommission,salescommission,Sales-Commission,kA01O000000oh29
 salescontractdevdealmgmt,salescontractdevdealmgmt,Sales-Contract-Device-Deal-Management,kA01O000000ogb4
 salescontractdevtransfer,salescontractdevtransfer,Sales-Contract-Device-Transfer,kA01O000000ogb3
-Salesorder_isstandalone,sf_soentryhv,Sales-Entry,kA01O000000ogc0
+Salesorder_isstandalone,sf_soentryhv,Sales-Orders-Entry-Overview,kA01O000000ogc0
+Salesorder_isstandalone,soorddmd_c,Sales-Orders-Entry-Overview,
 salesorderamortizationprocess,salesorderamortizationprocess,Sales-Order-Line-Amortization-Processing,kA01O000000ogsn
 salesorderworkbench,salesorderworkbench,Sales-Order-Fulfillment,kA01O000000ogkt
 sf_user,sf_user,Employees,kA01O000000ogNt
