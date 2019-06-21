@@ -1,0 +1,47 @@
+// Remove existing Print General Journal Entries menu records if they exist
+
+rstk__menu__c[] menud01 =
+
+[select id from rstk__menu__c where name = 'Print General Journal Entries'];
+
+if (menud01.size() > 0) delete menud01;
+
+ 
+
+// Remove existing AR Debit / Credit Memo Register menu records if they exist
+
+rstk__menu__c[] menud02 =
+
+[select id from rstk__menu__c where name = 'AR Debit / Credit Memo Register'];
+
+if (menud02.size() > 0) delete menud02;
+
+ 
+
+// Remove existing All Payment Types Register menu records if they exist
+
+rstk__menu__c[] menud03 =
+
+[select id from rstk__menu__c where name = 'All Payment Types Register'];
+
+if (menud03.size() > 0) delete menud03;
+
+ 
+
+// Remove existing Check Register by Period menu records if they exist
+
+rstk__menu__c[] menud04 =
+
+[select id from rstk__menu__c where name = 'Check Register by Period'];
+
+if (menud04.size() > 0) delete menud04;
+
+ 
+
+// Remove existing Check Register for Single Payment Session menu records if they exist
+
+rstk__menu__c[] menud05 =
+
+[select id from rstk__menu__c where name = 'Check Register for Single Payment Session'];
+
+if (menud05.size() > 0) delete menud05;
