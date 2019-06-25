@@ -1,0 +1,29 @@
+// - Price Book Detail Menu option exists, Pre-Delete 01
+rstk__menu__c[] menud01 = [select id, name, rstk__label__c from rstk__menu__c 
+					where rstk__label__c like '%Price Book Detail%'];
+
+if (menud01.size() > 0) {
+                delete menud01;
+}
+
+// - Price Book Detail Insert
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Price Book Detail',
+rstk__header__c = 'salesordersu',
+rstk__href__c = '/apex/listview?rectype=sopbkd',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Price Book Detail',
+rstk__sequence__c = 11,
+rstk__inactive__c = false,
+rstk__parentid__c = 16,
+rstk__level__c = 1,
+rstk__id__c = 135,
+rstk__appsecuritykey__c = 'm_sopkbd__c',
+rstk__subsection__c = 'Setup',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'sopbkd__c',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua01;
