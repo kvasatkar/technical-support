@@ -84,6 +84,74 @@ for (rstk__menu__c upd1 : menuapp1)
      {upd1.rstk__pagekey__c = 'icitemsiteproj__c';
      }
 update menuapp1;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1282 - Execute Anonymous,19.7,,,Execute Anonymous,,TRUE,,,,"// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'PO Issue Reversal',
+rstk__label__c = 'PO Issue Reversal',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssuer',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 19,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 987,
+rstk__appsecuritykey__c = 'm_poissuereversal__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissuer',
+rstk__recordtype__c = 'poissuer',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+// - Insert initial menu selection 15
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'PO Issue',
+rstk__label__c = 'PO Issue',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssue',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 982,
+rstk__appsecuritykey__c = 'm_poissue__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissue',
+rstk__recordtype__c = 'poissue',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;
+
+// - Insert initial menu selection 16
+rstk__menu__c menua16 = new rstk__menu__c(
+Name = 'PO Line Components',
+rstk__label__c = 'PO Line Components',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/podmdprocess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 274,
+rstk__appsecuritykey__c = 'm_posubecomponent__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'podmdprocess',
+rstk__recordtype__c = 'podmdprocess',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua16;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
 Jira 2484 - Delete Field,19.15,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Do_not_deploy_checkbox_fmla__c,,,,,,,FALSE,,,,,rstk__soline__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
 Jira 201 - New Picklist Value,19.13,,,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__sydata_txntype__c,,,,,,,FALSE,,,,,rstk__sydata__c,,,,PO Receipt Reversal,,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
 Jira 2322 - New Picklist Values,19.13,,,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__csusracctcntl_txnid__c,,,,,,,FALSE,,,,,rstk__csusracctcntl__c,,,,"CYCLECNT
