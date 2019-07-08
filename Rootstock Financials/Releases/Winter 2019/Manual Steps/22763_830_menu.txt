@@ -1,3 +1,37 @@
+// Corrected script
+// Remove existing Bank Card Transaction Template menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'Bank Card Transaction Template'];
+if (menud01.size() > 0) delete menud01;
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Bank Card Transaction Template',
+rstk__label__c = 'Bank Card Transaction Template',
+rstk__header__c = 'General Ledger Setup',
+rstk__href__c = 'apex/listView?recType=bankcardtt',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 95,
+rstk__inactive__c = false,
+rstk__parentid__c = 971,
+rstk__level__c = 1,
+rstk__id__c = 999,
+rstk__appsecuritykey__c = 'm_bankcardtt__c',
+rstk__subsection__c = 'Process',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'bankcardtt',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
+
+
+
+// ORIGINAL SCRIPT THAT FAILED TO RUN
+
 // Remove existing Bank Card Transaction Template menu records if they exist
 rstk__menu__c[] menud01 = 
 [select id from rstk__menu__c where name = 'Bank Card Transaction Template'];
