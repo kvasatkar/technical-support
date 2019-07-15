@@ -34,12 +34,12 @@ insert menua01;
 // Remove existing Bank Card Reconcile menu records if they exist
 rstk__menu__c[] menud02 = 
 [select id from rstk__menu__c where name = 'Bank Card Reconcile'];
-if (menud02.size() > 0) delete menud01;
+if (menud02.size() > 0) delete menud02;
 
 // - Insert initial menu selection 14
 rstk__menu__c menua02 = new rstk__menu__c(
-Name = 'Bank Card Transaction Template',
-rstk__label__c = 'Bank Card Transaction Template',
+Name = 'Bank Card Reconcile',
+rstk__label__c = 'Bank Card Reconcile',
 rstk__header__c = 'General Ledger Setup',
 rstk__href__c = '/apex/bankcardReconcile',
 rstk__imageclass__c = 'Custom57Mru',
