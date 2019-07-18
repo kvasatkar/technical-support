@@ -1,0 +1,11 @@
+rstk__sycurr__c[] sycurrsToUpdate = new List<rstk__sycurr__c>();
+for (rstk__sycmp__c firstSycmp : [select rstk__sycmp_homecurr__r.rstk__sycurr_currency__c from rstk__sycmp__c order by CreatedDate asc limit 1]) {
+for (rstk__sycurr__c sycurr : [select id from rstk__sycurr__c where rstk__sycurr_homecurr__c = null]) {
+sycurr.rstk__sycurr_homecurr__c = firstSycmp.rstk__sycmp_homecurr__r.rstk__sycurr_currency__c;
+sycurr.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+sycurrsToUpdate.add(sycurr);
+}
+}
+if (sycurrsToUpdate.size() > 0) {
+update sycurrsToUpdate;
+}
