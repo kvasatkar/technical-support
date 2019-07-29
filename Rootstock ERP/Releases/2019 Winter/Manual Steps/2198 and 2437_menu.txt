@@ -1,0 +1,31 @@
+rstk__menu__c[] menuapp1 = [SELECT Id,rstk__href__c, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Rootstock Support Portal'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__href__c = 'https://rootstock.force.com/Trailblazer/s/';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp2 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Shop Floor Time Entry Transactions'];
+
+for (rstk__menu__c upd2 : menuapp2) 
+     {upd2.rstk__pagekey__c = 'shopfloortimeentrytrans';
+     }
+update menuapp2;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Default Page Layout'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'objpagesetup__c';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Requirements'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__pagekey__c = 'icixr__c';
+     }
+update menuapp4;
