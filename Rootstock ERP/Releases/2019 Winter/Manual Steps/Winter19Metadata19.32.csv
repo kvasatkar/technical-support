@@ -688,3 +688,4 @@ sycurrsToUpdate.add(sycurr);
 if (sycurrsToUpdate.size() > 0) {
 update sycurrsToUpdate;
 }",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2990,19.24,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_wocst_wosonumind', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
