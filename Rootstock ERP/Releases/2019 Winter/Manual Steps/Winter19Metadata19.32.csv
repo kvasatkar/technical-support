@@ -1,0 +1,690 @@
+Name,Package_Version__c,Group__c,Sequence__c,Type__c,Action__c,Active__c,Add_Layout_Buttons__c,Add_Layout_Custom_Links__c,Add_Layout_Fields__c,Anonymous_Block__c,Apex__c,Available_Fields__c,Batch_Size__c,Decimal_Places__c,Default_Value__c,Disable_Triggers__c,Displayed_Fields__c,Error_Display_Field__c,Error_Formula__c,Error_Message__c,Field_Label__c,Field_Name__c,Field_Type__c,Fieldset_Description__c,Fieldset_Label__c,Fieldset_Name__c,Formula__c,Instructions__c,Is_Sandbox__c,Label__c,Metadata_Types__c,Name__c,Object_Label__c,Object_Name__c,Object_Plural_Label__c,Object_Record_Name__c,Password__c,Picklist_Values__c,Query__c,Record_Name_Type__c,Reference_To__c,Relationship_Label__c,Relationship_Name__c,Remove_Layout_Buttons__c,Remove_Layout_Custom_Links__c,Remove_Layout_Fields__c,Required__c,Skip_Record_Type_Select_Page__c,Sort_Picklist__c,Text_Length__c,Username__c,Validation_Rule__c,Values__c,Visible_Lines__c,Workflow_Rule__c
+Jira 781 - Run Script,19.1,19.1,1,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_sohdr_sumppy', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Ticket 24099 - New Picklist Values,19.1,19.1,2,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__syusr_expsfustartopt__c,,,,,,,FALSE,,,,,rstk__syusr__c,,,,Clock-On and Clock-Off,,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
+Ticket 24099 - New Picklist Value,19.1,19.1,3,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__syusr_sfustartopt__c,,,,,,,FALSE,,,,,rstk__syusr__c,,,,Clock-On and Clock-Off,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 628 - New Picklist values,19.3,19.3,1,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__sydata_txntype__c,,,,,,,FALSE,,,,,rstk__sydata__c,,,,"Sales Order Pack Reversal
+Sales Order Pick(Issue)
+Sales Order Pick-Pack Reversal
+Sales Order Pick-Pack-Ship Reversal
+Sales Order Shipment Reversal",,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
+Jira 1863 - New Picklist Value,19.7,19.7,1,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__sydata_txntype__c,,,,,,,FALSE,,,,,rstk__sydata__c,,,,Sales Order Pack-Ship Reversal,,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
+Jira 2016 - Menu Script,19.7,19.7,2,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__appsecuritykey__c = 'm_mpsreviewbyitem__c';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp2 = [SELECT Id, rstk__href__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd2 : menuapp2) 
+     {upd2.rstk__href__c = '/apex/SupDmdSumRev';
+     }
+update menuapp2;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'supdmdsumrev_summbyitem';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__appsecuritykey__c = 'm_detailedmrpbyitem__c';
+     }
+update menuapp4;
+
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__href__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__href__c = '/apex/SupDmdDetRev';
+     }
+update menuapp5;
+
+rstk__menu__c[] menuapp6 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item'];
+
+for (rstk__menu__c upd6 : menuapp6) 
+     {upd6.rstk__pagekey__c = 'supdmddetrev_detailbyitem';
+     }
+update menuapp6;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1919 - Menu Script,19.7,19.7,3,Execute Anonymous,,TRUE,,,,"// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Inventory By Site',
+rstk__label__c = 'Inventory By Site',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/listview?rectype=icitemsite',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 988,
+rstk__appsecuritykey__c = 'm_itembysite__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'icitemsite__c',
+rstk__recordtype__c = 'icitemsite',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1919 - Menu Script Part 2,19.7,19.7,4,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory By Item/Site/Project%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'icitemsiteproj__c';
+     }
+update menuapp1;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2484 - Delete Field,19.15,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Do_not_deploy_checkbox_fmla__c,,,,,,,FALSE,,,,,rstk__soline__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 201 - New Picklist Value,19.13,,,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__sydata_txntype__c,,,,,,,FALSE,,,,,rstk__sydata__c,,,,PO Receipt Reversal,,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
+Jira 2322 - New Picklist Values,19.13,,,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__csusracctcntl_txnid__c,,,,,,,FALSE,,,,,rstk__csusracctcntl__c,,,,"CYCLECNT
+INVLOCADJ",,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2053 - Delete Field,19.13,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__NewFormula__c,,,,,,,FALSE,,,,,rstk__sohdr__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2484 - Delete Field,19.15,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Do_not_Packaged_SO_Line_History_del__c,,,,,,,FALSE,,,,,rstk__soline__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2484 - Delete Field,19.15,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Do_not_Packaged_Product_ID_del__c,,,,,,,FALSE,,,,,rstk__soline__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2484 - Delete Field,19.15,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Do_not_Packaged_Customer_ID__c,,,,,,,FALSE,,,,,rstk__soline__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 238 - Execute Anonymous,19.15,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_ltexpireind', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 238 - Execute Anonymous,,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_issexpiredate', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2509 - Execute Anonymous,19.15,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('fix_socust_unbilledorders', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 45 - Delete Field,19.21,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Show_System_Qty__c,,,,,,,FALSE,,,,,rstk__sydiv__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 45 - Delete Field,,,,Field,Delete,TRUE,,,,,,,,,,FALSE,,,,,,rstk__Hold_Inventory_Reconciliation_Batch__c,,,,,,,FALSE,,,,,rstk__sydiv__c,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1282 - Execute Anonymous,19.7,,,Execute Anonymous,,TRUE,,,,"// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'PO Issue Reversal',
+rstk__label__c = 'PO Issue Reversal',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssuer',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 19,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 987,
+rstk__appsecuritykey__c = 'm_poissuereversal__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissuer',
+rstk__recordtype__c = 'poissuer',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+// - Insert initial menu selection 15
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'PO Issue',
+rstk__label__c = 'PO Issue',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssue',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 982,
+rstk__appsecuritykey__c = 'm_poissue__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissue',
+rstk__recordtype__c = 'poissue',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;
+
+// - Insert initial menu selection 16
+rstk__menu__c menua16 = new rstk__menu__c(
+Name = 'PO Line Components',
+rstk__label__c = 'PO Line Components',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/podmdprocess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 274,
+rstk__appsecuritykey__c = 'm_posubecomponent__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'podmdprocess',
+rstk__recordtype__c = 'podmdprocess',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua16;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1327,19.7,,,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%API Objects - Results%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'hr_RS_APIs';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Cost Accounting%'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'hr_CostAccounting';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%CPQ and Contract%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__pagekey__c = 'hr_CPQandContract';
+     }
+update menuapp4;
+
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%DRP Processing'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__pagekey__c = 'hr_DRPProcessing';
+     }
+update menuapp5;
+
+rstk__menu__c[] menuapp7 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Forecasting-MRP%'];
+
+for (rstk__menu__c upd7 : menuapp7) 
+     {upd7.rstk__pagekey__c = 'hr_ForecastingMRP';
+     }
+update menuapp7;
+
+rstk__menu__c[] menuapp8 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Management%'];
+
+for (rstk__menu__c upd8 : menuapp8) 
+     {upd8.rstk__pagekey__c = 'hr_InventoryManagement';
+     }
+update menuapp8;
+
+rstk__menu__c[] menuapp9 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Transactions%'];
+
+for (rstk__menu__c upd9 : menuapp9) 
+     {upd9.rstk__pagekey__c = 'hr_InventoryTransactions';
+     }
+update menuapp9;
+
+rstk__menu__c[] menuapp11 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Packaging'];
+
+for (rstk__menu__c upd11 : menuapp11) 
+     {upd11.rstk__pagekey__c = 'hr_Packaging';
+     }
+update menuapp11;
+
+rstk__menu__c[] menuapp12 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Project Control'];
+
+for (rstk__menu__c upd12 : menuapp12) 
+     {upd12.rstk__pagekey__c = 'hr_ProjectControl';
+     }
+update menuapp12;
+
+rstk__menu__c[] menuapp13 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purchasing'];
+
+for (rstk__menu__c upd13 : menuapp13) 
+     {upd13.rstk__pagekey__c = 'hr_Purchasing';
+     }
+update menuapp13;
+
+rstk__menu__c[] menuapp14 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purging - Monitoring'];
+
+for (rstk__menu__c upd14 : menuapp14) 
+     {upd14.rstk__pagekey__c = 'hr_PurgingMonitoring';
+     }
+update menuapp14;
+
+rstk__menu__c[] menuapp15 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Requisitions'];
+
+for (rstk__menu__c upd15 : menuapp15) 
+     {upd15.rstk__pagekey__c = 'hr_Requisitions';
+     }
+update menuapp15;
+
+rstk__menu__c[] menuapp16 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Rootstock Financials'];
+
+for (rstk__menu__c upd16 : menuapp16) 
+     {upd16.rstk__pagekey__c = 'hr_RootstockFinancials';
+     }
+update menuapp16;
+
+rstk__menu__c[] menuapp17 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Processes'];
+
+for (rstk__menu__c upd17 : menuapp17) 
+     {upd17.rstk__pagekey__c = 'hr_SalesOrderProcesses';
+     }
+update menuapp17;
+
+rstk__menu__c[] menuapp18 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Setup'];
+
+for (rstk__menu__c upd18 : menuapp18) 
+     {upd18.rstk__pagekey__c = 'hr_SalesOrderSetup';
+     }
+update menuapp18;
+
+rstk__menu__c[] menuapp19 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Scheduling-Capacity Planning'];
+
+for (rstk__menu__c upd19 : menuapp19) 
+     {upd19.rstk__pagekey__c = 'hr_SchedulingCapacityPlanning';
+     }
+update menuapp19;
+
+rstk__menu__c[] menuapp20 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Shop Floor'];
+
+for (rstk__menu__c upd20 : menuapp20) 
+     {upd20.rstk__pagekey__c = 'hr_ShopFloor';
+     }
+update menuapp20;
+
+rstk__menu__c[] menuapp21 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Standard Costs'];
+
+for (rstk__menu__c upd21 : menuapp21) 
+     {upd21.rstk__pagekey__c = 'hr_StandardCosts';
+     }
+update menuapp21;
+
+rstk__menu__c[] menuapp22 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'System Setup'];
+
+for (rstk__menu__c upd22 : menuapp22) 
+     {upd22.rstk__pagekey__c = 'hr_SystemSetup';
+     }
+update menuapp22;
+
+rstk__menu__c[] menuapp23 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Work Orders'];
+
+for (rstk__menu__c upd23 : menuapp23) 
+     {upd23.rstk__pagekey__c = 'hr_WorkOrders';
+     }
+update menuapp23;
+
+rstk__menu__c[] menuapp24 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Mfg Engineering'];
+
+for (rstk__menu__c upd24 : menuapp24) 
+     {upd24.rstk__pagekey__c = 'hr_MfgEngineering';
+     }
+update menuapp24;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2016 - Menu Script,19.7,,,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__appsecuritykey__c = 'm_mpsreviewbyitem__c';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp2 = [SELECT Id, rstk__href__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd2 : menuapp2) 
+     {upd2.rstk__href__c = '/apex/SupDmdSumRev';
+     }
+update menuapp2;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Summary Review by Item%'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'supdmdsumrev_summbyitem';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__appsecuritykey__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__appsecuritykey__c = 'm_detailedmrpbyitem__c';
+     }
+update menuapp4;
+
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__href__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__href__c = '/apex/SupDmdDetRev';
+     }
+update menuapp5;
+
+rstk__menu__c[] menuapp6 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Detailed Review by Item'];
+
+for (rstk__menu__c upd6 : menuapp6) 
+     {upd6.rstk__pagekey__c = 'supdmddetrev_detailbyitem';
+     }
+update menuapp6;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1919 - Menu Script,19.7,,,Execute Anonymous,,TRUE,,,,"// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Inventory By Site',
+rstk__label__c = 'Inventory By Site',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/listview?rectype=icitemsite',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 988,
+rstk__appsecuritykey__c = 'm_itembysite__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'icitemsite__c',
+rstk__recordtype__c = 'icitemsite',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1919 - Menu Script Part 2,19.7,,,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory By Item/Site/Project%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'icitemsiteproj__c';
+     }
+update menuapp1;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1282 - Execute Anonymous,19.7,,,Execute Anonymous,,TRUE,,,,"// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'PO Issue Reversal',
+rstk__label__c = 'PO Issue Reversal',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssuer',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 19,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 987,
+rstk__appsecuritykey__c = 'm_poissuereversal__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissuer',
+rstk__recordtype__c = 'poissuer',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+// - Insert initial menu selection 15
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'PO Issue',
+rstk__label__c = 'PO Issue',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/POIssue',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 982,
+rstk__appsecuritykey__c = 'm_poissue__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'poissue',
+rstk__recordtype__c = 'poissue',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;
+
+// - Insert initial menu selection 16
+rstk__menu__c menua16 = new rstk__menu__c(
+Name = 'PO Line Components',
+rstk__label__c = 'PO Line Components',
+rstk__header__c = 'purchasings',
+rstk__href__c = '/apex/podmdprocess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 12,
+rstk__level__c = 1,
+rstk__id__c = 274,
+rstk__appsecuritykey__c = 'm_posubecomponent__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'podmdprocess',
+rstk__recordtype__c = 'podmdprocess',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua16;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 1327,19.7,,,Execute Anonymous,,TRUE,,,,"rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%API Objects - Results%'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'hr_RS_APIs';
+     }
+update menuapp1;
+
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Cost Accounting%'];
+
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__pagekey__c = 'hr_CostAccounting';
+     }
+update menuapp3;
+
+rstk__menu__c[] menuapp4 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%CPQ and Contract%'];
+
+for (rstk__menu__c upd4 : menuapp4) 
+     {upd4.rstk__pagekey__c = 'hr_CPQandContract';
+     }
+update menuapp4;
+
+rstk__menu__c[] menuapp5 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%DRP Processing'];
+
+for (rstk__menu__c upd5 : menuapp5) 
+     {upd5.rstk__pagekey__c = 'hr_DRPProcessing';
+     }
+update menuapp5;
+
+rstk__menu__c[] menuapp7 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Forecasting-MRP%'];
+
+for (rstk__menu__c upd7 : menuapp7) 
+     {upd7.rstk__pagekey__c = 'hr_ForecastingMRP';
+     }
+update menuapp7;
+
+rstk__menu__c[] menuapp8 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Management%'];
+
+for (rstk__menu__c upd8 : menuapp8) 
+     {upd8.rstk__pagekey__c = 'hr_InventoryManagement';
+     }
+update menuapp8;
+
+rstk__menu__c[] menuapp9 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like '%Inventory Transactions%'];
+
+for (rstk__menu__c upd9 : menuapp9) 
+     {upd9.rstk__pagekey__c = 'hr_InventoryTransactions';
+     }
+update menuapp9;
+
+rstk__menu__c[] menuapp11 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Packaging'];
+
+for (rstk__menu__c upd11 : menuapp11) 
+     {upd11.rstk__pagekey__c = 'hr_Packaging';
+     }
+update menuapp11;
+
+rstk__menu__c[] menuapp12 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Project Control'];
+
+for (rstk__menu__c upd12 : menuapp12) 
+     {upd12.rstk__pagekey__c = 'hr_ProjectControl';
+     }
+update menuapp12;
+
+rstk__menu__c[] menuapp13 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purchasing'];
+
+for (rstk__menu__c upd13 : menuapp13) 
+     {upd13.rstk__pagekey__c = 'hr_Purchasing';
+     }
+update menuapp13;
+
+rstk__menu__c[] menuapp14 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Purging - Monitoring'];
+
+for (rstk__menu__c upd14 : menuapp14) 
+     {upd14.rstk__pagekey__c = 'hr_PurgingMonitoring';
+     }
+update menuapp14;
+
+rstk__menu__c[] menuapp15 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Requisitions'];
+
+for (rstk__menu__c upd15 : menuapp15) 
+     {upd15.rstk__pagekey__c = 'hr_Requisitions';
+     }
+update menuapp15;
+
+rstk__menu__c[] menuapp16 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Rootstock Financials'];
+
+for (rstk__menu__c upd16 : menuapp16) 
+     {upd16.rstk__pagekey__c = 'hr_RootstockFinancials';
+     }
+update menuapp16;
+
+rstk__menu__c[] menuapp17 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Processes'];
+
+for (rstk__menu__c upd17 : menuapp17) 
+     {upd17.rstk__pagekey__c = 'hr_SalesOrderProcesses';
+     }
+update menuapp17;
+
+rstk__menu__c[] menuapp18 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Sales Order Setup'];
+
+for (rstk__menu__c upd18 : menuapp18) 
+     {upd18.rstk__pagekey__c = 'hr_SalesOrderSetup';
+     }
+update menuapp18;
+
+rstk__menu__c[] menuapp19 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Scheduling-Capacity Planning'];
+
+for (rstk__menu__c upd19 : menuapp19) 
+     {upd19.rstk__pagekey__c = 'hr_SchedulingCapacityPlanning';
+     }
+update menuapp19;
+
+rstk__menu__c[] menuapp20 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Shop Floor'];
+
+for (rstk__menu__c upd20 : menuapp20) 
+     {upd20.rstk__pagekey__c = 'hr_ShopFloor';
+     }
+update menuapp20;
+
+rstk__menu__c[] menuapp21 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Standard Costs'];
+
+for (rstk__menu__c upd21 : menuapp21) 
+     {upd21.rstk__pagekey__c = 'hr_StandardCosts';
+     }
+update menuapp21;
+
+rstk__menu__c[] menuapp22 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'System Setup'];
+
+for (rstk__menu__c upd22 : menuapp22) 
+     {upd22.rstk__pagekey__c = 'hr_SystemSetup';
+     }
+update menuapp22;
+
+rstk__menu__c[] menuapp23 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Work Orders'];
+
+for (rstk__menu__c upd23 : menuapp23) 
+     {upd23.rstk__pagekey__c = 'hr_WorkOrders';
+     }
+update menuapp23;
+
+rstk__menu__c[] menuapp24 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Mfg Engineering'];
+
+for (rstk__menu__c upd24 : menuapp24) 
+     {upd24.rstk__pagekey__c = 'hr_MfgEngineering';
+     }
+update menuapp24;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 201 - New Picklist Value,19.13,,,Picklist,Add,TRUE,,,,,,,,,,FALSE,,,,,,rstk__sydata_txntype__c,,,,,,,FALSE,,,,,rstk__sydata__c,,,,PO Receipt Reversal,,Text,,,,,,,FALSE,FALSE,TRUE,,,,,,
+Jira 238 - Execute Anonymous,19.15,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_ltexpireind', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 238 - Execute Anonymous,19.15,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_issexpiredate', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2509 - Execute Anonymous,19.15,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('fix_socust_unbilledorders', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 2592 - Execut anonymous,19.24,,,Execute Anonymous,,TRUE,,,,"rstk.ScriptExecutor.execute('set_icitem_supplymultiplierind', true);",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 3046,19.3,,,Execute Anonymous,,TRUE,,,,"// - Price Book Detail Menu option exists, Pre-Delete 01
+rstk__menu__c[] menud01 = [select id, name, rstk__label__c from rstk__menu__c 
+					where rstk__label__c like '%Price Book Detail%'];
+
+if (menud01.size() > 0) {
+                delete menud01;
+}
+
+// - Price Book Detail Insert
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Price Book Detail',
+rstk__header__c = 'salesordersu',
+rstk__href__c = '/apex/listview?rectype=sopbkd',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Price Book Detail',
+rstk__sequence__c = 11,
+rstk__inactive__c = false,
+rstk__parentid__c = 16,
+rstk__level__c = 1,
+rstk__id__c = 135,
+rstk__appsecuritykey__c = 'm_sopkbd__c',
+rstk__subsection__c = 'Setup',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'sopbkd__c',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua01;",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
+Jira 3005,19.3,,,Execute Anonymous,,TRUE,,,,"rstk__sycurr__c[] sycurrsToUpdate = new List<rstk__sycurr__c>();
+for (rstk__sycmp__c firstSycmp : [select rstk__sycmp_homecurr__r.rstk__sycurr_currency__c from rstk__sycmp__c order by CreatedDate asc limit 1]) {
+for (rstk__sycurr__c sycurr : [select id from rstk__sycurr__c where rstk__sycurr_homecurr__c = null]) {
+sycurr.rstk__sycurr_homecurr__c = firstSycmp.rstk__sycmp_homecurr__r.rstk__sycurr_currency__c;
+sycurr.rstk__triggeroptions__c = '{""ST"":""1"",""SAE"":""1""}';
+sycurrsToUpdate.add(sycurr);
+}
+}
+if (sycurrsToUpdate.size() > 0) {
+update sycurrsToUpdate;
+}",,,,,,FALSE,,,,,,,,,,,,,FALSE,,,,,,,,,,,Text,,,,,,,FALSE,FALSE,FALSE,,,,,,
