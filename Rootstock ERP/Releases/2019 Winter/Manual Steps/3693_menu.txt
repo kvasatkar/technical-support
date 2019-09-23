@@ -1,0 +1,7 @@
+rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'PO Receipt Transactions'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__pagekey__c = 'porcptap_c';
+     }
+update menuapp1;
