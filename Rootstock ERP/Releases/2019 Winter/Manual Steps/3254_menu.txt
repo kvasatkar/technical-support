@@ -1,0 +1,7 @@
+rstk__menu__c[] menuapp1 = [SELECT Id,rstk__href__c, rstk__pagekey__c FROM rstk__menu__c
+where rstk__label__c like 'Engineering Revisions'];
+
+for (rstk__menu__c upd1 : menuapp1) 
+     {upd1.rstk__hideaddlink__c = true;
+     }
+update menuapp1;
