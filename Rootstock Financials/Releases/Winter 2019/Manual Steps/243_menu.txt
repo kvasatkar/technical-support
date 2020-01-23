@@ -1,0 +1,28 @@
+// Remove existing GL Historical Rate menu records if they exist
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where name = 'GL Historical Rate'];
+if (menud01.size() > 0) delete menud01;
+
+// - Insert initial menu selection 14
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'GL Historical Rate',
+rstk__label__c = 'GL Historical Rate',
+rstk__header__c = 'Multiple Currency',
+rstk__href__c = '/apex/listview?rectype=glhistrate',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 108,
+rstk__inactive__c = false,
+rstk__parentid__c = 989,
+rstk__level__c = 1,
+rstk__id__c = 967,
+rstk__appsecuritykey__c = 'm_glhistrate__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'glhistrate__c',	
+rstk__recordtype__c = 'glhistrate',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__rsfinancials__c = true, 
+rstk__menutype__c = 1
+);
+insert menua01;
