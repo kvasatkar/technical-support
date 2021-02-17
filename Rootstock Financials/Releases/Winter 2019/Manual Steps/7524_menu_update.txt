@@ -1,0 +1,9 @@
+rstk__menu__c[] menuapp1 = [SELECT Id, rstk__pagekey__c, rstk__href__c, rstk__recordtype__c FROM rstk__menu__c
+where rstk__label__c like 'Reporting Account Group Entry/Maintenance'];
+
+for (rstk__menu__c upd1 : menuapp1)
+{upd1.rstk__pagekey__c = 'glfstmplt7__c';
+upd1.rstk__href__c = '/apex/listview?rectype=glfstmplt7';
+upd1.rstk__recordtype__c= 'glfstmplt7';
+}
+update menuapp1;

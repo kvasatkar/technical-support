@@ -1,0 +1,4 @@
+rstk__menu__c[] menus = [select id from rstk__menu__c where rstk__pagekey__c = 'translatetoparentcompcurr'];
+if (menus.size() > 0) {
+delete menus;
+}
