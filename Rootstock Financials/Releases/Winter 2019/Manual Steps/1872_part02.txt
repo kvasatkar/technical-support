@@ -187,6 +187,12 @@ update menuapp50;
 rstk__menu__c[] menuapp51 = [SELECT Id, rstk__pagekey__c FROM rstk__menu__c
 where rstk__label__c like '%Adjusting Statement Entries'];
 
+rstk__menu__c[] menuapp3 = [SELECT Id, rstk__recordtype__c FROM rstk__menu__c  where rstk__label__c like '%Adjusting Statement Entries%'];
+for (rstk__menu__c upd3 : menuapp3) 
+     {upd3.rstk__href__c = '/apex/listview?rectype=glstmtntryh';}
+update menuapp3;
+
+
 for (rstk__menu__c upd51 : menuapp51) 
      {upd51.rstk__pagekey__c = 'glstmtlistview'; 
      }
