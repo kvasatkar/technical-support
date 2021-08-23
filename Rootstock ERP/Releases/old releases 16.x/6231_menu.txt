@@ -1,0 +1,20 @@
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Recurring Billing Batch Review',
+rstk__label__c = 'Recurring Billing Batch Review',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 13,
+rstk__subsection__c = 'Processes',
+rstk__appsecuritykey__c = 'm_recservices__c',
+rstk__href__c = '/apex/listview?recType=soconpbbatch',
+rstk__pagekey__c = 'soconpbbatch__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'SOCONPBBATCH',
+//rstk__id__c = ,
+rstk__inactive__c = false,
+rstk__activity_enabled__c = true,
+rstk__approval_enabled__c = true
+//rstk__menutype__c = 2
+);
+insert menu2;

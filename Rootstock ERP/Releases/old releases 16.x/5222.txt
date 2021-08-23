@@ -1,0 +1,40 @@
+// 5222 - Item Planning Review 
+menu__c menu = new menu__c(
+Name = 'Item Planning Review',
+label__c = 'Item Planning Review',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 53,
+subsection__c = '',
+appsecuritykey__c = 'm_itemplanreview__c',
+href__c = '/apex/itemplanreview',
+pagekey__c = 'itemplanreview',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = '',
+id__c = 321,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Item Planning Review',
+rstk__label__c = 'Item Planning Review',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 53,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_itemplanreview__c',
+rstk__href__c = '/apex/itemplanreview',
+rstk__pagekey__c = 'itemplanreview',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 321,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

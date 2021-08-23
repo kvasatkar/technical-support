@@ -1,0 +1,41 @@
+rstk__solrel__c[] solrels = [select Id,
+	rstk__solrel_ucstlab__c,
+	rstk__solrel_ucstmtl__c,
+	rstk__solrel_ucstohdfrng__c,
+	rstk__solrel_ucstohdlab__c,
+	rstk__solrel_ucstohdmach__c,
+	rstk__solrel_ucstohdmtl__c,
+	rstk__solrel_ucstsublab__c,
+	rstk__solrel_ucstsubmtl__c,
+	rstk__solrel_ucstfrght__c,
+	rstk__solrel_ucstothlnd__c,
+	rstk__triggeroptions__c
+from rstk__solrel__c
+where rstk__solrel_ucstlab__c = null or
+	rstk__solrel_ucstmtl__c = null or
+	rstk__solrel_ucstohdfrng__c = null or
+	rstk__solrel_ucstohdlab__c = null or
+	rstk__solrel_ucstohdmach__c = null or
+	rstk__solrel_ucstohdmtl__c = null or
+	rstk__solrel_ucstsublab__c = null or
+	rstk__solrel_ucstsubmtl__c = null or
+	rstk__solrel_ucstfrght__c = null or
+	rstk__solrel_ucstothlnd__c = null
+limit 10000];
+
+for (rstk__solrel__c solrel : solrels) {
+	solrel.rstk__solrel_ucstlab__c = 0;
+	solrel.rstk__solrel_ucstmtl__c = 0;
+	solrel.rstk__solrel_ucstohdfrng__c = 0;
+	solrel.rstk__solrel_ucstohdlab__c = 0;
+	solrel.rstk__solrel_ucstohdmach__c = 0;
+	solrel.rstk__solrel_ucstohdmtl__c = 0;
+	solrel.rstk__solrel_ucstsublab__c = 0;
+	solrel.rstk__solrel_ucstsubmtl__c = 0;
+    solrel.rstk__solrel_ucstfrght__c = 0;
+    solrel.rstk__solrel_ucstothlnd__c = 0;
+	solrel.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+
+update solrels;
+System.debug(Logginglevel.INFO, 'Updated ' + solrels.size() + ' records');

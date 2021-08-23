@@ -1,0 +1,34 @@
+class AException extends Exception {}
+rstk__sohdr__c[] sos = [select 
+rstk__sohdr_custno__c, rstk__sohdr_pricingcust__c, rstk__sohdr_installcust__c,
+rstk__sohdr_order__c, rstk__sohdr_div__c,
+rstk__sohdr_ackaddr__c, rstk__sohdr_ovrack__c,
+rstk__sohdr_billtoaddr__c, rstk__sohdr_ovrbill__c,
+rstk__sohdr_shiptoaddr__c, rstk__sohdr_ovrship__c,
+rstk__sohdr_creditorg__r.rstk__syorg_creditdeptind__c,
+rstk__sohdr_otype__c, rstk__sohdr_otype__r.rstk__sootype_div__c,
+rstk__sohdr_ordertotal__c
+from rstk__sohdr__c 
+where 
+rstk__sohdr_custno__c != null and 
+(rstk__sohdr_pricingcust__c = null or rstk__sohdr_installcust__c = null)
+order by lastmodifieddate limit 2000];
+rstk__sohdr__c[] toupdate = new List<rstk__sohdr__c>();
+for (rstk__sohdr__c s: sos) {
+if ((s.rstk__sohdr_ackaddr__c == null && s.rstk__sohdr_ovrack__c == false) ||
+(s.rstk__sohdr_billtoaddr__c == null && s.rstk__sohdr_ovrbill__c == false) ||
+(s.rstk__sohdr_shiptoaddr__c == null && s.rstk__sohdr_ovrship__c == false) ||
+(s.rstk__sohdr_ordertotal__c == null || s.rstk__sohdr_ordertotal__c < 0) ||
+(s.rstk__sohdr_creditorg__c != null && !s.rstk__sohdr_creditorg__r.rstk__syorg_creditdeptind__c) ||
+(s.rstk__sohdr_otype__c != null && s.rstk__sohdr_otype__r.rstk__sootype_div__c != null && s.rstk__sohdr_otype__r.rstk__sootype_div__c != s.rstk__sohdr_div__c) ||
+(s.rstk__sohdr_div__c == null)) {
+// Can't update invalid sales orders.
+continue;
+}
+if (s.rstk__sohdr_pricingcust__c == null) { s.rstk__sohdr_pricingcust__c = s.rstk__sohdr_custno__c; }
+if (s.rstk__sohdr_installcust__c == null) { s.rstk__sohdr_installcust__c = s.rstk__sohdr_custno__c; }
+s.rstk__triggeroptions__c = '{"SAE":"1"}';
+toupdate.add(s);
+}
+if (toupdate.size() == 0) { throw new AException('Sales Order Updates complete'); }
+update toupdate;

@@ -1,0 +1,20 @@
+Boolean commitChanges = false;
+rstk__socaddr__c[] socaddrs = 
+    [select id,
+     Name,
+     rstk__socaddr_state__c, 
+     rstk__socaddr_country__c,
+     CreatedById,
+     CreatedDate
+     from rstk__socaddr__c 
+     where rstk__socaddr_country__c = null];
+System.debug(Logginglevel.INFO, 'commitChanges=' + commitChanges);
+System.debug(Logginglevel.INFO, 'Found ' + socaddrs.size() + ' records with blank socaddr_country__c');
+for (rstk__socaddr__c socaddr : socaddrs) {
+    System.debug(Logginglevel.INFO, 'id=' + socaddr.id + ' Name=' + socaddr.Name + ' State=' + socaddr.rstk__socaddr_state__c + ' Country=' + socaddr.rstk__socaddr_country__c + ' CreatedById=' + socaddr.CreatedById + ' CreatedDate=' + socaddr.CreatedDate);    
+    socaddr.rstk__socaddr_country__c = 'USA'; // need to set to the correct value based on exisitng customer address records
+    socaddr.rstk__triggeroptions__c = '{"SAE":"1"}';    
+    if (commitChanges) {
+    	update socaddr;
+    }
+}

@@ -1,0 +1,14 @@
+// Correct menu titles - Transfer to Post
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'AP Batch Transfer'];
+for (rstk__menu__c menu : menus) {
+  menu.name = 'AP Batch Post';
+  menu.rstk__label__c = 'AP Batch Post';
+}
+update menus;
+
+rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'AP Group Transfer'];
+for (rstk__menu__c menu : menus2) {
+  menu.name = 'AP Group Post';
+  menu.rstk__label__c = 'AP Group Post';
+}
+update menus2;

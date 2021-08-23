@@ -1,0 +1,25 @@
+//Non packaged
+class AException extends Exception {}
+soshipline__c[] sls = [select Id, lastmodifieddate from soshipline__c where 
+soshipline_dateship__c = null and soshipline_qtyship__c > 0 limit 1000];
+if (sls.size() == 0) {
+throw new AException('Shipline update completed successfully');
+}
+for (soshipline__c s: sls) {
+s.soshipline_dateship__c = s.lastmodifieddate.date();
+s.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update sls;
+ 
+//Packaged
+class AException extends Exception {}
+rstk__soshipline__c[] sls = [select Id, lastmodifieddate from rstk__soshipline__c where 
+rstk__soshipline_dateship__c = null and rstk__soshipline_qtyship__c > 0 limit 1000];
+if (sls.size() == 0) {
+throw new AException('Shipline update completed successfully');
+}
+for (rstk__soshipline__c s: sls) {
+s.rstk__soshipline_dateship__c = s.lastmodifieddate.date();
+s.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update sls;

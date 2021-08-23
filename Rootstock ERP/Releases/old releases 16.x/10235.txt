@@ -1,0 +1,38 @@
+rstk__iclocitemscrap__c[] iclocitemscraps = [select Id, rstk__iclocitemscrap_item__c, rstk__iclocitemscrap_item__r.Name, rstk__iclocitemscrap_proj__c, rstk__iclocitemscrap_proj__r.Name, rstk__iclocitemscrap_locid__c, rstk__iclocitemscrap_locid__r.Name, rstk__iclocitemscrap_locnum__c from rstk__iclocitemscrap__c];
+if (iclocitemscraps.size() > 0) {
+	Set<String> icitems = new Set<String>();
+	Set<String> projs = new Set<String>();
+	Set<String> locids = new Set<String>();
+	Set<String> locnums = new Set<String>();
+	for (rstk__iclocitemscrap__c iclocitemscrap :iclocitemscraps) {
+		icitems.add(iclocitemscrap.rstk__iclocitemscrap_item__c);
+		projs.add(iclocitemscrap.rstk__iclocitemscrap_proj__c);
+		locids.add(iclocitemscrap.rstk__iclocitemscrap_locid__c);
+		locnums.add(iclocitemscrap.rstk__iclocitemscrap_locnum__c);
+	}
+
+	Map<String,rstk__iclocitem__c> iclocitemMap = new Map<String,rstk__iclocitem__c>();
+	
+	rstk__iclocitem__c[] iclocitems = [select Id,
+										rstk__iclocitem_icitem__c,
+										rstk__iclocitem_proj__c,
+										rstk__iclocitem_locid__c,
+										rstk__iclocitem_locnum__c
+									from rstk__iclocitem__c
+									where rstk__iclocitem_icitem__c IN :icitems
+									and rstk__iclocitem_proj__c IN :projs
+									and rstk__iclocitem_locid__c IN :locids
+									and rstk__iclocitem_locnum__c IN :locnums
+	];
+	if (iclocitems.size() > 0) {
+		for (rstk__iclocitem__c iclocitem :iclocitems) {
+			iclocitemMap.put(iclocitem.rstk__iclocitem_icitem__c + '|' + iclocitem.rstk__iclocitem_proj__c + '|' + iclocitem.rstk__iclocitem_locid__c + '|' + iclocitem.rstk__iclocitem_locnum__c, iclocitem);
+		}
+	}
+	
+	for (rstk__iclocitemscrap__c iclocitemscrap :iclocitemscraps) {
+		if (iclocitemMap.get(iclocitemscrap.rstk__iclocitemscrap_item__c + '|' + iclocitemscrap.rstk__iclocitemscrap_proj__c + '|' + iclocitemscrap.rstk__iclocitemscrap_locid__c + '|' + iclocitemscrap.rstk__iclocitemscrap_locnum__c) != null) {
+			System.debug(LoggingLevel.INFO, '****** ISSUE FOUND:  Item: ' + iclocitemscrap.rstk__iclocitemscrap_item__r.Name + '  Proj: ' + iclocitemscrap.rstk__iclocitemscrap_proj__r.Name + '  Locid: ' + iclocitemscrap.rstk__iclocitemscrap_proj__r.Name + '  Locnum: ' + iclocitemscrap.rstk__iclocitemscrap_locnum__c);
+		}
+	}
+}

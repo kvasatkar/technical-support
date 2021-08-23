@@ -1,0 +1,49 @@
+poitemcst__c[] poitemcsts = [select Id, triggeroptions__c, poitemcst_poitem__c, poitemcst_curavgprice__c, poitemcst_cumavgprice__c
+from poitemcst__c];
+List<ID> poitemIds = new List<ID>();
+for (poitemcst__c poitemcst : poitemcsts) {
+poitemIds.add(poitemcst.poitemcst_poitem__c);
+}
+Map<String, poline__c> polineMap = new Map<String, poline__c>();
+poline__c[] polines = [select poline_item__c, poline_unitprice__c
+from poline__c
+where poline_typesel__c = 'Direct' and poline_item__c IN :poitemIds
+order by poline_item__c, createddate];
+for (poline__c poline : polines) {
+polineMap.put(poline.poline_item__c, poline);
+}
+for (poitemcst__c poitemcst : poitemcsts) {
+poline__c poline = polineMap.get(poitemcst.poitemcst_poitem__c);
+if (poline != null) {
+poitemcst.poitemcst_curavgprice__c = poline.poline_unitprice__c;
+poitemcst.poitemcst_cumavgprice__c = poline.poline_unitprice__c;
+poitemcst.triggeroptions__c = '{"ST":"1"}';
+}
+}
+update poitemcsts;
+
+
+
+
+List<rstk__poitemcst__c> poitemcstsToUpdate = new List<rstk__poitemcst__c>();
+rstk__poitemcst__c[] poitemcsts = [select Id, rstk__triggeroptions__c, rstk__poitemcst_poitem__c, rstk__poitemcst_curavgprice__c, rstk__poitemcst_cumavgprice__c from rstk__poitemcst__c];
+List<ID> poitemIds = new List<ID>();
+for (rstk__poitemcst__c poitemcst : poitemcsts) {
+poitemIds.add(poitemcst.rstk__poitemcst_poitem__c);
+}
+Map<String, rstk__poline__c> polineMap = new Map<String, rstk__poline__c>();
+rstk__poline__c[] polines = [select rstk__poline_item__c, rstk__poline_unitprice__c
+from rstk__poline__c where rstk__poline_typesel__c = 'Direct' and rstk__poline_item__c IN :poitemIds order by rstk__poline_item__c, createddate];
+for (rstk__poline__c poline : polines) {
+polineMap.put(poline.rstk__poline_item__c, poline);
+}
+for (rstk__poitemcst__c poitemcst : poitemcsts) {
+rstk__poline__c poline = polineMap.get(poitemcst.rstk__poitemcst_poitem__c);
+if (poline != null) {
+poitemcst.rstk__poitemcst_curavgprice__c = poline.rstk__poline_unitprice__c;
+poitemcst.rstk__poitemcst_cumavgprice__c = poline.rstk__poline_unitprice__c;
+poitemcst.rstk__triggeroptions__c = '{"ST":"1"}';
+poitemcstsToUpdate.add(poitemcst);
+}
+}
+update poitemcstsToUpdate;

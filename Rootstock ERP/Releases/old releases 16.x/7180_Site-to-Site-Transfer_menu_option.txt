@@ -1,0 +1,33 @@
+// - Site to Site Transfer Menu option exists, Pre-Delete 01
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c like '%Site to Site%' and rstk__parentid__c = 9];
+if (menud01.size() > 0) {
+delete menud01;
+}
+// - Site to Site Transfer Insert
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Site to Site Transfer',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/Stocklocdivsitemove?mode=invsitesite',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Site to Site Transfer',
+rstk__sequence__c = 6,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 135,
+rstk__appsecuritykey__c = 'm_sitetositetransfer__c',
+rstk__subsection__c = 'Transactions',
+rstk__pagekey__c = 'stocklocdivsitemove_invsitesite',
+rstk__recordtype__c = ' ',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 2
+);
+insert menua01;
+
+rstk__menu__c[] menuu01 = [select id from rstk__menu__c where name = 'Cost Transaction Query' and rstk__parentid__c = 9];
+for (rstk__menu__c menu : menuu01) {
+  menu.rstk__sequence__c = 7;
+}
+update menuu01;

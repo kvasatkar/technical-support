@@ -1,0 +1,39 @@
+// 5306 - Inbound Shipment Container
+menu__c menu = new menu__c(
+Name = 'Inbound Shipment Container',
+label__c = 'Inbound Shipment Container',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 41,
+subsection__c = '',
+appsecuritykey__c = 'm_poshipcont__c',
+href__c = '/apex/listview?recType=poshipcont',
+pagekey__c = 'poshipcont__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'poshipcont',
+id__c = 308,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Inbound Shipment Container',
+rstk__label__c = 'Inbound Shipment Container',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 41,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_poshipcont__c',
+rstk__href__c = '/apex/listview?recType=poshipcont',
+rstk__pagekey__c = 'poshipcont__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'poshipcont',
+rstk__id__c = 308,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

@@ -1,0 +1,47 @@
+// Set commitChanges to true 
+
+Boolean commitChanges = false;
+rstk__sopdiv__c[] sopdivsToAdd = new rstk__sopdiv__c[] {};
+		Map<String, String> sopdivMap = new Map<String, String>();
+		rstk__sopdiv__c[] sopdivs = [select id, rstk__sopdiv_soprod__c, rstk__sopdiv_shipdiv__c 
+				from rstk__sopdiv__c where rstk__sopdiv_soprod__c != null and rstk__sopdiv_shipdiv__c != null];
+		
+		for (rstk__sopdiv__c sopdiv : sopdivs) {
+			sopdivMap.put(sopdiv.rstk__sopdiv_soprod__c + '_' + sopdiv.rstk__sopdiv_shipdiv__c, sopdiv.Id);
+		}
+		
+		map<String, rstk__sydiv__c> sydivMap = new map<String, rstk__sydiv__c>(
+			[select id, rstk__sydiv_mainsite__c from rstk__sydiv__c]
+		);
+		
+		rstk__soprod__c[] soprods = [
+			Select id, rstk__soprod_shipdiv__c, rstk__soprod_shipsite__c
+			from rstk__soprod__c 
+			where rstk__soprod_shipdiv__c != null and (rstk__soprod_prodtype__c = 'Stock' OR 
+                    rstk__soprod_prodtype__c = 'Kit' OR
+                    rstk__soprod_prodtype__c = 'Configured')
+		];
+		Logger.info('total products found: ' + soprods.size());
+		
+		for (rstk__soprod__c prod : soprods) {
+			if (sopdivMap.get(prod.Id + '_' + prod.rstk__soprod_shipdiv__c) == null) {
+				rstk__sopdiv__c sopdiv = new rstk__sopdiv__c(
+					rstk__sopdiv_soprod__c = prod.Id,
+					rstk__sopdiv_shipdiv__c = prod.rstk__soprod_shipdiv__c,
+					rstk__sopdiv_active__c = true
+				);
+				
+				sopdiv.rstk__sopdiv_shipsite__c = sydivMap.get(prod.rstk__soprod_shipdiv__c).rstk__sydiv_mainsite__c;
+				sopdiv.rstk__sopdiv_rmasite__c = sopdiv.rstk__sopdiv_shipsite__c;
+                sopdiv.rstk__triggeroptions__c = '{"SAE":"1"}';
+				
+				sopdivsToAdd.add(sopdiv);
+			}
+		}
+		
+		Logger.info('total sopdivs to add: ' + sopdivsToAdd.size());
+		
+		if (commitChanges) {
+			//ObjectSaver.insertObjects(sopdivsToAdd, true);
+            insert sopdivsToAdd; 
+		}

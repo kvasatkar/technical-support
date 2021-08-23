@@ -1,0 +1,154 @@
+// non-packaged orgs
+menu__c menu = new menu__c(
+Name = 'Planned Location Transfer Maintenance',
+header__c = 'ictransreq',
+href__c = '/apex/listview?recType=ictransreq',
+imageclass__c = 'Custom57Mru',
+label__c = 'Planned Location Transfer Maintenance',
+sequence__c = 54,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_ictransreq__c',
+subsection__c = '',
+pagekey__c = 'ictransreq__c',
+recordtype__c = 'ictransreq'
+//menutype__c = 2
+);
+insert menu;
+
+menu__c menu2 = new menu__c(
+Name = 'Planned Location Transfer Query',
+header__c = 'ictransreq',
+href__c = '/apex/ictransreqList',
+imageclass__c = 'Custom57Mru',
+label__c = 'Planned Location Transfer Query',
+sequence__c = 55,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_ictransreq__c',
+subsection__c = '',
+pagekey__c = 'ictransreqlist',
+recordtype__c = 'ictransreq'
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Process Replenishment',
+header__c = 'ictransreq',
+href__c = '/apex/icreplenishProcessRequest',
+imageclass__c = 'Custom57Mru',
+label__c = 'Process Replenishment',
+sequence__c = 56,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_ictransreq__c',
+subsection__c = '',
+pagekey__c = 'icreplenishprocessrequest',
+recordtype__c = 'ictransreq'
+//menutype__c = 2
+);
+insert menu3;
+
+menu__c menu4 = new menu__c(
+Name = 'Replenishment Location Maintenance',
+header__c = 'icreplenish',
+href__c = '/apex/listview?recType=icreplenish',
+imageclass__c = 'Custom57Mru',
+label__c = 'Replenishment Location Maintenance',
+sequence__c = 60,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_itemReplenish__c',
+subsection__c = '',
+pagekey__c = 'icreplenish__c',
+recordtype__c = 'icreplenish'
+//menutype__c = 2
+);
+insert menu4;
+
+
+// non-packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Planned Location Transfer Maintenance',
+rstk__header__c = 'ictransreq',
+rstk__href__c = '/apex/listview?recType=ictransreq',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Planned Location Transfer Maintenance',
+rstk__sequence__c = 54,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'ictransreq__c',
+rstk__recordtype__c = 'ictransreq'
+//rstk__menutype__c = 2
+);
+insert menu;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Planned Location Transfer Query',
+rstk__header__c = 'ictransreq',
+rstk__href__c = '/apex/ictransreqList',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Planned Location Transfer Query',
+rstk__sequence__c = 55,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'ictransreqlist',
+rstk__recordtype__c = 'ictransreq'
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Process Replenishment',
+rstk__header__c = 'ictransreq',
+rstk__href__c = '/apex/icreplenishProcessRequest',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Process Replenishment',
+rstk__sequence__c = 56,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icreplenishprocessrequest',
+rstk__recordtype__c = 'ictransreq'
+//rstk__menutype__c = 2
+);
+insert menu3;
+
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Replenishment Location Maintenance',
+rstk__header__c = 'icreplenish',
+rstk__href__c = '/apex/listview?recType=icreplenish',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Replenishment Location Maintenance',
+rstk__sequence__c = 60,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_itemReplenish__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icreplenish__c',
+rstk__recordtype__c = 'icreplenish'
+//rstk__menutype__c = 2
+);
+insert menu4;

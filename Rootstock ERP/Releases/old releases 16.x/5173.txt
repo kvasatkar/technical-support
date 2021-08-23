@@ -1,0 +1,40 @@
+// 5173
+menu__c menu = new menu__c(
+Name = 'SO Fulfillment Pre-Selection',
+label__c = 'SO Fulfillment Pre-Selection',
+header__c = 'salesorder',
+parentid__c = 15,
+sequence__c = 2,
+subsection__c = '',
+appsecuritykey__c = 'm_sopreselection__c',
+href__c = '/apex/SOPreSelection',
+pagekey__c = 'sopreselection',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = '',
+id__c = 902,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'SO Fulfillment Pre-Selection',
+rstk__label__c = 'SO Fulfillment Pre-Selection',
+rstk__header__c = 'salesorder',
+rstk__parentid__c = 15,
+rstk__sequence__c = 2,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_sopreselection__c',
+rstk__href__c = '/apex/SOPreSelection',
+rstk__pagekey__c = 'sopreselection',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 902,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

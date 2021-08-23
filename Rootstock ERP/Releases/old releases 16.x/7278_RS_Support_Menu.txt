@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'SOORDDMD',
+rstk__label__c = 'SOORDDMD',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=soorddmd',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 24,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 847,
+rstk__appsecuritykey__c = 'm_soorddmd__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'soorddmd',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;

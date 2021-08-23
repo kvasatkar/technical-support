@@ -1,0 +1,181 @@
+// 5179: add code to set syconfig_financials__c field - 
+// This replaces the  Accounting Package, FinancialForce Interface Active and QuickBooks Interface Active fields.
+// The fields will be set after adding a Mfg User and doing an edit/save on the syconfig record
+
+// Number of Authorized Users - this field is validated by Mfg User logic - can be increased if provisioning temporary licenses
+// Number of Paid Users - this field is not validated - set to number of licenses per contract  
+
+
+
+// Rootstock Manufacturing & Supply Chain Embedded Admin User PLTN (Limited Use) - Salesforce License
+// Rootstock Manufacturing & Supply Chain Embedded Partner Admin User PLTN (Ltd Use - Salesforce License
+// Rootstock Manufacturing & Supply Chain Embedded User PLTN (Limited Use) - Platform License
+// Rootstock Manufacturing & Supply Chain Embedded User SLV (Limited Use) - Platform License
+Integer authorizedUsers = 0;  // set to total of Platform Licenses plus 1 for the admin license (do not include Shop Floor licenses in this value)
+Integer paidUsers = 0;
+
+// Set shopfloorOnlyUsers to 50 x number of licenses for this product:
+// Rootstock Manufacturing & Supply Chain LIGHT Embedded - 50 User Bundle - Platform License
+Integer shopfloorOnlyUsers = 0;
+
+// The SF provisioning increases the org's Platform license count by the total of the 3 Platform License products.
+// Per Chuck, we do not (cannot) sell a customer a Salesforce (full CRM) license except for the 2 admin products
+
+//Boolean FFActive = true; //assumes QB is set to false
+// Edit syconfig record to set Financial System Interface field - old fields are still set based on FFA or not but are hidden
+
+rstk__syactivity__c activity = new rstk__syactivity__c();
+activity.name = 'SYACTIVITY';
+activity.rstk__syactivity_mrprunseq__c = 1;
+Database.insert(activity);
+
+rstk__syconfig__c config = new rstk__syconfig__c();
+config.name = 'SYCONFIG';
+config.rstk__syconfig_purchase__c = true;
+config.rstk__syconfig_divnumbers__c = 1;
+config.rstk__syconfig_acctgpackage__c = '0'; // must set value otherwise it's set to null
+//config.rstk__syconfig_acctgpackage__c = FFActive?'1':'0';  // 1=FFA 0=Other
+config.rstk__syconfig_solidworksint__c = false;
+config.rstk__syconfig_multidiv__c = true;
+config.rstk__syconfig_sysrevlvl__c = 2.000000;
+config.rstk__syconfig_intrsiteplng__c = true;
+config.rstk__syconfig_autocadint__c = false;
+config.rstk__syconfig_mrp__c = true;
+config.rstk__syconfig_inventory__c = true;
+config.rstk__syconfig_gradelvl__c = 999;
+config.rstk__syconfig_ffinvoice__c = false;
+config.rstk__syconfig_sales__c = true;
+config.rstk__syconfig_ffint__c = false; // must override field's default setting of true
+//config.rstk__syconfig_ffint__c = FFActive?true:false;
+//config.rstk__syconfig_quickbooks__c = FFActive?false:true;
+config.rstk__syconfig_financials__c = ' ';
+config.rstk__syconfig_intrdivplng__c = true;
+config.rstk__syconfig_subcontract__c = true;
+config.rstk__syconfig_disassembly__c = false;
+config.rstk__syconfig_proditem_bom__c = true;
+config.rstk__syconfig_scheduling__c = true;
+config.rstk__syconfig_numbauthusers__c = authorizedUsers;
+config.rstk__syconfig_numbpayusers__c = paidUsers;
+config.rstk__syconfig_numblaboronlyusers__c = shopfloorOnlyUsers;
+config.rstk__syconfig_workorder__c = true;
+config.rstk__syconfig_arenaint__c = false;
+config.rstk__syconfig_ffprojidfld__c = 'RS_PROJECT_ID__C';
+config.rstk__syconfig_password__c = 'R00tst0ck2012';
+config.rstk__syconfig_helpurl__c = 'http://www.rootstock.com/wp-content/uploads/';
+config.rstk__syconfig_allocations__c = true;  // Allocations 
+config.rstk__syconfig_configsoe__c = true; // Product Configurator
+config.rstk__syconfig_poloader__c  = true; // POLOADER Object Active
+//config.CurrencyIsoCode = 'USD';
+Database.insert(config);
+config.rstk__triggeroptions__c = '{"SAE":"1"}'; //SAE means Skip 
+config.rstk__syconfig_password__c = 'Enter password here';
+Database.update(config);
+
+
+rstk__sygradefunc__c gradeFunc = new rstk__sygradefunc__c();
+gradeFunc.name = 'SYGRADEFUNC';
+gradeFunc.rstk__sygradefunc_concursched_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_multsite_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_abccycphy_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_allocation_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_calendovr_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_rwkword_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_cstrollup_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_nonnettable_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_landedcost_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_rcvginsp_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_poagr_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_labmacheff_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_vendrfq_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_proj_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_scrap_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_routing_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_outsideop_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_eco_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_bomrtglink_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_requisition_lvl__c = 200;
+gradeFunc.rstk__sygradefunc_consigned_lvl__c = 200;
+Database.insert(gradeFunc);
+
+/*
+rstk__syinstall__c install = new rstk__syinstall__c();
+install.name = 'SYINSTALL';
+install.rstk__syinstall_mrp__c=true;
+install.rstk__syinstall_solidworksint__c=false; 
+install.rstk__syinstall_stdcost__c=true; 
+install.rstk__syinstall_divnumbers__c=1; 
+install.rstk__syinstall_nsitemlotallowind__c=false; 
+install.rstk__syinstall_ohdmachind__c=true; 
+install.rstk__syinstall_arenaint__c=false; 
+install.rstk__syinstall_projctl__c=true; 
+install.rstk__syinstall_shopfloor__c=true; 
+install.rstk__syinstall_ohdfrngind__c=true; 
+install.rstk__syinstall_oploggingactive__c=false; 
+install.rstk__syinstall_nsitemsrlallowind__c=false; 
+install.rstk__syinstall_ohdlabind__c=true; 
+install.rstk__syinstall_mrplock__c=false; 
+install.rstk__syinstall_maxusercount__c = authorizedUsers; 
+install.rstk__syinstall_ohdmtlind__c=true; 
+install.rstk__syinstall_advinvcost__c=true; 
+install.rstk__syinstall_intrsiteplng__c=true; 
+install.rstk__syinstall_scheduling__c=true; 
+install.rstk__syinstall_useprimary__c=false; 
+install.rstk__syinstall_oneworldint__c=false; 
+install.rstk__syinstall_dflt_run_immediate__c=false; 
+install.rstk__syinstall_forecasting__c=true; 
+install.rstk__syinstall_multipodlvry__c=false; 
+install.rstk__syinstall_eco__c=true; 
+install.rstk__syinstall_multidivind__c=true; 
+install.rstk__syinstall_arena_append_rev__c=false; 
+install.rstk__syinstall_realtimecogs_ui__c=false; 
+install.rstk__syinstall_upditemopt__c=0; 
+install.rstk__syinstall_wosoordnumopt__c=true; 
+install.rstk__syinstall_converscostqtyopt__c=0; 
+install.rstk__syinstall_intrdivplng__c=true; 
+install.rstk__syinstall_subcontract__c=true; 
+install.rstk__syinstall_outsrcdmfg__c=true; 
+install.rstk__syinstall_multisite__c=true; 
+install.rstk__syinstall_shopflract__c=true;
+install.rstk__syinstall_multicmpind__c=true; 
+install.rstk__syinstall_disassembly__c=false; 
+install.rstk__syinstall_autocadint__c=false;
+install.rstk__syinstall_scheduledatetype_pl__c = 'Shop Calendar';
+Database.insert(install);
+*/
+
+rstk__symrpordassign__c mrpordassign = new rstk__symrpordassign__c();
+mrpordassign.name = 'SYMRPORDASSIGN';
+mrpordassign.rstk__symrpordassign_lstdivordno__c = '1000';
+mrpordassign.rstk__symrpordassign_lstdreqordno__c = '1000';
+mrpordassign.rstk__symrpordassign_lstinddmdordno__c = '1000';
+mrpordassign.rstk__symrpordassign_lstreqordno__c = '1000';
+mrpordassign.rstk__symrpordassign_lstsiteordno__c = '1000';
+mrpordassign.rstk__syordnumassign_lstsoagreeno__c = '1000';
+mrpordassign.rstk__syordnumassign_lstsoordno__c = '1000';
+mrpordassign.rstk__symrpordassign_lstwoordno__c = '1000';
+Database.insert(mrpordassign);
+
+
+rstk__sydefault__c default1 = new rstk__sydefault__c();
+default1.name = 'SYDEFAULT';
+default1.rstk__sydefault_scheduledateype__c = 'Shop Calendar';
+default1.rstk__sydefault_soprodaddopt__c = 'B';
+default1.rstk__sydefault_addsfaccount__c = true;
+default1.rstk__sydefault_addrpolicycust__c = true;
+default1.rstk__sydefault_addrpolicyvend__c = true;
+default1.rstk__sydefault_autormacase__c = true;
+Database.insert(default1);
+
+
+rstk__syrecinit__c recinit = new rstk__syrecinit__c();
+recinit.name = 'SYRECINIT';
+Database.insert(recinit);
+
+
+
+
+
+
+
+
+

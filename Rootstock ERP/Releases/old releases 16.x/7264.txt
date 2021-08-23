@@ -1,0 +1,26 @@
+// Packaged version
+// - Menu, Pre-Delete
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Item Usage Forecast'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+// - Inventory Mgmt Insert
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Item Usage Forecast',
+rstk__header__c = 'forecastmrp',
+rstk__href__c = '/apex/usageforecast',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Item Usage Forecast',
+rstk__sequence__c = 10,
+rstk__inactive__c = false,
+rstk__parentid__c = 5,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_usageforecast__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'usageforecast',
+rstk__recordtype__c = 'usageforecast'
+//menutype__c = 1
+);
+insert menu1;

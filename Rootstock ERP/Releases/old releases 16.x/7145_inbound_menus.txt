@@ -1,0 +1,156 @@
+// Non-packaged orgs
+menu__c menu1 = new menu__c(
+Name = 'Inbound Shipment Route Type',
+label__c = 'Inbound Shipment Route Type',
+header__c = 'ibshipRoutType',
+parentid__c = 12,
+sequence__c = 20,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_ibrtetype__c',
+href__c = '/apex/listview?recType=ibrtetype',
+pagekey__c = 'ibrtetype__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'ibrtetype',
+id__c = 275,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu1;
+
+menu__c menu2 = new menu__c(
+Name = 'Inbound Shipment Container Type',
+label__c = 'Inbound Shipment Container Type',
+header__c = 'ibshipContType',
+parentid__c = 12,
+sequence__c = 21,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_ibconttype__c',
+href__c = '/apex/listview?recType=ibconttype',
+pagekey__c = 'ibconttype__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'ibconttype',
+id__c = 276,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Inbound Shipment Route',
+label__c = 'Inbound Shipment Route',
+header__c = 'ibshipRoute',
+parentid__c = 12,
+sequence__c = 22,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_ibroute__c',
+href__c = '/apex/listview?recType=ibroute',
+pagekey__c = 'ibroute__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'ibroute',
+id__c = 277,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu3;
+
+menu__c menu4 = new menu__c(
+Name = 'Inbound Shipment',
+label__c = 'Inbound Shipment',
+header__c = 'ibship',
+parentid__c = 12,
+sequence__c = 23,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_ibship__c',
+href__c = '/apex/listview?recType=ibship',
+pagekey__c = 'ibship__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'ibship',
+id__c = 278,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu4;
+
+
+
+
+// Packaged orgs
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Inbound Shipment Route Type',
+rstk__label__c = 'Inbound Shipment Route Type',
+rstk__header__c = 'ibshipRoutType',
+rstk__parentid__c = 12,
+rstk__sequence__c = 20,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ibrtetype__c',
+rstk__href__c = '/apex/listview?recType=ibrtetype',
+rstk__pagekey__c = 'ibrtetype__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'ibrtetype',
+rstk__id__c = 275,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Inbound Shipment Container Type',
+rstk__label__c = 'Inbound Shipment Container Type',
+rstk__header__c = 'ibshipContType',
+rstk__parentid__c = 12,
+rstk__sequence__c = 21,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ibconttype__c',
+rstk__href__c = '/apex/listview?recType=ibconttype',
+rstk__pagekey__c = 'ibconttype__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'ibconttype',
+rstk__id__c = 276,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Inbound Shipment Route',
+rstk__label__c = 'Inbound Shipment Route',
+rstk__header__c = 'ibshipRoute',
+rstk__parentid__c = 12,
+rstk__sequence__c = 22,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ibroute__c',
+rstk__href__c = '/apex/listview?recType=ibroute',
+rstk__pagekey__c = 'ibroute__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'ibroute',
+rstk__id__c = 277,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu3;
+
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Inbound Shipment',
+rstk__label__c = 'Inbound Shipment',
+rstk__header__c = 'ibship',
+rstk__parentid__c = 12,
+rstk__sequence__c = 23,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_ibship__c',
+rstk__href__c = '/apex/listview?recType=ibship',
+rstk__pagekey__c = 'ibship__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'ibship',
+rstk__id__c = 278,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu4;

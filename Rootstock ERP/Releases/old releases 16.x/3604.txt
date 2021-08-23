@@ -1,0 +1,14 @@
+rstk__icixr__c[] icixrs = [select 
+	id, 
+	rstk__icixr_ordno__c, 
+	rstk__icixr_soline__r.rstk__soline_line__c,
+	rstk__icixr_item__c,
+	rstk__icixr_qtyreq__c 
+	from rstk__icixr__c where rstk__icixr_ordtype__c='1' and rstk__icixr_soline__r.rstk__soline_firm__c = false];
+System.debug(LoggingLevel.INFO, 'icixr size: ' + icixrs.size());
+if(icixrs.size() > 0) {
+	for(rstk__icixr__c icixr : icixrs) {
+	        System.debug(LoggingLevel.INFO, 'found icixr id: ' + icixr.id + ' SO: ' + icixr.rstk__icixr_ordno__c + ' SO line: ' + icixr.rstk__icixr_soline__r.rstk__soline_line__c + ' Qty Req: ' + icixr.rstk__icixr_qtyreq__c + ' Item: ' + icixr.rstk__icixr_item__c);
+	} 
+	//delete icixrs;
+}

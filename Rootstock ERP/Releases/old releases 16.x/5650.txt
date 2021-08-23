@@ -1,0 +1,12 @@
+// - SO Kit Components Menu Delete - Non-Pkg'd
+menu__c[] menud01 = [select id, label__c from menu__c 
+where label__c = 'SO Kit Components'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+// - SO Kit Components Menu Delete - Pkg'd
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'SO Kit Components'];
+if (menud01.size() > 0) {
+delete menud01;
+}

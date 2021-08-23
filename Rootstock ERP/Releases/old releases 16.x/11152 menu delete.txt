@@ -1,0 +1,8 @@
+// - RS_Support_Menu Update - 16.19
+// - Execute this first, then Insert1.txt, then Insert2.txt
+
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__parentid__c = 970];
+if (menud01.size() > 0) {
+delete menud01;
+}

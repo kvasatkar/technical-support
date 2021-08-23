@@ -1,0 +1,31 @@
+Set<String> shiphdrIds = new Set<String>();
+rstk__sopackline__c[] packlines = [
+                select rstk__sopackline_packslip__r.rstk__sopack_shiphdr__c, rstk__sopackline_soline__c, rstk__sopackline_shipline__c, rstk__triggeroptions__c
+                from rstk__sopackline__c where rstk__sopackline_shipline__c = null limit 9000];
+System.debug(Logginglevel.INFO, 'packlines to update: ' + packlines.size());
+for (rstk__sopackline__c packline : packlines) {
+                shiphdrIds.add(packline.rstk__sopackline_packslip__r.rstk__sopack_shiphdr__c);
+}
+
+Map<String, String> linesMap = new Map<String, String>();
+rstk__soshipline__c[] shiplines = [
+                select rstk__soshipline_shipper__c, rstk__soshipline_line__c 
+                from rstk__soshipline__c where rstk__soshipline_shipper__c IN :new List<String>(shiphdrIds) order by createddate limit 40000];
+System.debug(Logginglevel.INFO, 'soshiplines found: ' + shiplines.size());
+for (rstk__soshipline__c shipline : shiplines) {
+                linesMap.put(shipline.rstk__soshipline_shipper__c + '_' + shipline.rstk__soshipline_line__c, shipline.Id);
+}
+
+for (rstk__sopackline__c packline : packlines) {
+                if (linesMap.get(packline.rstk__sopackline_packslip__r.rstk__sopack_shiphdr__c + '_' + packline.rstk__sopackline_soline__c) == null) {
+                                System.debug(Logginglevel.INFO, 'Unable to locate soshipline for Header: ' + packline.rstk__sopackline_packslip__r.rstk__sopack_shiphdr__c + ' Line: ' + packline.rstk__sopackline_soline__c);
+                } else {
+                                packline.rstk__sopackline_shipline__c = linesMap.get(packline.rstk__sopackline_packslip__r.rstk__sopack_shiphdr__c + '_' + packline.rstk__sopackline_soline__c);
+                               packline.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+}
+
+if (packlines.size() > 0) {
+                update packlines;
+}
+

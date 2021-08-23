@@ -1,0 +1,39 @@
+// 5056 - was never deployed until 11/8/2014
+menu__c menu = new menu__c(
+Name = 'Item Project Prices',
+header__c = 'csg',
+href__c = '/apex/listview?recType=icitemprojprice',
+imageclass__c = 'Custom57Mru',
+label__c = 'Item Project Prices',
+sequence__c = 62,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 303,
+appsecuritykey__c = 'm_icitemprojprice__c',
+subsection__c = '',
+recordtype__c = 'icitemprojprice',
+pagekey__c = 'icitemprojprice__c'
+//menutype__c = 2
+);
+insert menu;
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Item Project Prices',
+rstk__header__c = 'csg',
+rstk__href__c = '/apex/listview?recType=icitemprojprice',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Item Project Prices',
+rstk__sequence__c = 62,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 303,
+rstk__appsecuritykey__c = 'm_icitemprojprice__c',
+rstk__subsection__c = '',
+rstk__recordtype__c = 'icitemprojprice',
+rstk__pagekey__c = 'icitemprojprice__c'
+//rstk__menutype__c = 2
+);
+insert menu;

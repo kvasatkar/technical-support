@@ -1,0 +1,36 @@
+menu__c menu = new menu__c(
+Name = 'Item Usage Forecast',
+header__c = 'itemUsage',
+href__c = '/apex/usageForecast',
+imageclass__c = 'Custom57Mru',
+label__c = 'Item Usage Forecast',
+sequence__c = 57,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_itemUsage__c',
+subsection__c = '',
+pagekey__c = 'usageforecast'
+//menutype__c = 2
+);
+insert menu;
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Item Usage Forecast',
+rstk__header__c = 'itemUsage',
+rstk__href__c = '/apex/usageForecast',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Item Usage Forecast',
+rstk__sequence__c = 57,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_itemUsage__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'usageforecast'
+//menutype__c = 2
+);
+insert menu;

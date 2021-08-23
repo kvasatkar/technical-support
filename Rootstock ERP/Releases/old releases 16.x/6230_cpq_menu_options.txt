@@ -1,0 +1,85 @@
+// Packaged org
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Sales Contract Device Deal Management',
+rstk__label__c = 'Sales Contract Device Deal Management',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 14,
+rstk__subsection__c = 'Processes',
+rstk__appsecuritykey__c = 'm_salesContractDevDealMgmt__c',
+rstk__href__c = '/apex/SalesContractDevDealMgmt',
+rstk__pagekey__c = 'salescontractdevdealmgmt',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+//rstk__recordtype__c = 'soconpbill',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Sales Contract Device Transfer',
+rstk__label__c = 'Sales Contract Device Transfer',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 15,
+rstk__subsection__c = 'Processes',
+rstk__appsecuritykey__c = 'm_salesContractDevTransfer__c',
+rstk__href__c = '/apex/SalesContractDevTransfer',
+rstk__pagekey__c = 'salescontractdevtransfer',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+//rstk__recordtype__c = 'soconpbill',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+
+
+
+
+
+// Non-packaged orgs
+menu__c menu1 = new menu__c(
+Name = 'Sales Contract Device Deal Management',
+label__c = 'Sales Contract Device Deal Management',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 14,
+subsection__c = 'Processes',
+appsecuritykey__c = 'm_salesContractDevDealMgmt__c',
+href__c = '/apex/SalesContractDevDealMgmt',
+pagekey__c = 'salescontractdevdealmgmt',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+//recordtype__c = 'soconpbill',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu1;
+
+menu__c menu2 = new menu__c(
+Name = 'Sales Contract Device Transfer',
+label__c = 'Sales Contract Device Transfer',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 15,
+subsection__c = 'Processes',
+appsecuritykey__c = 'm_salesContractDevTransfer__c',
+href__c = '/apex/SalesContractDevTransfer',
+pagekey__c = 'salescontractdevtransfer',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+//recordtype__c = 'soconpbill',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+
+

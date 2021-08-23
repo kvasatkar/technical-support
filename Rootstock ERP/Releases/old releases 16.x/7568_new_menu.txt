@@ -1,0 +1,72 @@
+// - Insert Rootstock Support menu option for OBJPAGESETUP
+ 
+// Non-Pkg
+
+menu__c menua12 = new menu__c(
+Name = 'Obj Page Setup',
+label__c = 'Obj Page Setup',
+header__c = 'rs_menu',
+href__c = '/apex/listview?rectype=objpagesetup',
+imageclass__c = 'Custom57Mru',
+sequence__c = 44,
+inactive__c = false,
+parentid__c = 970,
+level__c = 1,
+id__c = 844,
+appsecuritykey__c = 'm_objpagesetup__c',
+subsection__c = ' ',
+pagekey__c = 'ccrstk',
+recordtype__c = 'objpagesetup',
+activity_enabled__c = true,
+approval_enabled__c = false
+);
+insert menua12; 
+
+
+
+
+
+
+ 
+// Pkg'd
+rstk__menu__c menua12 = new rstk__menu__c(
+Name = 'Obj Page Setup',
+rstk__label__c = 'Obj Page Setup',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=objpagesetup',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 44,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 844,
+rstk__appsecuritykey__c = 'm_objpagesetup__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'objpagesetup',
+rstk__activity_enabled__c = true,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua12;
+
+// - RS Support Menu Updates to remove '+' from menu options
+rstk__menu__c[] menux01 = [select id, rstk__recordtype__c, rstk__activity_enabled__c, rstk__approval_enabled__c from rstk__menu__c 
+where rstk__parentid__c = 970];
+for (rstk__menu__c menu01 : menux01) {
+menu01.rstk__activity_enabled__c = False;
+}
+update menux01;
+rstk__menu__c[] menux02 = [select id, rstk__recordtype__c, rstk__activity_enabled__c, rstk__approval_enabled__c from rstk__menu__c 
+where rstk__parentid__c = 970];
+for (rstk__menu__c menu02 : menux02) {
+menu02.rstk__approval_enabled__c = False;
+}
+update menux02;
+rstk__menu__c[] menux03 = [select id, rstk__recordtype__c, rstk__activity_enabled__c, rstk__approval_enabled__c from rstk__menu__c 
+where rstk__parentid__c = 970];
+for (rstk__menu__c menu03 : menux03) {
+menu03.rstk__recordtype__c = null;
+}
+update menux03;
+ 

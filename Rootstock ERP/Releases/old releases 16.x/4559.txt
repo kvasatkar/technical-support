@@ -1,0 +1,8 @@
+rstk__porcptap__c[] c = [select id from rstk__porcptap__c where rstk__externalid__c = null];
+if(c.size() > 0) {
+    for(rstk__porcptap__c o : c) {
+        o.rstk__externalid__c = o.id;
+        o.rstk__triggeroptions__c = '{"UAP":"1","SAE":"1"}';
+    } 
+}
+update c;

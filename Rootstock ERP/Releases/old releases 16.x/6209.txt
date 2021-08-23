@@ -1,0 +1,118 @@
+// Non-packaged org
+menu__c menu1 = new menu__c(
+Name = 'Generate Recurring Billing',
+label__c = 'Generate Recurring Billing',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 11,
+subsection__c = '',
+appsecuritykey__c = 'm_generateRecurringBilling__c',
+href__c = '/apex/GenerateRecurringBillingExecution',
+pagekey__c = 'generaterecurringbillingexecution',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'soconpbill',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu1;
+
+menu__c menu2 = new menu__c(
+Name = 'Contract Periodic Billing Review',
+label__c = 'Contract Periodic Billing Review',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 12,
+subsection__c = '',
+appsecuritykey__c = 'm_soconpbill__c',
+href__c = '/apex/listView?recType=soconpbill',
+pagekey__c = 'soconpbill__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'soconpbill',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Sales Contract Maintenance',
+label__c = 'Sales Contract Maintenance',
+header__c = 'scm',
+parentid__c = 244,
+sequence__c = 10,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_socontract__c',
+href__c = '/apex/listView?recType=socontract',
+pagekey__c = 'socontract__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'socontract',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu3;
+
+
+
+
+// Packaged org
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Generate Recurring Billing',
+rstk__label__c = 'Generate Recurring Billing',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 11,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_generateRecurringBilling__c',
+rstk__href__c = '/apex/GenerateRecurringBillingExecution',
+rstk__pagekey__c = 'generaterecurringbillingexecution',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'soconpbill',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Contract Periodic Billing Review',
+rstk__label__c = 'Contract Periodic Billing Review',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 12,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_soconpbill__c',
+rstk__href__c = '/apex/listView?recType=soconpbill',
+rstk__pagekey__c = 'soconpbill__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'soconpbill',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Sales Contract Maintenance',
+rstk__label__c = 'Sales Contract Maintenance',
+rstk__header__c = 'scm',
+rstk__parentid__c = 244,
+rstk__sequence__c = 10,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_socontract__c',
+rstk__href__c = '/apex/listView?recType=socontract',
+rstk__pagekey__c = 'socontract__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'socontract',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu3;

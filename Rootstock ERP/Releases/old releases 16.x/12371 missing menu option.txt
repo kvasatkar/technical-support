@@ -1,0 +1,38 @@
+// Delete extra Master Services Agreement record
+rstk__menu__c[] menus1 = [select id from rstk__menu__c
+	where name = 'Master Services Agreement' and
+	rstk__parentid__c = 244 and
+	rstk__menutype__c = null];
+if (menus1.size() > 1) {
+	delete menus1[1];
+}	
+
+
+// Add Sales Contract Maintenance record if missing
+rstk__menu__c[] menus2 = [select id from rstk__menu__c
+	where name = 'Sales Contract Maintenance' and 
+	rstk__parentid__c = 244];
+if (menus2.size() == 0) {
+	rstk__menu__c menua01 = new rstk__menu__c(
+	Name = 'Sales Contract Maintenance',
+	rstk__label__c = 'Sales Contract Maintenance',
+	rstk__header__c = 'cpq',
+	rstk__href__c = '/apex/listView?recType=socontract',
+	rstk__imageclass__c = 'Custom57Mru',
+	rstk__sequence__c = 10,
+	rstk__inactive__c = false,
+	rstk__parentid__c = 244,
+	rstk__level__c = 1,
+	rstk__id__c = null,
+	rstk__appsecuritykey__c = 'm_socontract__c',
+	rstk__subsection__c = 'Maintenance',
+	rstk__pagekey__c = 'socontract__c',
+	rstk__recordtype__c = 'socontract',
+	rstk__hideaddlink__c = false,
+	rstk__activity_enabled__c = true,
+	rstk__approval_enabled__c = true,
+	rstk__menutype__c = 1
+	);
+	insert menua01;
+}	
+

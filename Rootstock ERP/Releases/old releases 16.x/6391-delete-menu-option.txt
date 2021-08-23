@@ -1,0 +1,7 @@
+// Delete first occurrence of menu option if multiple records exist
+rstk__menu__c[] menus = [select id from rstk__menu__c
+	where name = 'Inventory Reconciliation Review & Processing' and
+	rstk__menutype__c = 1];
+if (menus.size() > 1) {
+	delete menus[1];
+}	

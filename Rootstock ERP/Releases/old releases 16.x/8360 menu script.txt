@@ -1,0 +1,22 @@
+// - Insert initial menu selection 04
+rstk__menu__c menua04 = new rstk__menu__c(
+Name = 'Sales Order Fulfillment by Order',
+rstk__label__c = 'Sales Order Fulfillment by Order',
+rstk__header__c = 'sales order processes',
+rstk__href__c = 'apex/SOFulfillByOrder',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 17,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 817,
+rstk__appsecuritykey__c = false,
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = false,
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua04;

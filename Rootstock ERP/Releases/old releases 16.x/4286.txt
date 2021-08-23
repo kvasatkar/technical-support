@@ -1,0 +1,14 @@
+// Move menu item from System setup to Sales Order Setup
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'System Custom Configuration'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__parentid__c = 16;
+}
+update menus;
+
+// Move menu item from System setup to Sales Order Setup
+menu__c[] menus = [select id from menu__c where name = 'System Custom Configuration'];
+for (menu__c menu : menus) {
+  menu.parentid__c = 16;
+}
+update menus;
+

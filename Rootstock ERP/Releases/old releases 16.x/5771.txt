@@ -1,0 +1,40 @@
+// Non-packaged
+SavePoint sp = Database.setSavepoint();
+porcptap__c[] porcptaps = [
+    select id
+    from porcptap__c
+    where porcptap_payauthind__c = false
+    and porcptap_authyn__c = 'N'
+    and porcptap_amtcomp__c = 0 
+    and porcptap_amtcompvcurr__c = 0
+    and porcptap_upricercpt__c = 0
+    and porcptap_upricercptvcurr__c = 0
+    and porcptap_amtnotauth__c = 0
+    and porcptap_poline__r.poline_potype__c in ('Service', 'Indirect Material')
+    and CALENDAR_YEAR(createddate) = 2014
+    and CALENDAR_MONTH(createddate) in (11,12)
+];
+System.debug(LoggingLevel.INFO, '*******DELETING ' + porcptaps.size() + ' ROWS********');
+delete porcptaps;
+Database.rollback(sp); //After the test run, just comment this line and run again
+
+
+// Packaged
+SavePoint sp = Database.setSavepoint();
+rstk__porcptap__c[] porcptaps = [
+    select id
+    from rstk__porcptap__c
+    where rstk__porcptap_payauthind__c = false
+    and rstk__porcptap_authyn__c = 'N'
+    and rstk__porcptap_amtcomp__c = 0 
+    and rstk__porcptap_amtcompvcurr__c = 0
+    and rstk__porcptap_upricercpt__c = 0
+    and rstk__porcptap_upricercptvcurr__c = 0
+    and rstk__porcptap_amtnotauth__c = 0
+    and rstk__porcptap_poline__r.rstk__poline_potype__c in ('Service', 'Indirect Material')
+    and CALENDAR_YEAR(createddate) = 2014
+    and CALENDAR_MONTH(createddate) in (11,12)
+];
+System.debug(LoggingLevel.INFO, '*******DELETING ' + porcptaps.size() + ' ROWS********');
+delete porcptaps;
+Database.rollback(sp); //After the test run, just comment this line and run again

@@ -1,0 +1,39 @@
+// 4373 - Print Template Mapping
+menu__c menu = new menu__c(
+Name = 'Print Template Mapping',
+header__c = 'setup',
+href__c = '/apex/listview?recType=PrintTemplateMapping',
+imageclass__c = 'Custom57Mru',
+label__c = 'Print Template Mapping',
+sequence__c = 29,
+inactive__c = false,
+parentid__c = 1,
+level__c = 1,
+id__c = 303,
+recordtype__c = 'printtemplatemapping',
+appsecuritykey__c = 'm_printtemplatemapping__c',
+subsection__c = '',
+pagekey__c = 'printtemplatemapping__c'
+//menutype__c = 2
+);
+insert menu;
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Print Template Mapping',
+rstk__header__c = 'setup',
+rstk__href__c = '/apex/listview?recType=PrintTemplateMapping',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Print Template Mapping',
+rstk__sequence__c = 29,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 303,
+rstk__recordtype__c = 'printtemplatemapping',
+rstk__appsecuritykey__c = 'm_printtemplatemapping__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'printtemplatemapping__c'
+//menutype__c = 2
+);
+insert menu;

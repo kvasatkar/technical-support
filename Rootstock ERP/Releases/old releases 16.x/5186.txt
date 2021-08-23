@@ -1,0 +1,45 @@
+// 5186 - delete menu option if it exists and add option to Work Orders group
+
+menu__c[] menu = [select id from menu__c where label__c = 'Consolidated Work Order Picklist' and parentid__c = 310];
+if (menu.size() > 0) delete menu;
+
+menu__c menu2 = new menu__c(
+Name = 'Consolidated Work Order Picklist',
+label__c = 'Consolidated Work Order Picklist',
+header__c = 'consolidatedWorkOrderPicklist',
+parentid__c = 14,
+sequence__c = 26,
+subsection__c = '',
+appsecuritykey__c = 'm_consolidatedWorkOrderPicklist__c',
+href__c = '/apex/WorkOrders',
+pagekey__c = 'workorders',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+id__c = 299,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+
+// packaged orgs
+rstk__menu__c[] menu = [select id from rstk__menu__c where rstk__label__c = 'Consolidated Work Order Picklist' and rstk__parentid__c = 310];
+if (menu.size() > 0) delete menu;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Consolidated Work Order Picklist',
+rstk__label__c = 'Consolidated Work Order Picklist',
+rstk__header__c = 'consolidatedWorkOrderPicklist',
+rstk__parentid__c = 14,
+rstk__sequence__c = 26,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_consolidatedWorkOrderPicklist__c',
+rstk__href__c = '/apex/WorkOrders',
+rstk__pagekey__c = 'workorders',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__id__c = 299,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;

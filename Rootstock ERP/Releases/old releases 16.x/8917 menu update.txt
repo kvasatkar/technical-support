@@ -1,0 +1,87 @@
+// Inbound Logistics Menu Update - Ticket 8917
+
+rstk__menu__c[] menud1 = [select id, rstk__label__c from rstk__menu__c 
+where (rstk__parentid__c = 13 or rstk__header__c = 'inboundlogistics')];
+if (menud1.size() > 0) {
+delete menud1;
+}
+
+rstk__menu__c menua1 = new rstk__menu__c(
+Name = 'Inbound Shipment Route Type',
+rstk__label__c = 'Inbound Shipment Route Type',
+rstk__header__c = 'inboundlogistics',
+rstk__href__c = '/apex/listview?rectype=ibrtetype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 6,
+rstk__inactive__c = false,
+rstk__parentid__c = 13,
+rstk__level__c = 1,
+rstk__id__c = 316,
+rstk__appsecuritykey__c = 'm_ibrtetype__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'icrtetype__c',
+rstk__recordtype__c = 'ibrtetype',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua1;
+
+rstk__menu__c menua2 = new rstk__menu__c(
+Name = 'Inbound Shipment Container Type',
+rstk__label__c = 'Inbound Shipment Route Type',
+rstk__header__c = 'inboundlogistics',
+rstk__href__c = '/apex/listview?rectype=ibconttype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 9,
+rstk__inactive__c = false,
+rstk__parentid__c = 13,
+rstk__level__c = 1,
+rstk__id__c = 319,
+rstk__appsecuritykey__c = 'm_ibconttype__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'icconttype__c',
+rstk__recordtype__c = 'ibrtetype',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua2;
+
+rstk__menu__c menua3 = new rstk__menu__c(
+Name = 'Inbound Shipment Route',
+rstk__label__c = 'Inbound Shipment Route',
+rstk__header__c = 'inboundlogistics',
+rstk__href__c = '/apex/listview?rectype=ibroute',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 22,
+rstk__inactive__c = false,
+rstk__parentid__c = 13,
+rstk__level__c = 1,
+rstk__id__c = 322,
+rstk__appsecuritykey__c = 'm_ibroute__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'icroute__c',
+rstk__recordtype__c = 'ibroute',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua3;
+
+rstk__menu__c menua4 = new rstk__menu__c(
+Name = 'Inbound Shipment',
+rstk__label__c = 'Inbound Shipment',
+rstk__header__c = 'inboundlogistics',
+rstk__href__c = '/apex/listview?rectype=ibship',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 3,
+rstk__inactive__c = false,
+rstk__parentid__c = 13,
+rstk__level__c = 1,
+rstk__id__c = 313,
+rstk__appsecuritykey__c = 'm_ibship__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ibship__c',
+rstk__recordtype__c = 'ibship',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua4;

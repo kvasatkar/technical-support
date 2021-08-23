@@ -1,0 +1,45 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Outbound Shipment Container',
+rstk__label__c = 'Outbound Shipment Container',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?rectype=obshipcont',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 148,
+rstk__inactive__c = false,
+rstk__parentid__c = 904,
+rstk__level__c = 1,
+rstk__id__c = 333,
+rstk__appsecuritykey__c = 'm_obshipcont__c',
+rstk__subsection__c = 'false',
+rstk__pagekey__c = 'obshipcont__c',
+rstk__recordtype__c = 'obshipcont',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;
+
+// - Insert initial menu selection 15
+rstk__menu__c menua15 = new rstk__menu__c(
+Name = 'Outbound Shipment Master',
+rstk__label__c = 'Outbound Shipment Master',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?rectype=obship',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 146,
+rstk__inactive__c = false,
+rstk__parentid__c = 904,
+rstk__level__c = 1,
+rstk__id__c = 332,
+rstk__appsecuritykey__c = 'm_obship__c',
+rstk__subsection__c = 'false',
+rstk__pagekey__c = 'obship__c',
+rstk__recordtype__c = 'obship',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua15;

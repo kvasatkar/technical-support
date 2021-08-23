@@ -1,0 +1,59 @@
+// - Site to Site Transfer Menu option exists, Pre-Delete 01
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Inventory Reconciliation'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+// - Insert initial menu selection 01
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Inventory Reconciliation',
+rstk__label__c = 'Inventory Reconciliation',
+rstk__header__c = 'Inventory Transactions',
+rstk__href__c = '/apex/listview?rectype=icinvrecon',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 22,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 314,
+rstk__appsecuritykey__c = 'm__icinvrecon__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = ' ',
+rstk__recordtype__c = ' ',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua01;
+
+// - Site to Site Transfer Menu option exists, Pre-Delete 02
+rstk__menu__c[] menud02 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Inventory Reconciliation Review & Processing'];
+if (menud02.size() > 0) {
+delete menud02;
+}
+
+// - Insert initial menu selection 02
+rstk__menu__c menua02 = new rstk__menu__c(
+Name = 'Inventory Reconciliation Review & Processing',
+rstk__label__c = 'Inventory Reconciliation Review & Processing',
+rstk__header__c = 'Inventory Transactions',
+rstk__href__c = '/apex/listview?rectype=icinvreconb',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 22,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 314,
+rstk__appsecuritykey__c = 'm__icinvreconb__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = ' ',
+rstk__recordtype__c = ' ',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua02;

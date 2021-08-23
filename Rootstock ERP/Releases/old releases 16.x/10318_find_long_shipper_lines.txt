@@ -1,0 +1,11 @@
+// Find Shipper Lines where the length is > 12 characters
+String shipperLine;
+rstk__soinvline__c[] soinvlines = 
+    [select rstk__soinvline_line__r.name from rstk__soinvline__c 
+	];
+for (rstk__soinvline__c soinvline : soinvlines) {
+    shipperLine = soinvline.rstk__soinvline_line__r.name;
+    if (shipperLine != null && shipperLine.length() > 12) {
+        System.debug(Logginglevel.INFO, 'shipperLine: ' + soinvline.rstk__soinvline_line__r.name);
+    }        
+}

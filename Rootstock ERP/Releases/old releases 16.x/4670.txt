@@ -1,0 +1,52 @@
+//sets the icitem_backflushpolind__c = FALSE and icitem_backflushpol__c = 'No Backflushing'
+
+icitem__c[] c = [
+    select icitem_backflushpolind__c 
+    from icitem__c 
+    where icitem_item__r.peitem_tracksrl_pl__c = 'Yes' 
+    and (
+        (icitem_backflushpolind__c = true and icitem_iccomcod__r.iccomcod_backflushpol_pl__c in ('First Operation','Last Operation')) or
+        (icitem_backflushpolind__c = false and icitem_backflushpol__c in ('First Operation','Last Operation'))
+    )
+    //and id = 'a30U0000000CFW8IAO'
+];
+if(c.size() > 0) {
+    icitem__c[] toUpdate = new List<icitem__c>();
+    for(icitem__c o : c) {
+        logger.debug(o.id);
+        if(o.icitem_backflushpolind__c == true) {
+            o.icitem_backflushpolind__c = false;
+        }
+        o.icitem_backflushpol__c = 'No Backflushing';
+        o.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+        toUpdate.add(o);
+    }
+    logger.debug('UPDATAED ' + toUpdate.size() + ' ICITEM entries');
+    update toUpdate;
+}
+
+// packaged orgs
+rstk__icitem__c[] c = [
+    select rstk__icitem_backflushpolind__c 
+    from rstk__icitem__c 
+    where rstk__icitem_item__r.rstk__peitem_tracksrl_pl__c = 'Yes' 
+    and (
+        (rstk__icitem_backflushpolind__c = true and rstk__icitem_iccomcod__r.rstk__iccomcod_backflushpol_pl__c in ('First Operation','Last Operation')) or
+        (rstk__icitem_backflushpolind__c = false and rstk__icitem_backflushpol__c in ('First Operation','Last Operation'))
+    )
+];
+
+if(c.size() > 0) {
+    rstk__icitem__c[] toUpdate = new List<rstk__icitem__c>();
+    for(rstk__icitem__c o : c) {
+        rstk.logger.debug(o.id);
+        if(o.rstk__icitem_backflushpolind__c == true) {
+            o.rstk__icitem_backflushpolind__c = false;
+        }
+        o.rstk__icitem_backflushpol__c = 'No Backflushing';
+        o.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+        toUpdate.add(o);
+    }
+    rstk.logger.debug('UPDATAED ' + toUpdate.size() + ' ICITEM entries');
+    update toUpdate;
+}

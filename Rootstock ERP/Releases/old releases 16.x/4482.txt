@@ -1,0 +1,78 @@
+// non-packaged orgs
+menu__c menu = new menu__c(
+Name = 'Inventory Reconciliation',
+header__c = 'icinvrecon',
+href__c = '/apex/listview?recType=icinvrecon',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Reconciliation',
+sequence__c = 50,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_icinvrecon__c',
+subsection__c = '',
+pagekey__c = 'icinvrecon__c',
+recordtype__c = 'icinvrecon'
+//menutype__c = 2
+);
+insert menu;
+
+menu__c menu2 = new menu__c(
+Name = 'Inventory Reconciliation Review & Processing',
+header__c = 'icinvreconsearch',
+href__c = '/apex/icinvreconsearch',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Reconciliation Review & Processing',
+sequence__c = 51,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_icinvreconreviewandprocessing__c',
+subsection__c = '',
+pagekey__c = 'icinvreconsearch',
+recordtype__c = ''
+//menutype__c = 2
+);
+insert menu2;
+
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Inventory Reconciliation',
+rstk__header__c = 'icinvrecon',
+rstk__href__c = '/apex/listview?recType=icinvrecon',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Reconciliation',
+rstk__sequence__c = 50,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_icinvrecon__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icinvrecon__c',
+rstk__recordtype__c = 'icinvrecon'
+//rstk__menutype__c = 2
+);
+insert menu;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Inventory Reconciliation Review & Processing',
+rstk__header__c = 'icinvreconsearch',
+rstk__href__c = '/apex/icinvreconsearch',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Reconciliation Review & Processing',
+rstk__sequence__c = 51,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_icinvreconreviewandprocessing__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icinvreconsearch',
+rstk__recordtype__c = ''
+//rstk__menutype__c = 2
+);
+insert menu2;

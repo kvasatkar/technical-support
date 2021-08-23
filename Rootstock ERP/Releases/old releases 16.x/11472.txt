@@ -1,0 +1,75 @@
+// Pre-Delete, so that it can be run more than once, if needed
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'Clock-%'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+// - Insert Clock-On and Clock-Off Menu Option
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Clock-On and Clock-Off',
+rstk__label__c = 'Clock-On and Clock-Off',
+rstk__header__c = 'shopfloor',
+rstk__href__c = '/apex/ClockOnAndOff',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 13,
+rstk__inactive__c = false,
+rstk__parentid__c = 10,
+rstk__level__c = 1,
+rstk__id__c = 342,
+rstk__appsecuritykey__c = 'm_clockon_clockoff__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'clockonandoff',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu1;
+
+// - Insert Clock-On and Clock-Off Menu Option
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Clock-On Job',
+rstk__label__c = 'Clock-On Job',
+rstk__header__c = 'shopfloor',
+rstk__href__c = '/c/ComponentRedirectApp.app?componentName=ClockOnCreateComponent',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 14,
+rstk__inactive__c = false,
+rstk__parentid__c = 10,
+rstk__level__c = 1,
+rstk__id__c = 343,
+rstk__appsecuritykey__c = 'm_taclockon__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = '',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu2;
+
+// - Insert Clock-On and Clock-Off Menu Option
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Clock-Off Job',
+rstk__label__c = 'Clock-Off Job',
+rstk__header__c = 'shopfloor',
+rstk__href__c = '/c/ComponentRedirectApp.app?componentName=ClockOffCreateComponent',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 15,
+rstk__inactive__c = false,
+rstk__parentid__c = 10,
+rstk__level__c = 1,
+rstk__id__c = 344,
+rstk__appsecuritykey__c = 'm_taclockoff__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = '',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 3
+);
+insert menu3;
+

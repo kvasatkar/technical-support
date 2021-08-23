@@ -1,0 +1,36 @@
+menu__c menu = new menu__c(
+Name = 'Transfer Request Packing Slip',
+header__c = 'ictransreq',
+href__c = '/apex/createPackingSlip',
+imageclass__c = 'Custom57Mru',
+label__c = 'Transfer Request Packing Slip',
+sequence__c = 56,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_ictransreq__c',
+subsection__c = '',
+pagekey__c = 'createpackingslip'
+//menutype__c = 2
+);
+insert menu;
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Transfer Request Packing Slip',
+rstk__header__c = 'ictransreq',
+rstk__href__c = '/apex/createPackingSlip',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Transfer Request Packing Slip',
+rstk__sequence__c = 56,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_ictransreq__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'createpackingslip'
+//menutype__c = 2
+);
+insert menu;

@@ -1,0 +1,146 @@
+// Pre-Delete section, so that it can be run more than once, if needed
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'Create Invoice For All Shippers%'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+rstk__menu__c[] menud02 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'CS Item%'];
+if (menud02.size() > 0) {
+delete menud02;
+}
+
+rstk__menu__c[] menud03 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'IntegrityCheck%'];
+if (menud03.size() > 0) {
+delete menud03;
+}
+
+rstk__menu__c[] menud04 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'Integrity Log%'];
+if (menud04.size() > 0) {
+delete menud04;
+}
+
+rstk__menu__c[] menud05 = [select id, rstk__label__c from rstk__menu__c 
+where name like 'Rootstock Support Portal%'];
+if (menud05.size() > 0) {
+delete menud05;
+}
+
+// - Insert Create Invoice For All Shippers Menu Option
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Create Invoice For All Shippers',
+rstk__label__c = 'Create Invoice For All Shippers',
+rstk__header__c = 'salesorder',
+rstk__href__c = '/apex/InvoiceShippersInDiv',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 15,
+rstk__level__c = 1,
+rstk__id__c = 331,
+rstk__appsecuritykey__c = '/apex/InvoiceShippersInDiv',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'invoiceshippersindiv',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu1;
+
+// - Insert CS Item Menu Option to RS-Support Menu
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'CS Item (Std Cost Rollup Detail)',
+rstk__label__c = 'CS Item (Std Cost Rollup Detail)',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=csitem',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 74,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 874,
+rstk__appsecuritykey__c = '/apex/listview?rectype=csitem',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu2;
+
+
+// - Insert IntegrityCheck Menu Option to RS-Support Menu
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'IntegrityCheck',
+rstk__label__c = 'IntegrityCheck',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/IntegrityCheck',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 77,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 877,
+rstk__appsecuritykey__c = '/apex/IntegrityCheck',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu3;
+
+// - Insert Integrity Log Menu Option to RS-Support Menu
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Integrity Log',
+rstk__label__c = 'Integrity Log',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=Integritylog',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 80,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 880,
+rstk__appsecuritykey__c = '/apex/Integritylog',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = '',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu4;
+
+// - Insert Rootstock Support Portal to RS-Support Menu
+rstk__menu__c menu5 = new rstk__menu__c(
+Name = 'Rootstock Support Portal',
+rstk__label__c = 'Rootstock Support Portal',
+rstk__header__c = 'setup',
+rstk__href__c = 'https://portal.teamsupport.com/login.aspx?Organizationid=424979',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 1,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 901,
+rstk__appsecuritykey__c = 'team_support',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'team_support',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menu5;

@@ -1,0 +1,129 @@
+// - Ticket 13809 Menu Pre-Delete 01
+rstk__menu__c[] menud01 = 
+[select id from rstk__menu__c where //rstk__parentid__c = 970 and
+rstk__label__c in ('SOAPI','SYDATA','SYDATAT','SYDATAD','POLOADER','API Objects - Results')];
+
+if (menud01.size() > 0) {
+                delete menud01;
+}
+
+// Menu Header Insert
+rstk__menu__c menu11 = new rstk__menu__c(
+Name = 'API Objects - Results',
+rstk__header__c = '',
+rstk__href__c = '/RS_APIs',
+rstk__imageclass__c = '',
+rstk__label__c = 'API Objects - Results',
+rstk__sequence__c = 19,
+rstk__secnsequence__c = 26,
+rstk__inactive__c = false,
+rstk__parentid__c = null,
+rstk__level__c = 0,
+rstk__id__c = 26,
+rstk__appsecuritykey__c = 'ms_rs_apis__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = ''
+//rstk__menutype__c = 1
+);
+insert menu11;
+
+// Insert SYDATA
+rstk__menu__c menu12 = new rstk__menu__c(
+Name = 'SYDATA',
+rstk__header__c = 'rs_apis',
+rstk__href__c = '/apex/listview?recType=sydata',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SYDATA',
+rstk__sequence__c = 1,
+rstk__inactive__c = false,
+rstk__parentid__c = 26,
+rstk__level__c = 1,
+rstk__id__c = 343,
+rstk__appsecuritykey__c = 'm_sydata__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'sydata'
+//rstk__menutype__c = 1
+);
+insert menu12;
+
+// Insert SOAPI
+rstk__menu__c menu13 = new rstk__menu__c(
+Name = 'SOAPI',
+rstk__header__c = 'rs_apis',
+rstk__href__c = '/apex/listview?recType=soapi',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SOAPI',
+rstk__sequence__c = 2,
+rstk__inactive__c = false,
+rstk__parentid__c = 26,
+rstk__level__c = 1,
+rstk__id__c = 344,
+rstk__appsecuritykey__c = 'm_soapi__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'soapi'
+//rstk__menutype__c = 1
+);
+insert menu13;
+
+// Insert POLADER
+rstk__menu__c menu14 = new rstk__menu__c(
+Name = 'POLOADER',
+rstk__header__c = 'rs_apis',
+rstk__href__c = '/apex/listview?recType=poloader',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'POLOADER',
+rstk__sequence__c = 1,
+rstk__inactive__c = false,
+rstk__parentid__c = 26,
+rstk__level__c = 1,
+rstk__id__c = 345,
+rstk__appsecuritykey__c = 'm_poloader__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'poloader'
+//rstk__menutype__c = 1
+);
+insert menu14;
+
+// Insert SYDATAT
+rstk__menu__c menu15 = new rstk__menu__c(
+Name = 'SYDATAT',
+rstk__header__c = 'rs_apis',
+rstk__href__c = '/apex/listview?recType=sydatat',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SYDATAT',
+rstk__sequence__c = 4,
+rstk__inactive__c = false,
+rstk__parentid__c = 26,
+rstk__level__c = 1,
+rstk__id__c = 346,
+rstk__appsecuritykey__c = 'm_sydatat__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'sydatat'
+//rstk__menutype__c = 1
+);
+insert menu15;
+
+// Insert SYDATAD
+rstk__menu__c menu16 = new rstk__menu__c(
+Name = 'SYDATAD',
+rstk__header__c = 'rs_apis',
+rstk__href__c = '/apex/listview?recType=sydatad',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SYDATAD',
+rstk__sequence__c = 5,
+rstk__inactive__c = false,
+rstk__parentid__c = 26,
+rstk__level__c = 1,
+rstk__id__c = 347,
+rstk__appsecuritykey__c = 'm_sydatad__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'sydatad'
+//rstk__menutype__c = 1
+);
+insert menu16;

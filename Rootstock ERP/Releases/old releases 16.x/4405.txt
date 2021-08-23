@@ -1,0 +1,28 @@
+// Non Package version
+// ------------------------------
+soprod__c[] soprods = [select Id, soprod_emailtackind__c, soprod_emailtpackind__c, soprod_emailtinvind__c from soprod__c 
+where soprod_emailtackind__c = false or soprod_emailtpackind__c = false or soprod_emailtinvind__c = false
+order by createddate desc limit 1000];
+System.debug(LoggingLevel.INFO, 'Updating '+soprods.size()+' products...');
+for (soprod__c s: soprods) {
+s.soprod_emailtackind__c = true;
+s.soprod_emailtpackind__c = true;
+s.soprod_emailtinvind__c = true;
+s.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update soprods;
+
+// Package version
+// ------------------------------
+rstk__soprod__c[] soprods = [select Id, rstk__soprod_emailtackind__c, rstk__soprod_emailtpackind__c, rstk__soprod_emailtinvind__c from rstk__soprod__c 
+where rstk__soprod_emailtackind__c = false or rstk__soprod_emailtpackind__c = false or rstk__soprod_emailtinvind__c = false
+order by createddate desc limit 1000];
+System.debug(LoggingLevel.INFO, 'Updating '+soprods.size()+' products...');
+for (rstk__soprod__c s: soprods) {
+s.rstk__soprod_emailtackind__c = true;
+s.rstk__soprod_emailtpackind__c = true;
+s.rstk__soprod_emailtinvind__c = true;
+s.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update soprods;
+ 

@@ -1,0 +1,75 @@
+pkg'd
+
+// - Credit Terms Menu option exists, Pre-Delete
+rstk__menu__c[] menudel01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Credit Terms'];
+if (menudel01.size() > 0) {
+delete menudel01;
+}
+
+rstk__menu__c[] menudel02 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Terms Codes'];
+if (menudel02.size() > 0) {
+delete menudel02;
+}
+
+// - Insert Credit Terms Menu selection
+rstk__menu__c menuadd01 = new rstk__menu__c(
+Name = 'Terms Codes',
+rstk__label__c = 'Terms Codes',
+rstk__header__c = 'setup',
+rstk__href__c = '/apex/listview?rectype=syterms',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 30,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = 172,
+rstk__appsecuritykey__c = 'm_termscode__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'syterms__c',
+rstk__recordtype__c = 'syterms',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false,
+rstk__menutype__c = 1
+);
+insert menuadd01;
+
+
+
+non-pkg'd
+
+// - Credit Terms Menu option exists, Pre-Delete
+menu__c[] menudel01 = [select id, label__c from menu__c 
+where label__c = 'Credit Terms'];
+if (menudel01.size() > 0) {
+delete menudel01;
+}
+
+menu__c[] menudel02 = [select id, label__c from menu__c 
+where label__c = 'Terms Codes'];
+if (menudel02.size() > 0) {
+delete menudel02;
+}
+
+// - Insert Credit Terms Menu selection
+menu__c menuadd01 = new menu__c(
+Name = 'Terms Codes',
+label__c = 'Terms Codes',
+header__c = 'setup',
+href__c = '/apex/listview?rectype=syterms',
+imageclass__c = 'Custom57Mru',
+sequence__c = 30,
+inactive__c = false,
+parentid__c = 1,
+level__c = 1,
+id__c = 172,
+appsecuritykey__c = 'm_termscode__c',
+subsection__c = 'Maintenance',
+pagekey__c = 'syterms__c',
+recordtype__c = 'syterms',
+activity_enabled__c = false,
+approval_enabled__c = false,
+menutype__c = 1
+);
+insert menuadd01;

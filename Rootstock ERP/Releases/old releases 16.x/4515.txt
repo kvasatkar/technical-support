@@ -1,0 +1,210 @@
+
+// Inventory Location Numbers - menu14.inactive__c = false in pde3 and true in pde5
+// Purchase Order Line - menu4.inactive__c = false in pde3 and true in pde5
+
+menu__c[] menus1 = [select id from menu__c where name = 'WC Dispatch List'];
+for (menu__c menu1 : menus1) {
+	menu1.name = 'Work Center Dispatch List';
+}	
+update menus1;
+
+menu__c[] menus2 = [select id from menu__c where name = 'Work Order Scheduling'];
+for (menu__c menu2 : menus2) {
+	menu2.name = 'Work Order Scheduling';
+}
+update menus2;
+
+menu__c[] menus3 = [select id from menu__c where name = 'WC Capacity Planning'];
+for (menu__c menu3 : menus3) {
+	menu3.name = 'Work Center Capacity Planning';
+}	
+update menus3;
+
+menu__c[] menus4 = [select id from menu__c where name = 'PO Line Detail'];
+for (menu__c menu4 : menus4) {
+	menu4.name = 'Purchase Order Line';
+	menu4.inactive__c = false;
+}	
+update menus4;
+
+menu__c[] menus5 = [select id from menu__c where name = 'PO Item Master'];
+for (menu__c menu5 : menus5) {
+	menu5.name = 'Purchase Item Master';
+}	
+update menus5;
+
+menu__c[] menus6 = [select id from menu__c where name = 'PO Entry'];
+for (menu__c menu6 : menus6) {
+	menu6.name = 'Purchase Order Entry';
+}	
+update menus6;
+
+menu__c[] menus7 = [select id from menu__c where name = 'PO Approval Maint'];
+for (menu__c menu7 : menus7) {
+	menu7.name = 'Purchase Order Approval';
+}	
+update menus7;
+
+menu__c[] menus8 = [select id from menu__c where name = 'PO Agreement'];
+for (menu__c menu8 : menus8) {
+	menu8.name = 'Purchase Order Agreement';
+}	
+update menus8;
+
+menu__c[] menus9 = [select id from menu__c where name = 'Mfg Work Centers'];
+for (menu__c menu9 : menus9) {
+	menu9.name = 'Manufacturing Work Centers';
+}	
+update menus9;
+
+menu__c[] menus10 = [select id from menu__c where name = 'Mfg Processes'];
+for (menu__c menu10 : menus10) {
+	menu10.name = 'Manufacturing Processes';
+}	
+update menus10;
+
+menu__c[] menus11 = [select id from menu__c where name = 'Mfg Machine Master'];
+for (menu__c menu11 : menus11) {
+	menu11.name = 'Manufacturing Machine Master';
+}	
+update menus11;
+
+menu__c[] menus12 = [select id from menu__c where name = 'Mfg Labor Grades'];
+for (menu__c menu12 : menus12) {
+	menu12.name = 'Manufacturing Labor Grades';
+}	
+update menus12;
+
+menu__c[] menus13 = [select id from menu__c where name = 'Mfg Departments'];
+for (menu__c menu13 : menus13) {
+	menu13.name = 'Manufacturing Departments';
+}	
+update menus13;
+
+menu__c[] menus14 = [select id from menu__c where name = 'Inventory Location Number'];
+for (menu__c menu14 : menus14) {
+	menu14.label__c = 'Inventory Location Numbers';
+	menu14.appsecuritykey__c = 'm_stocklocnumber__c';
+	menu14.sequence__c = 14;
+	menu14.inactive__c = false;
+}	
+update menus14;
+
+menu__c[] menus15 = [select id from menu__c where name = 'Stock Location IDs'];
+for (menu__c menu15 : menus15) {
+	menu15.name = 'Inventory Location IDs';
+	menu15.label__c = 'Inventory Location IDs';	
+}	
+update menus15;
+
+menu__c[] menus16 = [select id from menu__c where name = 'System Custom Configuration'];
+for (menu__c menu16 : menus16) {
+	menu16.id__c = 302;
+}	
+update menus16;
+
+
+
+
+//packaged orgs
+
+rstk__menu__c[] menus1 = [select id from rstk__menu__c where name = 'WC Dispatch List'];
+for (rstk__menu__c menu1 : menus1) {
+	menu1.name = 'Work Center Dispatch List';
+}	
+update menus1;
+
+rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'Work Order Scheduling'];
+for (rstk__menu__c menu2 : menus2) {
+	menu2.name = 'Work Order Scheduling';
+}
+update menus2;
+
+rstk__menu__c[] menus3 = [select id from rstk__menu__c where name = 'WC Capacity Planning'];
+for (rstk__menu__c menu3 : menus3) {
+	menu3.name = 'Work Center Capacity Planning';
+}	
+update menus3;
+
+rstk__menu__c[] menus4 = [select id from rstk__menu__c where name = 'PO Line Detail'];
+for (rstk__menu__c menu4 : menus4) {
+	menu4.name = 'Purchase Order Line';
+	menu4.rstk__inactive__c = false;
+}	
+update menus4;
+
+rstk__menu__c[] menus5 = [select id from rstk__menu__c where name = 'PO Item Master'];
+for (rstk__menu__c menu5 : menus5) {
+	menu5.name = 'Purchase Item Master';
+}	
+update menus5;
+
+rstk__menu__c[] menus6 = [select id from rstk__menu__c where name = 'PO Entry'];
+for (rstk__menu__c menu6 : menus6) {
+	menu6.name = 'Purchase Order Entry';
+}	
+update menus6;
+
+rstk__menu__c[] menus7 = [select id from rstk__menu__c where name = 'PO Approval Maint'];
+for (rstk__menu__c menu7 : menus7) {
+	menu7.name = 'Purchase Order Approval';
+}	
+update menus7;
+
+rstk__menu__c[] menus8 = [select id from rstk__menu__c where name = 'PO Agreement'];
+for (rstk__menu__c menu8 : menus8) {
+	menu8.name = 'Purchase Order Agreement';
+}	
+update menus8;
+
+rstk__menu__c[] menus9 = [select id from rstk__menu__c where name = 'Mfg Work Centers'];
+for (rstk__menu__c menu9 : menus9) {
+	menu9.name = 'Manufacturing Work Centers';
+}	
+update menus9;
+
+rstk__menu__c[] menus10 = [select id from rstk__menu__c where name = 'Mfg Processes'];
+for (rstk__menu__c menu10 : menus10) {
+	menu10.name = 'Manufacturing Processes';
+}	
+update menus10;
+
+rstk__menu__c[] menus11 = [select id from rstk__menu__c where name = 'Mfg Machine Master'];
+for (rstk__menu__c menu11 : menus11) {
+	menu11.name = 'Manufacturing Machine Master';
+}	
+update menus11;
+
+rstk__menu__c[] menus12 = [select id from rstk__menu__c where name = 'Mfg Labor Grades'];
+for (rstk__menu__c menu12 : menus12) {
+	menu12.name = 'Manufacturing Labor Grades';
+}	
+update menus12;
+
+rstk__menu__c[] menus13 = [select id from rstk__menu__c where name = 'Mfg Departments'];
+for (rstk__menu__c menu13 : menus13) {
+	menu13.name = 'Manufacturing Departments';
+}	
+update menus13;
+
+rstk__menu__c[] menus14 = [select id from rstk__menu__c where name = 'Inventory Location Number'];
+for (rstk__menu__c menu14 : menus14) {
+	menu14.rstk__label__c = 'Inventory Location Numbers';
+	menu14.rstk__appsecuritykey__c = 'm_stocklocnumber__c';
+	menu14.rstk__sequence__c = 14;
+	menu14.rstk__inactive__c = false;
+}	
+update menus14;
+
+rstk__menu__c[] menus15 = [select id from rstk__menu__c where name = 'Stock Location IDs'];
+for (rstk__menu__c menu15 : menus15) {
+	menu15.name = 'Inventory Location IDs';
+	menu15.rstk__label__c = 'Inventory Location IDs';	
+}	
+update menus15;
+
+rstk__menu__c[] menus16 = [select id from rstk__menu__c where name = 'System Custom Configuration'];
+for (rstk__menu__c menu16 : menus16) {
+	menu16.rstk__id__c = 302;
+}	
+update menus16;

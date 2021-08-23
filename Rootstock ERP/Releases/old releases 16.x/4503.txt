@@ -1,0 +1,13 @@
+// non-packaged orgs
+iccomcod__c[] iccomcods = [select id, triggeroptions__c from iccomcod__c];
+for (iccomcod__c iccomcod : iccomcods) {
+               iccomcod.triggeroptions__c = '{"ST":"1"}';
+}
+update iccomcods;
+
+// packaged orgs
+rstk__iccomcod__c[] iccomcods = [select id, rstk__triggeroptions__c from rstk__iccomcod__c];
+for (rstk__iccomcod__c iccomcod : iccomcods) {
+               iccomcod.rstk__triggeroptions__c = '{"ST":"1"}';
+}
+update iccomcods;

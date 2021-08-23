@@ -1,0 +1,93 @@
+class AException extends Exception {}
+Map<Id, rstk__socntl__c> socntlMap = new Map<Id, rstk__socntl__c>([select Id, rstk__socntl_dfltcontterm__c from rstk__socntl__c]);
+
+rstk__socontract__c[] cons = [select Id, Name, rstk__socontract_servicecust__c,rstk__socontract_installcust__c,rstk__socontract_pricecust__c,
+						  rstk__socontract_sohdrcust__c, rstk__socontract_socust__c, rstk__socontract_term__c, rstk__socontract_div__c,
+                          rstk__socontract_btaddr__c, rstk__socontract_staddr__c, rstk__socontract_icustinstaddr__c, rstk__socontract_scustbtaddr__c
+                        from rstk__socontract__c
+                        where 
+                          (rstk__socontract_servicecust__c=null or rstk__socontract_installcust__c=null or 
+                           rstk__socontract_pricecust__c=null or rstk__socontract_sohdrcust__c=null or
+                           rstk__socontract_btaddr__c=null or rstk__socontract_staddr__c=null or 
+                           rstk__socontract_icustinstaddr__c=null or rstk__socontract_scustbtaddr__c=null) and
+                          rstk__socontract_socust__c != null
+                              order by Id
+                        limit 1000];
+
+Set<String> socontractCusts = new Set<String>();
+for (rstk__socontract__c c: cons) {
+    socontractCusts.add(c.rstk__socontract_socust__c);
+    
+}
+
+Map<Id, rstk__socust__c> socustsMap = new Map<Id, rstk__socust__c>([Select Name,
+    (Select Id,
+    rstk__socaddr_defaultbillto__c,rstk__socaddr_defaultshipto__c,rstk__socaddr_defaultinstall__c,
+    rstk__socaddr_useasbillto__c,rstk__socaddr_useasshipto__c,rstk__socaddr_useasinstall__c  
+    from rstk__socaddrs__r 
+    where (rstk__socaddr_defaultbillto__c = true OR rstk__socaddr_defaultshipto__c = true OR 
+           rstk__socaddr_defaultinstall__c = true OR rstk__socaddr_useasbillto__c = true OR 
+           rstk__socaddr_useasshipto__c = true OR rstk__socaddr_useasinstall__c = true))
+    from rstk__socust__c 
+    where Id IN : socontractCusts]);
+				
+rstk__socontract__c[] updates = new List<rstk__socontract__c>();
+
+for (rstk__socontract__c c: cons) {
+    if (c.rstk__socontract_term__c == null || c.rstk__socontract_term__c == 0) {
+        rstk__socntl__c socntl = socntlMap.get(c.rstk__socontract_div__c);
+        Decimal terms = (socntl!=null)?socntl.rstk__socntl_dfltcontterm__c:0;
+        if (terms == null || terms ==0) { terms = 60; }
+        c.rstk__socontract_term__c = terms;
+    }
+    rstk__socust__c socust = socustsMap.get(c.rstk__socontract_socust__c);
+    if (c.rstk__socontract_servicecust__c == null) { c.rstk__socontract_servicecust__c = c.rstk__socontract_socust__c; }
+    if (c.rstk__socontract_installcust__c == null) { c.rstk__socontract_installcust__c = c.rstk__socontract_socust__c; }
+    if (c.rstk__socontract_pricecust__c == null) { c.rstk__socontract_pricecust__c = c.rstk__socontract_socust__c; }
+    if (c.rstk__socontract_sohdrcust__c == null) { c.rstk__socontract_sohdrcust__c = c.rstk__socontract_socust__c; }
+    for (rstk__socaddr__c ob: socust.rstk__socaddrs__r) {
+        if(c.rstk__socontract_btaddr__c == null && ob.rstk__socaddr_defaultbillto__c){
+            c.rstk__socontract_btaddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_staddr__c == null && ob.rstk__socaddr_defaultshipto__c){
+            c.rstk__socontract_staddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_icustinstaddr__c == null && ob.rstk__socaddr_defaultinstall__c){
+            c.rstk__socontract_icustinstaddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_scustbtaddr__c == null && ob.rstk__socaddr_defaultbillto__c){ 
+            c.rstk__socontract_scustbtaddr__c = ob.Id;
+        }
+    }
+    for (rstk__socaddr__c ob: socust.rstk__socaddrs__r) {
+        if(c.rstk__socontract_btaddr__c == null && ob.rstk__socaddr_useasbillto__c){
+            c.rstk__socontract_btaddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_staddr__c == null && ob.rstk__socaddr_useasshipto__c){
+            c.rstk__socontract_staddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_icustinstaddr__c == null && ob.rstk__socaddr_useasinstall__c){
+            c.rstk__socontract_icustinstaddr__c = ob.Id;
+        }
+        if(c.rstk__socontract_scustbtaddr__c == null && ob.rstk__socaddr_useasbillto__c){ 
+            c.rstk__socontract_scustbtaddr__c = ob.Id;
+        }
+    }
+    c.rstk__triggeroptions__c = '{"ET":"1"}';
+    if (c.rstk__socontract_btaddr__c==null || c.rstk__socontract_staddr__c==null || 
+        c.rstk__socontract_icustinstaddr__c==null || c.rstk__socontract_scustbtaddr__c==null) {
+        System.debug(Logginglevel.ERROR,
+                     'ERROR: Cannot update contract with Id '+c.Id+' ('+c.Name+') - The associated customer with Id '+socust.ID+' ('+socust.Name+
+                     ') does not have an address entry for one or more of the address types Billing, Shipping and/or Installation.');
+    } else {
+       updates.add(c); 
+    }
+}
+
+if (updates.size() == 0) { 
+    Integer numErrors = cons.size() - updates.size();
+    if (numErrors > 0) { throw new AException('Contract Updates complete with '+numErrors+' failure(s) - See log (ensure the logging level for System is set to at least the ERROR level)'); }
+    throw new AException('Contract Updates complete');
+}
+
+update updates;

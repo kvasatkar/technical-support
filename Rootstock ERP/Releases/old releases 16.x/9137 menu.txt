@@ -1,0 +1,23 @@
+// - Approver Menu Delete
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+					where rstk__label__c = 'Approvers'];
+
+if (menud01.size() > 0) {
+                delete menud01;
+}
+
+// - Organizational Dept Approval Levels Menu Delete
+rstk__menu__c[] menud02 = [select id, rstk__label__c from rstk__menu__c 
+					where rstk__label__c = 'Organizational Dept Approvals'];
+
+if (menud02.size() > 0) {
+                delete menud02;
+}
+
+// - Purchase Order Approval Menu Delete
+rstk__menu__c[] menud03 = [select id, rstk__label__c from rstk__menu__c 
+					where rstk__label__c = 'Purchase Order Approval'];
+
+if (menud03.size() > 0) {
+                delete menud03;
+}

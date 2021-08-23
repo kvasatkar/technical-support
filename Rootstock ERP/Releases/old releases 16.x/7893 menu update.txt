@@ -1,0 +1,308 @@
+//pkg'd
+
+>>>>>>> .r9530
+// - Site to Site Transfer Menu option exists, Pre-Delete 01
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__parentid__c = 970];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+// - Insert initial menu selection 01
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'Qty Reconcile',
+rstk__label__c = 'Qty Reconcile',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/iclocitemqtyveri',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 11,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 811,
+rstk__appsecuritykey__c = 'm_iclocitemqtyveri__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = ' ',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua01;
+
+// - Insert initial menu selection 02
+rstk__menu__c menua02 = new rstk__menu__c(
+Name = 'SOAPI',
+rstk__label__c = 'SOAPI',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=soapi',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 14,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 814,
+rstk__appsecuritykey__c = 'm_soapi__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'soapi',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua02;
+
+// - Insert initial menu selection 03
+rstk__menu__c menua03 = new rstk__menu__c(
+Name = 'SYDATA',
+rstk__label__c = 'SYDATA',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=sydata',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 17,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 817,
+rstk__appsecuritykey__c = 'm_sydata__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'sydata',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua03;
+
+// - Insert initial menu selection 04
+rstk__menu__c menua04 = new rstk__menu__c(
+Name = 'SYDATAT',
+rstk__label__c = 'SYDATAT',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=sydatat',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 20,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 820,
+rstk__appsecuritykey__c = 'm_sydatat__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'sydatat',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua04;
+
+// - Insert initial menu selection 05
+rstk__menu__c menua05 = new rstk__menu__c(
+Name = 'POLOADER',
+rstk__label__c = 'POLOADER',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=poloader',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 23,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 823,
+rstk__appsecuritykey__c = 'm_poloader__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'poloader',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua05;
+
+// - Insert initial menu selection 06
+rstk__menu__c menua06 = new rstk__menu__c(
+Name = 'Process Log',
+rstk__label__c = 'Process Log',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=processlog',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 26,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 826,
+rstk__appsecuritykey__c = 'm_processlog__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'processlog',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua06;
+
+// - Insert initial menu selection 07
+rstk__menu__c menua07 = new rstk__menu__c(
+Name = 'Net Change',
+rstk__label__c = 'Net Change',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=sydata',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 29,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 829,
+rstk__appsecuritykey__c = 'm_netchange__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'netchange',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua07;
+
+// - Insert initial menu selection 08
+rstk__menu__c menua08 = new rstk__menu__c(
+Name = 'SO Line',
+rstk__label__c = 'SO Line',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=soline',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 32,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 832,
+rstk__appsecuritykey__c = 'm_soline__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'soline',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua08;
+
+// - Insert initial menu selection 09
+rstk__menu__c menua09 = new rstk__menu__c(
+Name = 'ICIXR',
+rstk__label__c = 'ICIXR',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=icixr',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 35,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 835,
+rstk__appsecuritykey__c = 'm_icixr__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'icixr',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua09;
+
+// - Insert initial menu selection 10
+rstk__menu__c menua10 = new rstk__menu__c(
+Name = 'ICITEMSITEPROJ',
+rstk__label__c = 'ICITEMSITEPROJ',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=icitemsiteproj',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 38,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 838,
+rstk__appsecuritykey__c = 'm_icitemsiteproj__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'icitemsiteproj',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua10;
+
+// - Insert initial menu selection 11
+rstk__menu__c menua11 = new rstk__menu__c(
+Name = 'DRP Log',
+rstk__label__c = 'DRP Log',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=drplog',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 41,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 841,
+rstk__appsecuritykey__c = 'm_drplog__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'drplog',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua11;
+
+// - Insert initial menu selection 12
+rstk__menu__c menua12 = new rstk__menu__c(
+Name = 'Obj Page Setup',
+rstk__label__c = 'Obj Page Setup',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=objpagesetup',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 44,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 844,
+rstk__appsecuritykey__c = 'm_objpagesetup__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'objpagesetup',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua12;
+
+// - Insert initial menu selection 13
+rstk__menu__c menua13 = new rstk__menu__c(
+Name = 'System Configuration',
+rstk__label__c = 'System Configuration',
+rstk__header__c = 'rs_menu',
+rstk__href__c = '/apex/listview?rectype=syconfig',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 47,
+rstk__inactive__c = false,
+rstk__parentid__c = 970,
+rstk__level__c = 1,
+rstk__id__c = 847,
+rstk__appsecuritykey__c = 'm_syconfig__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'ccrstk',
+rstk__recordtype__c = 'syconfig',
+rstk__hideaddlink__c = true,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua13;

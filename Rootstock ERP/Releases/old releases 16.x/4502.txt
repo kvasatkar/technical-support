@@ -1,0 +1,25 @@
+// non-packaged orgs 
+rtwctr__c[] rtwctrs = [select id, triggeroptions__c from rtwctr__c];
+for (rtwctr__c rtwctr : rtwctrs) {
+                rtwctr.triggeroptions__c = '{"ST":"1"}';
+}
+update rtwctrs;
+ 
+rtproc__c[] rtprocs = [select id, tiggeroptions__c from rtproc__c];
+for (rtproc__c rtproc : rtprocs) {
+                rtproc.triggeroptions__c = '{"ST":"1"}';
+}
+update rtprocs;
+
+// packaged orgs 
+rstk__rtwctr__c[] rtwctrs = [select id, rstk__triggeroptions__c from rstk__rtwctr__c];
+for (rstk__rtwctr__c rtwctr : rtwctrs) {
+                rtwctr.rstk__triggeroptions__c = '{"ST":"1"}';
+}
+update rtwctrs;
+ 
+rstk__rtproc__c[] rtprocs = [select id, rstk__triggeroptions__c from rstk__rtproc__c];
+for (rstk__rtproc__c rtproc : rtprocs) {
+                rtproc.rstk__triggeroptions__c = '{"ST":"1"}';
+}
+update rtprocs;

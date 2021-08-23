@@ -1,0 +1,88 @@
+// non-packaged orgs
+class ScriptException extends Exception{}
+syconfig__c[] syconfigs = [select syconfig_ffint__c, syconfig_ffinvoice__c from syconfig__c limit 1];
+if (syconfigs.size() == 0) { throw new ScriptException('No syconfig record found, cannot continue'); }
+if (syconfigs[0].syconfig_ffint__c && !syconfigs[0].syconfig_ffinvoice__c) {
+  throw new ScriptException('Script should only be run on a system where SYCONFIG_FFINT = FALSE or SYCONFIG_FFINVOICE = TRUE'); }
+
+Boolean wasNullNumber(Sobject o, SobjectField f) {
+  if (o.get(f) == null) {
+    o.put(f, 0);
+    
+    return true;
+  }
+  return false;
+}
+
+sotax__c[] sotaxes = [select Name, sotax_totalrate__c, sotax_cityrate__c, sotax_countyrate__c, sotax_fedrate__c ,sotax_misc1rate__c,
+ sotax_misc2rate__c, sotax_misc3rate__c, sotax_staterate__c, sotax_transitrate__c from sotax__c];
+
+List<sotax__c> toupdate = new List<sotax__c>();
+for (sotax__c sotax: sotaxes) {
+  String initalState = String.valueOf(sotax);
+  Boolean mustUpdate = wasNullNumber(sotax, sotax__c.sotax_cityrate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_countyrate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_fedrate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_staterate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_transitrate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_misc1rate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_misc2rate__c);
+  mustUpdate |= wasNullNumber(sotax, sotax__c.sotax_misc3rate__c);
+  Decimal total = sotax.sotax_cityrate__c + sotax.sotax_countyrate__c + sotax.sotax_fedrate__c + 
+                  sotax.sotax_staterate__c + sotax.sotax_transitrate__c +
+                  sotax.sotax_misc1rate__c + sotax.sotax_misc2rate__c + sotax.sotax_misc3rate__c;
+  if (mustUpdate || total != sotax.sotax_totalrate__c) {
+    sotax.sotax_totalrate__c = total;
+    system.debug('Updated needed for '+initalState+' --> '+sotax);
+    sotax.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    toUpdate.add(sotax);
+    
+  }
+}
+update toUpdate;
+
+
+
+
+// packaged orgs
+class ScriptException extends Exception{}
+rstk__syconfig__c[] syconfigs = [select rstk__syconfig_ffint__c, rstk__syconfig_ffinvoice__c from rstk__syconfig__c limit 1];
+if (syconfigs.size() == 0) { throw new ScriptException('No syconfig record found, cannot continue'); }
+if (syconfigs[0].rstk__syconfig_ffint__c && !syconfigs[0].rstk__syconfig_ffinvoice__c) {
+  throw new ScriptException('Script should only be run on a system where SYCONFIG_FFINT = FALSE or SYCONFIG_FFINVOICE = TRUE'); }
+
+Boolean wasNullNumber(Sobject o, SobjectField f) {
+  if (o.get(f) == null) {
+    o.put(f, 0);
+    
+    return true;
+  }
+  return false;
+}
+
+rstk__sotax__c[] sotaxes = [select Name, rstk__sotax_totalrate__c, rstk__sotax_cityrate__c, rstk__sotax_countyrate__c, rstk__sotax_fedrate__c ,rstk__sotax_misc1rate__c,
+ rstk__sotax_misc2rate__c, rstk__sotax_misc3rate__c, rstk__sotax_staterate__c, rstk__sotax_transitrate__c from rstk__sotax__c];
+
+List<rstk__sotax__c> toupdate = new List<rstk__sotax__c>();
+for (rstk__sotax__c sotax: sotaxes) {
+  String initalState = String.valueOf(sotax);
+  Boolean mustUpdate = wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_cityrate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_countyrate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_fedrate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_staterate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_transitrate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_misc1rate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_misc2rate__c);
+  mustUpdate |= wasNullNumber(sotax, rstk__sotax__c.rstk__sotax_misc3rate__c);
+  Decimal total = sotax.rstk__sotax_cityrate__c + sotax.rstk__sotax_countyrate__c + sotax.rstk__sotax_fedrate__c + 
+                  sotax.rstk__sotax_staterate__c + sotax.rstk__sotax_transitrate__c +
+                  sotax.rstk__sotax_misc1rate__c + sotax.rstk__sotax_misc2rate__c + sotax.rstk__sotax_misc3rate__c;
+  if (mustUpdate || total != sotax.rstk__sotax_totalrate__c) {
+    sotax.rstk__sotax_totalrate__c = total;
+    system.debug('Updated needed for '+initalState+' --> '+sotax);
+    sotax.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    toUpdate.add(sotax);
+    
+  }
+}
+update toUpdate;

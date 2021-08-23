@@ -1,0 +1,28 @@
+
+pkg'd
+
+// Supplier Requisition Hide Add Link - Pkgd
+rstk__menu__c[] recs = [select id, rstk__label__c, rstk__hideaddlink__c
+from rstk__menu__c where rstk__label__c = 'Supplier Requisition'];
+if (recs.size() > 0) {
+for (rstk__menu__c menu1 : recs) { 
+menu1.rstk__hideaddlink__c = True;
+}
+update recs;
+}
+
+
+
+non-pkg'd
+
+// Supplier Requisition Hide Add Link - Non-Pkgd
+menu__c[] recs = [select id, label__c, hideaddlink__c
+from menu__c where label__c = 'Supplier Requisition'];
+if (recs.size() > 0) {
+for (menu__c menu1 : recs) { 
+menu1.hideaddlink__c = True;
+}
+update recs;
+}
+
+

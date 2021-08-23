@@ -1,0 +1,27 @@
+// Non Package version
+class AException extends Exception {}
+soline__c[] solines = [select Name, formula_name__c from soline__c where not Name like '%-0%' order by lastmodifieddate desc limit 10000];
+if (solines.size() == 0) { throw new AException('Sales Order Lines Update complete'); }
+List<soline__c> toupdate = new List<soline__c>();
+for (soline__c s: solines) {
+if (s.Name != s.formula_name__c) {
+s.Name = s.formula_name__c;
+s.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+}
+if (toupdate.size() == 0) { throw new AException('Sales Order Lines Update complete'); }
+update toupdate;
+
+// Package Version
+class AException extends Exception {}
+rstk__soline__c[] solines = [select Name, rstk__formula_name__c from rstk__soline__c where not Name like '%-0%' order by lastmodifieddate desc limit 10000];
+if (solines.size() == 0) { throw new AException('Sales Order Lines Update complete'); }
+List<rstk__soline__c> toupdate = new List<rstk__soline__c>();
+for (rstk__soline__c s: solines) {
+if (s.Name != s.rstk__formula_name__c) {
+s.Name = s.rstk__formula_name__c;
+s.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+}
+if (toupdate.size() == 0) { throw new AException('Sales Order Lines Update complete'); }
+update toupdate;

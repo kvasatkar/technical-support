@@ -1,0 +1,413 @@
+// Reorder menu options in the Sales Order Processes group
+// - SO Process Menu Changes 01
+menu__c[] menux01 = [select id from menu__c where parentid__c = 15 and name = 'Sales Commission'];
+for (menu__c menu01 : menux01) {
+  menu01.sequence__c = 15;
+}
+update menux01;
+
+// - SO Process Menu Changes 02
+menu__c[] menux02 = [select id from menu__c where parentid__c = 15 and name = 'Bill of Lading'];
+for (menu__c menu02 : menux02) {
+  menu02.sequence__c = 14;
+}
+update menux02;
+
+// - SO Process Menu Changes 03
+menu__c[] menux03 = [select id from menu__c where parentid__c = 15 and name = 'Packing Slip'];
+for (menu__c menu03 : menux03) {
+  menu03.sequence__c = 13;
+}
+update menux03;
+
+// - SO Process Menu Changes 04
+menu__c[] menux04 = [select id from menu__c where parentid__c = 15 and name = 'Shipped Item Warranty'];
+for (menu__c menu04 : menux04) {
+  menu04.sequence__c = 12;
+}
+update menux04;
+
+// - SO Process Menu Changes 05
+menu__c[] menux05 = [select id from menu__c where parentid__c = 15 and name = 'Returned Material (RMA)'];
+for (menu__c menu05 : menux05) {
+  menu05.sequence__c = 11;
+}
+update menux05;
+
+// - SO Process Menu Changes 06
+menu__c[] menux06 = [select id from menu__c where parentid__c = 15 and name = 'Prepayment'];
+for (menu__c menu06 : menux06) {
+  menu06.sequence__c = 10;
+}
+update menux06;
+
+// - SO Process Menu Changes 07
+menu__c[] menux07 = [select id from menu__c where parentid__c = 15 and name = 'Credit Release'];
+for (menu__c menu07 : menux07) {
+  menu07.sequence__c = 9;
+}
+update menux07;
+
+// - SO Process Menu Changes 08
+menu__c[] menux08 = [select id from menu__c where parentid__c = 15 and name = 'SO Invoice'];
+for (menu__c menu08 : menux08) {
+  menu08.sequence__c = 8;
+}
+update menux08;
+
+// - SO Process Menu Changes 09
+menu__c[] menux09 = [select id from menu__c where parentid__c = 15 and name = 'Shipping Containers'];
+for (menu__c menu09 : menux09) {
+  menu09.sequence__c = 7;
+}
+update menux09;
+
+// - SO Process Menu Changes 10
+menu__c[] menux10 = [select id from menu__c where parentid__c = 15 and name = 'Product Configurator'];
+for (menu__c menu10 : menux10) {
+  menu10.sequence__c = 6;
+}
+update menux10;
+
+// - SO Process Menu Changes 11
+menu__c[] menux11 = [select id from menu__c where parentid__c = 15 and name = 'SO Shipper'];
+for (menu__c menu11 : menux11) {
+  menu11.sequence__c = 5;
+}
+update menux11;
+
+
+// - SO Process Menu Inserts01
+menu__c menu01 = new menu__c(
+Name = 'SO Picklist Header',
+header__c = 'salesorder',
+href__c = '/apex/listview?recType=sopickh',
+imageclass__c = 'Custom57Mru',
+label__c = 'SO Picklist Header',
+sequence__c = 3,
+inactive__c = false,
+parentid__c = 15,
+level__c = 1,
+id__c = 313,
+appsecuritykey__c = 'm_sopickh__c',
+subsection__c = 'Processes',
+pagekey__c = 'sopickh__c',
+recordtype__c = 'sopickh',
+menutype__c = 1
+);
+insert menu01;
+
+// Reorder menu options in the Inventory Transactions group
+// - Inv Txn Menu Changes 12
+menu__c[] menux12 = [select id from menu__c where parentid__c = 9 and name = 'Project to Project Transfer'];
+for (menu__c menu12 : menux12) {
+  menu12.sequence__c = 8;
+}
+update menux12;
+
+// - Inv Txn Menu Changes 13
+menu__c[] menux13 = [select id from menu__c where parentid__c = 9 and name = 'Site to Site Transfer'];
+for (menu__c menu13 : menux13) {
+  menu13.sequence__c = 7;
+}
+update menux13;
+
+// - Inv Txn Menu Changes 14
+menu__c[] menux14 = [select id from menu__c where parentid__c = 9 and name = 'Cost Transaction Query'];
+for (menu__c menu14 : menux14) {
+  menu14.sequence__c = 6;
+}
+update menux14;
+
+// - Inv Txn Menu Changes 15
+menu__c[] menux15 = [select id from menu__c where parentid__c = 9 and name = 'Division to Division Transfer'];
+for (menu__c menu15 : menux15) {
+  menu15.sequence__c = 5;
+}
+update menux15;
+
+// - Inv Txn Menu Changes 16
+menu__c[] menux16 = [select id from menu__c where parentid__c = 9 and name = 'Location to Location Transfer'];
+for (menu__c menu16 : menux16) {
+  menu16.sequence__c = 4;
+}
+update menux16;
+
+// - Inv Txn Menu Changes 17
+menu__c[] menux17 = [select id from menu__c where parentid__c = 9 and name = 'Inventory Location Add'];
+for (menu__c menu17 : menux17) {
+  menu17.sequence__c = 3;
+}
+update menux17;
+
+// - Inv Txn Menu Changes 18
+menu__c[] menux18 = [select id from menu__c where parentid__c = 9 and name = 'Inventory Unit Cost Adjust'];
+for (menu__c menu18 : menux18) {
+  menu18.sequence__c = 2;
+}
+update menux18;
+
+// - Inv Txn Menu Changes 19
+menu__c[] menux19 = [select id from menu__c where parentid__c = 9 and name = 'Inventory Location Adjust'];
+for (menu__c menu19 : menux19) {
+  menu19.sequence__c = 1;
+}
+update menux19;
+
+// - Inv Txn Menu Changes 20
+menu__c[] menux20 = [select id from menu__c where parentid__c = 8 and name = 'Cycle Count Report'];
+for (menu__c menu20 : menux20) {
+  menu20.inactive__c = True;
+}
+update menux20;
+
+// - Inv Txn Menu Inserts02
+menu__c menu02 = new menu__c(
+Name = 'Inventory Reconciliation',
+header__c = 'inventorytrans',
+href__c = '/apex/listview?recType=icinvrecon',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Reconciliation',
+sequence__c = 9,
+inactive__c = false,
+parentid__c = 9,
+level__c = 1,
+id__c = 314,
+appsecuritykey__c = 'm_icinvrecon__c',
+subsection__c = 'Processes',
+pagekey__c = 'invrecon__c',
+recordtype__c = 'invrecon',
+menutype__c = 1
+);
+insert menu02;
+
+// - Inv Txn Menu Inserts03
+menu__c menu03 = new menu__c(
+Name = 'Inventory Reconciliation Review & Processing',
+header__c = 'inventorytrans',
+href__c = '/apex/icinvreconsearch',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Reconciliation Review & Processing',
+sequence__c = 9,
+inactive__c = false,
+parentid__c = 9,
+level__c = 1,
+id__c = 314,
+appsecuritykey__c = 'm_icinvreconreviewandprocessing__c',
+subsection__c = 'Processes',
+pagekey__c = 'icinvreconsearch',
+recordtype__c = 'invreconsearch',
+menutype__c = 1
+);
+insert menu03;
+
+
+
+
+
+
+
+
+// packaged orgs
+// Reorder menu options in the Sales Order Processes group
+// - SO Process Menu Changes 01
+rstk__menu__c[] menux01 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Sales Commission'];
+for (rstk__menu__c menu01 : menux01) {
+  menu01.rstk__sequence__c = 15;
+}
+update menux01;
+
+// - SO Process Menu Changes 02
+rstk__menu__c[] menux02 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Bill of Lading'];
+for (rstk__menu__c menu02 : menux02) {
+  menu02.rstk__sequence__c = 14;
+}
+update menux02;
+
+// - SO Process Menu Changes 03
+rstk__menu__c[] menux03 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Packing Slip'];
+for (rstk__menu__c menu03 : menux03) {
+  menu03.rstk__sequence__c = 13;
+}
+update menux03;
+
+// - SO Process Menu Changes 04
+rstk__menu__c[] menux04 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Shipped Item Warranty'];
+for (rstk__menu__c menu04 : menux04) {
+  menu04.rstk__sequence__c = 12;
+}
+update menux04;
+
+// - SO Process Menu Changes 05
+rstk__menu__c[] menux05 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Returned Material (RMA)'];
+for (rstk__menu__c menu05 : menux05) {
+  menu05.rstk__sequence__c = 11;
+}
+update menux05;
+
+// - SO Process Menu Changes 06
+rstk__menu__c[] menux06 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Prepayment'];
+for (rstk__menu__c menu06 : menux06) {
+  menu06.rstk__sequence__c = 10;
+}
+update menux06;
+
+// - SO Process Menu Changes 07
+rstk__menu__c[] menux07 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Credit Release'];
+for (rstk__menu__c menu07 : menux07) {
+  menu07.rstk__sequence__c = 9;
+}
+update menux07;
+
+// - SO Process Menu Changes 08
+rstk__menu__c[] menux08 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'SO Invoice'];
+for (rstk__menu__c menu08 : menux08) {
+  menu08.rstk__sequence__c = 8;
+}
+update menux08;
+
+// - SO Process Menu Changes 09
+rstk__menu__c[] menux09 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Shipping Containers'];
+for (rstk__menu__c menu09 : menux09) {
+  menu09.rstk__sequence__c = 7;
+}
+update menux09;
+
+// - SO Process Menu Changes 10
+rstk__menu__c[] menux10 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'Product Configurator'];
+for (rstk__menu__c menu10 : menux10) {
+  menu10.rstk__sequence__c = 6;
+}
+update menux10;
+
+// - SO Process Menu Changes 11
+rstk__menu__c[] menux11 = [select id from rstk__menu__c where rstk__parentid__c = 15 and name = 'SO Shipper'];
+for (rstk__menu__c menu11 : menux11) {
+  menu11.rstk__sequence__c = 5;
+}
+update menux11;
+
+
+// - SO Process Menu Inserts01
+rstk__menu__c menu01 = new rstk__menu__c(
+Name = 'SO Picklist Header',
+rstk__header__c = 'salesorder',
+rstk__href__c = '/apex/listview?recType=sopickh',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SO Picklist Header',
+rstk__sequence__c = 3,
+rstk__inactive__c = false,
+rstk__parentid__c = 15,
+rstk__level__c = 1,
+rstk__id__c = 313,
+rstk__appsecuritykey__c = 'm_sopickh__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'sopickh__c',
+rstk__recordtype__c = 'sopickh',
+rstk__menutype__c = 1
+);
+insert menu01;
+
+// Reorder menu options in the Inventory Transactions group
+// - Inv Txn Menu Changes 12
+rstk__menu__c[] menux12 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Project to Project Transfer'];
+for (rstk__menu__c menu12 : menux12) {
+  menu12.rstk__sequence__c = 8;
+}
+update menux12;
+
+// - Inv Txn Menu Changes 13
+rstk__menu__c[] menux13 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Site to Site Transfer'];
+for (rstk__menu__c menu13 : menux13) {
+  menu13.rstk__sequence__c = 7;
+}
+update menux13;
+
+// - Inv Txn Menu Changes 14
+rstk__menu__c[] menux14 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Cost Transaction Query'];
+for (rstk__menu__c menu14 : menux14) {
+  menu14.rstk__sequence__c = 6;
+}
+update menux14;
+
+// - Inv Txn Menu Changes 15
+rstk__menu__c[] menux15 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Division to Division Transfer'];
+for (rstk__menu__c menu15 : menux15) {
+  menu15.rstk__sequence__c = 5;
+}
+update menux15;
+
+// - Inv Txn Menu Changes 16
+rstk__menu__c[] menux16 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Location to Location Transfer'];
+for (rstk__menu__c menu16 : menux16) {
+  menu16.rstk__sequence__c = 4;
+}
+update menux16;
+
+// - Inv Txn Menu Changes 17
+rstk__menu__c[] menux17 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Inventory Location Add'];
+for (rstk__menu__c menu17 : menux17) {
+  menu17.rstk__sequence__c = 3;
+}
+update menux17;
+
+// - Inv Txn Menu Changes 18
+rstk__menu__c[] menux18 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Inventory Unit Cost Adjust'];
+for (rstk__menu__c menu18 : menux18) {
+  menu18.rstk__sequence__c = 2;
+}
+update menux18;
+
+// - Inv Txn Menu Changes 19
+rstk__menu__c[] menux19 = [select id from rstk__menu__c where rstk__parentid__c = 9 and name = 'Inventory Location Adjust'];
+for (rstk__menu__c menu19 : menux19) {
+  menu19.rstk__sequence__c = 1;
+}
+update menux19;
+
+// - Inv Txn Menu Changes 20
+rstk__menu__c[] menux20 = [select id from rstk__menu__c where rstk__parentid__c = 8 and name = 'Cycle Count Report'];
+for (rstk__menu__c menu20 : menux20) {
+  menu20.rstk__inactive__c = True;
+}
+update menux20;
+
+// - Inv Txn Menu Inserts02
+rstk__menu__c menu02 = new rstk__menu__c(
+Name = 'Inventory Reconciliation',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/listview?recType=icinvrecon',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Reconciliation',
+rstk__sequence__c = 9,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 314,
+rstk__appsecuritykey__c = 'm_icinvrecon__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'invrecon__c',
+rstk__recordtype__c = 'invrecon',
+rstk__menutype__c = 1
+);
+insert menu02;
+
+// - Inv Txn Menu Inserts03
+rstk__menu__c menu03 = new rstk__menu__c(
+Name = 'Inventory Reconciliation Review & Processing',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/icinvreconsearch',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Reconciliation Review & Processing',
+rstk__sequence__c = 9,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 314,
+rstk__appsecuritykey__c = 'm_icinvreconreviewandprocessing__c',
+rstk__subsection__c = 'Processes',
+rstk__pagekey__c = 'icinvreconsearch',
+rstk__recordtype__c = 'invreconsearch',
+rstk__menutype__c = 1
+);
+insert menu03;

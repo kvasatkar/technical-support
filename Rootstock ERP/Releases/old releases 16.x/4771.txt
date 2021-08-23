@@ -1,0 +1,15 @@
+// non-packaged orgs
+menu__c[] menus = [select id from menu__c where name = 'Group Selection'];
+for (menu__c menu : menus) {
+  menu.name = 'Configuration Selection';
+  menu.label__c = 'Configuration Selection';
+}
+update menus;
+
+// packaged orgs
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Group Selection'];
+for (rstk__menu__c menu : menus) {
+  menu.name = 'Configuration Selection';
+  menu.rstk__label__c = 'Configuration Selection';
+}
+update menus;

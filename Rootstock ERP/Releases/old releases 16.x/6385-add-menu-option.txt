@@ -1,0 +1,70 @@
+// Non-packaged org
+menu__c menu1 = new menu__c(
+Name = 'CPQ and Contract',
+label__c = 'CPQ and Contract',
+sequence__c = 43,
+secnsequence__c = 43,
+subsection__c = '',
+appsecuritykey__c = 'ms_cpq__c',
+href__c = ' ',
+level__c = 0,
+id__c = 244,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu1;
+
+
+menu__c menu2 = new menu__c(
+Name = 'Contract Terms Template',
+label__c = 'Contract Terms Template',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 9,
+subsection__c = '',
+appsecuritykey__c = 'm_soctt__c',
+href__c = '/apex/listView?recType=soctt',
+pagekey__c = 'soctt__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'soctt',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+
+// Packaged org
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'CPQ and Contract',
+rstk__label__c = 'CPQ and Contract',
+rstk__sequence__c = 43,
+rstk__secnsequence__c = 43,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'ms_cpq__c',
+rstk__level__c = 0,
+rstk__id__c = 244,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Contract Terms Template',
+rstk__label__c = 'Contract Terms Template',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 9,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_soctt__c',
+rstk__href__c = '/apex/listView?recType=soctt',
+rstk__pagekey__c = 'soctt__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'soctt',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;

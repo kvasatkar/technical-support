@@ -1,0 +1,50 @@
+Boolean commitmode = false;
+List<rstk__icitemsrl__c> updates = new List<rstk__icitemsrl__c>();
+
+rstk__icitemsrl__c[] icitemsrls = [select Id, rstk__icitemsrl_serial__c, rstk__icitemsrl_item__c, rstk__icitemsrl_srlno__c, 
+							 rstk__icitemsrl_itemrev__c, rstk__icitemsrl_itemrev__r.rstk__peitemrev_item__c, rstk__icitemsrl_item__r.rstk__icitem_item__c,
+							 rstk__icitemsrl_replaceicitem__c, rstk__icitemsrl_replaceicitem__r.rstk__icitem_div__c, rstk__icitemsrl_div__c,
+							 rstk__icitemsrl_orddiv__c, rstk__icitemsrl_ordsite__r.rstk__sysite_div__c,
+							 rstk__icitemsrl_locdiv__c,rstk__icitemsrl_locsite__r.rstk__sysite_div__c, rstk__triggeroptions__c
+	from rstk__icitemsrl__c where rstk__icitemsrl_serial__c = null
+	and rstk__icitemsrl_item__r.rstk__icitem_item__r.rstk__peitem_tracksrl_pl__c = 'Yes'
+	and (rstk__icitemsrl_locid__c = null or rstk__icitemsrl_locnum__c != null)
+	limit 5000];
+
+System.debug(Logginglevel.INFO, 'Retrieved ' + icitemsrls.size() + ' icitemsrl records');
+if(icitemsrls.size() == 0) {
+	System.debug(Logginglevel.INFO, 'No more records to be updated');
+} else {
+	Id[] errorIds = new Id[] {};
+	for (rstk__icitemsrl__c s : icitemsrls) {
+		if ((s.rstk__icitemsrl_itemrev__c != null && s.rstk__icitemsrl_item__c != null && s.rstk__icitemsrl_itemrev__r.rstk__peitemrev_item__c != s.rstk__icitemsrl_item__r.rstk__icitem_item__c) ||
+			(s.rstk__icitemsrl_replaceicitem__c != null && s.rstk__icitemsrl_replaceicitem__r.rstk__icitem_div__c != s.rstk__icitemsrl_div__c) ||
+			(s.rstk__icitemsrl_orddiv__c != null && s.rstk__icitemsrl_ordsite__r.rstk__sysite_div__c != s.rstk__icitemsrl_orddiv__c) ||
+			(s.rstk__icitemsrl_locdiv__c != null && s.rstk__icitemsrl_locsite__r.rstk__sysite_div__c != s.rstk__icitemsrl_locdiv__c)) {
+			// Error state, skip
+			errorIds.add(s.Id);
+			continue;
+		}
+		s.rstk__icitemsrl_serial__c = s.rstk__icitemsrl_srlno__c;
+		s.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+		updates.add(s);
+	}
+
+	if (!errorIds.isEmpty()) {
+		String idStr = '';
+		for(Id errId : errorIds) {
+			if(errId == null)continue;
+			idStr += (idStr == '' ? '' : ',') + '\'' + errId + '\''; 
+		}
+		System.debug(Logginglevel.INFO, 'Skipping the following '+errorIds.size()+' invalid icitemsrl objects: '+ idStr);
+	}
+
+	if (commitmode) {
+		if (updates.size() > 0) { 
+			update updates; 
+		}
+		System.debug(Logginglevel.INFO, 'Updated ' + updates.size() + ' icitemsrl records');
+	} else {
+		System.debug(Logginglevel.INFO, 'Commit disabled, else would have updated ' + updates.size() + ' icitemsrl records');
+	}
+}

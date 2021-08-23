@@ -1,0 +1,26 @@
+// - Ticket 12711 Menu Add, Pre-Delete
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Change Supplier'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+// - Ticket 12711 Menu Insert
+rstk__menu__c menu01 = new rstk__menu__c(
+Name = 'Change Supplier',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/changeSupplier',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Change Supplier',
+rstk__sequence__c = 12,
+rstk__inactive__c = false,
+rstk__parentid__c = 904,
+rstk__level__c = 1,
+rstk__id__c = 335,
+rstk__appsecuritykey__c = 'm_changeSupplier__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'changesupplier',
+rstk__recordtype__c = ' '
+//menutype__c = 1
+);
+insert menu01;

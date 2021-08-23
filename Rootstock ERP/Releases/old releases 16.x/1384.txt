@@ -1,0 +1,36 @@
+// 1384 - Inventory Unit Cost Adjust
+menu__c menu = new menu__c(
+Name = 'Inventory Unit Cost Adjust',
+header__c = 'inventorytrans',
+href__c = '/apex/Stocklocadj2?type=INVDOLADJ',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Unit Cost Adjust',
+sequence__c = 7,
+inactive__c = false,
+parentid__c = 9,
+level__c = 1,
+id__c = null,
+appsecuritykey__c = 'm_inventoryunitcostadjust__c',
+subsection__c = 'Transactions',
+pagekey__c = 'stocklocadj2_inventoryunitcostadjust'
+//menutype__c = 2
+);
+insert menu;
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Inventory Unit Cost Adjust',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/Stocklocadj2?type=INVDOLADJ',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Unit Cost Adjust',
+rstk__sequence__c = 7,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = null,
+rstk__appsecuritykey__c = 'm_inventoryunitcostadjust__c',
+rstk__subsection__c = 'Transactions',
+rstk__pagekey__c = 'stocklocadj2_inventoryunitcostadjust'
+//menutype__c = 2
+);
+insert menu;

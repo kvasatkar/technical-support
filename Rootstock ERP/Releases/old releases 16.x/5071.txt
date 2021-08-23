@@ -1,0 +1,118 @@
+// non packaged orgs
+menu__c menu = new menu__c(
+Name = 'Supplier Part Master',
+header__c = 'supitem',
+href__c = '/apex/listview?recType=supitem',
+imageclass__c = 'Custom57Mru',
+label__c = 'Supplier Part Master',
+sequence__c = 46,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 314,
+appsecuritykey__c = 'm_supitem__c',
+subsection__c = '',
+recordtype__c = 'supitem',
+pagekey__c = 'supitem__c'
+//menutype__c = 2
+);
+insert menu;
+
+menu__c menu2 = new menu__c(
+Name = 'Forecast Control',
+header__c = 'fcstcntl',
+href__c = '/apex/listview?recType=fcstcntl',
+imageclass__c = 'Custom57Mru',
+label__c = 'Forecast Control',
+sequence__c = 47,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 315,
+appsecuritykey__c = 'm_fcstcntl__c',
+subsection__c = '',
+recordtype__c = 'fcstcntl',
+pagekey__c = 'fcstcntl__c'
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Container Cost & Price',
+header__c = 'pocontprice',
+href__c = '/apex/listview?recType=pocontprice',
+imageclass__c = 'Custom57Mru',
+label__c = 'Container Cost & Price',
+sequence__c = 48,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 316,
+appsecuritykey__c = 'm_pocontprice__c',
+subsection__c = '',
+recordtype__c = 'fcstcntl',
+pagekey__c = 'pocontprice__c'
+//menutype__c = 2
+);
+insert menu3;
+
+
+
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Supplier Part Master',
+rstk__header__c = 'supitem',
+rstk__href__c = '/apex/listview?recType=supitem',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Supplier Part Master',
+rstk__sequence__c = 46,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 314,
+rstk__appsecuritykey__c = 'm_supitem__c',
+rstk__subsection__c = '',
+rstk__recordtype__c = 'supitem',
+rstk__pagekey__c = 'supitem__c'
+//rstk__menutype__c = 2
+);
+insert menu;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Forecast Control',
+rstk__header__c = 'fcstcntl',
+rstk__href__c = '/apex/listview?recType=fcstcntl',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Forecast Control',
+rstk__sequence__c = 47,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 315,
+rstk__appsecuritykey__c = 'm_fcstcntl__c',
+rstk__subsection__c = '',
+rstk__recordtype__c = 'fcstcntl',
+rstk__pagekey__c = 'fcstcntl__c'
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Container Cost & Price',
+rstk__header__c = 'pocontprice',
+rstk__href__c = '/apex/listview?recType=pocontprice',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Container Cost & Price',
+rstk__sequence__c = 48,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 316,
+rstk__appsecuritykey__c = 'm_pocontprice__c',
+rstk__subsection__c = '',
+rstk__recordtype__c = 'fcstcntl',
+rstk__pagekey__c = 'pocontprice__c'
+//rstk__menutype__c = 2
+);
+insert menu3;

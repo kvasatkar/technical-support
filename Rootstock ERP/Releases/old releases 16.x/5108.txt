@@ -1,0 +1,53 @@
+//Non package:
+//------------------
+Id[] excludedIds = new Id[] { };
+class SuccessException extends Exception {}
+sohdrextn__c[] sohdrextns = [select Id, 
+  sohdrextn_ustat__c, sohdrextn_sohdr__r.sohdr_ustat__c from sohdrextn__c where 
+  sohdrextn_sohdr__c not in :excludedIds and 
+  sohdrextn_sohdr__r.sohdr_ustat__c = null and 
+  sohdrextn_ustat__c != null and 
+  (sohdrextn_sohdr__r.sohdr_ackaddr__c != null or sohdrextn_sohdr__r.sohdr_ovrship__c = true) and
+  (sohdrextn_sohdr__r.sohdr_shiptoaddr__c != null or sohdrextn_sohdr__r.sohdr_ovrship__c = true) and
+  (sohdrextn_sohdr__r.sohdr_creditorg__c = null or sohdrextn_sohdr__r.sohdr_creditorg__r.syorg_creditdeptind__c = true) and
+  sohdrextn_sohdr__r.sohdr_ordertotal__c >= 0
+  order by createddate desc limit 1000];
+if (sohdrextns.size() == 0) {
+  throw new SuccessException('Success: All sales orders have now been updated, this is not an error.');
+}
+System.debug('Updating '+sohdrextns.size()+' sales orders...');
+List<sohdr__c> sohdrs = new List<sohdr__c>();
+for (sohdrextn__c s: sohdrextns) {
+  sohdr__c sohdr = s.sohdrextn_sohdr__r;
+  sohdr.sohdr_ustat__c = s.sohdrextn_ustat__c;
+  sohdr.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+  sohdrs.add(sohdr);
+}
+update sohdrs;
+ 
+// Packaged Version:
+//-----------------------
+Id[] excludedIds = new Id[] { };
+class SuccessException extends Exception {}
+rstk__sohdrextn__c[] sohdrextns = [select Id, 
+  rstk__sohdrextn_ustat__c, rstk__sohdrextn_sohdr__r.rstk__sohdr_ustat__c from rstk__sohdrextn__c where
+  rstk__sohdrextn_sohdr__c not in :excludedIds and 
+  rstk__sohdrextn_sohdr__r.rstk__sohdr_ustat__c = null and 
+  rstk__sohdrextn_ustat__c != null and 
+  (rstk__sohdrextn_sohdr__r.rstk__sohdr_ackaddr__c != null or rstk__sohdrextn_sohdr__r.rstk__sohdr_ovrship__c = true) and
+  (rstk__sohdrextn_sohdr__r.rstk__sohdr_shiptoaddr__c != null or rstk__sohdrextn_sohdr__r.rstk__sohdr_ovrship__c = true) and
+  (rstk__sohdrextn_sohdr__r.rstk__sohdr_creditorg__c = null or rstk__sohdrextn_sohdr__r.rstk__sohdr_creditorg__r.rstk__syorg_creditdeptind__c = true) and
+  rstk__sohdrextn_sohdr__r.rstk__sohdr_ordertotal__c >= 0
+  order by createddate desc limit 1000];
+if (sohdrextns.size() == 0) {
+  throw new SuccessException('Success: All sales orders have now been updated, this is not an error.');
+}
+System.debug('Updating '+sohdrextns.size()+' sales orders...');
+List<rstk__sohdr__c> sohdrs = new List<rstk__sohdr__c>();
+for (rstk__sohdrextn__c s: sohdrextns) {
+  rstk__sohdr__c sohdr = s.rstk__sohdrextn_sohdr__r;
+  sohdr.rstk__sohdr_ustat__c = s.rstk__sohdrextn_ustat__c;
+  sohdr.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+  sohdrs.add(sohdr);
+}
+update sohdrs;

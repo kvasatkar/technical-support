@@ -1,0 +1,8 @@
+// Non-packaged orgs
+menu__c[] menu = [select id from menu__c where parentid__c = 17 and name__c = 'PO Receipt Export'];
+delete menu;
+
+
+// Packaged orgs
+rstk__menu__c[] menu = [select id from rstk__menu__c where rstk__parentid__c = 17 and name = 'PO Receipt Export'];
+delete menu;

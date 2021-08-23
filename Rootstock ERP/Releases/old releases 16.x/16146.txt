@@ -1,0 +1,5 @@
+rstk__sylocid__c[] sylocids = [select Id, rstk__externalid__c, rstk__formula_extid__c from rstk__sylocid__c];
+for (rstk__sylocid__c sylocid: sylocids) {
+sylocid.rstk__externalid__c = sylocid.rstk__formula_extid__c;
+}
+update sylocids;

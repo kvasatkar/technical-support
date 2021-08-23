@@ -1,0 +1,37 @@
+// 4062 - Labor Pay Type menu option
+menu__c menu = new menu__c(
+Name = 'Labor Pay Type',
+header__c = 'shopfloor',
+href__c = '/apex/ListView?recType=tapaytype',
+imageclass__c = 'Custom57Mru',
+label__c = 'Labor Pay Type',
+sequence__c = 10,
+inactive__c = false,
+parentid__c = 10,
+level__c = 1,
+id__c = null,
+appsecuritykey__c = 'm_tapaytype__c',
+subsection__c = '',
+pagekey__c = 'tapaytype__c'
+//menutype__c = 2
+);
+insert menu;
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Labor Pay Type',
+rstk__header__c = 'shopfloor',
+rstk__href__c = '/apex/ListView?recType=tapaytype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Labor Pay Type',
+rstk__sequence__c = 10,
+rstk__inactive__c = false,
+rstk__parentid__c = 10,
+rstk__level__c = 1,
+rstk__id__c = null,
+rstk__appsecuritykey__c = 'm_tapaytype__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'tapaytype__c'
+//rstk__menutype__c = 2
+);
+insert menu;

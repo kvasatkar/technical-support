@@ -1,0 +1,90 @@
+rstk__soshipline__c[] soshiplines = [select Id,
+									
+
+rstk__soshipline_ucstlab__c,
+									
+
+rstk__soshipline_ucstmtl__c,
+									
+
+rstk__soshipline_ucstohdfrng__c,
+									
+
+rstk__soshipline_ucstohdlab__c,
+									
+
+rstk__soshipline_ucstohdmach__c,
+									
+
+rstk__soshipline_ucstohdmtl__c,
+									
+
+rstk__soshipline_ucstsublab__c,
+									
+
+rstk__soshipline_ucstsubmtl__c,
+									
+
+rstk__soshipline_niccost__c,
+                                    rstk__soshipline_ucstfrght__c,
+                                    rstk__soshipline_ucstothlnd__c,
+									
+
+rstk__triggeroptions__c
+								
+
+from rstk__soshipline__c
+								
+
+where	rstk__soshipline_ucstlab__c = null or
+									
+
+	rstk__soshipline_ucstmtl__c = null or
+									
+
+	rstk__soshipline_ucstohdfrng__c = null or
+									
+
+	rstk__soshipline_ucstohdlab__c = null or
+									
+
+	rstk__soshipline_ucstohdmach__c = null or
+									
+
+	rstk__soshipline_ucstohdmtl__c = null or
+									
+
+	rstk__soshipline_ucstsublab__c = null or
+									
+
+	rstk__soshipline_ucstsubmtl__c = null or
+                                        
+
+rstk__soshipline_ucstfrght__c = null or
+                                        
+
+rstk__soshipline_ucstothlnd__c = null or
+									
+
+	rstk__soshipline_niccost__c = null
+								
+
+limit 10000];
+
+for (rstk__soshipline__c soshipline : soshiplines) {
+	soshipline.rstk__soshipline_ucstlab__c = 0;
+	soshipline.rstk__soshipline_ucstmtl__c = 0;
+	soshipline.rstk__soshipline_ucstohdfrng__c = 0;
+	soshipline.rstk__soshipline_ucstohdlab__c = 0;
+	soshipline.rstk__soshipline_ucstohdmach__c = 0;
+	soshipline.rstk__soshipline_ucstohdmtl__c = 0;
+	soshipline.rstk__soshipline_ucstsublab__c = 0;
+	soshipline.rstk__soshipline_ucstsubmtl__c = 0;
+	soshipline.rstk__soshipline_niccost__c = 0;
+    soshipline.rstk__soshipline_ucstfrght__c = 0;
+    soshipline.rstk__soshipline_ucstothlnd__c = 0;
+	soshipline.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+
+update soshiplines;
+System.debug(Logginglevel.INFO, 'Updated ' + soshiplines.size() + ' records');

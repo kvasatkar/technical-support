@@ -1,0 +1,79 @@
+// Non-packaged orgs
+// 5078 - Process Forecast Upload
+menu__c menu1 = new menu__c(
+Name = 'Process Forecast Upload',
+header__c = 'iblogistics',
+href__c = '/apex/ProcessForecast',
+imageclass__c = 'Custom57Mru',
+label__c = 'Process Forecast Upload',
+sequence__c = 50,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 318,
+appsecuritykey__c = 'm_processforecast__c',
+subsection__c = '',
+pagekey__c = 'processforecast'
+//menutype__c = 2
+);
+insert menu1;
+
+// 5078 - Supplier Requisition
+menu__c menu2 = new menu__c(
+Name = 'Supplier Requisition',
+header__c = 'iblogistics',
+href__c = '/apex/listview?recType=supreq',
+imageclass__c = 'Custom57Mru',
+label__c = 'Supplier Requisition',
+sequence__c = 49,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 317,
+appsecuritykey__c = 'm_supreq__c',
+subsection__c = '',
+recordtype__c = 'supreq',
+pagekey__c = 'supreq__c'
+//menutype__c = 2
+);
+insert menu2;
+
+// Packaged orgs
+// 5078 - Process Forecast Upload
+rstk__menu__c menu1 = new rstk__menu__c(
+Name = 'Process Forecast Upload',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/ProcessForecast',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Process Forecast Upload',
+rstk__sequence__c = 50,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 318,
+rstk__appsecuritykey__c = 'm_processforecast__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'processforecast'
+//rstk__menutype__c = 2
+);
+insert menu1;
+
+// 5078 - Supplier Requisition
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Supplier Requisition',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?recType=supreq',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Supplier Requisition',
+rstk__sequence__c = 49,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 317,
+rstk__appsecuritykey__c = 'm_supreq__c',
+rstk__subsection__c = '',
+rstk__recordtype__c = 'supreq',
+rstk__pagekey__c = 'supreq__c'
+//rstk__menutype__c = 2
+);
+insert menu2;

@@ -1,0 +1,16 @@
+// *******************************************************************************************
+// DO NOT RUN THIS SCRIPT WHERE FOR FFA V11 - The BillingSettings__c object no longer exists
+// *******************************************************************************************
+
+
+//packged orgs
+Boolean doDisable = false;
+Type billingObj = Type.forName('c2g__BillingSettings__c');
+if (billingObj != null) {
+SObject[] bInsts = Database.query('select c2g__DisableTriggers__c from c2g__BillingSettings__c limit 1');
+if (bInsts.size() > 0 && ((Boolean) bInsts[0].get('c2g__DisableTriggers__c')) != doDisable) {
+SObject bInst = bInsts[0];
+bInst.put('c2g__DisableTriggers__c', doDisable);
+upsert bInst;
+}
+}

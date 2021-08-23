@@ -1,0 +1,32 @@
+// 5550
+class AException extends Exception {}
+soentwarr__c[] soentwarrs = [select Name, formula_name__c, externalid__c, formula_extid__c, soentwarr_sowarr__r.sowarr_soline__c
+from soentwarr__c where externalid__c = null order by lastmodifieddate desc limit 10000];
+if (soentwarrs.size() == 0) { throw new AException('Contract Entitlement Covered Items Update complete'); }
+for (soentwarr__c s: soentwarrs) {
+s.Name = s.formula_name__c;
+s.externalid__c = s.formula_extid__c;
+s.soentwarr_soline__c = s.soentwarr_sowarr__r.sowarr_soline__c;
+s.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update soentwarrs;
+
+
+
+// packaged orgs
+class AException extends Exception {}
+rstk__soentwarr__c[] soentwarrs = [select Name, rstk__formula_name__c, rstk__externalid__c, rstk__formula_extid__c, rstk__soentwarr_sowarr__r.rstk__sowarr_soline__c
+from rstk__soentwarr__c where rstk__externalid__c = null order by lastmodifieddate desc limit 10000];
+if (soentwarrs.size() == 0) { throw new AException('Contract Entitlement Covered Items Update complete'); }
+for (rstk__soentwarr__c s: soentwarrs) {
+//    if (s.id != 'a8pd0000000KyjL' && 
+//       s.id != 'a8pd0000000KyjQ' &&
+//       s.id != 'a8pd0000000KyjV' 
+//       ) {   
+    s.Name = s.rstk__formula_name__c;
+    s.rstk__externalid__c = s.rstk__formula_extid__c;
+    s.rstk__soentwarr_soline__c = s.rstk__soentwarr_sowarr__r.rstk__sowarr_soline__c;
+    s.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+//    }
+}
+update soentwarrs;

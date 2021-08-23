@@ -1,0 +1,40 @@
+// 5667
+menu__c menu = new menu__c(
+Name = 'Planned Transfer Picklist',
+label__c = 'Planned Transfer Picklist',
+header__c = 'createPlannedTransferPicklist',
+parentid__c = 310,
+sequence__c = 58,
+subsection__c = '',
+appsecuritykey__c = 'm_createplannedtransferpicklist__c',
+href__c = '/apex/createPlannedTransferPicklist',
+pagekey__c = 'createplannedtransferpicklist',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+//recordtype__c = 'poasn',
+id__c = 312,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Planned Transfer Picklist',
+rstk__label__c = 'Planned Transfer Picklist',
+rstk__header__c = 'createPlannedTransferPicklist',
+rstk__parentid__c = 310,
+rstk__sequence__c = 58,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_createplannedtransferpicklist__c',
+rstk__href__c = '/apex/createPlannedTransferPicklist',
+rstk__pagekey__c = 'createplannedtransferpicklist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+//rstk__recordtype__c = 'poasn',
+rstk__id__c = 312,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

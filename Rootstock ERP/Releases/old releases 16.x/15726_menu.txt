@@ -1,0 +1,7 @@
+// Change Voucher Edit List to Payable Edit List
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Voucher Edit List'];
+for (rstk__menu__c menu : menus) {
+  menu.name = 'Payable Edit List';
+  menu.rstk__label__c = 'Payable Edit List';
+}
+update menus;

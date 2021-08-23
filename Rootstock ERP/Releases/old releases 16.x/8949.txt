@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Inbound Shipment And Step',
+rstk__label__c = 'Inbound Shipment And Step',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/poshipStepGrid',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 32,
+rstk__inactive__c = false,
+rstk__parentid__c = 901,
+rstk__level__c = 1,
+rstk__id__c = 330,
+rstk__appsecuritykey__c = 'm_poshipStepGrid__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'cc',
+rstk__recordtype__c = 'poshipstepgrid',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;

@@ -1,0 +1,30 @@
+// non-package version
+rtdept__c[] rtdepts = [select id from rtdept__c];
+if (rtdepts.size() > 0) ObjectSaver.updateObjects(rtdepts, false);
+
+rtrouthdr__c[] rtrouthdrs = [select id, rtrouthdr_site__c from rtrouthdr__c];
+if (rtrouthdrs.size() > 0) ObjectSaver.updateObjects(rtrouthdrs, false);
+
+rtindoper__c[] rtindopers = [select id from rtindoper__c where rtindoper_site__c = null];
+update rtindopers;
+
+// Package version
+rstk__rtdept__c[] rtdepts = [select id, rstk__triggeroptions__c from rstk__rtdept__c];
+for (rstk__rtdept__c rtdept : rtdepts) {
+                rtdept.rstk__triggeroptions__c = '{"ET":"1"}';
+}
+if (rtdepts.size() > 0) update rtdepts;
+
+rstk__rtrouthdr__c[] rtrouthdrs = [select id, rstk__rtrouthdr_site__c from rstk__rtrouthdr__c];
+for (rstk__rtrouthdr__c rtrouthdr : rtrouthdrs) {
+                rtrouthdr.rstk__triggeroptions__c = '{"ET":"1"}';
+}
+if (rtrouthdrs.size() > 0) update rtrouthdrs;
+
+rstk__rtindoper__c[] rtindopers = [select id from rstk__rtindoper__c where rstk__rtindoper_site__c = null];
+for (rstk__rtindoper__c rtindoper : rtindopers) {
+                rtindoper.rstk__triggeroptions__c = '{"ET":"1"}';
+}
+if (rtindopers.size() > 0) update rtindopers;
+
+

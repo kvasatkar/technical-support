@@ -1,0 +1,50 @@
+//Cron Job below establishes scheduled jobs for processing API loads and DOI calculations.
+//This schedule is required in order to avoid overlaps of job runs (DOI Calculations are now taking over 1 hour)
+
+System.schedule('01:00-AM - M-F - WMSItemUsageAPI', '0 0 01 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('01:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 01 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('01:20-AM - M-F - DOIScheduler', '0 20 01 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('03:00-AM - M-F - WMSItemUsageAPI', '0 0 03 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('03:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 03 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('03:20-AM - M-F - DOIScheduler', '0 20 03 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('05:00-AM - M-F - WMSItemUsageAPI', '0 0 05 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('05:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 05 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('05:20-AM - M-F - DOIScheduler', '0 20 05 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('07:00-AM - M-F - WMSItemUsageAPI', '0 0 07 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('07:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 07 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('07:20-AM - M-F - DOIScheduler', '0 20 07 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('09:00-AM - M-F - WMSItemUsageAPI', '0 0 09 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('09:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 09 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('09:20-AM - M-F - DOIScheduler', '0 20 09 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('11:00-AM - M-F - WMSItemUsageAPI', '0 0 11 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('11:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 11 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('11:20-AM - M-F - DOIScheduler', '0 20 11 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('13:00-PM - M-F - WMSItemUsageAPI', '0 0 13 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('13:10-PM - M-F - WMSReceiptAndQtyohAPI', '0 10 13 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('13:20-PM - M-F - DOIScheduler', '0 20 13 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('15:00-AM - M-F - WMSItemUsageAPI', '0 0 15 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('15:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 15 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('15:20-AM - M-F - DOIScheduler', '0 20 15 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('17:00-AM - M-F - WMSItemUsageAPI', '0 0 17 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('17:10-AM - M-F - WMSReceiptAndQtyohAPI', '0 10 17 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('17:20-AM - M-F - DOIScheduler', '0 20 17 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('19:00-PM - M-F - WMSItemUsageAPI', '0 0 19 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('19:10-PM - M-F - WMSReceiptAndQtyohAPI', '0 10 19 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('19:20-PM - M-F - DOIScheduler', '0 20 19 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('21:00-PM - M-F - WMSItemUsageAPI', '0 0 21 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('21:10-PM - M-F - WMSReceiptAndQtyohAPI', '0 10 21 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('21:20-PM - M-F - DOIScheduler', '0 20 21 ? * MON-FRI', new rstk.DOISchedule());
+
+System.schedule('23:00-PM - M-F - WMSItemUsageAPI', '0 0 23 ? * MON-FRI', new rstk.WMSItemUsageAPI());
+System.schedule('23:10-PM - M-F - WMSReceiptAndQtyohAPI', '0 10 23 ? * MON-FRI', new rstk.WMSReceiptAndQtyohAPI());
+System.schedule('23:20-PM - M-F - DOIScheduler', '0 20 23 ? * MON-FRI', new rstk.DOISchedule());

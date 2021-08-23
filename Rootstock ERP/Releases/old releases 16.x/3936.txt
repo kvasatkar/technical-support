@@ -1,0 +1,36 @@
+menu__c[] menus1 = [select id from menu__c where name = 'Detailed Review by Item'];
+for (menu__c menu : menus1) {
+menu.pagekey__c = 'supdmdrev_detailbyitem';
+}
+update menus1;
+menu__c[] menus2 = [select id from menu__c where name = 'Summary Review by Item'];
+for (menu__c menu : menus2) {
+menu.pagekey__c = 'supdmdrev_summbyitem';
+}
+update menus2;
+menu__c[] menus3 = [select id from menu__c where name = 'Employees'];
+for (menu__c menu : menus3) {
+menu.pagekey__c = 'sf_user';
+}
+update menus3;
+menu__c[] menus4 = [select id from menu__c where name = 'Set Std Costs from Simulated'];
+for (menu__c menu : menus4) {
+menu.pagekey__c = 'stdsetcosts_cssimstdmove';
+}
+update menus4;
+menu__c[] menus5 = [select id from menu__c where name = 'Generate/Apply Simulated Rollup Costs'];
+for (menu__c menu : menus5) {
+menu.pagekey__c = 'stdsetcosts_costrollup';
+}
+update menus5;
+menu__c[] menus6 = [select id from menu__c where name = 'Set Sim Purch Price From PO Derived Costs'];
+for (menu__c menu : menus6) {
+menu.pagekey__c = 'stdsetcosts_icsetmtlsimcost';
+}
+update menus6;
+
+menu__c[] menus7 = [select id from menu__c where name = 'Derive Purch Mtl Costs From PO Activity'];
+for (menu__c menu : menus7) {
+menu.pagekey__c = 'stdsetcosts_posetmtlcost';
+}
+update menus7;

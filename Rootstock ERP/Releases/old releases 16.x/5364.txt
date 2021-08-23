@@ -1,0 +1,40 @@
+// 5364 - High Value Container Maintenance
+menu__c menu = new menu__c(
+Name = 'High Value Container Maintenance',
+label__c = 'High Value Container Maintenance',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 54,
+subsection__c = '',
+appsecuritykey__c = m_pohvcont__c',
+href__c = '/apex/listview?recType=pohvcont',
+pagekey__c = 'pohvcont__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'supmtr',
+id__c = 322,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'High Value Container Maintenance',
+rstk__label__c = 'High Value Container Maintenance',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 54,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_pohvcont__c',
+rstk__href__c = '/apex/listview?recType=pohvcont',
+rstk__pagekey__c = 'pohvcont__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'supmtr',
+rstk__id__c = 322,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

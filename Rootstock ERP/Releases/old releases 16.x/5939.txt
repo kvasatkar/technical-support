@@ -1,0 +1,21 @@
+// Non Package version
+class AException extends Exception {}
+syzip__c[] ses = [select formula_name__c, formula_extid__c, name, externalId__c from syzip__c
+where not name like '%(%' order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Postal Code update complete'); }
+for (syzip__c s: ses) {
+s.name = s.formula_name__c;
+s.externalId__c = s.formula_extid__c;
+}
+update ses;
+ 
+// Package version
+class AException extends Exception {}
+rstk__syzip__c[] ses = [select rstk__formula_name__c, rstk__formula_extid__c, name, rstk__externalId__c from rstk__syzip__c
+where not name like '%(%' order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Postal Code update complete'); }
+for (rstk__syzip__c s: ses) {
+s.name = s.rstk__formula_name__c;
+s.rstk__externalId__c = s.rstk__formula_extid__c;
+}
+update ses;

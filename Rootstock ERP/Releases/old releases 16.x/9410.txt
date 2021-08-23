@@ -1,0 +1,9 @@
+rstk__wocst__c[] recs = [SELECT Id,Name,rstk__wocst_ordsts_pl__c,rstk__wocst_ordsts__c FROM rstk__wocst__c WHERE 
+						rstk__wocst_ordsts_pl__c LIKE '%7-Act%'];
+
+for (rstk__wocst__c ord : recs) {
+    			ord.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+                ord.rstk__wocst_ordsts_pl__c = '7-Partial Receipt';
+}
+update recs;
+system.debug(logginglevel.info, '*****UPDATED '+recs.size()+' WOCST RECORDS*****');

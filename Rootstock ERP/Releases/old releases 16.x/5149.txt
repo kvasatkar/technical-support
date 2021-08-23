@@ -1,0 +1,6 @@
+
+rstk.ScriptExecutor.execute(
+'fix_nodelete_missing_icproj_icsiteproj',
+false,
+new Map<String,Object>{'divid' => '<enter id of the division>'}
+);

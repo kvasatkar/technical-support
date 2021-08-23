@@ -1,0 +1,204 @@
+// 1.146 BOC menu changes
+
+// 5256 - Material Transfer Request
+menu__c menu = new menu__c(
+Name = 'Material Transfer Request',
+label__c = 'Material Transfer Request',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 52,
+subsection__c = '',
+appsecuritykey__c = 'm_supmtr__c',
+href__c = '/apex/listview?recType=supmtr',
+pagekey__c = 'supmtr__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'supmtr',
+id__c = 320,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+// 5253 - Global Item MRP Planning Policy Change
+menu__c menu2 = new menu__c(
+Name = 'Global Item MRP Planning Policy Change',
+label__c = 'Global Item MRP Planning Policy Change',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 55,
+subsection__c = '',
+appsecuritykey__c = 'm_mrppolicychange__c',
+href__c = '/apex/MRPPolicychange',
+pagekey__c = 'mrppolicychange',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = '',
+id__c = 324,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+// 5252 - Chemsource View into Inbound Containers 
+menu__c menu3 = new menu__c(
+Name = 'Chemsource View into Inbound Containers',
+label__c = 'Chemsource View into Inbound Containers',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 56,
+subsection__c = '',
+appsecuritykey__c = 'm_inboundcontainers__c',
+href__c = '/apex/InboundContainers',
+pagekey__c = 'inboundcontainers',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = '',
+id__c = 325,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu3;
+
+// 5250 - Interim Shipment Container 
+menu__c menu4 = new menu__c(
+Name = 'Interim Shipment Container',
+label__c = 'Interim Shipment Container',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 40,
+subsection__c = '',
+appsecuritykey__c = 'm_pocontainer__c',
+href__c = '/apex/listview?recType=pocontainer',
+pagekey__c = 'pocontainer__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'pocontainer',
+id__c = 308,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu4;
+
+// 5364 - High Value Container Maintenance
+menu__c menu5 = new menu__c(
+Name = 'High Value Container Maintenance',
+label__c = 'High Value Container Maintenance',
+header__c = 'iblogistics',
+parentid__c = 304,
+sequence__c = 54,
+subsection__c = '',
+appsecuritykey__c = 'm_pohvcont__c',
+href__c = '/apex/listview?recType=pohvcont',
+pagekey__c = 'pohvcont__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'pohvcont',
+id__c = 322,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu5;
+
+
+
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Material Transfer Request',
+rstk__label__c = 'Material Transfer Request',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 52,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_supmtr__c',
+rstk__href__c = '/apex/listview?recType=supmtr',
+rstk__pagekey__c = 'supmtr__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'supmtr',
+rstk__id__c = 320,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;
+
+// 5253 - Global Item MRP Planning Policy Change
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Global Item MRP Planning Policy Change',
+rstk__label__c = 'Global Item MRP Planning Policy Change',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 55,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_mrppolicychange__c',
+rstk__href__c = '/apex/MRPPolicychange',
+rstk__pagekey__c = 'mrppolicychange',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 324,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+// 5252 - Chemsource View into Inbound Containers 
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Chemsource View into Inbound Containers',
+rstk__label__c = 'Chemsource View into Inbound Containers',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 56,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_inboundcontainers__c',
+rstk__href__c = '/apex/InboundContainers',
+rstk__pagekey__c = 'inboundcontainers',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 325,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu3;
+
+// 5250 - Interim Shipment Container 
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Interim Shipment Container',
+rstk__label__c = 'Interim Shipment Container',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 40,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_pocontainer__c',
+rstk__href__c = '/apex/listview?recType=pocontainer',
+rstk__pagekey__c = 'pocontainer__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'pocontainer',
+rstk__id__c = 308,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu4;
+
+// 5364 - High Value Container Maintenance
+rstk__menu__c menu5 = new rstk__menu__c(
+Name = 'High Value Container Maintenance',
+rstk__label__c = 'High Value Container Maintenance',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 304,
+rstk__sequence__c = 54,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_pohvcont__c',
+rstk__href__c = '/apex/listview?recType=pohvcont',
+rstk__pagekey__c = 'pohvcont__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'pohvcont',
+rstk__id__c = 322,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu5;

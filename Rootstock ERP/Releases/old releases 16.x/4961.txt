@@ -1,0 +1,39 @@
+// non-packaged orgs
+menu__c menu = new menu__c(
+Name = 'Inventory Item Supersession',
+header__c = 'icitemss',
+href__c = '/apex/listview?recType=icitemss',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inventory Item Supersession',
+sequence__c = 60,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_icitemss__c',
+subsection__c = '',
+pagekey__c = 'icitemss__c',
+recordtype__c = 'icitemss'
+//menutype__c = 2
+);
+insert menu;
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Inventory Item Supersession',
+rstk__header__c = 'icitemss',
+rstk__href__c = '/apex/listview?recType=icitemss',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inventory Item Supersession',
+rstk__sequence__c = 60,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_icitemss__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'icitemss__c',
+rstk__recordtype__c = 'icitemss'
+//rstk__menutype__c = 2
+);
+insert menu;

@@ -1,0 +1,20 @@
+//Non-Packaged Org.
+supitem__c[] supitems = [select Id, triggeroptions__c, supitem_itemplanreview__c, supitem_icitem__c from supitem__c];
+for (supitem__c supitem : supitems) {
+    supitem.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    if (supitem.supitem_icitem__c != null) {
+        supitem.supitem_itemplanreview__c = '/apex/itemplanreview?actionType=edit&id='+supitem.supitem_icitem__c;
+    }
+}
+update supitems;
+ 
+ 
+//Packaged Org.
+rstk__supitem__c[] supitems = [select Id, rstk__triggeroptions__c, rstk__supitem_itemplanreview__c, rstk__supitem_icitem__c from rstk__supitem__c];
+for (rstk__supitem__c supitem : supitems) {
+    supitem.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    if (supitem.rstk__supitem_icitem__c != null) {
+        supitem.rstk__supitem_itemplanreview__c = '/apex/itemplanreview?actionType=edit&id='+supitem.rstk__supitem_icitem__c;
+    }
+}
+update supitems;

@@ -1,0 +1,14 @@
+// Packaged version
+class AException extends Exception {}
+rstk__confsess__c[] confsesss = [select rstk__externalid__c, rstk__formula_extid__c from rstk__confsess__c where rstk__externalid__c = null limit 2000];
+if(confsesss.size() > 0) {
+    for(rstk__confsess__c r : confsesss) {
+        r.rstk__externalid__c = r.rstk__formula_extid__c;
+        r.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+    } 
+    update confsesss;
+    //Logger.info('confsess__c records updated: ' + confsesss.size());
+} else {
+	//Logger.info('No confsess__c records found for update');
+    throw new AException('No confsess__c records found for update');
+}

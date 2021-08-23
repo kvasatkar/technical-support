@@ -1,0 +1,16 @@
+rstk__sorma__c[] c = [
+     select rstk__sorma_sormh__r.rstk__sormh_custno__c
+     from rstk__sorma__c
+     where rstk__sorma_custno__c = null
+     limit 1000
+];
+if (c.size() > 0) {
+     for (rstk__sorma__c o : c) {
+          o.rstk__sorma_custno__c = o.rstk__sorma_sormh__r.rstk__sormh_custno__c;
+          o.rstk__triggeroptions__c = '{"SAE":"1","ST":"1"}';
+     }
+     update c;
+     system.debug(logginglevel.INFO, '*****UPDATED '+c.size()+' SORMA RECORDS*****');
+} else {
+     system.debug(logginglevel.INFO, '*****NO MORE SORMA RECORDS FOUND FOR UPDATE*****');
+}

@@ -1,0 +1,193 @@
+// 3707 - Inbound Logistics menu group
+menu__c menu = new menu__c(
+Name = 'Inbound Logistics',
+header__c = '',
+href__c = '',
+imageclass__c = '',
+label__c = 'Inbound Logistics',
+sequence__c = 12,
+secnsequence__c = 10,
+inactive__c = false,
+parentid__c = null,
+level__c = 0,
+id__c = 304,
+appsecuritykey__c = 'ms_iblogicstics__c',
+subsection__c = '',
+pagekey__c = ''
+//menutype__c = 2
+);
+insert menu;
+
+menu__c menu2 = new menu__c(
+Name = 'Inbound Shipment Master',
+header__c = 'iblogistics',
+href__c = '/apex/listview?recType=poship',
+imageclass__c = 'Custom57Mru',
+label__c = 'Inbound Shipment Master',
+sequence__c = 40,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 308,
+appsecuritykey__c = 'm_poship__c',
+subsection__c = '',
+pagekey__c = 'poship__c',
+triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Shipment Route Master',
+header__c = 'iblogistics',
+href__c = '/apex/listview?recType=poroute',
+imageclass__c = 'Custom57Mru',
+label__c = 'Shipment Route Master',
+sequence__c = 30,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 307,
+appsecuritykey__c = 'm_poroute__c',
+subsection__c = '',
+pagekey__c = 'poroute__c',
+triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu3;
+
+menu__c menu4 = new menu__c(
+Name = 'Shipment Container Type',
+header__c = 'iblogistics',
+href__c = '/apex/listview?recType=poconttype',
+imageclass__c = 'Custom57Mru',
+label__c = 'Shipment Container Type',
+sequence__c = 20,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 306,
+appsecuritykey__c = 'm_poconttype__c',
+subsection__c = '',
+pagekey__c = 'poconttype__c',
+triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu4;
+
+menu__c menu5 = new menu__c(
+Name = 'Shipment Route Type',
+header__c = 'iblogistics',
+href__c = '/apex/listview?recType=portetype',
+imageclass__c = 'Custom57Mru',
+label__c = 'Shipment Route Type',
+sequence__c = 10,
+inactive__c = false,
+parentid__c = 304,
+level__c = 1,
+id__c = 305,
+appsecuritykey__c = 'm_portetype__c',
+subsection__c = '',
+pagekey__c = 'portetype__c',
+triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu5;
+
+
+// packaged orgs
+// 3707 - Inbound Logistics menu group
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Inbound Logistics',
+rstk__header__c = '',
+rstk__href__c = '',
+rstk__imageclass__c = '',
+rstk__label__c = 'Inbound Logistics',
+rstk__sequence__c = 12,
+rstk__secnsequence__c = 10,
+rstk__inactive__c = false,
+rstk__parentid__c = null,
+rstk__level__c = 0,
+rstk__id__c = 304,
+rstk__appsecuritykey__c = 'ms_iblogicstics__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = ''
+//menutype__c = 2
+);
+insert menu;
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Inbound Shipment Master',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?recType=poship',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Inbound Shipment Master',
+rstk__sequence__c = 40,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 308,
+rstk__appsecuritykey__c = 'm_poship__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'poship__c',
+rstk__triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Shipment Route Master',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?recType=poroute',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Shipment Route Master',
+rstk__sequence__c = 30,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 307,
+rstk__appsecuritykey__c = 'm_poroute__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'poroute__c',
+rstk__triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu3;
+
+rstk__menu__c menu4 = new rstk__menu__c(
+Name = 'Shipment Container Type',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?recType=poconttype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Shipment Container Type',
+rstk__sequence__c = 20,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 306,
+rstk__appsecuritykey__c = 'm_poconttype__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'poconttype__c',
+rstk__triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu4;
+
+rstk__menu__c menu5 = new rstk__menu__c(
+Name = 'Shipment Route Type',
+rstk__header__c = 'iblogistics',
+rstk__href__c = '/apex/listview?recType=portetype',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Shipment Route Type',
+rstk__sequence__c = 10,
+rstk__inactive__c = false,
+rstk__parentid__c = 304,
+rstk__level__c = 1,
+rstk__id__c = 305,
+rstk__appsecuritykey__c = 'm_portetype__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'portetype__c',
+rstk__triggeroptions__c = '{"SAE"}'
+//menutype__c = 2
+);
+insert menu5;

@@ -1,0 +1,18 @@
+//BEGIN//
+rstk__sowarr__c[] c = [
+     select rstk__sowarr_srlno__c 
+     from rstk__sowarr__c 
+     where rstk__sowarr_srlno_index__c = null
+     and rstk__sowarr_srlno__c != null
+     limit 1000];
+for (rstk__sowarr__c o : c) {
+     o.rstk__sowarr_srlno_index__c = o.rstk__sowarr_srlno__c;
+     o.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+if (c.size() == 0) {
+     system.debug(logginglevel.info, '*****NO MORE SOWARR RECORDS TO BE UPDATED*****');
+} else {
+     update c;
+     system.debug(logginglevel.info, '*****UPDATED '+c.size()+' SOWARR RECORDS*****');
+}
+//END//

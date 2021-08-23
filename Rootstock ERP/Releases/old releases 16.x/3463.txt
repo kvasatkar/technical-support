@@ -1,0 +1,39 @@
+// 3463 - System Custom Configuration - non-packaged orgs 
+menu__c menu = new menu__c(
+Name = 'System Custom Configuration',
+header__c = 'salesordersu',
+href__c = '/apex/listview?recType=Sycustom',
+imageclass__c = 'Custom57Mru',
+label__c = 'System Custom Configuration',
+sequence__c = 28,
+inactive__c = false,
+parentid__c = 1,
+level__c = 1,
+id__c = null,
+recordtype__c = 'sycustom',
+appsecuritykey__c = 'm_sycustom__c',
+subsection__c = 'Maintenance',
+pagekey__c = 'sycustom__c',
+menutype__c = 1
+);
+insert menu;
+
+// 3463 - System Custom Configuration - packaged orgs 
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'System Custom Configuration',
+rstk__header__c = 'salesordersu',
+rstk__href__c = '/apex/listview?recType=Sycustom',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'System Custom Configuration',
+rstk__sequence__c = 28,
+rstk__inactive__c = false,
+rstk__parentid__c = 1,
+rstk__level__c = 1,
+rstk__id__c = null,
+rstk__recordtype__c = 'sycustom',
+rstk__appsecuritykey__c = 'm_sycustom__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'sycustom__c',
+rstk__menutype__c = 1
+);
+insert menu;

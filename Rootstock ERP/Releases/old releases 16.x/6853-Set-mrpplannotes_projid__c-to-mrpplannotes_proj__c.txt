@@ -1,0 +1,25 @@
+//Non-packaged orgs
+mrpplannotes__c[] c = [select mrpplannotes_proj__c from mrpplannotes__c where mrpplannotes_proj__c != null and mrpplannotes_projid__c = null limit 5000];
+for (mrpplannotes__c o : c) {
+     o.mrpplannotes_projid__c = String.valueOf(o.mrpplannotes_proj__c);
+}
+if (c.size() > 0) {
+     update c;
+     system.debug(logginglevel.info, '*****UPDATED ' + c.size() + ' RECORDS');
+} else {
+     system.debug(logginglevel.info, '*****NO MORE RECORDS FOUND TO BE UPDATED');
+}
+
+
+
+// Packaged orgs
+rstk__mrpplannotes__c[] c = [select rstk__mrpplannotes_proj__c from rstk__mrpplannotes__c where rstk__mrpplannotes_proj__c != null and rstk__mrpplannotes_projid__c = null limit 5000];
+for (rstk__mrpplannotes__c o : c) {
+     o.rstk__mrpplannotes_projid__c = String.valueOf(o.rstk__mrpplannotes_proj__c);
+}
+if (c.size() > 0) {
+     update c;
+     system.debug(logginglevel.info, '*****UPDATED ' + c.size() + ' RECORDS');
+} else {
+     system.debug(logginglevel.info, '*****NO MORE RECORDS FOUND TO BE UPDATED');
+}

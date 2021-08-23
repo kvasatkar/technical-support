@@ -1,0 +1,72 @@
+//
+// NEED TO FIX THE ORDER OF THE MENU ITEMS IN THIS MENU GROUP
+
+
+
+
+// non-packaged orgs
+menu__c[] menus = [select id from menu__c where name = 'Inventory Project Move'];
+for (menu__c menu : menus) {
+  menu.name = 'Project to Project Transfer';
+  menu.label__c = 'Project to Project Transfer';
+}
+update menus;
+
+menu__c[] menus2 = [select id from menu__c where name = 'Inventory Location Move'];
+for (menu__c menu : menus2) {
+  menu.name = 'Location to Location Transfer';
+  menu.label__c = 'Location to Location Transfer';
+}
+update menus2;
+
+menu__c menu = new menu__c(
+Name = 'Site to Site Transfer',
+header__c = 'inventorytrans',
+href__c = '/apex/Stocklocdivsitemove?mode=invsitesite',
+imageclass__c = 'Custom57Mru',
+label__c = 'Site to Site Transfer',
+sequence__c = 19,
+inactive__c = false,
+parentid__c = 9,
+level__c = 1,
+id__c = 135,
+appsecuritykey__c = 'm_sitetositetransfer__c',
+subsection__c = 'Transactions',
+pagekey__c = 'stocklocdivsitemove_invsitesite'
+//menutype__c = 2
+);
+insert menu;
+
+// packaged orgs
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Inventory Project Move'];
+for (rstk__menu__c menu : menus) {
+  menu.name = 'Project to Project Transfer';
+  menu.rstk__label__c = 'Project to Project Transfer';
+}
+update menus;
+
+rstk__menu__c[] menus2 = [select id from rstk__menu__c where name = 'Inventory Location Move'];
+for (rstk__menu__c menu : menus2) {
+  menu.name = 'Location to Location Transfer';
+  menu.rstk__label__c = 'Location to Location Transfer';
+}
+update menus2;
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Site to Site Transfer',
+rstk__header__c = 'inventorytrans',
+rstk__href__c = '/apex/Stocklocdivsitemove?mode=invsitesite',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Site to Site Transfer',
+rstk__sequence__c = 19,
+rstk__inactive__c = false,
+rstk__parentid__c = 9,
+rstk__level__c = 1,
+rstk__id__c = 135,
+rstk__appsecuritykey__c = 'm_sitetositetransfer__c',
+rstk__subsection__c = 'Transactions',
+rstk__pagekey__c = 'stocklocdivsitemove_invsitesite'
+//menutype__c = 2
+);
+insert menu;
+

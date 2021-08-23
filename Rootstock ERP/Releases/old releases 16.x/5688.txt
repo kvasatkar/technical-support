@@ -1,0 +1,18 @@
+// Update menu options in order to display Activities/History related lists on lwocst page in view mode
+menu__c[] menus = [select id from menu__c where name = 'Labor Orders'];
+for (menu__c menu : menus) {
+	menu.activity_enabled__c = true;
+	menu.approval_enabled__c = true;
+	menu.recordtype__c = 'lwocst';
+}
+update menus;
+
+// packaged orgs
+// Update menu options in order to display Activities/History related lists on lwocst page in view mode
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Labor Orders'];
+for (rstk__menu__c menu : menus) {
+	menu.rstk__activity_enabled__c = true;
+	menu.rstk__approval_enabled__c = true;
+	menu.rstk__recordtype__c = 'lwocst';
+}
+update menus;

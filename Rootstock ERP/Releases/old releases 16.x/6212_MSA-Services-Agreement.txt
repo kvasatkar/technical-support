@@ -1,0 +1,79 @@
+menu__c menu2 = new menu__c(
+Name = 'Master Services Agreement',
+label__c = 'Master Services Agreement',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 1,
+subsection__c = '',
+appsecuritykey__c = 'm_msa__c',
+href__c = '/apex/listView?recType=somsa',
+pagekey__c = 'somsa__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'somsa',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu2;
+
+menu__c menu3 = new menu__c(
+Name = 'Customer MSA',
+label__c = 'Customer MSA',
+header__c = 'cpq',
+parentid__c = 244,
+sequence__c = 2,
+subsection__c = 'Maintenance',
+appsecuritykey__c = 'm_custmsa__c',
+href__c = '/apex/listView?recType=socustmsa',
+pagekey__c = 'socustmsa__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'socustmsa',
+//id__c = ,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu3;
+
+
+
+
+
+rstk__menu__c menu2 = new rstk__menu__c(
+Name = 'Master Services Agreement',
+rstk__label__c = 'Master Services Agreement',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 1,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_msa__c',
+rstk__href__c = '/apex/listView?recType=somsa',
+rstk__pagekey__c = 'somsa__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'somsa',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu2;
+
+rstk__menu__c menu3 = new rstk__menu__c(
+Name = 'Customer MSA',
+rstk__label__c = 'Customer MSA',
+rstk__header__c = 'cpq',
+rstk__parentid__c = 244,
+rstk__sequence__c = 2,
+rstk__subsection__c = 'Maintenance',
+rstk__appsecuritykey__c = 'm_custmsa__c',
+rstk__href__c = '/apex/listView?recType=socustmsa',
+rstk__pagekey__c = 'socustmsa__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'socustmsa',
+//rstk__id__c = ,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu3;

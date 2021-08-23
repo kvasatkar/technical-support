@@ -1,0 +1,57 @@
+// - Purge Cost Transactions - Journals Menu option exists, Pre-Delete
+rstk__menu__c[] menudel01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Purge Cost Transactions'];
+if (menudel01.size() > 0) {
+delete menudel01;
+}
+
+// - Insert Purge Cost Transactions Menu selection
+rstk__menu__c menuadd01 = new rstk__menu__c(
+Name = 'Purge Cost Transactions',
+rstk__label__c = 'Purge Cost Transactions',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/PurgeCostTransaction',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 30,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 337,
+rstk__appsecuritykey__c = 'm_purgeCostTransaction__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'purgecosttransaction',
+rstk__recordtype__c = 'purgecosttransaction',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menuadd01;
+
+// - Purge System Transactions Menu option exists, Pre-Delete
+rstk__menu__c[] menudel02 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Purge System Transactions'];
+if (menudel02.size() > 0) {
+delete menudel02;
+}
+
+// - Insert Purge System Transactions Menu selection
+rstk__menu__c menuadd02 = new rstk__menu__c(
+Name = 'Purge System Transactions',
+rstk__label__c = 'Purge System Transactions',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/PurgeSystemTransactions',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 33,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 338,
+rstk__appsecuritykey__c = 'm_purgeSystemTransactions__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'purgesystemtransactions',
+rstk__recordtype__c = 'purgesystemtransactions',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menuadd02;

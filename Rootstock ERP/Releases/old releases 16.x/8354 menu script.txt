@@ -1,0 +1,22 @@
+// - Insert initial menu selection 14
+rstk__menu__c menua14 = new rstk__menu__c(
+Name = 'Shipping Zones',
+rstk__label__c = 'Shipping Zones',
+rstk__header__c = 'salesordersu',
+rstk__href__c = '/apex/listview?rectype=Sozone',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 29,
+rstk__inactive__c = false,
+rstk__parentid__c = 16,
+rstk__level__c = 1,
+rstk__id__c = 976,
+rstk__appsecuritykey__c = 'm_shippingzone__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'sozone__c',
+rstk__recordtype__c = 'sozone',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua14;

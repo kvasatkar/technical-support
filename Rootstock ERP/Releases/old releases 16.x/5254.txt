@@ -1,0 +1,40 @@
+// 5254
+menu__c menu = new menu__c(
+Name = 'Picklist for Consolidation (Temporary) Containers',
+label__c = 'Picklist for Consolidation (Temporary) Containers',
+header__c = 'iblogistics',
+parentid__c = 901,
+sequence__c = 30,
+subsection__c = '',
+appsecuritykey__c = 'm_pocontpiclist__c',
+href__c = '/apex/Pocontpicklist',
+pagekey__c = 'pocontpicklist',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'poasn',
+id__c = 327,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Picklist for Consolidation (Temporary) Containers',
+rstk__label__c = 'Picklist for Consolidation (Temporary) Containers',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 901,
+rstk__sequence__c = 30,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_pocontpiclist__c',
+rstk__href__c = '/apex/Pocontpicklist',
+rstk__pagekey__c = 'pocontpicklist',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'poasn',
+rstk__id__c = 327,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

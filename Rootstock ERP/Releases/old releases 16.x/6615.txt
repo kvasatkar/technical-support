@@ -1,0 +1,53 @@
+// Requistion Menu Update - Ticket 6615
+
+rstk__menu__c[] menud1 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c like '%Purchase Requisition%'];
+if (menud1.size() > 0) {
+delete menud1;
+}
+
+rstk__menu__c menua1 = new rstk__menu__c(
+Name = 'Purchase Requisition',
+rstk__label__c = 'Purchase Requisition',
+rstk__header__c = 'requisitions',
+rstk__href__c = '/apex/listview?rectype=poreq',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 26,
+rstk__inactive__c = false,
+rstk__parentid__c = 11,
+rstk__level__c = 1,
+rstk__id__c = 339,
+rstk__appsecuritykey__c = 'm_poreq__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'poreq__c',
+rstk__recordtype__c = 'poreq',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua1;
+
+rstk__menu__c[] menud2 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__pagekey__c = 'syreqind__c'];
+if (menud2.size() > 0) {
+delete menud2;
+}
+
+rstk__menu__c menua2 = new rstk__menu__c(
+Name = 'Indirect-Service Requisition',
+rstk__label__c = 'Indirect-Service Requisition',
+rstk__header__c = 'requisitions',
+rstk__href__c = '/apex/listview?rectype=syreqind',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 12,
+rstk__inactive__c = false,
+rstk__parentid__c = 11,
+rstk__level__c = 1,
+rstk__id__c = 165,
+rstk__appsecuritykey__c = 'm_syreqind__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'syreqind__c',
+rstk__recordtype__c = 'syreqind',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+);
+insert menua2;

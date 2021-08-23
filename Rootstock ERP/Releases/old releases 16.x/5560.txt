@@ -1,0 +1,30 @@
+// Non Package version
+class AException extends Exception {}
+soprod__c[] ses = [select soprod_shipsetidind__c, soprod_nopartialsind__c, soprod_nopartialsetind__c 
+from soprod__c 
+where soprod_nopartialsetind__c = false
+order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Product inds Update complete'); }
+for (soprod__c se: ses) {
+se.soprod_shipsetidind__c = true;
+se.soprod_nopartialsind__c = true;
+se.soprod_nopartialsetind__c = true;
+se.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update ses;
+
+// Packaged version
+class AException extends Exception {}
+rstk__soprod__c[] ses = [select rstk__soprod_shipsetidind__c, rstk__soprod_nopartialsind__c, rstk__soprod_nopartialsetind__c 
+from rstk__soprod__c 
+where rstk__soprod_nopartialsetind__c = false
+order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Product inds Update complete'); }
+for (rstk__soprod__c se: ses) {
+se.rstk__soprod_shipsetidind__c = true;
+se.rstk__soprod_nopartialsind__c = true;
+se.rstk__soprod_nopartialsetind__c = true;
+se.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update ses;
+ 

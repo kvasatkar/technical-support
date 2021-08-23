@@ -1,0 +1,18 @@
+//Non-Packaged Org Script
+soprod__c[] soprods = [select Id, soprod_reqserviceind__c, soprod_sowarrtypeind__c, triggeroptions__c from soprod__c where soprod_reqserviceind__c = false or soprod_sowarrtypeind__c = false];
+for (soprod__c soprod : soprods) {
+soprod.soprod_reqserviceind__c = true;
+soprod.soprod_sowarrtypeind__c = true;
+soprod.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update soprods;
+ 
+ 
+//Packaged Org Script
+rstk__soprod__c[] soprods = [select Id, rstk__soprod_reqserviceind__c, rstk__soprod_sowarrtypeind__c, rstk__triggeroptions__c from rstk__soprod__c where rstk__soprod_reqserviceind__c = false or rstk__soprod_sowarrtypeind__c = false limit 5000];
+for (rstk__soprod__c soprod : soprods) {
+soprod.rstk__soprod_reqserviceind__c = true;
+soprod.rstk__soprod_sowarrtypeind__c = true;
+soprod.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+update soprods;

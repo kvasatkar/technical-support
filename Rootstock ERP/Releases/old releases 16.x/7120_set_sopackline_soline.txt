@@ -1,0 +1,31 @@
+Map<String, String> linesMap = new Map<String, String>();
+Set<String> ordersToFetch = new Set<String>();
+
+rstk__sopackline__c[] sopacklines = [
+	select rstk__sopackline_orderline__c, rstk__sopackline_salesorder__c
+	from rstk__sopackline__c where rstk__sopackline_soline__c = null limit 9000];
+System.debug(Logginglevel.INFO, 'test sopacklines found: ' + sopacklines.size());
+
+for (rstk__sopackline__c sopackline : sopacklines) {
+	ordersToFetch.add(sopackline.rstk__sopackline_salesorder__c);
+}
+
+rstk__soline__c[] solines = [
+	select rstk__soline_line__c, rstk__soline_sohdr__r.rstk__sohdr_order__c
+	from rstk__soline__c where rstk__soline_sohdr__r.rstk__sohdr_order__c in :ordersToFetch 
+    order by createddate limit 40000];
+System.debug(Logginglevel.INFO, 'test solines found: ' + solines.size());
+
+for (rstk__soline__c line : solines) {
+	linesMap.put(line.rstk__soline_sohdr__r.rstk__sohdr_order__c + '_' + line.rstk__soline_line__c, line.Id);
+}
+
+for (rstk__sopackline__c sopackline : sopacklines) {
+    String lineId = linesMap.get(sopackline.rstk__sopackline_salesorder__c + '_' + sopackline.rstk__sopackline_orderline__c);
+	sopackline.rstk__sopackline_soline__c = lineId;
+    sopackline.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+}
+
+if (sopacklines.size() > 0) {
+	update sopacklines;
+}

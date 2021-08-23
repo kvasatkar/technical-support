@@ -1,0 +1,43 @@
+Boolean doUpdate = false;
+
+List<rstk__wocst__c> wocstsToUpdate = new List<rstk__wocst__c>();
+rstk__wocst__c[] wocsts = [select Id, Name,
+							rstk__wocst_qtyreq__c,
+							rstk__wocst_opsrmng__c,
+							rstk__triggeroptions__c,
+								(select rstk__woordopact_qtyscrap__c,
+										rstk__woordopact_qtyacc__c,
+										rstk__woordopact_qtysplit__c,
+										rstk__woordopact_qtymoved__c
+								from rstk__woordopacts__r)
+					from rstk__wocst__c
+					where rstk__wocst_ordsts__c = '2' or rstk__wocst_ordsts__c = '3' or rstk__wocst_ordsts__c = '4' or rstk__wocst_ordsts__c = '5'];
+
+for (rstk__wocst__c wocst : wocsts) {
+	if (wocst.rstk__woordopacts__r != null && wocst.rstk__woordopacts__r.size() > 0) {
+		Integer totalOps = 0;
+		Integer opsRemaining = 0;
+		for (rstk__woordopact__c woordopact : wocst.rstk__woordopacts__r) {
+			totalOps++;
+			Decimal qty = woordopact.rstk__woordopact_qtyscrap__c + woordopact.rstk__woordopact_qtyacc__c + woordopact.rstk__woordopact_qtysplit__c + woordopact.rstk__woordopact_qtymoved__c;
+			if (wocst.rstk__wocst_qtyreq__c != qty) {
+				opsRemaining++;
+			}
+		}
+		if (wocst.rstk__wocst_opsrmng__c != opsRemaining) {
+			System.debug(LoggingLevel.INFO, 'WO('+wocst.Id+') WOCST_OPSRMNG is ' + wocst.rstk__wocst_opsrmng__c + '. Should be ' + opsRemaining);
+			wocst.rstk__wocst_opsrmng__c = opsRemaining;
+			wocst.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+			wocstsToUpdate.add(wocst);
+			if (wocstsToUpdate.size() > 20) { break;} 
+		}
+	}
+}
+if (doUpdate) {
+	if (wocstsToUpdate.size() > 0) {
+		update wocstsToUpdate;
+		System.debug(LoggingLevel.INFO, 'Updated ' + wocstsToUpdate.size() + ' Work Orders');
+	}
+} else {
+	System.debug(LoggingLevel.INFO, 'Would have updated ' + wocstsToUpdate.size() + ' Work Orders');
+}

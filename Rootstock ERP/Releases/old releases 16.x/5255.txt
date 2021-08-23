@@ -1,0 +1,40 @@
+// 5255 - 
+menu__c menu = new menu__c(
+Name = 'Supplier Part Change Request',
+label__c = 'Supplier Part Change Request',
+header__c = 'iblogistics',
+parentid__c = 901,
+sequence__c = 27,
+subsection__c = '',
+appsecuritykey__c = 'm_supitemchg__c',
+href__c = '/apex/listview?recType=supitemchg',
+pagekey__c = 'supitemchg__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'supitemchg',
+id__c = 326,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+//packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Supplier Part Change Request',
+rstk__label__c = 'Supplier Part Change Request',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 901,
+rstk__sequence__c = 27,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_supitemchg__c',
+rstk__href__c = '/apex/listview?recType=supitemchg',
+rstk__pagekey__c = 'supitemchg__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'supitemchg',
+rstk__id__c = 326,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

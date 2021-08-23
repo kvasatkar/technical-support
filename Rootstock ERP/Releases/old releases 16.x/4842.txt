@@ -1,0 +1,39 @@
+// non-packaged orgs
+menu__c menu = new menu__c(
+Name = 'Postal Code Maintenance',
+header__c = 'syzip',
+href__c = '/apex/listview?recType=syzip',
+imageclass__c = 'Custom57Mru',
+label__c = 'Postal Code Maintenance',
+sequence__c = 61,
+inactive__c = false,
+parentid__c = 310,
+level__c = 1,
+id__c = 312,
+appsecuritykey__c = 'm_syzip__c',
+subsection__c = '',
+pagekey__c = 'syzip__c',
+recordtype__c = 'syzip'
+//menutype__c = 2
+);
+insert menu;
+
+// packaged orgs
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Postal Code Maintenance',
+rstk__header__c = 'syzip',
+rstk__href__c = '/apex/listview?recType=syzip',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'Postal Code Maintenance',
+rstk__sequence__c = 61,
+rstk__inactive__c = false,
+rstk__parentid__c = 310,
+rstk__level__c = 1,
+rstk__id__c = 312,
+rstk__appsecuritykey__c = 'm_syzip__c',
+rstk__subsection__c = '',
+rstk__pagekey__c = 'syzip__c',
+rstk__recordtype__c = 'syzip'
+//rstk__menutype__c = 2
+);
+insert menu;

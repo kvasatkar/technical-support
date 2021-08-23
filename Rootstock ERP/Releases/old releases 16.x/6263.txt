@@ -1,0 +1,12 @@
+menu__c[] menus = [select id from menu__c where name = 'Credit Release' and keyprefix__c = 'Custom57Mru'];
+for (menu__c menu : menus) {
+  menu.keyprefix__c = '';
+}
+update menus;
+
+
+rstk__menu__c[] menus = [select id from rstk__menu__c where name = 'Credit Release' and rstk__keyprefix__c = 'Custom57Mru'];
+for (rstk__menu__c menu : menus) {
+  menu.rstk__keyprefix__c = '';
+}
+update menus;

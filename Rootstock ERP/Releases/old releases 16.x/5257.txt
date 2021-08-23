@@ -1,0 +1,40 @@
+// 5257 - Receptacle Master
+menu__c menu = new menu__c(
+Name = 'Receptacle Master',
+label__c = 'Receptacle Master',
+header__c = 'iblogistics',
+parentid__c = 901,
+sequence__c = 28,
+subsection__c = '',
+appsecuritykey__c = 'm_icreceptacle__c',
+href__c = '/apex/listview?recType=icreceptacle',
+pagekey__c = 'icreceptacle__c',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'icreceptacle',
+id__c = 328,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Receptacle Master',
+rstk__label__c = 'Receptacle Master',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 901,
+rstk__sequence__c = 28,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_icreceptacle__c',
+rstk__href__c = '/apex/listview?recType=icreceptacle',
+rstk__pagekey__c = 'icreceptacle__c',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'icreceptacle',
+rstk__id__c = 328,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

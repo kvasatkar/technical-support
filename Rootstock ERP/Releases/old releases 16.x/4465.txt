@@ -1,0 +1,17 @@
+// Set Variable UMCF Item and Variable UMCF Item Ind to blank
+// Apply to all orgs except Re-Steel
+Boolean updateRecs = false;
+rstk__poitem__c[] poitemUpdates = new List<rstk__poitem__c>();
+
+rstk__poitem__c[] poitems = [select id, rstk__poitem_varumcfitem__c, rstk__poitem_varumcfitemind__c from rstk__poitem__c];
+for (rstk__poitem__c poitem : poitems) {
+  if (poitem.rstk__poitem_varumcfitem__c == true || poitem.rstk__poitem_varumcfitemind__c == true) {
+	  poitem.rstk__poitem_varumcfitem__c = false;
+	  poitem.rstk__poitem_varumcfitemind__c = false;
+	  poitem.rstk__triggeroptions__c = '{"SAE":"1"}';
+	  poitemUpdates.add(poitem);
+	  //updateRecs = true;
+  }  
+}
+System.debug(Logginglevel.INFO, 'Found ' + poitemUpdates.size() + ' records');
+if (updateRecs) update poitemUpdates;

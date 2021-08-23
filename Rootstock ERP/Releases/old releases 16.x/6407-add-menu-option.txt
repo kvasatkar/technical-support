@@ -1,0 +1,40 @@
+// 6407 - Create Invoice for All Shippers
+menu__c menu = new menu__c(
+Name = 'Create Invoice for All Shippers',
+label__c = 'Create Invoice for All Shippers',
+header__c = 'csg',
+parentid__c = 310,
+sequence__c = 63,
+subsection__c = '',
+appsecuritykey__c = 'm_crtshpinvs__c',
+href__c = '/apex/InvoiceShippersInDiv',
+pagekey__c = 'invoiceshippersindiv',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = 'sydata',
+id__c = 304,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+// 6407 - Create Invoice for All Shippers
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Create Invoice for All Shippers',
+rstk__label__c = 'Create Invoice for All Shippers',
+rstk__header__c = 'csg',
+rstk__parentid__c = 310,
+rstk__sequence__c = 63,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_crtshpinvs__c',
+rstk__href__c = '/apex/InvoiceShippersInDiv',
+rstk__pagekey__c = 'invoiceshippersindiv',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = 'sydata',
+rstk__id__c = 304,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

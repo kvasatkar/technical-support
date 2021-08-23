@@ -1,0 +1,31 @@
+// Non Package version
+class AException extends Exception {}
+solineextn__c[] ses = [select solineextn_orgid__c, solineextn_soline__r.soline_orgid__c
+from solineextn__c 
+where solineextn_orgid__c != null and solineextn_soline__r.soline_orgid__c = null 
+order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Sales Order Group Update complete'); }
+List<soline__c> toupdate = new List<soline__c>();
+for (solineextn__c se: ses) {
+soline__c soline = se.solineextn_soline__r;
+soline.soline_orgid__c = se.solineextn_orgid__c;
+soline.triggeroptions__c = '{"ST":"1","SAE":"1"}';
+toupdate.add(soline);
+}
+update toupdate;
+
+// Packaged version
+class AException extends Exception {}
+rstk__solineextn__c[] ses = [select rstk__solineextn_orgid__c, rstk__solineextn_soline__r.rstk__soline_orgid__c
+from rstk__solineextn__c 
+where rstk__solineextn_orgid__c != null and rstk__solineextn_soline__r.rstk__soline_orgid__c = null 
+order by lastmodifieddate limit 2000];
+if (ses.size() == 0) { throw new AException('Sales Order Group Update complete'); }
+List<rstk__soline__c> toupdate = new List<rstk__soline__c>();
+for (rstk__solineextn__c se: ses) {
+rstk__soline__c soline = se.rstk__solineextn_soline__r;
+soline.rstk__soline_orgid__c = se.rstk__solineextn_orgid__c;
+soline.rstk__triggeroptions__c = '{"ST":"1","SAE":"1"}';
+toupdate.add(soline);
+}
+update toupdate;

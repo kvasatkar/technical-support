@@ -1,0 +1,47 @@
+// - Ticket 13737 Menu Add, Pre-Delete
+rstk__menu__c[] menud01 = [select id, Name, rstk__parentid__c, rstk__header__c, rstk__label__c from rstk__menu__c 
+where Name like 'SO Line Amortization%'];
+
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+// - Ticket 13737 Menu Insert1
+rstk__menu__c menu01 = new rstk__menu__c(
+Name = 'SO Line Amortization Schedules',
+rstk__header__c = 'salesorder',
+rstk__href__c = '/apex/listview?rectype=soamort',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SO Line Amortization Schedules',
+rstk__sequence__c = 17,
+rstk__inactive__c = false,
+rstk__parentid__c = 15,
+rstk__level__c = 1,
+rstk__id__c = 337,
+rstk__appsecuritykey__c = 'm_soamort__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'soamort__c',
+rstk__recordtype__c = ' '
+//rstk__menutype__c = 1
+);
+insert menu01;
+
+// - Ticket 13737 Menu Insert2
+rstk__menu__c menu02 = new rstk__menu__c(
+Name = 'SO Line Amortization Processing',
+rstk__header__c = 'salesorder',
+rstk__href__c = '/apex/salesOrderAmortizationProcess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__label__c = 'SO Line Amortization Processing',
+rstk__sequence__c = 18,
+rstk__inactive__c = false,
+rstk__parentid__c = 15,
+rstk__level__c = 1,
+rstk__id__c = 338,
+rstk__appsecuritykey__c = 'm_soamortschedule__c',
+rstk__subsection__c = ' ',
+rstk__pagekey__c = 'salesorderamortizationprocess',
+rstk__recordtype__c = ' '
+//rstk__menutype__c = 1
+);
+insert menu02;

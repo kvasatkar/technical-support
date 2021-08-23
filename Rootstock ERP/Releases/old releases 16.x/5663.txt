@@ -1,0 +1,40 @@
+// 5663
+menu__c menu = new menu__c(
+Name = 'Consolidated Requisition Review and Processing',
+label__c = 'Consolidated Requisition Review and Processing',
+header__c = 'iblogistics',
+parentid__c = 901,
+sequence__c = 31,
+subsection__c = '',
+appsecuritykey__c = 'm_consreqproc__c',
+href__c = '/apex/ConsReqRevProc',
+pagekey__c = 'consreqrevproc',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+//recordtype__c = 'poasn',
+id__c = 329,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'Consolidated Requisition Review and Processing',
+rstk__label__c = 'Consolidated Requisition Review and Processing',
+rstk__header__c = 'iblogistics',
+rstk__parentid__c = 901,
+rstk__sequence__c = 31,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_consreqproc__c',
+rstk__href__c = '/apex/ConsReqRevProc',
+rstk__pagekey__c = 'consreqrevproc',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+//rstk__recordtype__c = 'poasn',
+rstk__id__c = 329,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

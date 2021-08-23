@@ -1,0 +1,11 @@
+//non packaged orgs
+menu__c[] menu = [select id from menu__c where parentid__c = 304];
+delete menu;
+menu__c[] menu2 = [select id from menu__c where id__c = 304];
+delete menu2;
+
+//packaged orgs
+rstk__menu__c[] menu = [select id from rstk__menu__c where rstk__parentid__c = 304];
+delete menu;
+rstk__menu__c[] menu2 = [select id from rstk__menu__c where rstk__id__c = 304];
+delete menu2;

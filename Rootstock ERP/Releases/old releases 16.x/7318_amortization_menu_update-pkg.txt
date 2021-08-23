@@ -1,0 +1,58 @@
+// - Amortization Menu option exists, Pre-Delete
+rstk__menu__c[] menud01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'SO Line Amortization Schedules'];
+if (menud01.size() > 0) {
+delete menud01;
+}
+
+rstk__menu__c[] menud02 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'SO Line Amortization Processing'];
+if (menud02.size() > 0) {
+delete menud02;
+}
+
+// - Insert Amortization Menu selection 01
+rstk__menu__c menua01 = new rstk__menu__c(
+Name = 'SO Line Amortization Schedules',
+rstk__label__c = 'SO Line Amortization Schedules',
+rstk__header__c = 'quickbooks',
+rstk__href__c = '/apex/listview?rectype=soamort',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 8,
+rstk__inactive__c = false,
+rstk__parentid__c = 17,
+rstk__level__c = 1,
+rstk__id__c = 337,
+rstk__appsecuritykey__c = 'm_soamort__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'soamort__c',
+rstk__recordtype__c = ' ',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua01;
+
+// - Insert Amortization Menu selection 02
+rstk__menu__c menua02 = new rstk__menu__c(
+Name = 'SO Line Amortization Processing',
+rstk__label__c = 'SO Line Amortization Processing',
+rstk__header__c = 'quickbooks',
+rstk__href__c = '/apex/salesOrderAmortizationProcess',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 9,
+rstk__inactive__c = false,
+rstk__parentid__c = 17,
+rstk__level__c = 1,
+rstk__id__c = 338,
+rstk__appsecuritykey__c = 'm_soamortschedule__c',
+rstk__subsection__c = 'Maintenance',
+rstk__pagekey__c = 'salesorderamortizationprocess',
+rstk__recordtype__c = ' ',
+rstk__hideaddlink__c = false,
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menua02;

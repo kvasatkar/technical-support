@@ -1,0 +1,39 @@
+menu__c menu = new menu__c(
+Name = 'General Journal Export',
+label__c = 'General Journal Export',
+header__c = 'quickbooks',
+parentid__c = 17,
+sequence__c = 7,
+subsection__c = '',
+appsecuritykey__c = 'm_generaljournalexport__c',
+href__c = '/apex/TransactionExport',
+pagekey__c = 'transactionexport',
+imageclass__c = 'Custom57Mru',
+level__c = 1,
+recordtype__c = '',
+id__c = 300,
+inactive__c = false
+//menutype__c = 2
+);
+insert menu;
+
+
+
+rstk__menu__c menu = new rstk__menu__c(
+Name = 'General Journal Export',
+rstk__label__c = 'General Journal Export',
+rstk__header__c = 'quickbooks',
+rstk__parentid__c = 17,
+rstk__sequence__c = 7,
+rstk__subsection__c = '',
+rstk__appsecuritykey__c = 'm_generaljournalexport__c',
+rstk__href__c = '/apex/TransactionExport',
+rstk__pagekey__c = 'transactionexport',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__level__c = 1,
+rstk__recordtype__c = '',
+rstk__id__c = 300,
+rstk__inactive__c = false
+//rstk__menutype__c = 2
+);
+insert menu;

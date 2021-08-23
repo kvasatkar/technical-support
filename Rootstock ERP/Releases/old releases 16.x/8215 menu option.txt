@@ -1,0 +1,28 @@
+// - Inventory Valuations By Date Menu option exists, Pre-Delete
+rstk__menu__c[] menudel01 = [select id, rstk__label__c from rstk__menu__c 
+where rstk__label__c = 'Inventory Valuations By Date'];
+if (menudel01.size() > 0) {
+delete menudel01;
+}
+ 
+// - Insert Inventory Valuations By Date Menu selection
+rstk__menu__c menuadd01 = new rstk__menu__c(
+Name = 'Inventory Valuations By Date',
+rstk__label__c = 'Inventory Valuations By Date',
+rstk__header__c = 'inventorymgmt',
+rstk__href__c = '/apex/InventoryValuationByDate',
+rstk__imageclass__c = 'Custom57Mru',
+rstk__sequence__c = 25,
+rstk__inactive__c = false,
+rstk__parentid__c = 8,
+rstk__level__c = 1,
+rstk__id__c = 301,
+rstk__appsecuritykey__c = 'm_icitemval__c',
+rstk__subsection__c = 'Qty / Costs / Info',
+rstk__pagekey__c = 'inventoryvaluationbydate',
+rstk__recordtype__c = 'icitemval',
+rstk__activity_enabled__c = false,
+rstk__approval_enabled__c = false
+//rstk__menutype__c = 1
+);
+insert menuadd01;
