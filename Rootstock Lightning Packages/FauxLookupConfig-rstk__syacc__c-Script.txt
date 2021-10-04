@@ -1,0 +1,55 @@
+/*
+* This script will create Faux_Lookup_Config__mdt records for the GL Account related fields on the SYACC object based on the financial setup in the org
+* The target faux lookup reference object will be either GLACCT or CODAGENERALLEDGERACCOUNT or GL_ACCOUNT
+*
+*/
+Map<String, String> targetObjects = new Map<String, String>{
+    'Rootstock' => 'rstkf__glacct__c',
+    'FinancialForce' => 'c2g__codaGeneralLedgerAccount__c',
+    'Accounting Seed' => 'AcctSeed__GL_Account__c'
+};
+rstk__syconfig__c sc = [SELECT rstk__syconfig_financials__c FROM rstk__syconfig__c LIMIT 1];
+String targetObject = targetObjects.get(sc.rstk__syconfig_financials__c);
+if(targetObject != null) {
+    Metadata.DeployContainer dc = new Metadata.DeployContainer();
+    List<String> mdtRecordNames = new List<String> {
+        'GL Account ID Reference', 'GL Acct Freight Reference', 'GL Acct Fringe Ohd Reference', 'GL Acct Labor Ohd Reference', 'GL Acct Labor Reference',
+        'GL Acct Mach Ohd Reference', 'GL Acct Material Ohd Reference', 'GL Acct Material Reference', 'GL Acct Oth Landed Reference',
+        'GL Acct Subc Labor Reference', 'GL Acct Subc Mtl Reference'
+    };
+    List<String> fields = new List<String> {
+        'rootstock__Active__c', 'rootstock__Source_Object_Name__c', 'rootstock__Source_Object_Field_Name__c', 'rootstock__Reference_To_Object_Name__c'
+    };
+    List<List<Object>> fieldValues = new List<List<Object>> {
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxrefacct__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctfrght__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctohdfrng__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctohdlab__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctlab__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctohdmach__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctohdmtl__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctmtl__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctothlnd__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctsublab__c', targetObject},
+        new List<Object> {true, 'rstk__syacc__c', 'rstk__syacc_glxacctsubmtl__c', targetObject}
+    };
+    Integer row = 0;
+    for(String mdtName : mdtRecordNames) {
+        Metadata.CustomMetadata cm =  new Metadata.CustomMetadata();
+        cm.label = mdtName;
+        cm.fullName = 'rootstock__Faux_Lookup_Config__mdt.' + mdtName.replaceAll(' ', '');
+        Integer col = 0;
+        for(String fld : fields) {
+            Metadata.CustomMetadataValue cmv = new Metadata.CustomMetadataValue();
+            cmv.field = fld;
+            cmv.value = fieldValues[row][col];
+            cm.values.add(cmv);
+            col++;
+        }
+        row++;
+        dc.addMetadata(cm);
+    }
+    Metadata.Operations.enqueueDeployment(dc, null);
+} else {
+    System.debug('No Accounting System setup found on Syconfig');
+}
