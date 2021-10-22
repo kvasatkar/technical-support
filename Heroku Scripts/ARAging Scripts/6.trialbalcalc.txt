@@ -1,0 +1,217 @@
+CREATE SEQUENCE prereleasealpha.trialbalcalc__c_id_seq
+    INCREMENT 1
+    START 14836
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE prereleasealpha.trialbalcalc__c_id_seq
+    OWNER TO u9tgm7n0rjh5ge;
+
+CREATE SEQUENCE prereleasealpha.trialbalcalc__c_recnum_seq
+    INCREMENT 1
+    START 16973
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE prereleasealpha.trialbalcalc__c_recnum_seq
+    OWNER TO u9tgm7n0rjh5ge;
+
+-- Table: prereleasealpha.trialbalcalc__c
+
+-- DROP TABLE prereleasealpha.trialbalcalc__c;
+
+CREATE TABLE prereleasealpha.trialbalcalc__c
+(
+    trialbalcalc_col0__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol45__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol34__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol23__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol12__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol44__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol33__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol22__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol11__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol43__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol32__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol21__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol10__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_extendedspreadsheet__c boolean,
+    trialbalcalc_stylecol42__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol31__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol20__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol52__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol41__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol30__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol51__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol40__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol50__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_glusr__c character varying(18) COLLATE pg_catalog."default",
+    trialbalcalc_glusr__r__externalid__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_glacctnum__c character varying(50) COLLATE pg_catalog."default",
+    trialbalcalc_reportcols__c character varying(3) COLLATE pg_catalog."default",
+    trialbalcalc_origin__c character varying(255) COLLATE pg_catalog."default",
+    trialbalcalc_vendorcustnum__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol9__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_agingdate__c date,
+    trialbalcalc_rectype__c character varying(255) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol8__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_glacctname__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol7__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col19__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol6__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col29__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col18__c character varying(100) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    trialbalcalc_stylecol5__c character varying(120) COLLATE pg_catalog."default",
+    systemmodstamp timestamp without time zone,
+    trialbalcalc_col39__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col28__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col17__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col49__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col38__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col27__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col16__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol4__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col48__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_printorexport__c character varying(255) COLLATE pg_catalog."default",
+    trialbalcalc_col37__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col26__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col15__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol3__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col47__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col36__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col25__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col14__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol2__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col46__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col35__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col24__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col13__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol1__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col12__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_glcmp__c character varying(18) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol0__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_cutoffdate__c date,
+    trialbalcalc_col45__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col34__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col23__c character varying(100) COLLATE pg_catalog."default",
+    createddate timestamp without time zone,
+    trialbalcalc_glacct__r__externalid__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col44__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col33__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col22__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col11__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col9__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col43__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col32__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col21__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col10__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col8__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_glacct__c character varying(18) COLLATE pg_catalog."default",
+    trialbalcalc_col42__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col31__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col20__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col7__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol19__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col52__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col41__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col30__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_glcmp__r__externalid__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_vendorcusttitle__c character varying(200) COLLATE pg_catalog."default",
+    trialbalcalc_col6__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol29__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol18__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col51__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col40__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_col5__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol39__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol28__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol17__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col50__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_reportcount__c character varying(5) COLLATE pg_catalog."default",
+    trialbalcalc_col4__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol49__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol38__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol27__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol16__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol15__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col3__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol48__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol37__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol26__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col2__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol47__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol36__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol25__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol14__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_col1__c character varying(100) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol46__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol35__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol24__c character varying(120) COLLATE pg_catalog."default",
+    trialbalcalc_stylecol13__c character varying(120) COLLATE pg_catalog."default",
+    sfid character varying(18) COLLATE pg_catalog."default",
+    id integer NOT NULL DEFAULT nextval('prereleasealpha.trialbalcalc__c_id_seq'::regclass),
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    trialbalcalcs_processlog__c character varying(18) COLLATE pg_catalog."default",
+    trialbalcalcs_recnum__c double precision NOT NULL DEFAULT nextval	('prereleasealpha.trialbalcalc__c_recnum_seq'::regclass),
+    trialbalcalc_arinvdue__c character varying(18) COLLATE pg_catalog."default",	
+    CONSTRAINT trialbalcalc_pk PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.trialbalcalc__c
+    OWNER to u9tgm7n0rjh5ge;
+
+COMMENT ON COLUMN prereleasealpha.trialbalcalc__c.trialbalcalcs_processlog__c
+    IS 'trialbalcalcs_processlog__c';
+
+-- Index: hc_idx_trialbalcalc__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_trialbalcalc__c_systemmodstamp;
+
+CREATE INDEX hc_idx_trialbalcalc__c_systemmodstamp
+    ON prereleasealpha.trialbalcalc__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hc_idx_trialbalcalc__c_trialbalcalc_glacct__c
+
+-- DROP INDEX prereleasealpha.hc_idx_trialbalcalc__c_trialbalcalc_glacct__c;
+
+CREATE INDEX hc_idx_trialbalcalc__c_trialbalcalc_glacct__c
+    ON prereleasealpha.trialbalcalc__c USING btree
+    (trialbalcalc_glacct__c COLLATE pg_catalog."default")
+    TABLESPACE pg_default;
+
+-- Index: hc_idx_trialbalcalc__c_trialbalcalc_glcmp__c
+
+-- DROP INDEX prereleasealpha.hc_idx_trialbalcalc__c_trialbalcalc_glcmp__c;
+
+CREATE INDEX hc_idx_trialbalcalc__c_trialbalcalc_glcmp__c
+    ON prereleasealpha.trialbalcalc__c USING btree
+    (trialbalcalc_glcmp__c COLLATE pg_catalog."default")
+    TABLESPACE pg_default;
+
+-- Index: hc_idx_trialbalcalc__c_trialbalcalc_glusr__c
+
+-- DROP INDEX prereleasealpha.hc_idx_trialbalcalc__c_trialbalcalc_glusr__c;
+
+CREATE INDEX hc_idx_trialbalcalc__c_trialbalcalc_glusr__c
+    ON prereleasealpha.trialbalcalc__c USING btree
+    (trialbalcalc_glusr__c COLLATE pg_catalog."default")
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_trialbalcalc__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_trialbalcalc__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_trialbalcalc__c_sfid
+    ON prereleasealpha.trialbalcalc__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;

@@ -1,0 +1,64 @@
+CREATE SEQUENCE prereleasealpha.aragingh__c_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE prereleasealpha.aragingh__c_id_seq
+    OWNER TO u9tgm7n0rjh5ge;
+
+-- Table: prereleasealpha.aragingh__c
+
+-- DROP TABLE prereleasealpha.aragingh__c;
+
+CREATE TABLE prereleasealpha.aragingh__c
+(
+    aragingh_glcmp__c character varying(18) COLLATE pg_catalog."default",
+    aragingh_cutoffdate__c date,
+    aragingh_recordcount__c double precision,
+    aragingh_numcol6head__c character varying(50) COLLATE pg_catalog."default",
+    aragingh_numcol5head__c character varying(50) COLLATE pg_catalog."default",
+    aragingh_numcol4head__c character varying(50) COLLATE pg_catalog."default",
+    aragingh_numcol3head__c character varying(50) COLLATE pg_catalog."default",
+    aragingh_numcol2head__c character varying(50) COLLATE pg_catalog."default",
+    aragingh_numcol1head__c character varying(50) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    systemmodstamp timestamp without time zone,
+    aragingh_glusr__c character varying(18) COLLATE pg_catalog."default",
+    createddate timestamp without time zone,
+    createdbyid character varying(18) COLLATE pg_catalog."default",
+    aragingh_agingdate__c date,
+    aragingh_reportdate__c date,
+    sfid character varying(18) COLLATE pg_catalog."default" NOT NULL,
+    id integer NOT NULL DEFAULT nextval('prereleasealpha.aragingh__c_id_seq'::regclass),
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    aragingh_processlog__c character varying(18) COLLATE pg_catalog."default",
+    CONSTRAINT aragingh__c_pkey PRIMARY KEY (sfid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.aragingh__c
+    OWNER to u9tgm7n0rjh5ge;
+
+-- Index: hc_idx_aragingh__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_aragingh__c_systemmodstamp;
+
+CREATE INDEX hc_idx_aragingh__c_systemmodstamp
+    ON prereleasealpha.aragingh__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_aragingh__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_aragingh__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_aragingh__c_sfid
+    ON prereleasealpha.aragingh__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;

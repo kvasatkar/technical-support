@@ -1,0 +1,56 @@
+-- Table: prereleasealpha.processlogf__c
+
+-- DROP TABLE prereleasealpha.processlogf__c;
+
+CREATE TABLE prereleasealpha.processlogf__c
+(
+    runby__c character varying(18) COLLATE pg_catalog."default",
+    output__c character varying(40) COLLATE pg_catalog."default",
+    errorstack__c text COLLATE pg_catalog."default",
+    errormessage__c character varying(255) COLLATE pg_catalog."default",
+    iserror__c boolean,
+    warning__c character varying(1000) COLLATE pg_catalog."default",
+    errormessagelong__c text COLLATE pg_catalog."default",
+    errorrecord__c character varying(255) COLLATE pg_catalog."default",
+    name character varying(80) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    systemmodstamp timestamp without time zone,
+    substatus__c character varying(255) COLLATE pg_catalog."default",
+    status__c character varying(200) COLLATE pg_catalog."default",
+    isheroku__c boolean,
+    createddate timestamp without time zone,
+    completed__c boolean,
+    input__c text COLLATE pg_catalog."default",
+    isdebug__c boolean,
+    log__c text COLLATE pg_catalog."default",
+    sfid character varying(18) COLLATE pg_catalog."default" NOT NULL,
+    id integer,
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    CONSTRAINT processlogf__c_pkey PRIMARY KEY (sfid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.processlogf__c
+    OWNER to u9tgm7n0rjh5ge;
+
+-- Index: hc_idx_processlogf__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_processlogf__c_systemmodstamp;
+
+CREATE INDEX hc_idx_processlogf__c_systemmodstamp
+    ON prereleasealpha.processlogf__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_processlogf__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_processlogf__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_processlogf__c_sfid
+    ON prereleasealpha.processlogf__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;

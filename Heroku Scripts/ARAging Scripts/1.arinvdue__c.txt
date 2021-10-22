@@ -1,0 +1,74 @@
+-- Table: prereleasealpha.arinvdue__c
+
+-- DROP TABLE prereleasealpha.arinvdue__c;
+
+CREATE TABLE prereleasealpha.arinvdue__c
+(
+    arinvdue_homeamt__c double precision,
+    arinvdue_discntduedate__c date,
+    arinvdue_discntpct__c double precision,
+    name character varying(80) COLLATE pg_catalog."default",
+    arinvdue_maintamt__c double precision,
+    arinvdue_duedate__c date,
+    arinvdue_arinvtxn__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_socustcmpno__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_soinv__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_arinvh__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_tranid__c character varying(30) COLLATE pg_catalog."default",
+    arinvtxn_trantype__c character varying(255) COLLATE pg_catalog."default",
+    arinvtxn_maintcurr__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_trandate__c date,
+    arinvtxn_glacct__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_exchrate__c double precision,
+    arinvtxn_homecurr__c character varying(18) COLLATE pg_catalog."default",
+    rstk__socust_custno__c character varying(40) COLLATE pg_catalog."default",
+    socustcmpno_fcustomernum__c character varying(255) COLLATE pg_catalog."default",
+    glacct_acct__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_soinv__name character varying(80) COLLATE pg_catalog."default",
+    homecurr_rstk__sycurr_currency__c character varying(255) COLLATE pg_catalog."default",
+    maintcurr_rstk__sycurr_currency__c character varying(255) COLLATE pg_catalog."default",
+    rstk__socust_sf_account_name__c character varying(255) COLLATE pg_catalog."default",
+    rstk__soinv_order__c character varying(18) COLLATE pg_catalog."default",
+    rstk__sohdr_custpo__c character varying(18) COLLATE pg_catalog."default",
+    arinvtxn_docno__c character varying(30) COLLATE pg_catalog."default",
+    arinvtxn_socust__c character varying(18) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    systemmodstamp timestamp without time zone,
+    createddate timestamp without time zone,
+    sfid character varying(18) COLLATE pg_catalog."default" NOT NULL,
+    id integer,
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    arinvh_glcmp__c character varying(18) COLLATE pg_catalog."default",
+    arinvh_accountingdate__c date,
+    arinvh_poststatus__c character varying(255) COLLATE pg_catalog."default",
+    arinvh_batchno__c character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT arinvdue_pk PRIMARY KEY (sfid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.arinvdue__c
+    OWNER to u9tgm7n0rjh5ge;
+COMMENT ON CONSTRAINT arinvdue_pk ON prereleasealpha.arinvdue__c
+    IS 'arinvdue_pk';
+
+-- Index: hc_idx_arinvdue__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_arinvdue__c_systemmodstamp;
+
+CREATE INDEX hc_idx_arinvdue__c_systemmodstamp
+    ON prereleasealpha.arinvdue__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_arinvdue__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_arinvdue__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_arinvdue__c_sfid
+    ON prereleasealpha.arinvdue__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;

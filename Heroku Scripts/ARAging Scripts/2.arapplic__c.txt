@@ -1,0 +1,59 @@
+-- Table: prereleasealpha.arapplic__c
+
+-- DROP TABLE prereleasealpha.arapplic__c;
+
+CREATE TABLE prereleasealpha.arapplic__c
+(
+    arapplic_trandate__c date,
+    arapplic_amthome__c double precision,
+    arapplic_arinvdue__c character varying(18) COLLATE pg_catalog."default",
+    name character varying(80) COLLATE pg_catalog."default",
+    arapplic_arcashd__c character varying(18) COLLATE pg_catalog."default",
+    arapplic_payhomeexchrate__c double precision,
+    arapplic_recordsource__c character varying(255) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    systemmodstamp timestamp without time zone,
+    arapplic_arinvtxn__c character varying(18) COLLATE pg_catalog."default",
+    arapplic_trantype__c character varying(255) COLLATE pg_catalog."default",
+    createddate timestamp without time zone,
+    arapplic_period__c double precision,
+    sfid character varying(18) COLLATE pg_catalog."default" NOT NULL,
+    id integer,
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    arinvh_glcmp__c character varying(18) COLLATE pg_catalog."default",
+    arinvh_accountingdate__c date,
+    arapplic_amtmaint__c double precision,
+    arcashh_poststatus__c character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT arapplic__c_pkey PRIMARY KEY (sfid),
+    arapplic_ardrhome__c double precision,
+    arapplic_arcrhome__c double precision,
+    arapplic_arcrmaint__c double precision,
+    arapplic_ardrmaint__c double precision
+
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.arapplic__c
+    OWNER to u9tgm7n0rjh5ge;
+
+-- Index: hc_idx_arapplic__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_arapplic__c_systemmodstamp;
+
+CREATE INDEX hc_idx_arapplic__c_systemmodstamp
+    ON prereleasealpha.arapplic__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_arapplic__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_arapplic__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_arapplic__c_sfid
+    ON prereleasealpha.arapplic__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;

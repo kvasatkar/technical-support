@@ -1,0 +1,71 @@
+CREATE SEQUENCE prereleasealpha.aragind__c_id_seq
+    INCREMENT 1
+    START 2676
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE prereleasealpha.aragind__c_id_seq
+    OWNER TO u9tgm7n0rjh5ge;
+
+-- Table: prereleasealpha.aragingd__c
+
+-- DROP TABLE prereleasealpha.aragingd__c;
+
+CREATE TABLE prereleasealpha.aragingd__c
+(
+    aragingd_aragingh__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_xsoinv__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_discntduedate__c date,
+    aragingd_xsocust__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_trandate__c date,
+    aragingd_duedate__c date,
+    aragingd_arinvdue__c character varying(18) COLLATE pg_catalog."default",
+    isdeleted boolean,
+    aragingd_docno__c character varying(50) COLLATE pg_catalog."default",
+    systemmodstamp timestamp without time zone,
+    aragingd_xopenamtmaint__c double precision,
+    createddate timestamp without time zone,
+    aragingd_tranid__c character varying(50) COLLATE pg_catalog."default",
+    aragingd_xopenamthome__c double precision,
+    aragingd_trantype__c character varying(100) COLLATE pg_catalog."default",
+    aragingd_xsohdr__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_xsocustcmpno__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_currencytext__c character varying(3) COLLATE pg_catalog."default",
+    aragingd_xcustpo__c character varying(30) COLLATE pg_catalog."default",
+    sfid character varying(18) COLLATE pg_catalog."default",
+    id integer NOT NULL DEFAULT nextval('prereleasealpha.aragind__c_id_seq'::regclass),
+    _hc_lastop character varying(32) COLLATE pg_catalog."default",
+    _hc_err text COLLATE pg_catalog."default",
+    aragingh_glcmp__c character varying(18) COLLATE pg_catalog."default",
+    aragingd_processlog__c character varying(18) COLLATE pg_catalog."default",
+    triggeroptions__c character varying(50)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE prereleasealpha.aragingd__c
+    OWNER to u9tgm7n0rjh5ge;
+
+COMMENT ON COLUMN prereleasealpha.aragingd__c.aragingh_glcmp__c
+    IS 'aragingh_glcmp__c';
+
+-- Index: hc_idx_aragingd__c_systemmodstamp
+
+-- DROP INDEX prereleasealpha.hc_idx_aragingd__c_systemmodstamp;
+
+CREATE INDEX hc_idx_aragingd__c_systemmodstamp
+    ON prereleasealpha.aragingd__c USING btree
+    (systemmodstamp)
+    TABLESPACE pg_default;
+
+-- Index: hcu_idx_aragingd__c_sfid
+
+-- DROP INDEX prereleasealpha.hcu_idx_aragingd__c_sfid;
+
+CREATE UNIQUE INDEX hcu_idx_aragingd__c_sfid
+    ON prereleasealpha.aragingd__c USING btree
+    (sfid COLLATE pg_catalog."default")
+    TABLESPACE pg_default;
