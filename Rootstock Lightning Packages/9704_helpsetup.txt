@@ -1,0 +1,27 @@
+// Add rootstock__Custom_UI_Rule__c help text
+rstk__helpsetup__c[] helpsetup_d01 = [select id from rstk__helpsetup__c where name = 'rootstock__Custom_UI_Rule__c'];
+if (helpsetup_d01.size() > 0) {
+	delete helpsetup_d01;
+}
+
+rstk__helpsetup__c helpsetup_a01 = new rstk__helpsetup__c(
+name = 'rootstock__Custom_UI_Rule__c',
+rstk__pagekey__c = 'rootstock__Custom_UI_Rule__c',
+rstk__helpurl1__c = 'kA04y000000kL06'
+);
+insert helpsetup_a01;
+
+
+// Add ROOTSTOCK__ACTION__C help text
+rstk__helpsetup__c[] helpsetup_d02 = [select id from rstk__helpsetup__c where name = 'rootstock__Custom_UI_Action__c'];
+if (helpsetup_d02.size() > 0) {
+	delete helpsetup_d02;
+}
+
+rstk__helpsetup__c helpsetup_a02 = new rstk__helpsetup__c(
+name = 'rootstock__Custom_UI_Action__c',
+rstk__pagekey__c = 'rootstock__Custom_UI_Action__c',
+rstk__helpurl1__c = 'kA04y000000kL06'
+);
+insert helpsetup_a02;
+
