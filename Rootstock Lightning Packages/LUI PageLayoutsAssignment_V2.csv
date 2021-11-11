@@ -1,0 +1,234 @@
+Name,Package_Version__c,Group__c,Sequence__c,Type__c,Action__c,Object_Name__c,PLA_Layout_Name__c,PLA_Record_Type_Name__c,Profile_Name__c
+Opportunity-Opportunity Layout,,RSTK-9651,,Profile,Update,Opportunity,rootstock__Opportunity Layout,,Admin
+rstk__confcomp__c-Configuration Selection Components Default Layout,,RSTK-9651,,Profile,Update,rstk__confcomp__c,rootstock__Configuration Selection Components Default Layout,,Admin
+rstk__confexcl__c-Configuration Selection Exclusions Default Layout,,RSTK-9651,,Profile,Update,rstk__confexcl__c,rootstock__Configuration Selection Exclusions Default Layout,,Admin
+rstk__confgroup__c-Configuration Group Default Layout,,RSTK-9651,,Profile,Update,rstk__confgroup__c,rootstock__Configuration Group Default Layout,,Admin
+rstk__confreq__c-Configuration Selection Requirements Default Layout,,RSTK-9651,,Profile,Update,rstk__confreq__c,rootstock__Configuration Selection Requirements Default Layout,,Admin
+rstk__confrec__c-Configuration Selection Recommendations Default Layout,,RSTK-9651,,Profile,Update,rstk__confrec__c,rootstock__Configuration Selection Recommendations Default Layout,,Admin
+rstk__confsel__c-Configuration Selections Default Layout,,RSTK-9651,,Profile,Update,rstk__confsel__c,rootstock__Configuration Selections Default Layout,,Admin
+rstk__csacctcntl__c-Cost Accounting Control Record Default Layout,,RSTK-9651,,Profile,Update,rstk__csacctcntl__c,rootstock__Cost Accounting Control Record Default Layout,,Admin
+rstk__csusracctcntl__c-Cost Acct User Control Record Default Layout,,RSTK-9651,,Profile,Update,rstk__csusracctcntl__c,rootstock__Cost Acct User Control Record Default Layout,,Admin
+rstk__ibconttype__c-Inbound Shipment Container Type Default Layout,,RSTK-9651,,Profile,Update,rstk__ibconttype__c,rootstock__Inbound Shipment Container Type Default Layout,,Admin
+rstk__ibship__c-Inbound Shipment Master Default Layout,,RSTK-9651,,Profile,Update,rstk__ibship__c,rootstock__Inbound Shipment Master Default Layout,,Admin
+rstk__ibrtetype__c-Inbound Shipment Route Type Default Layout,,RSTK-9651,,Profile,Update,rstk__ibrtetype__c,rootstock__Inbound Shipment Route Type Default Layout,,Admin
+rstk__ibshipcont__c-Inbound Shipment Container Default Layout,,RSTK-9651,,Profile,Update,rstk__ibshipcont__c,rootstock__Inbound Shipment Container Default Layout,,Admin
+rstk__ibshipcontdtl__c-Inbound Shipment Container Contents Default Layout,,RSTK-9651,,Profile,Update,rstk__ibshipcontdtl__c,rootstock__Inbound Shipment Container Contents Default Layout,,Admin
+rstk__ibshipstep__c-Inbound Shipment Step Default Layout,,RSTK-9651,,Profile,Update,rstk__ibshipstep__c,rootstock__Inbound Shipment Step Default Layout,,Admin
+rstk__ibroute__c-Inbound Shipment Route Master Default Layout,,RSTK-9651,,Profile,Update,rstk__ibroute__c,rootstock__Inbound Shipment Route Master Default Layout,,Admin
+rstk__ibroutestep__c-Inbound Shipment Route Steps Default Layout,,RSTK-9651,,Profile,Update,rstk__ibroutestep__c,rootstock__Inbound Shipment Route Steps Default Layout,,Admin
+rstk__iccomcod__c-Inventory Commodity Code Default Layout,,RSTK-9651,,Profile,Update,rstk__iccomcod__c,rootstock__Inventory Commodity Code Default Layout,,Admin
+rstk__iccomcodacc__c-Inventory Commodity Account Default Layout,,RSTK-9651,,Profile,Update,rstk__iccomcodacc__c,rootstock__Inventory Commodity Account Default Layout,,Admin
+rstk__icfcstdmd__c-Forecast Demand Default Layout,,RSTK-9651,,Profile,Update,rstk__icfcstdmd__c,rootstock__Forecast Demand Default Layout,,Admin
+rstk__icitem__c-Inventory Item Master - Count,,RSTK-9651,,Profile,Update,rstk__icitem__c,rootstock__Inventory Item Master - Count,,Admin
+rstk__icitem__c-Inventory Item Master Default Layout,,RSTK-9651,,Profile,Update,rstk__icitem__c,rootstock__Inventory Item Master Default Layout,,Admin
+rstk__icitemacc__c-Inventory Item Account Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemacc__c,rootstock__Inventory Item Account Default Layout,,Admin
+rstk__icitemlot__c-Inventory By Lot Number Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemlot__c,rootstock__Inventory By Lot Number Default Layout,,Admin
+rstk__icitemlotfeat__c-Inventory by Lot Number Features Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemlotfeat__c,rootstock__Inventory by Lot Number Features Default Layout,,Admin
+rstk__icitemproj__c-Inventory By Item%2FProject Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemproj__c,rootstock__Inventory By Item%2FProject Default Layout,,Admin
+rstk__icitemsite__c-Inventory Item by Site Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemsite__c,rootstock__Inventory Item by Site Default Layout,,Admin
+rstk__icitemsiteproj__c-Item by Site%2FProject Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemsiteproj__c,rootstock__Item by Site%2FProject Default Layout,,Admin
+rstk__icitemsrl__c-Inventory By Serial Number Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemsrl__c,rootstock__Inventory By Serial Number Default Layout,,Admin
+rstk__icitemsrlfeat__c-Inventory by Serial Number Features Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemsrlfeat__c,rootstock__Inventory by Serial Number Features Default Layout,,Admin
+rstk__icitemsrlhist__c-Item Serial Change History Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemsrlhist__c,rootstock__Item Serial Change History Default Layout,,Admin
+rstk__icitemstd__c-Inventory Item Standard Costs Default Layout,,RSTK-9651,,Profile,Update,rstk__icitemstd__c,rootstock__Inventory Item Standard Costs Default Layout,,Admin
+rstk__icjobcode__c-Job Code Master Default Layout,,RSTK-9651,,Profile,Update,rstk__icjobcode__c,rootstock__Job Code Master Default Layout,,Admin
+rstk__iclocitem__c-Inventory by Location - Count,,RSTK-9651,,Profile,Update,rstk__iclocitem__c,rootstock__Inventory by Location - Count,,Admin
+rstk__iclocitem__c-Inventory By Location Default Layout,,RSTK-9651,,Profile,Update,rstk__iclocitem__c,rootstock__Inventory By Location Default Layout,,Admin
+rstk__icmrprsch__c-MRP Action Messages Default Layout,,RSTK-9651,,Profile,Update,rstk__icmrprsch__c,rootstock__MRP Action Messages Default Layout,,Admin
+rstk__icreq__c-Inventory Requisitions Default Layout,,RSTK-9651,,Profile,Update,rstk__icreq__c,rootstock__Inventory Requisitions Default Layout,,Admin
+rstk__inspord__c-Inspection Order Default Layout,,RSTK-9651,,Profile,Update,rstk__inspord__c,rootstock__Inspection Order Default Layout,,Admin
+rstk__inspordsrl__c-Inspection Order Serial Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__inspordsrl__c,rootstock__Inspection Order Serial Detail Default Layout,,Admin
+rstk__inspordstep__c-Inspection Order Steps Default Layout,,RSTK-9651,,Profile,Update,rstk__inspordstep__c,rootstock__Inspection Order Steps Default Layout,,Admin
+rstk__mrplaunch__c-MRP Default Layout,,RSTK-9651,,Profile,Update,rstk__mrplaunch__c,rootstock__MRP Default Layout,,Admin
+rstk__mrpsch__c-Mrp Schedule Default Layout,,RSTK-9651,,Profile,Update,rstk__mrpsch__c,rootstock__Mrp Schedule Default Layout,,Admin
+rstk__mrpplannotes__c-MRPPLANNOTES Default Layout,,RSTK-9651,,Profile,Update,rstk__mrpplannotes__c,rootstock__MRPPLANNOTES Default Layout,,Admin
+rstk__pecoh__c-ECO Master Header Default Layout,,RSTK-9651,,Profile,Update,rstk__pecoh__c,rootstock__ECO Master Header Default Layout,,Admin
+rstk__pecoi__c-ECO Master Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__pecoi__c,rootstock__ECO Master Detail Default Layout,,Admin
+rstk__pecor__c-ECO Reason Codes Default Layout,,RSTK-9651,,Profile,Update,rstk__pecor__c,rootstock__ECO Reason Codes Default Layout,,Admin
+rstk__peitemrev__c-Engineering Item Revision Default Layout,,RSTK-9651,,Profile,Update,rstk__peitemrev__c,rootstock__Engineering Item Revision Default Layout,,Admin
+rstk__pjproj__c-Project Master Default Layout,,RSTK-9651,,Profile,Update,rstk__pjproj__c,rootstock__Project Master Default Layout,,Admin
+rstk__pjprojwbs__c-Project Charge Code Default Layout,,RSTK-9651,,Profile,Update,rstk__pjprojwbs__c,rootstock__Project Charge Code Default Layout,,Admin
+rstk__pjprojwbscst__c-Project Charge Code Budget%2FCost Default Layout,,RSTK-9651,,Profile,Update,rstk__pjprojwbscst__c,rootstock__Project Charge Code Budget%2FCost Default Layout,,Admin
+rstk__pjprojcst__c-Project Budget%2FCost Default Layout,,RSTK-9651,,Profile,Update,rstk__pjprojcst__c,rootstock__Project Budget%2FCost Default Layout,,Admin
+rstk__pjstatus__c-Project Status Default Layout,,RSTK-9651,,Profile,Update,rstk__pjstatus__c,rootstock__Project Status Default Layout,,Admin
+rstk__pjwbsmtl__c-Project Budget Material Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__pjwbsmtl__c,rootstock__Project Budget Material Detail Default Layout,,Admin
+rstk__pjwbslab__c-Project Budget Labor Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__pjwbslab__c,rootstock__Project Budget Labor Detail Default Layout,,Admin
+rstk__pjwbsodc__c-Project Budget ODC Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__pjwbsodc__c,rootstock__Project Budget ODC Detail Default Layout,,Admin
+rstk__poagc__c-PO Agreement Commodity Code Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__poagc__c,rootstock__PO Agreement Commodity Code Detail Default Layout,,Admin
+rstk__poagcq__c-PO Agreement Commodity Code Quantity Default Layout,,RSTK-9651,,Profile,Update,rstk__poagcq__c,rootstock__PO Agreement Commodity Code Quantity Default Layout,,Admin
+rstk__poagh__c-Purchase Agreement Default Layout,,RSTK-9651,,Profile,Update,rstk__poagh__c,rootstock__Purchase Agreement Default Layout,,Admin
+rstk__poagp__c-PO Agreement Item Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__poagp__c,rootstock__PO Agreement Item Detail Default Layout,,Admin
+rstk__poagpd__c-PO Agreement Item Price by Date Default Layout,,RSTK-9651,,Profile,Update,rstk__poagpd__c,rootstock__PO Agreement Item Price by Date Default Layout,,Admin
+rstk__poagpq__c-PO Agreement Order Qty Pricing Default Layout,,RSTK-9651,,Profile,Update,rstk__poagpq__c,rootstock__PO Agreement Order Qty Pricing Default Layout,,Admin
+rstk__poagpdq__c-PO Agreement Item Price by Date and Qty Default Layout,,RSTK-9651,,Profile,Update,rstk__poagpdq__c,rootstock__PO Agreement Item Price by Date and Qty Default Layout,,Admin
+rstk__pocntl__c-PO Control Record Default Layout,,RSTK-9651,,Profile,Update,rstk__pocntl__c,rootstock__PO Control Record Default Layout,,Admin
+rstk__pocontact__c-Vendor Contacts Default Layout,,RSTK-9651,,Profile,Update,rstk__pocontact__c,rootstock__Vendor Contacts Default Layout,,Admin
+rstk__podmd__c-PO Component Demand Default Layout,,RSTK-9651,,Profile,Update,rstk__podmd__c,rootstock__PO Component Demand Default Layout,,Admin
+rstk__pohdr__c-Purchase Order Header Default Layout,,RSTK-9651,,Profile,Update,rstk__pohdr__c,rootstock__Purchase Order Header Default Layout,,Admin
+rstk__pohdraddr__c-PO Header Address Default Layout,,RSTK-9651,,Profile,Update,rstk__pohdraddr__c,rootstock__PO Header Address Default Layout,,Admin
+rstk__pohdrrev__c-PO Header Revision Default Layout,,RSTK-9651,,Profile,Update,rstk__pohdrrev__c,rootstock__PO Header Revision Default Layout,,Admin
+rstk__poitem__c-Purchase Item Master Default Layout,,RSTK-9651,,Profile,Update,rstk__poitem__c,rootstock__Purchase Item Master Default Layout,,Admin
+rstk__poitemcst__c-Purchase Item Cost Default Layout,,RSTK-9651,,Profile,Update,rstk__poitemcst__c,rootstock__Purchase Item Cost Default Layout,,Admin
+rstk__poitemvend__c-Item Vendor Master Default Layout,,RSTK-9651,,Profile,Update,rstk__poitemvend__c,rootstock__Item Vendor Master Default Layout,,Admin
+rstk__poline__c-Purchase Order Line Default Layout,,RSTK-9651,,Profile,Update,rstk__poline__c,rootstock__Purchase Order Line Default Layout,,Admin
+rstk__polineaddr__c-PO Line Address Default Layout,,RSTK-9651,,Profile,Update,rstk__polineaddr__c,rootstock__PO Line Address Default Layout,,Admin
+rstk__polinemfr__c-PO Line Approved Manufacturer Default Layout,,RSTK-9651,,Profile,Update,rstk__polinemfr__c,rootstock__PO Line Approved Manufacturer Default Layout,,Admin
+rstk__polinerev__c-PO Line Revision Default Layout,,RSTK-9651,,Profile,Update,rstk__polinerev__c,rootstock__PO Line Revision Default Layout,,Admin
+rstk__porcptap__c-PO Receipt Transacion Default Layout,,RSTK-9651,,Profile,Update,rstk__porcptap__c,rootstock__PO Receipt Transacion Default Layout,,Admin
+rstk__poreq__c-Purchase Requisition Default Layout,,RSTK-9651,,Profile,Update,rstk__poreq__c,rootstock__Purchase Requisition Default Layout,,Admin
+rstk__povclass__c-Vendor Class Default Layout,,RSTK-9651,,Profile,Update,rstk__povclass__c,rootstock__Vendor Class Default Layout,,Admin
+rstk__povend__c-Vendor Master Default Layout,,RSTK-9651,,Profile,Update,rstk__povend__c,rootstock__Vendor Master Default Layout,,Admin
+rstk__povendpoaddr__c-Vendor Address Default Layout,,RSTK-9651,,Profile,Update,rstk__povendpoaddr__c,rootstock__Vendor Address Default Layout,,Admin
+rstk__povendmfr__c-Item Vendor Approver Manufacturers Record Page %28Default%29,,RSTK-9651,,Profile,Update,rstk__povendmfr__c,rootstock__Item Vendor Approver Manufacturers Record Page %28Default%29,,Admin
+rstk__rtdept__c-Manufacturing Department Default Layout,,RSTK-9651,,Profile,Update,rstk__rtdept__c,rootstock__Manufacturing Department Default Layout,,Admin
+rstk__rtindoper__c-Independent Operation Default Layout,,RSTK-9651,,Profile,Update,rstk__rtindoper__c,rootstock__Independent Operation Default Layout,,Admin
+rstk__rtindoperitem__c-Independent Operation Materials Default Layout,,RSTK-9651,,Profile,Update,rstk__rtindoperitem__c,rootstock__Independent Operation Materials Default Layout,,Admin
+rstk__rtindopertask__c-Independent Operation Tasks Default Layout,,RSTK-9651,,Profile,Update,rstk__rtindopertask__c,rootstock__Independent Operation Tasks Default Layout,,Admin
+rstk__rtlabgrd__c-Manufacturing Labor Grades Default Layout,,RSTK-9651,,Profile,Update,rstk__rtlabgrd__c,rootstock__Manufacturing Labor Grades Default Layout,,Admin
+rstk__rtmach__c-Manufacturing Machine Master Default Layout,,RSTK-9651,,Profile,Update,rstk__rtmach__c,rootstock__Manufacturing Machine Master Default Layout,,Admin
+rstk__rtproc__c-Manufacturing Processes Default Layout,,RSTK-9651,,Profile,Update,rstk__rtproc__c,rootstock__Manufacturing Processes Default Layout,,Admin
+rstk__rtroutoper__c-Routing Operation Default Layout,,RSTK-9651,,Profile,Update,rstk__rtroutoper__c,rootstock__Routing Operation Default Layout,,Admin
+rstk__rtrouthdr__c-Routing Master Default Layout,,RSTK-9651,,Profile,Update,rstk__rtrouthdr__c,rootstock__Routing Master Default Layout,,Admin
+rstk__rtwcgroup__c-Work Center Group Default Layout,,RSTK-9651,,Profile,Update,rstk__rtwcgroup__c,rootstock__Work Center Group Default Layout,,Admin
+rstk__rtwcgwc__c-Work Center Group Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__rtwcgwc__c,rootstock__Work Center Group Detail Default Layout,,Admin
+rstk__soaddr__c-Sales Order Override Address Default Layout,,RSTK-9651,,Profile,Update,rstk__soaddr__c,rootstock__Sales Order Override Address Default Layout,,Admin
+rstk__soagh__c-Customer Agreement Default Layout,,RSTK-9651,,Profile,Update,rstk__soagh__c,rootstock__Customer Agreement Default Layout,,Admin
+rstk__soaghvd__c-Agreement Volume Discount Default Layout,,RSTK-9651,,Profile,Update,rstk__soaghvd__c,rootstock__Agreement Volume Discount Default Layout,,Admin
+rstk__soagp__c-SO Agreement Product Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__soagp__c,rootstock__SO Agreement Product Detail Default Layout,,Admin
+rstk__soagpc__c-Sales Agreement Product Group Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__soagpc__c,rootstock__Sales Agreement Product Group Detail Default Layout,,Admin
+rstk__soagpcq__c-Sales Agreement Product Group Qty Price Default Layout,,RSTK-9651,,Profile,Update,rstk__soagpcq__c,rootstock__Sales Agreement Product Group Qty Price Default Layout,,Admin
+rstk__soagpq__c-SO Agreement Order Qty Pricing Default Layout,,RSTK-9651,,Profile,Update,rstk__soagpq__c,rootstock__SO Agreement Order Qty Pricing Default Layout,,Admin
+rstk__soagpt__c-Agreement Product Price by Date Default Layout,,RSTK-9651,,Profile,Update,rstk__soagpt__c,rootstock__Agreement Product Price by Date Default Layout,,Admin
+rstk__soagptq__c-Agreement Product Price by Date and Qty Default Layout,,RSTK-9651,,Profile,Update,rstk__soagptq__c,rootstock__Agreement Product Price by Date and Qty Default Layout,,Admin
+rstk__soamortaud__c-Sales Order Line Amortization Audit Default Layout,,RSTK-9651,,Profile,Update,rstk__soamortaud__c,rootstock__Sales Order Line Amortization Audit Default Layout,,Admin
+rstk__soamort__c-Sales Order Line Amortization Schedule Default Layout,,RSTK-9651,,Profile,Update,rstk__soamort__c,rootstock__Sales Order Line Amortization Schedule Default Layout,,Admin
+rstk__soamorttxn__c-Sales Order Line Amortization Txns Default Layout,,RSTK-9651,,Profile,Update,rstk__soamorttxn__c,rootstock__Sales Order Line Amortization Txns Default Layout,,Admin
+rstk__sobol__c-Bill of Lading Default Layout,,RSTK-9651,,Profile,Update,rstk__sobol__c,rootstock__Bill of Lading Default Layout,,Admin
+rstk__sobolc__c-Bill of Lading Container Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__sobolc__c,rootstock__Bill of Lading Container Detail Default Layout,,Admin
+rstk__sobols__c-Bill of Lading Shipper Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__sobols__c,rootstock__Bill of Lading Shipper Detail Default Layout,,Admin
+rstk__socaddr__c-Customer Address Default Layout,,RSTK-9651,,Profile,Update,rstk__socaddr__c,rootstock__Customer Address Default Layout,,Admin
+rstk__socarriervia__c-Shipping Method by Carrier Default Layout,,RSTK-9651,,Profile,Update,rstk__socarriervia__c,rootstock__Shipping Method by Carrier Default Layout,,Admin
+rstk__soccccd__c-Customer Class Product Group Discounts Default Layout,,RSTK-9651,,Profile,Update,rstk__soccccd__c,rootstock__Customer Class Product Group Discounts Default Layout,,Admin
+rstk__soccccdd__c-Cust Class Prod Group Disc by Quantity Default Layout,,RSTK-9651,,Profile,Update,rstk__soccccdd__c,rootstock__Cust Class Prod Group Disc by Quantity Default Layout,,Admin
+rstk__socccd__c-Customer Product Group Discounts Default Layout,,RSTK-9651,,Profile,Update,rstk__socccd__c,rootstock__Customer Product Group Discounts Default Layout,,Admin
+rstk__socccdd__c-Custs Prod Group Discount by Quantity Default Layout,,RSTK-9651,,Profile,Update,rstk__socccdd__c,rootstock__Custs Prod Group Discount by Quantity Default Layout,,Admin
+rstk__soccpd__c-Customer Class Product Discounts Default Layout,,RSTK-9651,,Profile,Update,rstk__soccpd__c,rootstock__Customer Class Product Discounts Default Layout,,Admin
+rstk__soccpdd__c-Customer Class Product Discount by Quantity Default Layout,,RSTK-9651,,Profile,Update,rstk__soccpdd__c,rootstock__Customer Class Product Discount by Quantity Default Layout,,Admin
+rstk__socclass__c-Customer Class Default Layout,,RSTK-9651,,Profile,Update,rstk__socclass__c,rootstock__Customer Class Default Layout,,Admin
+rstk__socompp__c-Component Pricing Default Layout,,RSTK-9651,,Profile,Update,rstk__socompp__c,rootstock__Component Pricing Default Layout,,Admin
+rstk__socntl__c-Sales Order Control Default Layout,,RSTK-9651,,Profile,Update,rstk__socntl__c,rootstock__Sales Order Control Default Layout,,Admin
+rstk__socomm__c-Product Group Master Default Layout,,RSTK-9651,,Profile,Update,rstk__socomm__c,rootstock__Product Group Master Default Layout,,Admin
+rstk__socontact__c-Customer Contact Default Layout,,RSTK-9651,,Profile,Update,rstk__socontact__c,rootstock__Customer Contact Default Layout,,Admin
+rstk__socontainel__c-Sales Order Shipping Container Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__socontainel__c,rootstock__Sales Order Shipping Container Detail Default Layout,,Admin
+rstk__socontainer__c-Sales Order Shipping Container Header Default Layout,,RSTK-9651,,Profile,Update,rstk__socontainer__c,rootstock__Sales Order Shipping Container Header Default Layout,,Admin
+rstk__socontainser__c-Sales Order Shipping Container Serial Default Layout,,RSTK-9651,,Profile,Update,rstk__socontainser__c,rootstock__Sales Order Shipping Container Serial Default Layout,,Admin
+rstk__socontype__c-Container Type Default Layout,,RSTK-9651,,Profile,Update,rstk__socontype__c,rootstock__Container Type Default Layout,,Admin
+rstk__socsales__c-Customer Salesperson Default Layout,,RSTK-9651,,Profile,Update,rstk__socsales__c,rootstock__Customer Salesperson Default Layout,,Admin
+rstk__socservice__c-Customer Service Item Price Default Layout,,RSTK-9651,,Profile,Update,rstk__socservice__c,rootstock__Customer Service Item Price Default Layout,,Admin
+rstk__socust__c-Customer Master Default Layout,,RSTK-9651,,Profile,Update,rstk__socust__c,rootstock__Customer Master Default Layout,,Admin
+rstk__socustcarr__c-Customer Carrier Default Layout,,RSTK-9651,,Profile,Update,rstk__socustcarr__c,rootstock__Customer Carrier Default Layout,,Admin
+rstk__socustcust__c-Inter Customer Relationships Default Layout,,RSTK-9651,,Profile,Update,rstk__socustcust__c,rootstock__Inter Customer Relationships Default Layout,,Admin
+rstk__socustgateway__c-Customer Payment Gateway Default Layout,,RSTK-9651,,Profile,Update,rstk__socustgateway__c,rootstock__Customer Payment Gateway Default Layout,,Admin
+rstk__socusttoken__c-Customer Payment Gateway Token Default Layout,,RSTK-9651,,Profile,Update,rstk__socusttoken__c,rootstock__Customer Payment Gateway Token Default Layout,,Admin
+rstk__soentto__c-Entitlement To Detail Default Page Layout,,RSTK-9651,,Profile,Update,rstk__soentto__c,rootstock__Entitlement To Detail Default Page Layout,,Admin
+rstk__sofrtcalc__c-Freight Calculations Default Layout,,RSTK-9651,,Profile,Update,rstk__sofrtcalc__c,rootstock__Freight Calculations Default Layout,,Admin
+rstk__sofrtcalcw__c-Freight Calculation by Weight Range Default Layout,,RSTK-9651,,Profile,Update,rstk__sofrtcalcw__c,rootstock__Freight Calculation by Weight Range Default Layout,,Admin
+rstk__sogateaud__c-Payment Gateway Audit Default Layout,,RSTK-9651,,Profile,Update,rstk__sogateaud__c,rootstock__Payment Gateway Audit Default Layout,,Admin
+rstk__sogateway__c-Sales Order Payment Gateway Default Layout,,RSTK-9651,,Profile,Update,rstk__sogateway__c,rootstock__Sales Order Payment Gateway Default Layout,,Admin
+rstk__sohdr__c-Sales Order Header Default Layout,,RSTK-9651,,Profile,Update,rstk__sohdr__c,rootstock__Sales Order Header Default Layout,,Admin
+rstk__sohdrextn__c-Sales Order Header Extension Default Layout,,RSTK-9651,,Profile,Update,rstk__sohdrextn__c,rootstock__Sales Order Header Extension Default Layout,,Admin
+rstk__soibatch__c-Sales Order Invoice Batch Default Layout,,RSTK-9651,,Profile,Update,rstk__soibatch__c,rootstock__Sales Order Invoice Batch Default Layout,,Admin
+rstk__soinv__c-Sales Order Invoice Header Default Layout,,RSTK-9651,,Profile,Update,rstk__soinv__c,rootstock__Sales Order Invoice Header Default Layout,,Admin
+rstk__soinvline__c-Sales Order Invoice Line Default Layout,,RSTK-9651,,Profile,Update,rstk__soinvline__c,rootstock__Sales Order Invoice Line Default Layout,,Admin
+rstk__soinvlinedist__c-Inv Line Account Distribution Default Layout,,RSTK-9651,,Profile,Update,rstk__soinvlinedist__c,rootstock__Inv Line Account Distribution Default Layout,,Admin
+rstk__soinvlinecos__c-Inv Line COS Redistribution Page Layout,,RSTK-9651,,Profile,Update,rstk__soinvlinecos__c,rootstock__Inv Line COS Redistribution Page Layout,,Admin
+rstk__soinvdist__c-Invoice Account Distribution Summary Default Layout,,RSTK-9651,,Profile,Update,rstk__soinvdist__c,rootstock__Invoice Account Distribution Summary Default Layout,,Admin
+rstk__soinvdistdet__c-Invoice Account Distribution Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__soinvdistdet__c,rootstock__Invoice Account Distribution Detail Default Layout,,Admin
+rstk__soisales__c-Invoice Line Salesperson Default Layout,,RSTK-9651,,Profile,Update,rstk__soisales__c,rootstock__Invoice Line Salesperson Default Layout,,Admin
+rstk__soline__c-Sales Order Line Default Layout,,RSTK-9651,,Profile,Update,rstk__soline__c,rootstock__Sales Order Line Default Layout,,Admin
+rstk__solineextn__c-Sales Order Line Extension Default Layout,,RSTK-9651,,Profile,Update,rstk__solineextn__c,rootstock__Sales Order Line Extension Default Layout,,Admin
+rstk__sootype__c-Sales Order Type Default Layout,,RSTK-9651,,Profile,Update,rstk__sootype__c,rootstock__Sales Order Type Default Layout,,Admin
+rstk__sopack__c-Packing Slip Header Default Layout,,RSTK-9651,,Profile,Update,rstk__sopack__c,rootstock__Packing Slip Header Default Layout,,Admin
+rstk__sopackage__c-Sales Order Package Default Layout,,RSTK-9651,,Profile,Update,rstk__sopackage__c,rootstock__Sales Order Package Default Layout,,Admin
+rstk__sopackline__c-Packing Slip Line Default Layout,,RSTK-9651,,Profile,Update,rstk__sopackline__c,rootstock__Packing Slip Line Default Layout,,Admin
+rstk__sopbk__c-Default SO PriceBook Layout,,RSTK-9651,,Profile,Update,rstk__sopbk__c,rootstock__Default SO PriceBook Layout,,Admin
+rstk__sopbkd__c-SO Price Book Details Default Layout,,RSTK-9651,,Profile,Update,rstk__sopbkd__c,rootstock__SO Price Book Details Default Layout,,Admin
+rstk__sopc__c-Sales Order Customer Product Default Layout,,RSTK-9651,,Profile,Update,rstk__sopc__c,rootstock__Sales Order Customer Product Default Layout,,Admin
+rstk__sopcconfgroupp__c-Customer Product Configuration Group Default Layout,,RSTK-9651,,Profile,Update,rstk__sopcconfgroupp__c,rootstock__Customer Product Configuration Group Default Layout,,Admin
+rstk__sopcd__c-Customer Product Discount by Quantity Default Layout,,RSTK-9651,,Profile,Update,rstk__sopcd__c,rootstock__Customer Product Discount by Quantity Default Layout,,Admin
+rstk__sopcq__c-SO Customer Product Price Default Layout,,RSTK-9651,,Profile,Update,rstk__sopcq__c,rootstock__SO Customer Product Price Default Layout,,Admin
+rstk__sopct__c-Customer Product Price by Date Default Layout,,RSTK-9651,,Profile,Update,rstk__sopct__c,rootstock__Customer Product Price by Date Default Layout,,Admin
+rstk__sopcomp__c-Product Component Default Layout,,RSTK-9651,,Profile,Update,rstk__sopcomp__c,rootstock__Product Component Default Layout,,Admin
+rstk__sopdiv__c-Product Inventory Division Default Layout,,RSTK-9651,,Profile,Update,rstk__sopdiv__c,rootstock__Product Inventory Division Default Layout,,Admin
+rstk__sopicitem__c-Product Inventory Item Default Layout,,RSTK-9651,,Profile,Update,rstk__sopicitem__c,rootstock__Product Inventory Item Default Layout,,Admin
+rstk__soppy__c-Prepayment Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__soppy__c,rootstock__Prepayment Detail Default Layout,,Admin
+rstk__soppya__c-Prepayment Applied Default Layout,,RSTK-9651,,Profile,Update,rstk__soppya__c,rootstock__Prepayment Applied Default Layout,,Admin
+rstk__soprod__c-Rootstock Product Master Default Layout,,RSTK-9651,,Profile,Update,rstk__soprod__c,rootstock__Rootstock Product Master Default Layout,,Admin
+rstk__sopt__c-Product Price by Date Default Layout,,RSTK-9651,,Profile,Update,rstk__sopt__c,rootstock__Product Price by Date Default Layout,,Admin
+rstk__soptq__c-Product Price by Date and Qty Default Layout,,RSTK-9651,,Profile,Update,rstk__soptq__c,rootstock__Product Price by Date and Qty Default Layout,,Admin
+rstk__sopq__c-Product Pricing Default Layout,,RSTK-9651,,Profile,Update,rstk__sopq__c,rootstock__Product Pricing Default Layout,,Admin
+rstk__soreason__c-SO Reason Default Layout,,RSTK-9651,,Profile,Update,rstk__soreason__c,rootstock__SO Reason Default Layout,,Admin
+rstk__soregion__c-Sales Region Default Layout,,RSTK-9651,,Profile,Update,rstk__soregion__c,rootstock__Sales Region Default Layout,,Admin
+rstk__sorma__c-RMA Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__sorma__c,rootstock__RMA Detail Default Layout,,Admin
+rstk__sormaaddr__c-RMA Address Override Default Layout,,RSTK-9651,,Profile,Update,rstk__sormaaddr__c,rootstock__RMA Address Override Default Layout,,Admin
+rstk__sormastat__c-RMA Status Default Layout,,RSTK-9651,,Profile,Update,rstk__sormastat__c,rootstock__RMA Status Default Layout,,Admin
+rstk__sormh__c-Return Material Authorization Default Layout,,RSTK-9651,,Profile,Update,rstk__sormh__c,rootstock__Return Material Authorization Default Layout,,Admin
+rstk__sosales__c-Salesperson Default Layout,,RSTK-9651,,Profile,Update,rstk__sosales__c,rootstock__Salesperson Default Layout,,Admin
+rstk__soservice__c-Service Item Default Layout,,RSTK-9651,,Profile,Update,rstk__soservice__c,rootstock__Service Item Default Layout,,Admin
+rstk__soship__c-Shipper Header Default Layout,,RSTK-9651,,Profile,Update,rstk__soship__c,rootstock__Shipper Header Default Layout,,Admin
+rstk__soshipline__c-Shipper Line Default Layout,,RSTK-9651,,Profile,Update,rstk__soshipline__c,rootstock__Shipper Line Default Layout,,Admin
+rstk__sotax__c-Tax Location Maintenance Default Layout,,RSTK-9651,,Profile,Update,rstk__sotax__c,rootstock__Tax Location Maintenance Default Layout,,Admin
+rstk__sotaxacct__c-Tax Location Accounts Default Layout,,RSTK-9651,,Profile,Update,rstk__sotaxacct__c,rootstock__Tax Location Accounts Default Layout,,Admin
+rstk__soustat__c-User Status Default Layout,,RSTK-9651,,Profile,Update,rstk__soustat__c,rootstock__User Status Default Layout,,Admin
+rstk__sovsales__c-Salesperson Default by Division Default Layout,,RSTK-9651,,Profile,Update,rstk__sovsales__c,rootstock__Salesperson Default by Division Default Layout,,Admin
+rstk__sowarr__c-Shipped Item Warranty Default Layout,,RSTK-9651,,Profile,Update,rstk__sowarr__c,rootstock__Shipped Item Warranty Default Layout,,Admin
+rstk__sowarrdtl__c-Shipped Item Transaction Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__sowarrdtl__c,rootstock__Shipped Item Transaction Detail Default Layout,,Admin
+rstk__sowarrtype__c-Warranty Types Default Layout,,RSTK-9651,,Profile,Update,rstk__sowarrtype__c,rootstock__Warranty Types Default Layout,,Admin
+rstk__sowarrhist__c-Device Association History Default Layout,,RSTK-9651,,Profile,Update,rstk__sowarrhist__c,rootstock__Device Association History Default Layout,,Admin
+rstk__sozone__c-Shipping Zone Default Layout,,RSTK-9651,,Profile,Update,rstk__sozone__c,rootstock__Shipping Zone Default Layout,,Admin
+rstk__sozonecomm__c-Shipping Zone Product Group Details Default Layout,,RSTK-9651,,Profile,Update,rstk__sozonecomm__c,rootstock__Shipping Zone Product Group Details Default Layout,,Admin
+rstk__sozonediv__c-Shipping Zone Division Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__sozonediv__c,rootstock__Shipping Zone Division Detail Default Layout,,Admin
+rstk__syacc__c-Sub Ledger Account Default Layout,,RSTK-9651,,Profile,Update,rstk__syacc__c,rootstock__Sub Ledger Account Default Layout,,Admin
+rstk__sycarrier__c-Carrier Code Default Layout,,RSTK-9651,,Profile,Update,rstk__sycarrier__c,rootstock__Carrier Code Default Layout,,Admin
+rstk__syapcntl__c-PO-AP Control Default Layout,,RSTK-9651,,Profile,Update,rstk__syapcntl__c,rootstock__PO-AP Control Default Layout,,Admin
+rstk__sycmp__c-Company Master Default Layout,,RSTK-9651,,Profile,Update,rstk__sycmp__c,rootstock__Company Master Default Layout,,Admin
+rstk__sycurr__c-Currency Master Default Layout,,RSTK-9651,,Profile,Update,rstk__sycurr__c,rootstock__Currency Master Default Layout,,Admin
+rstk__sycurralt__c-Currency Master - Alternate Exchange Rat Default Layout,,RSTK-9651,,Profile,Update,rstk__sycurralt__c,rootstock__Currency Master - Alternate Exchange Rat Default Layout,,Admin
+rstk__sydefault__c-System Defaults Default Layout,,RSTK-9651,,Profile,Update,rstk__sydefault__c,rootstock__System Defaults Default Layout,,Admin
+rstk__sydim__c-Dimension Value Master Default Layout,,RSTK-9651,,Profile,Update,rstk__sydim__c,rootstock__Dimension Value Master Default Layout,,Admin
+rstk__sydimovr__c-Dimension Source Override Default Layout,,RSTK-9651,,Profile,Update,rstk__sydimovr__c,rootstock__Dimension Source Override Default Layout,,Admin
+rstk__sydiv__c-Division Master Default Layout,,RSTK-9651,,Profile,Update,rstk__sydiv__c,rootstock__Division Master Default Layout,,Admin
+rstk__sydivaddr__c-Division Address Default Layout,,RSTK-9651,,Profile,Update,rstk__sydivaddr__c,rootstock__Division Address Default Layout,,Admin
+rstk__syfob__c-FOB Code Default Layout,,RSTK-9651,,Profile,Update,rstk__syfob__c,rootstock__FOB Code Default Layout,,Admin
+rstk__syfrghtrm__c-Freight Term Code Default Layout,,RSTK-9651,,Profile,Update,rstk__syfrghtrm__c,rootstock__Freight Term Code Default Layout,,Admin
+rstk__sylocid__c-Inventory Location ID Count,,RSTK-9651,,Profile,Update,rstk__sylocid__c,rootstock__Inventory Location ID Count,,Admin
+rstk__sylocid__c-Inventory Location ID Default Layout,,RSTK-9651,,Profile,Update,rstk__sylocid__c,rootstock__Inventory Location ID Default Layout,,Admin
+rstk__syodc__c-ODC Code Maintenance Default Layout,,RSTK-9651,,Profile,Update,rstk__syodc__c,rootstock__ODC Code Maintenance Default Layout,,Admin
+rstk__syorg__c-Organizational Department Default Layout,,RSTK-9651,,Profile,Update,rstk__syorg__c,rootstock__Organizational Department Default Layout,,Admin
+rstk__syordnumassign__c-Order No Record Default Layout,,RSTK-9651,,Profile,Update,rstk__syordnumassign__c,rootstock__Order No Record Default Layout,,Admin
+rstk__syreqind__c-Indirect Requisition Default Layout,,RSTK-9651,,Profile,Update,rstk__syreqind__c,rootstock__Indirect Requisition Default Layout,,Admin
+rstk__syscrap__c-Scrap Reason Codes Default Layout,,RSTK-9651,,Profile,Update,rstk__syscrap__c,rootstock__Scrap Reason Codes Default Layout,,Admin
+rstk__sysite__c-Site Master Default Layout,,RSTK-9651,,Profile,Update,rstk__sysite__c,rootstock__Site Master Default Layout,,Admin
+rstk__syshipviatype__c-Ship Method Type Code Default Layout,,RSTK-9651,,Profile,Update,rstk__syshipviatype__c,rootstock__Ship Method Type Code Default Layout,,Admin
+rstk__systate__c-State%2FProvince Default Layout,,RSTK-9651,,Profile,Update,rstk__systate__c,rootstock__State%2FProvince Default Layout,,Admin
+rstk__syterms__c-Terms Code Default Layout,,RSTK-9651,,Profile,Update,rstk__syterms__c,rootstock__Terms Code Default Layout,,Admin
+rstk__syumcf__c-Default UOM Conversion Factors Layout,,RSTK-9651,,Profile,Update,rstk__syumcf__c,rootstock__Default UOM Conversion Factors Layout,,Admin
+rstk__syuom__c-Default Unit Of Measure Layout,,RSTK-9651,,Profile,Update,rstk__syuom__c,rootstock__Default Unit Of Measure Layout,,Admin
+rstk__syusr__c-Manufacturing User Default Layout,,RSTK-9651,,Profile,Update,rstk__syusr__c,rootstock__Manufacturing User Default Layout,,Admin
+rstk__syvatclass__c-VAT Class Default Layout,,RSTK-9651,,Profile,Update,rstk__syvatclass__c,rootstock__VAT Class Default Layout,,Admin
+rstk__taclockoff__c-Clock Off Job Transaction Default Layout,,RSTK-9651,,Profile,Update,rstk__taclockoff__c,rootstock__Clock Off Job Transaction Default Layout,,Admin
+rstk__taclockon__c-Clock Into Job Transaction Default layout,,RSTK-9651,,Profile,Update,rstk__taclockon__c,rootstock__Clock Into Job Transaction Default layout,,Admin
+rstk__tapaytype__c-Labor Pay Type Default Layout,,RSTK-9651,,Profile,Update,rstk__tapaytype__c,rootstock__Labor Pay Type Default Layout,,Admin
+rstk__ttaphdr__c-Payable Batch Header Default Layout,,RSTK-9651,,Profile,Update,rstk__ttaphdr__c,rootstock__Payable Batch Header Default Layout,,Admin
+rstk__wocst__c-Work Order Default Layout,,RSTK-9651,,Profile,Update,rstk__wocst__c,rootstock__Work Order Default Layout,rootstock__Regular,Admin
+rstk__wocst__c-Work Order Labor Default Layout,,RSTK-9651,,Profile,Update,rstk__wocst__c,rootstock__Work Order Labor Default Layout,rootstock__Labor,Admin
+rstk__woopertask__c-Work Order Operation Tasks Default Layout,,RSTK-9651,,Profile,Update,rstk__woopertask__c,rootstock__Work Order Operation Tasks Default Layout,,Admin
+rstk__woordop__c-Work Order Operation Default Layout,,RSTK-9651,,Profile,Update,rstk__woordop__c,rootstock__Work Order Operation Default Layout,,Admin
+rstk__woorddmd__c-Work Order Component Default Layout,,RSTK-9651,,Profile,Update,rstk__woorddmd__c,rootstock__Work Order Component Default Layout,,Admin
+rstk__woorddmdcst__c-Work Order Component Detail Default Layout,,RSTK-9651,,Profile,Update,rstk__woorddmdcst__c,rootstock__Work Order Component Detail Default Layout,,Admin
+rstk__woordopact__c-WO Operation Actual Default Layout,,RSTK-9651,,Profile,Update,rstk__woordopact__c,rootstock__WO Operation Actual Default Layout,,Admin
+rstk__woordsrl__c-Work Order Serial Master Default Layout,,RSTK-9651,,Profile,Update,rstk__woordsrl__c,rootstock__Work Order Serial Master Default Layout,,Admin
+rstk__wopcst__c-WO Operation Cost Default Layout,,RSTK-9651,,Profile,Update,rstk__wopcst__c,rootstock__WO Operation Cost Default Layout,,Admin
+rstk__woploc__c-WO Operation Location Default Layout,,RSTK-9651,,Profile,Update,rstk__woploc__c,rootstock__WO Operation Location Default Layout,,Admin
+rstk__wopsch__c-WO Operation Schedule Default Layout,,RSTK-9651,,Profile,Update,rstk__wopsch__c,rootstock__WO Operation Schedule Default Layout,,Admin
+rstk__wopwip__c-WO Operation WIP Default Layout,,RSTK-9651,,Profile,Update,rstk__wopwip__c,rootstock__WO Operation WIP Default Layout,,Admin
